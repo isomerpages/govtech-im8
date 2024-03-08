@@ -1,4 +1,5 @@
 collections:
   system-security-plans:
     output: true
-    order: []
+    order:
+      - Introduction.md
