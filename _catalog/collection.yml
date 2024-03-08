@@ -3,6 +3,7 @@ collections:
     output: true
     order:
       - Overview.md
+      - Application Security/AS᠆9.md
       - Application Security/AS᠆8.md
       - Application Security/AS᠆7.md
       - Application Security/AS᠆6.md
