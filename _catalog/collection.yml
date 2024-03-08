@@ -2,7 +2,7 @@ collections:
   catalog:
     output: true
     order:
-      - Overview.md
+      - Catalog.md
       - Application Security/.keep
       - Application Security/Introduction.md
       - Application Security/AS᠆1.md
