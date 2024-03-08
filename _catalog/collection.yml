@@ -2,6 +2,7 @@ collections:
   catalog:
     output: true
     order:
+      - Security Programme Management/PM᠆5.md
       - Security Programme Management/PM᠆4.md
       - Security Programme Management/PM᠆3.md
       - Security Programme Management/PM᠆2.md
