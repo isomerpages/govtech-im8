@@ -1,11 +1,4 @@
-##################################
-#                                #
-# Feel free to edit this file :) #
-#                                #
-##################################
-
 logo: /images/isomer-logo.svg
-
 links:
   - title: Contact Us
     url: /contact-us/
@@ -13,3 +6,34 @@ links:
     url: /example-page/
   - title: Example Folder
     collection: example-folder
+  - title: Catalog
+    url: /permalink
+    sublinks:
+      - title: Overview
+        url: /catalog
+      - title: Application Security
+        url: /catalog/as
+      - title: Software Supply Chain
+        url: /catalog/sc
+      - title: Security Testing
+        url: /catalog/st
+      - title: Network Security
+        url: /catalog/ns
+      - title: Backup and Recovery
+        url: /catalog/br
+      - title: Data Protection
+        url: /catalog/dp
+      - title: Logging and Monitoring
+        url: /catalog/lm
+      - title: Access Control
+        url: /catalog/ac
+      - title: Container Security
+        url: /catalog/cs
+      - title: Security Programme Management
+        url: /catalog/pm
+      - title: Infrastructure Security
+        url: /catalog/is
+      - title: Secure Development
+        url: /catalog/sd
+      - title: Datacentre
+        url: /catalog/dc
