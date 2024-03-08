@@ -1,0 +1,4 @@
+collections:
+  system-security-plans:
+    output: true
+    order: []
