@@ -2,6 +2,7 @@ collections:
   catalog:
     output: true
     order:
+      - Datacentre/DC᠆2.md
       - Datacentre/DC᠆1.md
       - Datacentre/Introduction.md
       - Datacentre/.keep
