@@ -2,6 +2,7 @@ collections:
   catalog:
     output: true
     order:
+      - Backup and Recovery/BR᠆1.md
       - Backup and Recovery/Introduction.md
       - Backup and Recovery/.keep
       - Catalog.md
