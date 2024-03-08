@@ -2,5 +2,5 @@ collections:
   system-security-plans:
     output: true
     order:
-      - Introduction.md
+      - Overview.md
       - Low᠆Risk Cloud.md
