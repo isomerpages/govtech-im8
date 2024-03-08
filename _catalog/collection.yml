@@ -2,11 +2,11 @@ collections:
   catalog:
     output: true
     order:
-      - Backup and Recovery/BR᠆3.md
-      - Backup and Recovery/BR᠆2.md
-      - Backup and Recovery/BR᠆1.md
-      - Backup and Recovery/Introduction.md
       - Backup and Recovery/.keep
+      - Backup and Recovery/Introduction.md
+      - Backup and Recovery/BR᠆1.md
+      - Backup and Recovery/BR᠆2.md
+      - Backup and Recovery/BR᠆3.md
       - Catalog.md
       - Application Security/.keep
       - Application Security/Introduction.md
