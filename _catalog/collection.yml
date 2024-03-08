@@ -2,8 +2,6 @@ collections:
   catalog:
     output: true
     order:
-      - Logging and Monitoring/Introduction.md
-      - Logging and Monitoring/.keep
       - Catalog.md
       - Application Security/.keep
       - Application Security/Introduction.md
@@ -63,3 +61,5 @@ collections:
       - Data Protection/DP᠆4.md
       - Data Protection/DP᠆5.md
       - Data Protection/DP᠆6.md
+      - Logging and Monitoring/.keep
+      - Logging and Monitoring/Introduction.md
