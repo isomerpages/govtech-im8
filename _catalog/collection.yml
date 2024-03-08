@@ -2,7 +2,7 @@ collections:
   catalog:
     output: true
     order:
-      - Software Supply Chain/Software Supply Chain.md
-      - Software Supply Chain/.keep
       - Overview.md
+      - Software Supply Chain/.keep
+      - Software Supply Chain/Software Supply Chain.md
       - Application Security/.keep
