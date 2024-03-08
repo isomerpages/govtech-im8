@@ -2,8 +2,6 @@ collections:
   catalog:
     output: true
     order:
-      - Security Testing/Introduction.md
-      - Security Testing/.keep
       - Catalog.md
       - Application Security/.keep
       - Application Security/Introduction.md
@@ -30,3 +28,5 @@ collections:
       - Software Supply Chain/SC᠆8.md
       - Software Supply Chain/SC᠆9.md
       - Software Supply Chain/SC᠆10.md
+      - Security Testing/.keep
+      - Security Testing/Introduction.md
