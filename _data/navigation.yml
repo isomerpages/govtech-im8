@@ -11,3 +11,5 @@ links:
     sublinks:
       - title: New submenu
         url: /test-sub
+      - title: Outside
+        url: https://www.facebook.com/
