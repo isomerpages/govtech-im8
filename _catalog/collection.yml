@@ -2,20 +2,6 @@ collections:
   catalog:
     output: true
     order:
-      - Container Security/.keep
-      - Container Security/Introduction.md
-      - Container Security/CS᠆1.md
-      - Container Security/CS᠆2.md
-      - Container Security/CS᠆3.md
-      - Container Security/CS᠆4.md
-      - Container Security/CS᠆5.md
-      - Container Security/CS᠆6.md
-      - Container Security/CS᠆7.md
-      - Container Security/CS᠆8.md
-      - Container Security/CS᠆9.md
-      - Container Security/CS᠆10.md
-      - Container Security/CS᠆11.md
-      - Container Security/CS᠆12.md
       - Catalog.md
       - Application Security/.keep
       - Application Security/Introduction.md
@@ -108,3 +94,17 @@ collections:
       - Access Control/AC᠆10.md
       - Access Control/AC᠆11.md
       - Access Control/AC᠆12.md
+      - Container Security/.keep
+      - Container Security/Introduction.md
+      - Container Security/CS᠆1.md
+      - Container Security/CS᠆2.md
+      - Container Security/CS᠆3.md
+      - Container Security/CS᠆4.md
+      - Container Security/CS᠆5.md
+      - Container Security/CS᠆6.md
+      - Container Security/CS᠆7.md
+      - Container Security/CS᠆8.md
+      - Container Security/CS᠆9.md
+      - Container Security/CS᠆10.md
+      - Container Security/CS᠆11.md
+      - Container Security/CS᠆12.md
