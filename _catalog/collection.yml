@@ -2,10 +2,6 @@ collections:
   catalog:
     output: true
     order:
-      - Datacentre/.keep
-      - Datacentre/Introduction.md
-      - Datacentre/DC᠆1.md
-      - Datacentre/DC᠆2.md
       - Catalog.md
       - Application Security/.keep
       - Application Security/Introduction.md
@@ -144,3 +140,7 @@ collections:
       - Secure Development/SD᠆6.md
       - Secure Development/SD᠆7.md
       - Secure Development/SD᠆8.md
+      - Datacentre/.keep
+      - Datacentre/Introduction.md
+      - Datacentre/DC᠆1.md
+      - Datacentre/DC᠆2.md
