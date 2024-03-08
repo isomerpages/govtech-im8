@@ -2,6 +2,7 @@ collections:
   catalog:
     output: true
     order:
+      - Container Security/Introduction.md
       - Container Security/.keep
       - Catalog.md
       - Application Security/.keep
