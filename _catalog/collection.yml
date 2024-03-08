@@ -2,8 +2,6 @@ collections:
   catalog:
     output: true
     order:
-      - Secure Development/Introduction.md
-      - Secure Development/.keep
       - Catalog.md
       - Application Security/.keep
       - Application Security/Introduction.md
@@ -132,3 +130,5 @@ collections:
       - Infrastructure Security/IS᠆8.md
       - Infrastructure Security/IS᠆9.md
       - Infrastructure Security/IS᠆10.md
+      - Secure Development/.keep
+      - Secure Development/Introduction.md
