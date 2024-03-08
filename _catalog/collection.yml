@@ -2,16 +2,6 @@ collections:
   catalog:
     output: true
     order:
-      - Security Programme Management/.keep
-      - Security Programme Management/Introduction.md
-      - Security Programme Management/PM᠆1.md
-      - Security Programme Management/PM᠆2.md
-      - Security Programme Management/PM᠆3.md
-      - Security Programme Management/PM᠆4.md
-      - Security Programme Management/PM᠆5.md
-      - Security Programme Management/PM᠆6.md
-      - Security Programme Management/PM᠆7.md
-      - Security Programme Management/PM᠆8.md
       - Catalog.md
       - Application Security/.keep
       - Application Security/Introduction.md
@@ -118,3 +108,13 @@ collections:
       - Container Security/CS᠆10.md
       - Container Security/CS᠆11.md
       - Container Security/CS᠆12.md
+      - Security Programme Management/.keep
+      - Security Programme Management/Introduction.md
+      - Security Programme Management/PM᠆1.md
+      - Security Programme Management/PM᠆2.md
+      - Security Programme Management/PM᠆3.md
+      - Security Programme Management/PM᠆4.md
+      - Security Programme Management/PM᠆5.md
+      - Security Programme Management/PM᠆6.md
+      - Security Programme Management/PM᠆7.md
+      - Security Programme Management/PM᠆8.md
