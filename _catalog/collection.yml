@@ -1,4 +1,5 @@
 collections:
   catalog:
     output: true
-    order: []
+    order:
+      - example-page.md
