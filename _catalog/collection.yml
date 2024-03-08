@@ -2,4 +2,4 @@ collections:
   catalog:
     output: true
     order:
-      - example-page.md
+      - Overview.md
