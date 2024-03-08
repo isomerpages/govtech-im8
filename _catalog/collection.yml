@@ -3,18 +3,18 @@ collections:
     output: true
     order:
       - Overview.md
-      - Application Security/Introduction.md
-      - Application Security/AS᠆9.md
-      - Application Security/AS᠆8.md
-      - Application Security/AS᠆7.md
-      - Application Security/AS᠆6.md
-      - Application Security/AS᠆5.md
-      - Application Security/AS᠆4.md
-      - Application Security/AS᠆3.md
-      - Application Security/AS᠆2.md
-      - Application Security/AS᠆11.md
-      - Application Security/AS᠆10.md
-      - Application Security/AS᠆1.md
       - Application Security/.keep
+      - Application Security/Introduction.md
+      - Application Security/AS᠆1.md
+      - Application Security/AS᠆2.md
+      - Application Security/AS᠆3.md
+      - Application Security/AS᠆4.md
+      - Application Security/AS᠆5.md
+      - Application Security/AS᠆6.md
+      - Application Security/AS᠆7.md
+      - Application Security/AS᠆8.md
+      - Application Security/AS᠆9.md
+      - Application Security/AS᠆10.md
+      - Application Security/AS᠆11.md
       - Software Supply Chain/.keep
       - Software Supply Chain/Software Supply Chain.md
