@@ -2,5 +2,5 @@ collections:
   catalog:
     output: true
     order:
-      - Application Security/.keep
       - Overview.md
+      - Application Security/.keep
