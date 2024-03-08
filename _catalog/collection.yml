@@ -2,14 +2,6 @@ collections:
   catalog:
     output: true
     order:
-      - Data Protection/.keep
-      - Data Protection/Introduction.md
-      - Data Protection/DP᠆1.md
-      - Data Protection/DP᠆2.md
-      - Data Protection/DP᠆3.md
-      - Data Protection/DP᠆4.md
-      - Data Protection/DP᠆5.md
-      - Data Protection/DP᠆6.md
       - Catalog.md
       - Application Security/.keep
       - Application Security/Introduction.md
@@ -61,3 +53,11 @@ collections:
       - Backup and Recovery/BR᠆1.md
       - Backup and Recovery/BR᠆2.md
       - Backup and Recovery/BR᠆3.md
+      - Data Protection/.keep
+      - Data Protection/Introduction.md
+      - Data Protection/DP᠆1.md
+      - Data Protection/DP᠆2.md
+      - Data Protection/DP᠆3.md
+      - Data Protection/DP᠆4.md
+      - Data Protection/DP᠆5.md
+      - Data Protection/DP᠆6.md
