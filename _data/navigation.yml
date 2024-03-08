@@ -5,7 +5,7 @@ links:
   - title: Example Page
     url: /example-page/
   - title: Example Folder
-    collection: example-folder
+    collection: catalog
   - title: Catalog
     url: /permalink
     sublinks:
