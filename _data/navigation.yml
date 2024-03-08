@@ -1,8 +1,8 @@
 logo: /images/isomer-logo.svg
 links:
-  - title: Contact Us
-    url: /contact-us/
   - title: System Security Plans
     collection: system-security-plans
   - title: Catalog
     collection: catalog
+  - title: Contact Us
+    url: /contact-us/
