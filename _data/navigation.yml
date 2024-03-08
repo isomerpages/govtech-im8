@@ -6,3 +6,8 @@ links:
     collection: catalog
   - title: Contact Us
     url: /contact-us/
+  - title: Cataaaa
+    url: /test
+    sublinks:
+      - title: New submenu
+        url: /test-sub
