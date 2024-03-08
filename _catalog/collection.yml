@@ -2,10 +2,10 @@ collections:
   catalog:
     output: true
     order:
-      - Datacentre/DC᠆2.md
-      - Datacentre/DC᠆1.md
-      - Datacentre/Introduction.md
       - Datacentre/.keep
+      - Datacentre/Introduction.md
+      - Datacentre/DC᠆1.md
+      - Datacentre/DC᠆2.md
       - Catalog.md
       - Application Security/.keep
       - Application Security/Introduction.md
