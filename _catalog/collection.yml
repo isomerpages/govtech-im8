@@ -2,6 +2,7 @@ collections:
   catalog:
     output: true
     order:
+      - Security Programme Management/PM᠆1.md
       - Security Programme Management/Introduction.md
       - Security Programme Management/.keep
       - Catalog.md
