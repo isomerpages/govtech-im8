@@ -2,6 +2,7 @@ collections:
   catalog:
     output: true
     order:
+      - Container Security/CS᠆7.md
       - Container Security/CS᠆6.md
       - Container Security/CS᠆5.md
       - Container Security/CS᠆4.md
