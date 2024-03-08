@@ -2,6 +2,7 @@ collections:
   catalog:
     output: true
     order:
+      - Network Security/.keep
       - Catalog.md
       - Application Security/.keep
       - Application Security/Introduction.md
