@@ -2,5 +2,6 @@ collections:
   catalog:
     output: true
     order:
+      - Software Supply Chain/.keep
       - Overview.md
       - Application Security/.keep
