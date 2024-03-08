@@ -3,6 +3,6 @@ collections:
     output: true
     order:
       - Overview.md
+      - Application Security/.keep
       - Software Supply Chain/.keep
       - Software Supply Chain/Software Supply Chain.md
-      - Application Security/.keep
