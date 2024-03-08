@@ -2,6 +2,7 @@ collections:
   catalog:
     output: true
     order:
+      - Security Testing/Introduction.md
       - Security Testing/.keep
       - Catalog.md
       - Application Security/.keep
