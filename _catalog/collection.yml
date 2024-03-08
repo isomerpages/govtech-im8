@@ -2,8 +2,6 @@ collections:
   catalog:
     output: true
     order:
-      - Access Control/Introduction.md
-      - Access Control/.keep
       - Catalog.md
       - Application Security/.keep
       - Application Security/Introduction.md
@@ -82,3 +80,5 @@ collections:
       - Logging and Monitoring/LM᠆15.md
       - Logging and Monitoring/LM᠆16.md
       - Logging and Monitoring/LM᠆17.md
+      - Access Control/.keep
+      - Access Control/Introduction.md
