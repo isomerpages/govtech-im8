@@ -35,8 +35,8 @@ collections:
       - Security Testing/ST᠆3.md
       - Security Testing/ST᠆4.md
       - Security Testing/ST᠆5.md
-      - Network Security/NS᠆11.md
-      - Network Security/NS᠆10.md
-      - Network Security/NS᠆1.md
-      - Network Security/Introduction.md
       - Network Security/.keep
+      - Network Security/Introduction.md
+      - Network Security/NS᠆1.md
+      - Network Security/NS᠆10.md
+      - Network Security/NS᠆11.md
