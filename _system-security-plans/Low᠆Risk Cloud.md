@@ -105,16 +105,20 @@ Without input validation, there's a heightened risk of injection attacks, data m
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers implement input validation in the source code.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.5: Security libraries](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S1c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S8b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 1.1/S1b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### AS-2: Parametrised Interfaces
 
 * **Group:** [Application Security](/catalog/as)
@@ -143,15 +147,19 @@ Failure to use parameterised interfaces increases the vulnerability to SQL injec
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers use parametrised interfaces in the source code.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.5: Security libraries](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S8c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 1.1/S1c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### AS-3: Output Sanitisation
 
 * **Group:** [Application Security](/catalog/as)
@@ -180,15 +188,19 @@ Lack of sanitisation for application outputs used in rendering HTML documents ex
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers implement output sanitisation in the source code.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.5: Security libraries](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S8e](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 1.1/S1e,k,l](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### AS-4: Authentication Mechanism Rate-Limiting
 
 * **Group:** [Application Security](/catalog/as)
@@ -218,15 +230,19 @@ Without rate-limiting, there's an increased risk of unauthorised access as attac
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers implement authentication mechanism rate-limiting in the source code.
 * Web Application Firewall: Maintainers configure authentication mechanism rate-limiting in the web application firewall.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.4: Password policy](https://mvsp.dev/)
  * [IM8 Cloud ADS: 2.2/S1j, 2.2/S5b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### AS-5: Password Requirements
 
 * **Group:** [Application Security](/catalog/as)
@@ -255,17 +271,21 @@ Short or commonly used passwords increase the vulnerability to unauthorised acce
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers implement password requirements in the source code.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.4: Password policy](https://mvsp.dev/)
  * [NIST SP 800-53 IA-5(1): Password-based Authentication](https://doi.org/10.6028/NIST.SP.800-53r5)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S1a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S2a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 2.2/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### AS-6: Password Salting and Hashing
 
 * **Group:** [Application Security](/catalog/as)
@@ -298,15 +318,19 @@ Without salting and hashing, in case of a data breach, exposed passwords can be 
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers implement password salting and hashing in the source code.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.4: Password policy](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 2.2/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### AS-7: Access Control Check Enforcement
 
 * **Group:** [Application Security](/catalog/as)
@@ -335,14 +359,18 @@ Failure to perform access control checks on authenticated requests increases the
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers enforce access control checks in the source code.
-#### References
 
+
+
+#### References
 
  * [MVSP 3.3: Vulnerability prevention](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S8a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### AS-8: Application Secrets Management
 
 * **Group:** [Application Security](/catalog/as)
@@ -372,15 +400,19 @@ Exposure of sensitive information and unauthorised access to system credentials 
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers implement secrets manager usage and do not hard-code secrets in the source code.
 * Secrets Manager: Maintainers configure secret storage and encryption in the secrets manager.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S11](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 1.1/S1f, 2.2/S4, 3.1/S1 and 3.1/S4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### AS-9: Content Security Policy (CSP)
 
 * **Group:** [Application Security](/catalog/as)
@@ -409,14 +441,18 @@ Without minimally permissive Content Security Policy (CSP) headers, the risk of 
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers implement Content Security Policy headers in the source code.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.3: Security Headers](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/G7](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### AS-10: HTTP Strict Transport Security (HSTS)
 
 * **Group:** [Application Security](/catalog/as)
@@ -445,13 +481,17 @@ Failure to implement HTTP Strict Transport Security (HSTS) with a sufficient max
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers implement HTTP Strict Transport Security headers in the source code.
+
+
+
 #### References
 
-
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/G4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### AS-11: Session Management
 
 * **Group:** [Application Security](/catalog/as)
@@ -480,16 +520,20 @@ Not verifying a user regularly and at suitable checkpoints could allow someone w
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers implement re-authentication conditions in the source code.
-#### References
 
+
+
+#### References
 
  * [NIST SP 800-53 AC-12: Session Termination](https://doi.org/10.6028/NIST.SP.800-53r5)
  * [NIST SP 800-53 IA-11: Re-authentication](https://doi.org/10.6028/NIST.SP.800-53r5)
  * [IM8 Cloud ADS: 2.5/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
  * [NIST SP 800-63B 4.2.3: Reauthentication](https://doi.org/10.6028/NIST.SP.800-63b)
+
 ### SC-1: Code Repository
 
 * **Group:** [Software Supply Chain](/catalog/sc)
@@ -518,13 +562,17 @@ Absence of centralised code repository and version control increases the risk of
   * System Developers
 
 
+
 #### By Components
 
 * Code Repository: Developers manage the codebase in the code repository.
+
+
+
 #### References
 
-
  * [IM8 Cloud ADS: 7.1/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### SC-2: Commit Signing
 
 * **Group:** [Software Supply Chain](/catalog/sc)
@@ -553,9 +601,11 @@ Allowing unsigned commits in the code repository introduces the risk of unauthor
   * System Developers
 
 
+
 #### By Components
 
 * Code Repository: Developers configure the code repository to reject unsigned commits.
+
 ### SC-3: Peer Review
 
 * **Group:** [Software Supply Chain](/catalog/sc)
@@ -584,14 +634,18 @@ Without peer review and approval before merging, there is an increased risk of i
   * System Developers
 
 
+
 #### By Components
 
 * Code Repository: Developers configure the code repository to require peer review and approval.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.1/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud ADS: 8.1/G1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### SC-4: Dependency Manifest Version Pinning
 
 * **Group:** [Software Supply Chain](/catalog/sc)
@@ -620,14 +674,18 @@ Failure to pin direct and transitive dependency versions in the application's ma
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers pin versions in the dependency manifest.
-#### References
 
+
+
+#### References
 
  * [SLSA Build L1: Provenance exists](https://slsa.dev)
  * [IM8 Cloud ADS: 8.1/G4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### SC-5: Software Composition Analysis
 
 * **Group:** [Software Supply Chain](/catalog/sc)
@@ -656,16 +714,20 @@ Without regular software composition analysis, the risk of using outdated or vul
   * System Developers
 
 
+
 #### By Components
 
 * Continuous Integration/Continuous Delivery Workflow: Developers implement a software composition analysis job in the CI/CD workflow.
-#### References
 
+
+
+#### References
 
  * [SLSA Build L1: Provenance exists](https://slsa.dev)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S8i](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud ADS: 6.1/S1c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
  * [IM8 On-Premise ADS (Non-S): 1.1/S1i](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### SC-6: Automated Build and Deploy
 
 * **Group:** [Software Supply Chain](/catalog/sc)
@@ -694,16 +756,20 @@ Inconsistent system provisioning and operation, without automation, may lead to 
   * System Developers
 
 
+
 #### By Components
 
 * Continuous Integration/Continuous Delivery Workflow: Developers implement automated build and deploy in the CI/CD workflow.
-#### References
 
+
+
+#### References
 
  * [MVSP 3.5: Build process](https://mvsp.dev/)
  * [SLSA Build L1: Provenance exists](https://slsa.dev)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S22](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud ADS: 6.1/G4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### SC-7: Dependency Installation during Deployment
 
 * **Group:** [Software Supply Chain](/catalog/sc)
@@ -732,13 +798,17 @@ Failure to install only pinned versions of dependencies during deployment increa
   * System Developers
 
 
+
 #### By Components
 
 * Continuous Integration/Continuous Delivery Workflow: Developers configure the CI/CD workflow to only install pinned versions in the manifest.
+
+
+
 #### References
 
-
  * [SLSA Build L1: Provenance exists](https://slsa.dev)
+
 ### SD-1: Push Protection for Secrets
 
 * **Group:** [Secure Development](/catalog/sd)
@@ -767,13 +837,17 @@ Failure to configure the code repository to prevent secrets from being pushed in
   * System Developers
 
 
+
 #### By Components
 
 * Code Repository: Developers configure the code repository to prevent secrets from being pushed.
+
+
+
 #### References
 
-
  * [IM8 Cloud ADS: 6.4/G1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### SD-2: Default Branch Push Permissions
 
 * **Group:** [Secure Development](/catalog/sd)
@@ -802,9 +876,11 @@ Without configuring the code repository to prevent pushes, including force pushe
   * System Developers
 
 
+
 #### By Components
 
 * Code Repository: Developers configure the code repository to reject pushes to the default branch.
+
 ### SD-4: Static Analysis
 
 * **Group:** [Secure Development](/catalog/sd)
@@ -833,14 +909,18 @@ Without setting up static analysis in the CI/CD pipeline for each merge request 
   * System Developers
 
 
+
 #### By Components
 
 * Continuous Integration/Continuous Delivery Workflow: Developers implement static analysis in the CI/CD workflow.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud ADS: 6.4/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
  * [IM8 On-Premise ADS (Non-S): 4.1/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### SD-5: Dependency Scanning
 
 * **Group:** [Secure Development](/catalog/sd)
@@ -869,16 +949,20 @@ Failing to schedule regular scans in the CI/CD pipeline to identify vulnerable s
   * System Developers
 
 
+
 #### By Components
 
 * Continuous Integration/Continuous Delivery Workflow: Developers implement dependency scanning in the CI/CD workflow.
 * Code Repository: Developers configure a dependency scanning bot on the code repository.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.6: Dependency Patching](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S8i](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud ADS: 8.1/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### SD-6: Secret Detection Scanning
 
 * **Group:** [Secure Development](/catalog/sd)
@@ -907,16 +991,20 @@ Without setting up secret detection alerts or jobs in the development CI/CD pipe
   * System Developers
 
 
+
 #### By Components
 
 * Continuous Integration/Continuous Delivery Workflow: Developers implement secret detection scanning in the CI/CD workflow.
 * Code Repository: Developers configure a secret detection alert on the code repository.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S8f](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud ADS: 1.1/S1f](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
  * [IM8 Cloud ADS: 6.4/G1b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### SD-7: CI Environment Variable Secrets Management
 
 * **Group:** [Secure Development](/catalog/sd)
@@ -945,9 +1033,11 @@ Failing to protect environment variable secrets in CI jobs by limiting them to p
   * System Developers
 
 
+
 #### By Components
 
 * Continuous Integration/Continuous Delivery Platform: Developers configure the CI/CD platform to protect environment variable secrets.
+
 ### SD-8: Deployment Environment Segregation
 
 * **Group:** [Secure Development](/catalog/sd)
@@ -976,14 +1066,18 @@ Failure to segregate production and non-production environments increases the ri
   * System Developers
 
 
+
 #### By Components
 
 * System: Developers segregate production and non-production environments in the system.
-#### References
 
+
+
+#### References
 
  * [MVSP 4.2: Logical access](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S9](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### ST-1: Vulnerability Assessment
 
 * **Group:** [Security Testing](/catalog/st)
@@ -1013,13 +1107,17 @@ Without regular vulnerability assessment scans, hosts remain exposed to undetect
   * System Developers
 
 
+
 #### By Components
 
 * Vulnerability Assessment Scanner: Maintainers set up continuous vulnerability assessment scans with the vulnerability assessment service.
+
+
+
 #### References
 
-
  * [IM8 Cloud Security (IaaS and PaaS): 1.8/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### ST-2: Cloud Security Posture Management
 
 * **Group:** [Security Testing](/catalog/st)
@@ -1049,13 +1147,17 @@ Lack of continuous configuration scans through cloud security posture management
   * System Developers
 
 
+
 #### By Components
 
 * Cloud Security Posture Management Service: Maintainers set up continuous configuration scans with the cloud security posture management service.
+
+
+
 #### References
 
-
  * [IM8 Cloud Security (IaaS and PaaS): 1.1/S6](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### ST-3: Vulnerability Disclosure Programme
 
 * **Group:** [Security Testing](/catalog/st)
@@ -1084,14 +1186,18 @@ Publicly disclosing vulnerabilities without following a responsible disclosure p
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers add a visible vulnerability disclosure element in the source code.
-#### References
 
+
+
+#### References
 
  * [MVSP 1.1: Vulnerability reports](https://mvsp.dev/)
  * [IM8 On-Premise ADS (Non-S): 5.1/S4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### ST-4: Penetration Testing
 
 * **Group:** [Security Testing](/catalog/st)
@@ -1120,15 +1226,19 @@ Without conducting and documenting penetration tests, there's an increased risk 
   * System Administrators
 
 
+
 #### By Components
 
 * Penetration Testing Process: Owners and administrators arrange regular penetration testing of according to the recommended process.
-#### References
 
+
+
+#### References
 
  * [MVSP 1.4: External testing](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.8/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 4.1/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### ST-5: Vulnerability Management
 
 * **Group:** [Security Testing](/catalog/st)
@@ -1160,16 +1270,20 @@ Failure to promptly remediate vulnerabilities increases the risk of potential ex
   * System Administrators
 
 
+
 #### By Components
 
 * System: Maintainers triage and remediate vulnerability findings in the systems.
-#### References
 
+
+
+#### References
 
  * [MVSP 3.4: Time to fix vulnerabilities](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.8/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.8/S4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 5.1/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### NS-1: Public and Private Subnet Segmentation
 
 * **Group:** [Network Security](/catalog/ns)
@@ -1198,11 +1312,14 @@ Failure to segregate private and public resources within distinct subnets in a v
   * System Developers
 
 
+
 #### By Components
 
 * Virtual Networks: Developers segment public and private resources and subnets in the virtual networks.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.5/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.5/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
@@ -1210,6 +1327,7 @@ Failure to segregate private and public resources within distinct subnets in a v
  * [IM8 On-Premise IS (Non-S): 4.2/S1a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
  * [IM8 On-Premise AAS (Non-S): 1.1/S1, 2.1/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Architecture-Security-(For-Non-S).aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.5/S6b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### NS-2: Access Restrictions on CSP Resources Outside Virtual Network
 
 * **Group:** [Network Security](/catalog/ns)
@@ -1244,15 +1362,19 @@ Lack of access restrictions raises the risk of unauthorised access, data exposur
   * System Developers
 
 
+
 #### By Components
 
 * System: Developers implement access restrictions on CSP resources outside of the virtual networks.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.5/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.5/S5](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S23](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### NS-3: Deny by Default – Allow by Exception
 
 * **Group:** [Network Security](/catalog/ns)
@@ -1281,11 +1403,14 @@ Without network access controls, there's an increased risk of unauthorised or ma
   * System Developers
 
 
+
 #### By Components
 
 * Virtual Networks: Developers deny network communications traffic by default in the virtual networks.
-#### References
 
+
+
+#### References
 
  * [NIST SP 800-53 SC-7(5): Deny by Default – Allow by Exception](https://doi.org/10.6028/NIST.SP.800-53r5)
  * [IM8 Cloud Security (IaaS and PaaS): 1.5/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
@@ -1294,6 +1419,7 @@ Without network access controls, there's an increased risk of unauthorised or ma
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S23b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise IS (Non-S): 4.2/S1b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
  * [IM8 On-Premise AAS (Non-S): 2.2/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Architecture-Security-(For-Non-S).aspx)
+
 ### NS-4: Inter-Private Network Connectivity
 
 * **Group:** [Network Security](/catalog/ns)
@@ -1322,14 +1448,18 @@ When routing through the internet, there's an increased risk of man-in-the-middl
   * System Developers
 
 
+
 #### By Components
 
 * Virtual Networks: Developers route network traffic privately between private virtual networks.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.5/S7](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.5/S4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### NS-5: Network and Application Layer Filtering
 
 * **Group:** [Network Security](/catalog/ns)
@@ -1365,16 +1495,20 @@ Lack of filtering for direct traffic from the internet exposes the system to the
   * System Developers
 
 
+
 #### By Components
 
 * Web Application Firewall: Maintainers configure a web application firewall to filter traffic from the internet.
 * Distributed Denial of Service Protection: Maintainers configure Distributed Denial of Service protection to filter traffic from the internet.
 * Content Delivery Network: Maintainers configure a Content Delivery Network to distribute traffic from the internet.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.5/S5](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 1.1/S4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### NS-6: Valid and Trusted SSL/TLS Certificates
 
 * **Group:** [Network Security](/catalog/ns)
@@ -1409,13 +1543,17 @@ Using invalid SSL/TLS certificates introduces the risk of compromised encryption
   * System Developers
 
 
+
 #### By Components
 
 * Certificate Manager: Maintainers configure a certificate manager to manage and monitor SSL/TLS certificates.
+
+
+
 #### References
 
-
  * [IM8 Cloud Security (IaaS and PaaS): 1.5/S8](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### NS-8: Secure Government Enterprise Network (GEN) connectivity
 
 * **Group:** [Network Security](/catalog/ns)
@@ -1444,9 +1582,11 @@ Routing network traffic through a secure intermediary mitigates the risk of unau
   * System Developers
 
 
+
 #### By Components
 
 * Virtual Networks: Developers route network traffic between on-premises systems and GCC systems through a secure intermediary.
+
 ### BR-1: Backup
 
 * **Group:** [Backup and Recovery](/catalog/br)
@@ -1476,16 +1616,20 @@ Without regular backups stored in a secure and separate location, there is an in
   * System Developers
 
 
+
 #### By Components
 
 * Backup Service: Maintainers configure regular backups.
 * Backup Storage: Maintainers stores backups in a secure and separate location.
-#### References
 
+
+
+#### References
 
  * [MVSP 4.4: Backup and Disaster recovery](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.2/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise IS (Non-S): 1.5/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
+
 ### BR-2: Recovery Testing
 
 * **Group:** [Backup and Recovery](/catalog/br)
@@ -1515,15 +1659,19 @@ Failure to regularly test recovery processes may result in ineffective response 
   * System Developers
 
 
+
 #### By Components
 
 * Disaster Recovery Plan: Maintainers regularly test the disaster recovery plan.
-#### References
 
+
+
+#### References
 
  * [MVSP 4.4: Backup and Disaster recovery](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.2/S1d](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise IS (Non-S): 1.5/S1d](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
+
 ### BR-3: Backup Retention
 
 * **Group:** [Backup and Recovery](/catalog/br)
@@ -1553,15 +1701,19 @@ Lack of prevention measures against the modification or deletion of backups for 
   * System Developers
 
 
+
 #### By Components
 
 * Backup Storage: Maintainers configure the backup storage to prevent backups from being modified or delete for a suitable time period.
-#### References
 
+
+
+#### References
 
  * [MVSP 4.4: Backup and Disaster recovery](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.2/S1b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise IS (Non-S): 1.5/S2c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
+
 ### DP-1: Data Residency
 
 * **Group:** [Data Protection](/catalog/dp)
@@ -1588,15 +1740,19 @@ Failure to enforce data residency of primary data in Singapore may lead to legal
   * System Owners
 
 
+
 #### By Components
 
 * System: System owners enforce data residency of the system's primary data in Singapore.
-#### References
 
+
+
+#### References
 
  * [MVSP 1.6: Compliance](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.3/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise IS (Non-S): 1.1/S1a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
+
 ### DP-2: Data at Rest Encryption
 
 * **Group:** [Data Protection](/catalog/dp)
@@ -1626,15 +1782,19 @@ Without encrypting data at rest, there's an increased risk of unauthorised acces
   * System Developers
 
 
+
 #### By Components
 
 * System: Maintainers encrypt the system's data at rest.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.8: Encryption](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.3/S2a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 1.1/S1h](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### DP-3: Data in Transit Encryption
 
 * **Group:** [Data Protection](/catalog/dp)
@@ -1664,15 +1824,19 @@ Failure to encrypt data in transit increases the risk of unauthorised intercepti
   * System Developers
 
 
+
 #### By Components
 
 * System: Maintainers encrypt the system's data in transit.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.8: Encryption](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.3/S2b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 3.1/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### DP-4: Government on Commercial Cloud (GCC)
 
 * **Group:** [Data Protection](/catalog/dp)
@@ -1699,14 +1863,18 @@ Hosting higher-sensitivity systems in Government on Commercial Cloud (GCC) ensur
   * System Owners
 
 
+
 #### By Components
 
 * System: System owners host the system on Government Commercial Cloud.
-#### References
 
+
+
+#### References
 
  * [MVSP 1.6: Compliance](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.1/S4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### LM-1: Separate Log Storage
 
 * **Group:** [Logging and Monitoring](/catalog/lm)
@@ -1736,16 +1904,20 @@ Storing logs in a repository separate from the audited system or component enhan
   * System Developers
 
 
+
 #### By Components
 
 * Cloud Audit Logging Service: Maintainers store event logs in a separate account.
 * Log Storage: Maintainers store audit logs in a different system or system component than the system or component being audited.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.7: Logging](https://mvsp.dev/)
  * [NIST SP 800-53 AU-9(2): Store on Separate Physical Systems or Components](https://doi.org/10.6028/NIST.SP.800-53r5)
  * [IM8 On-Premise IS (Non-S): 7.2/S8](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
+
 ### LM-2: Tamper-Resistant Log Storage
 
 * **Group:** [Logging and Monitoring](/catalog/lm)
@@ -1775,16 +1947,20 @@ Without protection measures, logs are susceptible to unauthorised access, modifi
   * System Developers
 
 
+
 #### By Components
 
 * Log Storage: Maintainers ensure the logs are tamper-resistant.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S5](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S9d](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise IS (Non-S): 7.1/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
+
 ### LM-3: Network Flow Logging
 
 * **Group:** [Logging and Monitoring](/catalog/lm)
@@ -1814,13 +1990,17 @@ Failing to log network traffic going to and from network interfaces increases th
   * System Developers
 
 
+
 #### By Components
 
 * Virtual Networks: Maintainers log network traffic flows.
+
+
+
 #### References
 
-
  * [IM8 Cloud Security (IaaS and PaaS): 1.5/S6a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### LM-4: Cloud Management Event Logging
 
 * **Group:** [Logging and Monitoring](/catalog/lm)
@@ -1850,14 +2030,18 @@ Neglecting to log and manage audit events on cloud resources increases the risk 
   * System Developers
 
 
+
 #### By Components
 
 * Cloud Audit Logging Service: Maintainers log cloud management events.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.7: Logging](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S7](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### LM-5: Database Logging
 
 * **Group:** [Logging and Monitoring](/catalog/lm)
@@ -1887,14 +2071,18 @@ Neglecting to log database audit events raises the risk of overlooking unauthori
   * System Developers
 
 
+
 #### By Components
 
 * Database: Maintainers log database changes.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.7: Logging](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### LM-6: Access Logging
 
 * **Group:** [Logging and Monitoring](/catalog/lm)
@@ -1924,18 +2112,22 @@ Failure to log access requests sent to web application firewalls, load balancers
   * System Developers
 
 
+
 #### By Components
 
 * Web Application Firewall: Maintainers log web requests at the web application firewall.
 * Source Code: Maintainers log web requests at the application.
 * Application Load Balancer: Maintainers log web requests at the application load balancer.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.7: Logging](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.6/S4e](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise IS (Non-S): 7.1/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
+
 ### LM-8: Security Log Retention
 
 * **Group:** [Logging and Monitoring](/catalog/lm)
@@ -1965,17 +2157,21 @@ Failure to retain security logs increases the risk of losing crucial historical 
   * System Developers
 
 
+
 #### By Components
 
 * Log Storage: Maintainers retain logs for the required time period.
-#### References
 
+
+
+#### References
 
  * [MVSP 2.7: Logging](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S9](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S13](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise IS (Non-S): 7.2/S6](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
+
 ### LM-9: Security Monitoring and Alerting
 
 * **Group:** [Logging and Monitoring](/catalog/lm)
@@ -2005,11 +2201,14 @@ Without configuring security monitoring to identify potential security violation
   * System Developers
 
 
+
 #### By Components
 
 * Security Monitoring Service: Maintainers configure security monitoring and alerting.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S7](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
@@ -2017,6 +2216,7 @@ Without configuring security monitoring to identify potential security violation
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S11](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S13](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise IS (Non-S): 7.2/S10](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
+
 ### LM-10: Resource Usage Monitoring and Alerting
 
 * **Group:** [Logging and Monitoring](/catalog/lm)
@@ -2046,13 +2246,17 @@ Lack of resource usage monitoring with automated alerts increases the risk of ov
   * System Developers
 
 
+
 #### By Components
 
 * Resource Usage Monitoring Service: Maintainers configure resource usage monitoring and alerting.
+
+
+
 #### References
 
-
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S8](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### LM-11: Service Level Monitoring and Alerting
 
 * **Group:** [Logging and Monitoring](/catalog/lm)
@@ -2082,13 +2286,17 @@ Without effective service level monitoring to identify potential application or 
   * System Developers
 
 
+
 #### By Components
 
 * Availability Monitoring Service: Maintainers configure availability monitoring and alerting.
+
+
+
 #### References
 
-
  * [IM8 Cloud ADS: 11.1/G3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### LM-14: Web defacement monitoring and response
 
 * **Group:** [Logging and Monitoring](/catalog/lm)
@@ -2118,14 +2326,18 @@ Leverage on GCSOC services to reduce duplication of effort and reduce inconsiste
   * System Developers
 
 
+
 #### By Components
 
 * : Maintainers configure web defacement monitoring and response.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.9/S13](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise IS (Non-S): 7.1/S5](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
+
 ### AC-1: Principle of Least Privilege
 
 * **Group:** [Access Control](/catalog/ac)
@@ -2152,16 +2364,20 @@ Violating the principle of least privileges increases the risk of unauthorised a
   * System Administrators
 
 
+
 #### By Components
 
 * Identity and Access Management Service: Administrators configure the identity and access management service to enforce the principle of least privilege.
-#### References
 
+
+
+#### References
 
  * [MVSP 4.2: Logical access](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S7](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.5/S4e](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S1b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### AC-2: Multi-Factor Authentication (MFA)
 
 * **Group:** [Access Control](/catalog/ac)
@@ -2188,15 +2404,19 @@ Without requiring phishing-resistant Multi-Factor Authentication (MFA) for remot
   * System Administrators
 
 
+
 #### By Components
 
 * Identity and Access Management Service: Administrators configure the identity and access management service to require phishing-resistant MFA for remote developer, maintainer, or administrator access.
-#### References
 
+
+
+#### References
 
  * [MVSP 4.2: Logical access](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S20a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 2.4/S2]()
+
 ### AC-3: Inactive and Expired Accounts
 
 * **Group:** [Access Control](/catalog/ac)
@@ -2223,16 +2443,20 @@ Failure to disable or remove unused accounts or credentials with elevated access
   * System Administrators
 
 
+
 #### By Components
 
 * Identity and Access Management Service: Administrators disable or remove inactive developer, maintainer and administrator accounts in the identity and access management service.
-#### References
 
+
+
+#### References
 
  * [MVSP 4.2: Logical access](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S15](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S18b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 2.3/S2, 2.3/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### AC-4: Access Review
 
 * **Group:** [Access Control](/catalog/ac)
@@ -2259,15 +2483,19 @@ Without regular access reviews and prompt removal of unauthorised or unintended 
   * System Administrators
 
 
+
 #### By Components
 
 * Identity and Access Management Service: Administrators perform regular access reviews in the identity and access management service.
-#### References
 
+
+
+#### References
 
  * [MVSP 4.2: Logical access](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S13](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 2.3/S1, 2.3/S6](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### AC-5: Endpoint Device Hardening
 
 * **Group:** [Access Control](/catalog/ac)
@@ -2294,15 +2522,19 @@ Without requiring hardened endpoint devices for remote access, there's an increa
   * System Administrators
 
 
+
 #### By Components
 
 * Endpoint Device: Administrators enforce endpoint device hardening.
 * Identity and Access Management Service: Administrators configure the identity and access management service to only grant remote developer, maintainer, or administrator access from a hardened endpoint device.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S20a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise IS (Non-S): 1.3/S1, 4.7/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
+
 ### AC-6: Default Credentials
 
 * **Group:** [Access Control](/catalog/ac)
@@ -2329,16 +2561,20 @@ Failure to change default credentials prior to first use increases the risk of u
   * System Administrators
 
 
+
 #### By Components
 
 * Endpoint Device: Administrators change default credentials in any component in the system.
-#### References
 
+
+
+#### References
 
  * [NIST SP 800-53 IA-5: Authenticator Management](https://doi.org/10.6028/NIST.SP.800-53r5)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S1c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S2c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 2.2/S1d, 2.3/S5](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
 ### AC-12: Single Sign-On (SSO) for Internal Users
 
 * **Group:** [Access Control](/catalog/ac)
@@ -2365,14 +2601,18 @@ Without Single Sign-On (SSO), there is an increased risk of unauthorized access 
   * System Administrators
 
 
+
 #### By Components
 
 * System: Administrators integrate the SaaS with the SSO IdP.
-#### References
 
+
+
+#### References
 
  * [IA-2(10): Single Sign-on](https://doi.org/10.6028/NIST.SP.800-53r5)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S18c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### CS-1: Unique Base Container Image Tags
 
 * **Group:** [Container Security](/catalog/cs)
@@ -2401,14 +2641,18 @@ Using unique base container image tags instead of rolling tags reduces the risk 
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers use unique base image tags in the container image build instructions.
-#### References
 
+
+
+#### References
 
  * [SLSA Build L1: Provenance exists](https://slsa.dev)
  * [IM8 Cloud ADS: 12.1/G3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### CS-2: Minimal Base Container Images
 
 * **Group:** [Container Security](/catalog/cs)
@@ -2437,13 +2681,17 @@ Building container images with minimal base images reduces the attack surface, p
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers use minimal base images in the container image build instructions.
+
+
+
 #### References
 
-
  * [IM8 Cloud ADS: 12.1/G1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### CS-3: Runtime Container Secrets
 
 * **Group:** [Container Security](/catalog/cs)
@@ -2472,13 +2720,17 @@ Providing secrets and sensitive data to the container at runtime instead of imag
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers exclude secrets in the container image build instructions.
+
+
+
 #### References
 
-
  * [IM8 Cloud ADS: 2.2/S4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### CS-4: Non-Privileged Container User
 
 * **Group:** [Container Security](/catalog/cs)
@@ -2507,13 +2759,17 @@ Failure to create a non-root user and set it as the default user in container im
   * System Developers
 
 
+
 #### By Components
 
 * Source Code: Developers set a non-root user as the default user in the container image build instructions.
+
+
+
 #### References
 
-
  * [IM8 Cloud ADS: 12.2/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### CS-5: Dockerfile Linting
 
 * **Group:** [Container Security](/catalog/cs)
@@ -2542,13 +2798,17 @@ Without linting Dockerfiles before building container images, there's an increas
   * System Developers
 
 
+
 #### By Components
 
 * Continuous Integration/Continuous Delivery Workflow: Developers implement a container image build instructions linting job in the CI/CD workflow.
+
+
+
 #### References
 
-
  * [IM8 Cloud ADS: 12.1/G4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### CS-7: CI/CD Container Image Scanning
 
 * **Group:** [Container Security](/catalog/cs)
@@ -2577,13 +2837,17 @@ Without setting up a container image scanning job in the CI/CD pipeline, there's
   * System Developers
 
 
+
 #### By Components
 
 * Continuous Integration/Continuous Delivery Workflow: Developers implement a container image scanning job in the CI/CD workflow.
+
+
+
 #### References
 
-
  * [IM8 Cloud ADS: 12.3/G2c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### CS-8: Container Registry Image Scanning
 
 * **Group:** [Container Security](/catalog/cs)
@@ -2613,14 +2877,18 @@ Failure to scan container images in container registries for known vulnerabiliti
   * System Developers
 
 
+
 #### By Components
 
 * Container Image Registry: Maintainers configure the container registry to scan container images.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud ADS: 12.3/G2b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
  * [IM8 Cloud ADS: 12.3/G2c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
+
 ### CS-9: Private Container Image Registries
 
 * **Group:** [Container Security](/catalog/cs)
@@ -2649,9 +2917,11 @@ Hosting built container images in private registries enhances security by reduci
   * System Developers
 
 
+
 #### By Components
 
 * Container Image Registry: Developers host container images in a private container image registry.
+
 ### CS-10: Container Orchestrator API Access Control
 
 * **Group:** [Container Security](/catalog/cs)
@@ -2681,13 +2951,17 @@ Failure to disable public access to Container Orchestrator API endpoints from th
   * System Developers
 
 
+
 #### By Components
 
 * Kubernetes Service: Maintainers configure the Kubernetes service to disable public access to the API.
+
+
+
 #### References
 
-
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S21b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### CS-11: Container Workload Segmentation
 
 * **Group:** [Container Security](/catalog/cs)
@@ -2716,9 +2990,11 @@ Without separating container workloads into namespaces, there's an increased ris
   * System Developers
 
 
+
 #### By Components
 
 * Kubernetes Service: Developers set namespaces for workloads in the Kubernetes service.
+
 ### PM-1: Cybersecurity Incident Management Plan
 
 * **Group:** [Security Programme Management](/catalog/pm)
@@ -2745,14 +3021,18 @@ Lack of a cybersecurity incident management plan increases the risk of ineffecti
   * Agency
 
 
+
 #### By Components
 
 * Cybersecurity Incident Management Plan: The agency develops, documents, and disseminates a cybersecurity incident management plan.
-#### References
 
+
+
+#### References
 
  * [MVSP 1.7: Incident handling](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.1/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### PM-2: Project Cybersecurity Risk Assessment
 
 * **Group:** [Security Programme Management](/catalog/pm)
@@ -2785,14 +3065,18 @@ Without developing and documenting a project-level cybersecurity risk assessment
   * Agency
 
 
+
 #### By Components
 
 * Project Cybersecurity Risk Assessment: The agency develops and documents a project cybersecurity risk assessment.
-#### References
 
+
+
+#### References
 
  * [MVSP 1.3: Self-assessment](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.1/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### PM-3: System Security Plan (SSP) Development
 
 * **Group:** [Security Programme Management](/catalog/pm)
@@ -2819,9 +3103,11 @@ Failure to develop a comprehensive SSP can result in inadequate documentation an
   * System Owners
 
 
+
 #### By Components
 
 * System Security Plan: The agency develops, documents, and disseminates a system security plan.
+
 ### PM-4: Approval of Policy Deviations
 
 * **Group:** [Security Programme Management](/catalog/pm)
@@ -2848,9 +3134,11 @@ Unauthorised deviations from the policy can lead to an increased risk of securit
   * System Owners
 
 
+
 #### By Components
 
 * System Security Plan: The system owner seeks approval for deviations in the system security plan.
+
 ### PM-5: Central Submission of Approved System Security Plan (SSP)
 
 * **Group:** [Security Programme Management](/catalog/pm)
@@ -2877,13 +3165,17 @@ Inconsistent or decentralised submission of the SSP can lead to decreased visibi
   * System Owners
 
 
+
 #### By Components
 
 * System Security Plan: The system owner submits the system security plan centrally.
+
+
+
 #### References
 
-
  * [Centralised SSP Management Guidelines]()
+
 ### IS-1: Management Agents
 
 * **Group:** [Infrastructure Security](/catalog/is)
@@ -2913,14 +3205,18 @@ Without installing management agents on hosts, there is an increased risk of man
   * System Developers
 
 
+
 #### By Components
 
 * Compute Management Service: Maintainers install management agents on compute instances through the compute management service.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.1/G1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S21](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### IS-2: Automated Patch Management
 
 * **Group:** [Infrastructure Security](/catalog/is)
@@ -2950,14 +3246,18 @@ Failure to automate patching of operating systems and applications increases the
   * System Developers
 
 
+
 #### By Components
 
 * Compute Management Service: Maintainers automate patching in the compute management service.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S12](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.8/S4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### IS-3: Restricted Administrator Privileges
 
 * **Group:** [Infrastructure Security](/catalog/is)
@@ -2987,15 +3287,19 @@ Without restricting administrator privileges, there is an increased risk of unau
   * System Developers
 
 
+
 #### By Components
 
 * Hosted Virtual Machine: Maintainers restrict administrator privileges in hosted virtual machines.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.6/S1d](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.6/S1e](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise IS (Non-S): 1.2/S2a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
+
 ### IS-4: Least Functionality
 
 * **Group:** [Infrastructure Security](/catalog/is)
@@ -3025,17 +3329,21 @@ Failure to disable or remove unnecessary functions, system ports, protocols, sof
   * System Developers
 
 
+
 #### By Components
 
 * Hosted Virtual Machine: Maintainers disable or remove unnecessary functions in hosted virtual machines.
-#### References
 
+
+
+#### References
 
  * [NIST SP 800-53 CM-7: Least Functionality](https://doi.org/10.6028/NIST.SP.800-53r5)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S7](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.5/S4e](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S1b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise IS (Non-S): 1.2/S2c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
+
 ### IS-5: Host System Hardening
 
 * **Group:** [Infrastructure Security](/catalog/is)
@@ -3065,15 +3373,19 @@ Without hardening the operating system configuration according to industry stand
   * System Developers
 
 
+
 #### By Components
 
 * Hosted Virtual Machine: Maintainers harden the operating systems of hosted virtual machines.
-#### References
 
+
+
+#### References
 
  * [IM8 Cloud Security (IaaS and PaaS): 1.6/G2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.6/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise IS (Non-S): 1.2/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Infrastructure-Security-(For-Non-S).aspx)
+
 ### IS-6: Remote Administration
 
 * **Group:** [Infrastructure Security](/catalog/is)
@@ -3103,14 +3415,18 @@ Using remote administration tools enhances security by providing controlled and 
   * System Developers
 
 
+
 #### By Components
 
 * Compute Management Service: Maintainers use remote administration tools provided by the compute management service.
-#### References
 
+
+
+#### References
 
  * [AWS SSB WKLD.06: Use Systems Manager instead of SSH or RDP](https://docs.aws.amazon.com/prescriptive-guidance/latest/aws-startup-security-baseline/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.4/S21](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### IS-8: Endpoint Detection and Response (EDR)
 
 * **Group:** [Infrastructure Security](/catalog/is)
@@ -3140,13 +3456,17 @@ Failure to monitor security threats on hosts with an Endpoint Detection and Resp
   * System Developers
 
 
+
 #### By Components
 
 * Hosted Virtual Machine: Maintainers implement Endpoint Detection and Response (EDR) tools on hosted virtual machines.
+
+
+
 #### References
 
-
  * [IM8 Cloud Security (IaaS and PaaS): 1.6/G1a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+
 ### IS-9: End-of-Support (EOS) Assets
 
 * **Group:** [Infrastructure Security](/catalog/is)
@@ -3176,10 +3496,17 @@ EOS assets can introduce security vulnerabilities as the assets are no longer pr
   * System Developers
 
 
+
 #### By Components
 
 * Software Asset: Maintainers ensure end-of-support software assets are removed or replaced.
+
+
+
 #### References
 
-
  * [IM8 On-Premise ADS (Non-S): 5.1/S8](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
+
+
+
+
