@@ -6,3 +6,10 @@ links:
     collection: catalog
   - title: Contact Us
     url: /contact-us/
+  - title: Test
+    url: /test
+    sublinks:
+      - title: Application Security
+        url: /as
+      - title: Software Supply Chain
+        url: /sc
