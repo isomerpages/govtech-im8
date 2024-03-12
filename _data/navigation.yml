@@ -1,12 +1,5 @@
 logo: /images/isomer-logo.svg
 links:
-  - title: Test
-    url: /catalog
-    sublinks:
-      - title: Application Security
-        url: /catalog/as
-      - title: Software Supply Chain
-        url: /catalog/sc
   - title: System Security Plans
     collection: system-security-plans
   - title: Catalog
