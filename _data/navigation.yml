@@ -1,11 +1,5 @@
 logo: /images/isomer-logo.svg
 links:
-  - title: System Security Plans
-    collection: system-security-plans
-  - title: Catalog
-    collection: catalog
-  - title: Contact Us
-    url: /contact-us/
   - title: Test
     url: /catalog
     sublinks:
@@ -13,3 +7,9 @@ links:
         url: /catalog/as
       - title: Software Supply Chain
         url: /catalog/sc
+  - title: System Security Plans
+    collection: system-security-plans
+  - title: Catalog
+    collection: catalog
+  - title: Contact Us
+    url: /contact-us/
