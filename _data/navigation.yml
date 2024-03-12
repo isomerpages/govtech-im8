@@ -7,9 +7,9 @@ links:
   - title: Contact Us
     url: /contact-us/
   - title: Test
-    url: /test
+    url: /catalog
     sublinks:
       - title: Application Security
-        url: /as
+        url: /catalog/as
       - title: Software Supply Chain
-        url: /sc
+        url: /catalog/sc
