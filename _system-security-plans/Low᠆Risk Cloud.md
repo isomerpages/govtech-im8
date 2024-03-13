@@ -18,13 +18,13 @@ The Low-Risk Cloud System Security Plan template includes Level 0 and Level 1 ba
   </a>
 </p>
 
-| Name | Link to |
-| ---- | ---- |
-| Application Security | [as-1](/catalog/as#as-1) |
-| Application Security | [as-2](/catalog/as#as-2) |
-| Application Security | [as-3](/catalog/as#as-3) |
-| Application Security | [as-4](/catalog/as#as-4) |
-| Application Security | [as-5](/catalog/as#as-5) |
+| Catalog |
+| ---- |
+| [AS-1: Input Validation](/catalog/as#as-1) |
+| [AS-2: Parametrised Interfaces](/catalog/as#as-2) |
+| [AS-3: Output Sanitisation](/catalog/as#as-3) |
+| [AS-4: Authentication Mechanism Rate-Limiting](/catalog/as#as-4) |
+| [AS-5: Password Requirements](/catalog/as#as-5) |
 
 ## Parties
 
