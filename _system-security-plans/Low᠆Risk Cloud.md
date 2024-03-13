@@ -18,6 +18,14 @@ The Low-Risk Cloud System Security Plan template includes Level 0 and Level 1 ba
   </a>
 </p>
 
+| Name | Link to |
+| ---- | ---- |
+| Application Security | [as-1](/catalog/as#as-1) |
+| Application Security | [as-2](/catalog/as#as-2) |
+| Application Security | [as-3](/catalog/as#as-3) |
+| Application Security | [as-4](/catalog/as#as-4) |
+| Application Security | [as-5](/catalog/as#as-5) |
+
 ## Parties
 
 | Name | Type |
@@ -3506,7 +3514,3 @@ EOS assets can introduce security vulnerabilities as the assets are no longer pr
 #### References
 
  * [IM8 On-Premise ADS (Non-S): 5.1/S8](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
-
-
-
-
