@@ -52,7 +52,7 @@ Any application outputs that are returned to the requester and used to render a 
 
 Lack of sanitisation for application outputs used in rendering HTML documents exposes the system to the risk of cross-site scripting (XSS) attacks, allowing malicious code execution in users' browsers.
 
-# AS-4: Authentication Mechanism Rate-Limiting <a name="as-4"></a>
+# AS-4: Authentication Mechanism Rate-Limiting<a name="as-4"></a> 
 
 ## Control Statement
 
