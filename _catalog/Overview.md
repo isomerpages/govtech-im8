@@ -16,7 +16,7 @@ description: ""
 
 ## Purpose
 
-## [AS-1](#as-1)
+## AS-1 <a name="as-1"></a>
 
 Within the OSCAL framework, a **catalog** represents a collection of **controls**. The catalog model is designed to represent security and privacy controls in standardised, machine-readable formats.
 
@@ -24,4 +24,4 @@ These controls are catagorised into **profiles** that represent security baselin
 
 The IM8-lite catalog serves as a central pool of controls. Agencies can contribute to the catalog when they need to a control that does not currently exist in the catalog.
 
-## [AS-2](#as-2)
+## AS-2 <a name="as-2"></a>
