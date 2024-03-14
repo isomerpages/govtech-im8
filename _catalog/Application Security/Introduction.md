@@ -9,6 +9,21 @@ third_nav_title: Application Security
 
 Controls to prevent application vulnerabilities caused by insecure coding.
 
+| Controls |
+| ---- |
+| [AS-1: Input Validation](/catalog/as#as-1) |
+| [AS-2: Parametrised Interfaces](/catalog/as#as-2) |
+| [AS-3: Output Sanitisation](/catalog/as#as-3) |
+| [AS-4: Authentication Mechanism Rate-Limiting](/catalog/as#as-4) |
+| [AS-5: Password Requirements](/catalog/as#as-5) |
+| [AS-6: Password Salting and Hashing](/catalog/as#as-6) |
+| [AS-7: Access Control Check Enforcement](/catalog/as#as-7) |
+| [AS-8: Application Secrets Management](/catalog/as#as-8) |
+| [AS-9: Content Security Policy (CSP)](/catalog/as#as-9) |
+| [AS-10: HTTP Strict Transport Security (HSTS)](/catalog/as#as-10) |
+| [AS-11: Session Management](/catalog/as#as-11) |
+
+
 <a id="as-1"></a>
 # AS-1: Input Validation 
 
