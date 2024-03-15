@@ -2,6 +2,7 @@ collections:
   catalog:
     output: true
     order:
+      - Data Protection.md
       - Backup and Recovery.md
       - Network Security.md
       - Application Security.md
