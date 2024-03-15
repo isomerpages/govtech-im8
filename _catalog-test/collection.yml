@@ -1,5 +1,5 @@
 collections:
-  catalog:
+  catalog-test:
     output: true
     order:
       - Overview.md
