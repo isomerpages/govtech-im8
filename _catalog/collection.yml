@@ -2,5 +2,6 @@ collections:
   catalog:
     output: true
     order:
+      - Security Testing.md
       - Software Supply Chain.md
       - Application Security.md
