@@ -20,11 +20,11 @@ The Low-Risk Cloud System Security Plan template includes Level 0 and Level 1 ba
 
 | Catalog |
 | ---- |
-| [AS-1: Input Validation](/catalog/as#as-1) |
-| [AS-2: Parametrised Interfaces](/catalog/as#as-2) |
-| [AS-3: Output Sanitisation](/catalog/as#as-3) |
-| [AS-4: Authentication Mechanism Rate-Limiting](/catalog/as#as-4) |
-| [AS-5: Password Requirements](/catalog/as#as-5) |
+| [AS-1: Input Validation](/system-security-plans/low-risk-cloud#as-1) |
+| [AS-2: Parametrised Interfaces](/system-security-plans/low-risk-cloud#as-2) |
+| [AS-3: Output Sanitisation](/system-security-plans/low-risk-cloud#as-3) |
+| [AS-4: Authentication Mechanism Rate-Limiting](/system-security-plans/low-risk-cloud#as-4) |
+| [AS-5: Password Requirements](/system-security-plans/low-risk-cloud#as-5) |
 
 ## Parties
 
@@ -84,7 +84,7 @@ The Low-Risk Cloud System Security Plan template includes Level 0 and Level 1 ba
 
 
 ## Control Implementation
-
+<a id="as-1"></a>
 ### AS-1: Input Validation
 
 * **Group:** [Application Security](/catalog/as)
@@ -126,7 +126,7 @@ Without input validation, there's a heightened risk of injection attacks, data m
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S1c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S8b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 1.1/S1b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
-
+<a id="as-2"></a>
 ### AS-2: Parametrised Interfaces
 
 * **Group:** [Application Security](/catalog/as)
@@ -167,7 +167,7 @@ Failure to use parameterised interfaces increases the vulnerability to SQL injec
  * [MVSP 2.5: Security libraries](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S8c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 1.1/S1c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
-
+<a id="as-3"></a>
 ### AS-3: Output Sanitisation
 
 * **Group:** [Application Security](/catalog/as)
@@ -208,7 +208,7 @@ Lack of sanitisation for application outputs used in rendering HTML documents ex
  * [MVSP 2.5: Security libraries](https://mvsp.dev/)
  * [IM8 Cloud Security (IaaS and PaaS): 1.7/S8e](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
  * [IM8 On-Premise ADS (Non-S): 1.1/S1e,k,l](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/On-Premise/Topics/Application-Development-Security-(For-Non-S).aspx)
-
+<a id="as-4"></a>
 ### AS-4: Authentication Mechanism Rate-Limiting
 
 * **Group:** [Application Security](/catalog/as)
@@ -250,7 +250,7 @@ Without rate-limiting, there's an increased risk of unauthorised access as attac
 
  * [MVSP 2.4: Password policy](https://mvsp.dev/)
  * [IM8 Cloud ADS: 2.2/S1j, 2.2/S5b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Application-Development-Security-(For-Cloud).aspx)
-
+<a id="as-5"></a>
 ### AS-5: Password Requirements
 
 * **Group:** [Application Security](/catalog/as)
