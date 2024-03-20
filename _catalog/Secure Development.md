@@ -93,7 +93,7 @@ Without setting up static analysis in the CI/CD pipeline for each merge request 
 
 ### Control Statement
 
-Schedule a scan at least every {{ insert: param, sd-5_prm_1 }} day(s) in the CI/CD pipeline and/or repository to identify the use of vulnerable software libraries.
+Schedule a scan at least every [sd-5_prm_1] day(s) in the CI/CD pipeline and/or repository to identify the use of vulnerable software libraries.
 
 ### Control Recommendations
 
@@ -105,12 +105,18 @@ Failing to schedule regular scans in the CI/CD pipeline to identify vulnerable s
 
 
 
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| sd-5_prm_1 | time period (days) | The time period in days of dependency scanning frequency. |
+
 <a id="sd-6"></a>
 ## SD-6: Secret Detection Scanning
 
 ### Control Statement
 
-Set up a secret detection alert or job in the development CI/CD pipeline that runs on each commit and remediate true positives within {{ insert: param, sd-6_prm_1 }} day(s).
+Set up a secret detection alert or job in the development CI/CD pipeline that runs on each commit and remediate true positives within [sd-6_prm_1] day(s).
 
 ### Control Recommendations
 
@@ -121,6 +127,12 @@ Ensure that the exposed secret is revoked and purged from the Git history.
 Without setting up secret detection alerts or jobs in the development CI/CD pipeline and addressing true positive findings promptly, there's an increased risk of exposing sensitive information, potential unauthorized access, and compromised security.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| sd-6_prm_1 | time period (days) | Number of days within which to remediate a secret detection true positive. |
 
 <a id="sd-7"></a>
 ## SD-7: CI Environment Variable Secrets Management
