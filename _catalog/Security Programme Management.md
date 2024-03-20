@@ -133,7 +133,7 @@ Comprehensive documentation of system architecture, components, configurations, 
 
 ### Control Statement
 
-Ensure that the Software as a Service (SaaS) provider is certified with {{ insert: param, pm-7_prm_1 }}.
+Ensure that the Software as a Service (SaaS) provider is certified with [pm-7_prm_1].
 
 ### Control Recommendations
 
@@ -144,6 +144,12 @@ Ensure that the certification is up-to-date. Avoid certifications that are only 
 Third-party certification provides assurance that security controls have been properly implemented in the Software as a Service (SaaS) provider.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| pm-7_prm_1 | certifications | The required certifications. |
 
 <a id="pm-8"></a>
 ## PM-8: Software as a Service (SaaS) Service Level Agreement
