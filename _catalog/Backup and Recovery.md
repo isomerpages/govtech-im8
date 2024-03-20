@@ -54,7 +54,7 @@ Failure to regularly test recovery processes may result in ineffective response 
 
 ### Control Statement
 
-Prevent backups from being modified or deleted for {{ insert: param, br-3_prm_1 }} day(s) or as stipulated in the agency's data retention policies.
+Prevent backups from being modified or deleted for [br-3_prm_1] day(s) or as stipulated in the agency's data retention policies.
 
 ### Control Recommendations
 
@@ -65,5 +65,11 @@ Use S3 Object Lock or immutable storage for Azure Blob Storage to enforce time-b
 Lack of prevention measures against the modification or deletion of backups for the specified duration increases the risk of data loss, unauthorised alterations, and potential inability to recover from incidents, compromising the integrity and availability of critical information.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| br-3_prm_1 | time period (days) | The time period in days of backup retention. |
 
 
