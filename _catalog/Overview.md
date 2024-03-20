@@ -6,14 +6,6 @@ description: ""
 ---
 # Catalog
 
-<p>
-  <a href="/im8-lite-catalog.xlsx">
-    <button>
-      Download as Excel
-    </button>
-  </a>
-</p>
-
 ## Purpose
 
 
