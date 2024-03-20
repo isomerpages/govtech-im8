@@ -163,7 +163,7 @@ Failure to monitor security threats on hosts with an Endpoint Detection and Resp
 
 ### Control Statement
 
-Ensure deployed {{ insert: param, is-9_prm_1 }} assets have not reached end-of-support (EOS). Use of EOS assets will require risk acceptance by approved authority.
+Ensure deployed [is-9_prm_1] assets have not reached end-of-support (EOS). Use of EOS assets will require risk acceptance by approved authority.
 
 ### Control Recommendations
 
@@ -174,6 +174,12 @@ Identify, track and replace EOS assets in a timely manner. Regularly review asse
 EOS assets can introduce security vulnerabilities as the assets are no longer provided with security fixes.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| is-9_prm_1 | type | The type of asset. |
 
 <a id="is-10"></a>
 ## IS-10: Synchronise time clocks
