@@ -96,7 +96,7 @@ Without rate-limiting, there's an increased risk of unauthorised access as attac
 
 ### Control Statement
 
-Where SSO or passwordless is not supported, verify that user-defined passwords are at least {{ insert: param, as-5_prm_1 }} characters in length and {{ insert: param, as-5_prm_2 }}.
+Where SSO or passwordless is not supported, verify that user-defined passwords are at least [as-5_prm_1] characters in length and [as-5_prm_2].
 
 ### Control Recommendations
 
@@ -107,6 +107,13 @@ Latest NIST [SP 800-63B](https://doi.org/10.6028/NIST.SP.800-63b) guidelines fou
 Short or commonly used passwords increase the vulnerability to unauthorised access, potentially leading to compromised accounts and unauthorised activities on the system.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| as-5_prm_1 | number of characters | The minimum length of a password. |
+| as-5_prm_2 | policy | The password policy. |
 
 <a id="as-6"></a>
 ## AS-6: Password Salting and Hashing
@@ -202,7 +209,7 @@ Failure to implement HTTP Strict Transport Security (HSTS) with a sufficient max
 
 ### Control Statement
 
-Require users to re-authenticate after their session exceeds {{ insert: param, as-11_prm_1 }} hour(s) or terminate the session.
+Require users to re-authenticate after their session exceeds [as-11_prm_1] hour(s) or terminate the session.
 
 ### Control Recommendations
 
@@ -213,5 +220,11 @@ NIST SP 800-63B recommends re-authentication once per 30 days for Authenticator 
 Not verifying a user regularly and at suitable checkpoints could allow someone who has access to the user's account to carry out unauthorised actions.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| as-11_prm_1 | time period (hours) | The maximum time period in hours of a user's session. |
 
 
