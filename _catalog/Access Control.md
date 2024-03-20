@@ -63,7 +63,7 @@ Without requiring phishing-resistant Multi-Factor Authentication (MFA) for remot
 
 ### Control Statement
 
-Disable or remove accounts with developer, maintainer, or administrator access within {{ insert: param, ac-3_prm_1 }} day(s) from last day of authorised use or have not been used for {{ insert: param, ac-3_prm_2 }} day(s).
+Disable or remove accounts with developer, maintainer, or administrator access within [ac-3_prm_1] day(s) from last day of authorised use or have not been used for [ac-3_prm_2] day(s).
 
 ### Control Recommendations
 
@@ -75,12 +75,19 @@ Failure to disable or remove unused accounts or credentials with elevated access
 
 
 
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| ac-3_prm_1 | time period (days) | The time period in days after account expiry. |
+| ac-3_prm_2 | time period (days) | The time period in days of account inactivity. |
+
 <a id="ac-4"></a>
 ## AC-4: Access Review
 
 ### Control Statement
 
-Perform an access review every {{ insert: param, ac-4_prm_1 }} day(s) and remove unauthorised or unintended access rights within {{ insert: param, ac-4_prm_2 }} day(s).
+Perform an access review every [ac-4_prm_1] day(s) and remove unauthorised or unintended access rights within [ac-4_prm_2] day(s).
 
 ### Control Recommendations
 
@@ -91,6 +98,13 @@ Use tools such as AWS IAM Access Advisor or Azure AD Access Review to facilitate
 Without regular access reviews and prompt removal of unauthorised or unintended access rights, there is an increased risk of lingering access, potential misuse of privileges, and compromised security, impacting the confidentiality and integrity of sensitive data.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| ac-4_prm_1 | time period (days) | The time period in days of access review frequency. |
+| ac-4_prm_2 | time period (days) | The time period in days of access removal deadline. |
 
 <a id="ac-5"></a>
 ## AC-5: Endpoint Device Hardening
