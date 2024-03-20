@@ -10,21 +10,21 @@ Controls to prevent application vulnerabilities caused by insecure coding.
 
 | Controls |
 | ---- |
-| [AS-1: Input Validation](#as-1) |
-| [AS-2: Parametrised Interfaces](#as-2) |
-| [AS-3: Output Sanitisation](#as-3) |
-| [AS-4: Authentication Mechanism Rate-Limiting](#as-4) |
-| [AS-5: Password Requirements](#as-5) |
-| [AS-6: Password Salting and Hashing](#as-6) |
-| [AS-7: Access Control Check Enforcement](#as-7) |
-| [AS-8: Application Secrets Management](#as-8) |
-| [AS-9: Content Security Policy (CSP)](#as-9) |
-| [AS-10: HTTP Strict Transport Security (HSTS)](#as-10) |
-| [AS-11: Session Management](#as-11) |
+| [AS-1: Input Validation](#as-as-1) |
+| [AS-2: Parametrised Interfaces](#as-as-2) |
+| [AS-3: Output Sanitisation](#as-as-3) |
+| [AS-4: Authentication Mechanism Rate-Limiting](#as-as-4) |
+| [AS-5: Password Requirements](#as-as-5) |
+| [AS-6: Password Salting and Hashing](#as-as-6) |
+| [AS-7: Access Control Check Enforcement](#as-as-7) |
+| [AS-8: Application Secrets Management](#as-as-8) |
+| [AS-9: Content Security Policy (CSP)](#as-as-9) |
+| [AS-10: HTTP Strict Transport Security (HSTS)](#as-as-10) |
+| [AS-11: Session Management](#as-as-11) |
 
 
 <a id="as-1"></a>
-## AS-1: Input Validation 
+## AS-1: Input Validation
 
 ### Control Statement
 
@@ -38,8 +38,10 @@ Strictly validating inputs against a comprehensive schema prevents injection att
 
 Without input validation, there's a heightened risk of injection attacks, data manipulation, or system crashes due to unexpected input, potentially leading to unauthorised access or disruption of services.
 
+
+
 <a id="as-2"></a>
-## AS-2: Parametrised Interfaces 
+## AS-2: Parametrised Interfaces
 
 ### Control Statement
 
@@ -53,8 +55,10 @@ Parametrised interfaces such Object-Relational Mapping (ORM) libraries ensure th
 
 Failure to use parameterised interfaces increases the vulnerability to SQL injection or command injection attacks, posing a significant risk of unauthorised access, data manipulation, or even potential system compromise.
 
+
+
 <a id="as-3"></a>
-## AS-3: Output Sanitisation 
+## AS-3: Output Sanitisation
 
 ### Control Statement
 
@@ -68,8 +72,10 @@ Any application outputs that are returned to the requester and used to render a 
 
 Lack of sanitisation for application outputs used in rendering HTML documents exposes the system to the risk of cross-site scripting (XSS) attacks, allowing malicious code execution in users' browsers.
 
+
+
 <a id="as-4"></a>
-## AS-4: Authentication Mechanism Rate-Limiting 
+## AS-4: Authentication Mechanism Rate-Limiting
 
 ### Control Statement
 
@@ -83,12 +89,14 @@ Consider rate-limiting to a maximum of 3 consecutive failed authentication attem
 
 Without rate-limiting, there's an increased risk of unauthorised access as attackers may exploit weak credentials through repeated login attempts.
 
+
+
 <a id="as-5"></a>
-## AS-5: Password Requirements 
+## AS-5: Password Requirements
 
 ### Control Statement
 
-Where SSO or passwordless is not supported, verify that user-defined passwords are at least [as-5_prm_1] characters in length and [as-5_prm_2].
+Where SSO or passwordless is not supported, verify that user-defined passwords are at least {{ insert: param, as-5_prm_1 }} characters in length and {{ insert: param, as-5_prm_2 }}.
 
 ### Control Recommendations
 
@@ -99,13 +107,6 @@ Latest NIST [SP 800-63B](https://doi.org/10.6028/NIST.SP.800-63b) guidelines fou
 Short or commonly used passwords increase the vulnerability to unauthorised access, potentially leading to compromised accounts and unauthorised activities on the system.
 
 
-
-#### Parameters
-
-| ID | Type | Description |
-| -- | ---- | ----------- |
-| as-5_prm_1 | number of characters | The minimum length of a password. |
-| as-5_prm_2 | policy | The password policy. |
 
 <a id="as-6"></a>
 ## AS-6: Password Salting and Hashing
@@ -126,6 +127,8 @@ Refer to NIST [SP 800-90Ar1](https://doi.org/10.6028/NIST.SP.800-90Ar1) for suit
 
 Without salting and hashing, in case of a data breach, exposed passwords can be easily extracted, leading to potential compromise of user accounts and sensitive information.
 
+
+
 <a id="as-7"></a>
 ## AS-7: Access Control Check Enforcement
 
@@ -140,6 +143,8 @@ Utilise authorisation filters or middleware to force all authenticated requests 
 ### Risk Statement
 
 Failure to perform access control checks on authenticated requests increases the risk of unauthorised access to sensitive data or functionalities, potentially leading to data breaches and misuse of system resources.
+
+
 
 <a id="as-8"></a>
 ## AS-8: Application Secrets Management
@@ -156,6 +161,8 @@ Secret management solutions include cloud solutions like AWS Secrets Manager and
 
 Exposure of sensitive information and unauthorised access to system credentials may occur if application secrets are stored without encryption or if hard-coded in source code.
 
+
+
 <a id="as-9"></a>
 ## AS-9: Content Security Policy (CSP)
 
@@ -170,6 +177,8 @@ Utilise the relevant fetch directives such as `default-src`, `script-src`, `styl
 ### Risk Statement
 
 Without minimally permissive Content Security Policy (CSP) headers, the risk of cross-site scripting attacks, leading to unauthorised script execution and potential data theft, is increased.
+
+
 
 <a id="as-10"></a>
 ## AS-10: HTTP Strict Transport Security (HSTS)
@@ -186,12 +195,14 @@ Refer to the [OWASP Secure Headers Project](https://owasp.org/www-project-secure
 
 Failure to implement HTTP Strict Transport Security (HSTS) with a sufficient maximum age may expose the system to protocol downgrade attacks, compromising the security of communication channels.
 
+
+
 <a id="as-11"></a>
 ## AS-11: Session Management
 
 ### Control Statement
 
-Require users to re-authenticate after their session exceeds [as-11_prm_1] hour(s) or terminate the session.
+Require users to re-authenticate after their session exceeds {{ insert: param, as-11_prm_1 }} hour(s) or terminate the session.
 
 ### Control Recommendations
 
@@ -203,8 +214,4 @@ Not verifying a user regularly and at suitable checkpoints could allow someone w
 
 
 
-#### Parameters
 
-| ID | Type | Description |
-| -- | ---- | ----------- |
-| as-11_prm_1 | time period (hours) | The maximum time period in hours of a user's session. |
