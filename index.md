@@ -4,7 +4,7 @@ title: Title
 description: An Isomer site of the Singapore Government
 image: /images/isomer-logo.svg
 permalink: /
-notification: Here's a notification bar you can use!
+notification: ""
 sections:
   - hero:
       title: Hero title
@@ -22,6 +22,9 @@ sections:
         - title: Page A
           description: Page A is important too
           url: /privacy/
+      variant: floating
+      backgroundColor: gray
+      alignment: left
   - infobar:
       title: Infobar title
       subtitle: Subtitle
