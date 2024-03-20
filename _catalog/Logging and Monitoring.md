@@ -153,7 +153,7 @@ Neglecting to log security events on hosts and other cloud resources increases t
 
 ### Control Statement
 
-Retain security logs for at least {{ insert: param, lm-8_prm_1 }} day(s).
+Retain security logs for at least [lm-8_prm_1] day(s).
 
 ### Control Recommendations
 
@@ -164,6 +164,12 @@ Security logs include network flow logs, cloud management logs, access logs, dat
 Failure to retain security logs increases the risk of losing crucial historical data, hindering investigations, compliance audits, and the ability to identify and respond to security incidents that occurred beyond a limited timeframe.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| lm-8_prm_1 | time period (days) | The time period in days of log retention. |
 
 <a id="lm-9"></a>
 ## LM-9: Security Monitoring and Alerting
