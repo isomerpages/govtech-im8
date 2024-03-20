@@ -22,7 +22,7 @@ Controls to validate the security of a system via internal and external testing.
 
 ### Control Statement
 
-Run {{ insert: param, st-1_prm_1 }} vulnerability assessment scans for eligible hosts.
+Run [st-1_prm_1] vulnerability assessment scans for eligible hosts.
 
 ### Control Recommendations
 
@@ -33,6 +33,12 @@ Select agent-based or network-based scans as necessary. Use scanners such as Ama
 Without regular vulnerability assessment scans, hosts remain exposed to undetected security vulnerabilities, increasing the risk of exploitation and unauthorised access to critical systems.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| st-1_prm_1 | type | The time period of vulnerability assessment scanning. |
 
 <a id="st-2"></a>
 ## ST-2: Cloud Security Posture Management
@@ -73,7 +79,7 @@ Publicly disclosing vulnerabilities without following a responsible disclosure p
 
 ### Control Statement
 
-Conduct and document a penetration test by internal teams or independent external parties every {{ insert: param, st-4_prm_1 }} day(s).
+Conduct and document a penetration test by internal teams or independent external parties every [st-4_prm_1] day(s).
 
 ### Control Recommendations
 
@@ -85,16 +91,22 @@ Without conducting and documenting penetration tests, there's an increased risk 
 
 
 
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| st-4_prm_1 | time period (days) | The time period in days of penetration testing frequency. |
+
 <a id="st-5"></a>
 ## ST-5: Vulnerability Management
 
 ### Control Statement
 
 Triage and then remediate or risk accept all true positive vulnerability findings discovered through security testing within the following timeframe based on severity:
- * Critical: {{ insert: param, st-5_prm_1 }} day(s)
- * High: {{ insert: param, st-5_prm_2 }} day(s)
- * Medium: {{ insert: param, st-5_prm_3 }} day(s)
- * Low: {{ insert: param, st-5_prm_4 }} day(s)
+ * Critical: [st-5_prm_1] day(s)
+ * High: [st-5_prm_2] day(s)
+ * Medium: [st-5_prm_3] day(s)
+ * Low: [st-5_prm_4] day(s)
 
 
 ### Control Recommendations
@@ -106,5 +118,14 @@ Seek approval from the appropriate approving authority for risk acceptance.
 Failure to promptly remediate vulnerabilities increases the risk of potential exploits, security breaches, and prolonged exposure to known vulnerabilities in the system.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| st-5_prm_1 | time period (days) | The time period in days to remediate or risk accept critical vulnerability findings. |
+| st-5_prm_2 | time period (days) | The time period in days to remediate or risk accept high vulnerability findings. |
+| st-5_prm_3 | time period (days) | The time period in days to remediate or risk accept medium vulnerability findings. |
+| st-5_prm_4 | time period (days) | The time period in days to remediate or risk accept low vulnerability findings. |
 
 
