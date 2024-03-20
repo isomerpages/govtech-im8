@@ -10,16 +10,16 @@ Controls to prevent tampering and improve the integrity of the software supply c
 
 | Controls |
 | ---- |
-| [SC-1: Code Repository](#sc-sc-1) |
-| [SC-2: Commit Signing](#sc-sc-2) |
-| [SC-3: Peer Review](#sc-sc-3) |
-| [SC-4: Dependency Manifest Version Pinning](#sc-sc-4) |
-| [SC-5: Software Composition Analysis](#sc-sc-5) |
-| [SC-6: Automated Build and Deploy](#sc-sc-6) |
-| [SC-7: Dependency Installation during Deployment](#sc-sc-7) |
-| [SC-8: Component Signing](#sc-sc-8) |
-| [SC-9: Signature Verification](#sc-sc-9) |
-| [SC-10: Internal Code Collaboration and Sharing](#sc-sc-10) |
+| [SC-1: Code Repository](#sc-1) |
+| [SC-2: Commit Signing](#sc-2) |
+| [SC-3: Peer Review](#sc-3) |
+| [SC-4: Dependency Manifest Version Pinning](#sc-4) |
+| [SC-5: Software Composition Analysis](#sc-5) |
+| [SC-6: Automated Build and Deploy](#sc-6) |
+| [SC-7: Dependency Installation during Deployment](#sc-7) |
+| [SC-8: Component Signing](#sc-8) |
+| [SC-9: Signature Verification](#sc-9) |
+| [SC-10: Internal Code Collaboration and Sharing](#sc-10) |
 
 
 <a id="sc-1"></a>
