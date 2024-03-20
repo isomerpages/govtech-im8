@@ -151,13 +151,19 @@ Ensure that deployed SSL/TLS certificates are:
 
 ### Control Recommendations
 
-Configure a certificate manager that auto-renews certificates and sends alerts at least {{ insert: param, ns-6_prm_1 }} day(s) before expiry (e.g., AWS Certificate Manager). Otherwise, automate these functions separately.
+Configure a certificate manager that auto-renews certificates and sends alerts at least [ns-6_prm_1] day(s) before expiry (e.g., AWS Certificate Manager). Otherwise, automate these functions separately.
 
 ### Risk Statement
 
 Using invalid SSL/TLS certificates introduces the risk of compromised encryption, man-in-the-middle attacks, and potential unauthorised access to sensitive information.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| ns-6_prm_1 | time period (days) | The time period in days before certificate expiry. |
 
 <a id="ns-7"></a>
 ## NS-7: Secure Inter-Service Communication
