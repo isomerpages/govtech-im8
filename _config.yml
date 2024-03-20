@@ -2,19 +2,19 @@ title: Title
 url: https://im8.tech.gov.sg
 favicon: /images/favicon-isomer.ico
 colors:
-  primary-color: "#6031b6"
-  secondary-color: "#4372d6"
+  primary-color: "#b41e8e"
+  secondary-color: "#0061af"
   media-colors:
     - title: media-color-one
-      color: "#49759a"
+      color: "#a7c539"
     - title: media-color-two
-      color: "#744d9f"
+      color: "#00984e"
     - title: media-color-three
-      color: "#00838f"
+      color: "#00c0f3"
     - title: media-color-four
-      color: "#00838f"
+      color: "#0061af"
     - title: media-color-five
-      color: "#00838f"
+      color: "#b41e8e"
 description: An Isomer site of the Singapore Government
 permalink: none
 baseurl: ""
