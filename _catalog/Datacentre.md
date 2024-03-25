@@ -4,8 +4,6 @@ permalink: /catalog/dc/
 variant: markdown
 description: ""
 ---
-# Datacentre
-
 
 
 | Controls |
