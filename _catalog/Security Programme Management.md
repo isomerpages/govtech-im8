@@ -4,8 +4,6 @@ permalink: /catalog/pm/
 variant: markdown
 description: ""
 ---
-# Security Programme Management
-
 Controls to implement cybersecurity governance, risk, and compliance processes and policies.
 
 | Controls |
