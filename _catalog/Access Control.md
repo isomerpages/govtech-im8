@@ -4,8 +4,6 @@ permalink: /catalog/ac/
 variant: markdown
 description: ""
 ---
-# Access Control
-
 Controls to protect against unauthorised access to agency systems.
 
 | Controls |
