@@ -4,8 +4,6 @@ permalink: /catalog/br/
 variant: markdown
 description: ""
 ---
-# Backup and Recovery
-
 Controls to support backup and disaster recovery.
 
 | Controls |
