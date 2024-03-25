@@ -4,8 +4,6 @@ permalink: /catalog/st/
 variant: markdown
 description: ""
 ---
-# Security Testing
-
 Controls to validate the security of a system via internal and external testing.
 
 | Controls |
