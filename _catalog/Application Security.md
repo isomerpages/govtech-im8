@@ -4,8 +4,6 @@ permalink: /catalog/as/
 variant: markdown
 description: ""
 ---
-# Application Security
-
 Controls to prevent application vulnerabilities caused by insecure coding.
 
 | Controls |
