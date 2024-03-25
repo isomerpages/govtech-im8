@@ -4,8 +4,6 @@ permalink: /catalog/dp/
 variant: markdown
 description: ""
 ---
-# Data Protection
-
 Controls to protect the data of a system.
 
 | Controls |
