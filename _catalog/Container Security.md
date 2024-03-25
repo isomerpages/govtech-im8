@@ -4,8 +4,6 @@ permalink: /catalog/cs/
 variant: markdown
 description: ""
 ---
-# Container Security
-
 Controls to secure container building, distribution, and deployment.
 
 | Controls |
