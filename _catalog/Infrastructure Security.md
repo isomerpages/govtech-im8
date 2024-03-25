@@ -4,8 +4,6 @@ permalink: /catalog/is/
 variant: markdown
 description: ""
 ---
-# Infrastructure Security
-
 Controls to secure infrastructure that host applications, services, and data.
 
 | Controls |
