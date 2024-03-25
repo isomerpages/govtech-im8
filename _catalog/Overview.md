@@ -4,8 +4,6 @@ permalink: /catalog/
 variant: markdown
 description: ""
 ---
-# Catalog
-
 ## Purpose
 
 
