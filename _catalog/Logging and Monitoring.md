@@ -4,8 +4,6 @@ permalink: /catalog/lm/
 variant: markdown
 description: ""
 ---
-# Logging and Monitoring
-
 Controls to support detection and response to security and operations incidents.
 
 | Controls |
