@@ -4,8 +4,6 @@ permalink: /catalog/sc/
 variant: markdown
 description: ""
 ---
-# Software Supply Chain
-
 Controls to prevent tampering and improve the integrity of the software supply chain.
 
 | Controls |
