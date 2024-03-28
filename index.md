@@ -27,13 +27,7 @@ sections:
       id: infopic
       description: Effort to reform ICT&SS policies to give flexibility to right-fit
         controls based on risk materiality level of systems.
-      button: Button Text
+      button: Read more
       alt: Image alt text
       url: /about
-  - infobar:
-      title: Infobar title
-      subtitle: Subtitle
-      description: About a sentence worth of description here
-      button: Button text
-      url: /faq/
 ---
