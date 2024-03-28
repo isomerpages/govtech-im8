@@ -15,20 +15,21 @@ sections:
         - title: Control Catalog
           description: Key Highlight description
           url: /catalog
-        - title: "Stay connected with us "
+        - title: Stay connected with us
           description: Key Highlight description
           url: https://url.gov.sg
-      variant: center
+      variant: floating
       backgroundColor: gray
       alignment: left
+      size: sm
   - infopic:
-      title: Infopic
-      subtitle: Add an image and text
+      title: About Policy Reform
       id: infopic
       description: Effort to reform ICT&SS policies to give flexibility to right-fit
         controls based on risk materiality level of systems.
       button: Button Text
       alt: Image alt text
+      url: /about
   - infobar:
       title: Infobar title
       subtitle: Subtitle
