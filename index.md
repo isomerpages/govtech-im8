@@ -12,18 +12,23 @@ sections:
       background: /images/hero-banner.png
       url: /contact-us/
       key_highlights:
-        - title: Highlight A
-          description: Important highlight A is important
-          url: https://google.com
-        - title: Highlight B
-          description: Important highlight B is equally important
-          url: https://gmail.com
-        - title: Page A
-          description: Page A is important too
-          url: /privacy/
+        - title: Control Catalog
+          description: Key Highlight description
+          url: /catalog
+        - title: "Stay connected with us "
+          description: Key Highlight description
+          url: https://url.gov.sg
       variant: center
       backgroundColor: gray
       alignment: left
+  - infopic:
+      title: Infopic
+      subtitle: Add an image and text
+      id: infopic
+      description: Effort to reform ICT&SS policies to give flexibility to right-fit
+        controls based on risk materiality level of systems.
+      button: Button Text
+      alt: Image alt text
   - infobar:
       title: Infobar title
       subtitle: Subtitle
