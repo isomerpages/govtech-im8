@@ -12,7 +12,6 @@ sections:
   - hero:
       title: One-stop portal for modern digital governance
       background: /images/banner_home.png
-      url: /contact-us/
       key_highlights:
         - title: Control Catalog
           description: See full catalog of controls
