@@ -2,10 +2,10 @@ collections:
   catalog-1:
     output: true
     order:
-      - Data Protection.md
-      - Backup and Recovery.md
-      - Network Security.md
-      - Security Testing.md
-      - Software Supply Chain.md
-      - Application Security.md
       - Overview.md
+      - Application Security.md
+      - Software Supply Chain.md
+      - Security Testing.md
+      - Network Security.md
+      - Backup and Recovery.md
+      - Data Protection.md
