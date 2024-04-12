@@ -44,11 +44,11 @@ Violating the principle of least privileges increases the risk of unauthorised a
 
 ### Control Statement
 
-Require MFA for remote developer, maintainer, or administrator access.
+Require MFA for remote developer, maintainer, or administrator access at login.
 
 ### Control Recommendations
 
-Ensure that the authentication factors are different and independent of the accessing device.
+Ensure that the authentication factors are different and independent of the accessing device. For additional security, consider MFA for privileged actions at the application level (such as step-up MFA challenges via PIM tools).
 
 ### Risk Statement
 
@@ -61,11 +61,11 @@ Without requiring phishing-resistant Multi-Factor Authentication (MFA) for remot
 
 ### Control Statement
 
-Disable or remove accounts with developer, maintainer, or administrator access within [ac-3_prm_1] day(s) from last day of authorised use or have not been used for [ac-3_prm_2] day(s).
+Disable or remove accounts with privileged access within [ac-3_prm_1] day(s) from last day of authorised use or have not been used for [ac-3_prm_2] day(s).
 
 ### Control Recommendations
 
-Use automated checks such as AWS Config iam-user-unused-credentials-check to identify accounts and credentials that should be disabled. Consider using automated workflows such as System for Cross-domain Identity Management (SCIM) or identity lifecycle management tools.
+Use automated checks to identify accounts and credentials that should be disabled. For privileged user accounts in applications, consider using automated workflows such as System for Cross-domain Identity Management (SCIM) or identity lifecycle management tools. For cloud service provider accounts, use tools such as AWS Config iam-user-unused-credentials-check to manage Identity and Access Management (IAM) users.
 
 ### Risk Statement
 
@@ -85,11 +85,11 @@ Failure to disable or remove unused accounts or credentials with elevated access
 
 ### Control Statement
 
-Perform an access review every [ac-4_prm_1] day(s) and remove unauthorised or unintended access rights within [ac-4_prm_2] day(s).
+Perform an access review every [ac-4_prm_1] day(s) and remove unauthorised or unintended privileged access rights within [ac-4_prm_2] day(s).
 
 ### Control Recommendations
 
-Use tools such as AWS IAM Access Advisor or Azure AD Access Review to facilitate and manage access reviews.
+For privileged user accounts in applications, implement automated review workflows or reports. For cloud service provider accounts and roles, use tools such as AWS IAM Access Advisor or Azure AD Access Review to facilitate and manage access reviews.
 
 ### Risk Statement
 
@@ -113,11 +113,11 @@ Require hardened endpoint devices for remote developer, maintainer, or administr
 
 ### Control Recommendations
 
-Use Endpoint Management platfoms such as Security Suite for Engineering Endpoint Devices (SEED) to continuously check and enforce device security posture and deny access if the hardening requirements are not met.
+Use Endpoint Management platfoms to continuously check and enforce device security posture and deny access if the hardening requirements are not met. Hardened devices include Government Standard Image Build (GSIB) and Security Suite for Engineering Endpoint Devices (SEED).
 
 ### Risk Statement
 
-Without requiring hardened endpoint devices for remote access, there's an increased risk of compromised endpoints, potential malware infections, and security breaches, which could lead to unauthorised access and compromise the integrity of systems with developer, maintainer, or administrator access.
+Without requiring hardened endpoint devices for remote access, there's an increased risk of compromised endpoints, potential malware infections, and security breaches, which could lead to unauthorised access and compromise the integrity of systems.
 
 
 
@@ -177,11 +177,11 @@ Manual account and access provisioning can introduce errors and weaknesses, thus
 
 ### Control Statement
 
-Implement and maintain a Device Management solution to ensure the security and integrity of endpoint devices used within the organisation.
+Implement and maintain an endpoint device management solution to ensure the security and integrity of endpoint devices used within the organisation.
 
 ### Control Recommendations
 
-Deploy an Mobile Device Management (MDM) solution that enables management, monitoring, and secure configuration of endpoint devices. This includes enforcing disk encryption, managing configuration, ensuring regular updates, and providing the ability to remotely wipe data in case of device loss or theft.
+Mobile Device Management (MDM) platforms enable management, monitoring, and secure configuration of endpoint devices. This includes enforcing disk encryption, managing configuration, ensuring regular updates, and providing the ability to remotely wipe data in case of device loss or theft.
 
 ### Risk Statement
 
@@ -198,7 +198,7 @@ Adopt Identity and Device-Based Access Control for secure and context-aware conn
 
 ### Control Recommendations
 
-Use solutions such as Secure Service Edge (SSE), Identity Aware Proxies (IAP) or other Zero Trust services (Entra ID Conditional Access, Okta Device Trust, etc) that integrate identity and device management systems to provide granular access control to resources based on user identity and device posture.
+Use solutions such as Secure Service Edge (SSE), Identity Aware Proxies (IAP) or other Zero Trust services (Entra ID Conditional Access, Okta Device Trust, etc) that integrate identity and device management systems to provide granular access control to resources based on user identity and device posture. For example, Security Suite for Engineering Endpoint Devices (SEED).
 
 ### Risk Statement
 
