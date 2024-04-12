@@ -2,6 +2,7 @@ collections:
   catalog-1:
     output: true
     order:
+      - Backup and Recovery.md
       - Network Security.md
       - Security Testing.md
       - Software Supply Chain.md
