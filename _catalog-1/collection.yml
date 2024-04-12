@@ -2,5 +2,6 @@ collections:
   catalog-1:
     output: true
     order:
+      - Software Supply Chain.md
       - Application Security.md
       - Overview.md
