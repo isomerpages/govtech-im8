@@ -30,6 +30,7 @@ sections:
       button: Read more
       alt: Image alt text
       url: /about
+      image: /images/img_about.png
   - infopic:
       title: Catalog of Controls
       id: infopic
