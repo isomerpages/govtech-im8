@@ -1,40 +1,45 @@
 title: Title
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://im8.tech.gov.sg
 favicon: /images/favicon-isomer.ico
-
-# Site colors
 colors:
-  primary-color: '#6031b6'
-  secondary-color: '#4372d6'
+  primary-color: "#70389b"
+  secondary-color: "#0061af"
   media-colors:
     - title: media-color-one
-      color: '#49759a'
+      color: "#a7c539"
     - title: media-color-two
-      color: '#744d9f'
+      color: "#00984e"
     - title: media-color-three
-      color: '#00838f'
+      color: "#00c0f3"
     - title: media-color-four
-      color: '#00838f'
+      color: "#0061af"
     - title: media-color-five
-      color: '#00838f'
-
+      color: "#b41e8e"
 description: An Isomer site of the Singapore Government
-
-##################################################################################################################
-# Everything below this line is Isomer-specific configuration. There should not be a need to edit these settings #
-##################################################################################################################
 permalink: none
 baseurl: ""
-exclude: [travis-script.js, .travis.yml, README.md, package.json, package-lock.json, node_modules, vendor/bundle/, vendor/cache/, vendor/gems/, vendor/ruby/, Gemfile, Gemfile.lock]
-include: [_redirects]
+exclude:
+  - travis-script.js
+  - .travis.yml
+  - README.md
+  - package.json
+  - package-lock.json
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - Gemfile
+  - Gemfile.lock
+include:
+  - _redirects
 defaults:
   - scope:
       path: ""
     values:
-      layout: "page"
-# Custom CSS file path
-custom_css_path: "/misc/custom.css"
-custom_print_css_path: "/assets/css/print.css"
+      layout: page
+custom_css_path: /misc/custom.css
+custom_print_css_path: /assets/css/print.css
 paginate: 12
 remote_theme: isomerpages/isomerpages-template@next-gen
 safe: false
@@ -46,3 +51,9 @@ plugins:
   - jekyll-remote-theme
 staging: https://staging-lite.d3ech1ul6ye0y6.amplifyapp.com
 prod: https://master.d2kzw23lpbfro.amplifyapp.com
+facebook-pixel: ""
+resources_name: resource-room
+shareicon: /images/isomer-logo.svg
+is_government: true
+google_analytics_ga4: ""
+linkedin-insights: ""
