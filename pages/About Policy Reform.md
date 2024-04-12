@@ -4,7 +4,7 @@ permalink: /about/
 variant: markdown
 description: ""
 ---
-<div class="row">
+<div class="row is-multiline">
   <div class="col is-7">
 <h3>ICT&amp;SS Policy Reform</h3>
 <p>To support Singapore’s ambition to build a Smart Nation, the Government
@@ -17,6 +17,6 @@ risks and choose the appropriate controls for their systems based on factors
 such as cost and effort.</p>
   </div>
   <div class="col is-5"><img style="width: 100%;" height="auto" width="100%" alt="illustration of 2 business user and improvement in productivity" src="/images/img_about_kv.png"></div>
+    <div class="col is-12"><p><strong>The first tranche of the reviewed controls is published <a href="/catalog/" rel="noopener noreferrer nofollow" target="_blank">here</a> and will be progressively updated in this website.</strong>
+</p></div>
 </div>
-<p><strong>The first tranche of the reviewed controls is published <a href="/catalog/" rel="noopener noreferrer nofollow" target="_blank">here</a> and will be progressively updated in this website.</strong>
-</p>
