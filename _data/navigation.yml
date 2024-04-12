@@ -1,7 +1,7 @@
 logo: /images/logo_govtech_hort.gif
 links:
-  - title: Catalog (I)
-    collection: catalog-1
+  - title: Catalog
+    collection: catalog
   - title: Catalog (II)
     collection: catalog-2
   - title: Contact Us
