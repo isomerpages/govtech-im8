@@ -1,5 +1,5 @@
 collections:
-  catalog-ii:
+  catalog-iii:
     output: true
     order:
       - Logging and Monitoring.md
