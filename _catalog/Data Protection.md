@@ -72,7 +72,7 @@ Failure to encrypt data in transit increases the risk of unauthorised intercepti
 
 ### Control Statement
 
-Host systems classified as CONFIDENTIAL (CLOUD-ELIGIBLE), RESTRICTED, OFFICIAL-CLOSED or OFFICIAL-OPEN on Commercial Cloud hosting environments in GCC.
+Host systems classified as CONFIDENTIAL (CLOUD-ELIGIBLE), RESTRICTED, or OFFICIAL-CLOSED on Commercial Cloud hosting environments in GCC.
 
 ### Control Recommendations
 
