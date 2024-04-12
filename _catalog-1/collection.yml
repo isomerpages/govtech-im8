@@ -2,4 +2,5 @@ collections:
   catalog-1:
     output: true
     order:
+      - Application Security.md
       - Overview.md
