@@ -2,4 +2,5 @@ collections:
   catalog-2:
     output: true
     order:
+      - Secure Development.md
       - Datacentre.md
