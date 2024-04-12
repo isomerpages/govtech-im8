@@ -13,7 +13,7 @@ Controls to secure the development pipeline and perform source code quality assu
 | [SD-3: Continuous Integration (CI) Tests](#sd-3) |
 | [SD-4: Static Analysis](#sd-4) |
 | [SD-5: Dependency Scanning](#sd-5) |
-| [SD-6: Secret Detection Scanning](#sd-6) |
+| [SD-6: Secret Detection](#sd-6) |
 | [SD-7: CI Environment Variable Secrets Management](#sd-7) |
 | [SD-8: Deployment Environment Segregation](#sd-8) |
 
@@ -74,7 +74,7 @@ Failing to require passing Continuous Integration (CI) tests before merging into
 
 ### Control Statement
 
-Set up a static analysis job in the development CI/CD pipeline that runs on each merge request, and remediate or risk accept true positive vulnerability findings before merging into the production branch.
+Set up a static analysis job in the [cs-7_prm_1], and remediate or risk accept true positive vulnerability findings before deploying to production.
 
 ### Control Recommendations
 
@@ -86,20 +86,26 @@ Without setting up static analysis in the CI/CD pipeline for each merge request 
 
 
 
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| sd-4_prm_1 | location | The location where static analysis occurs. |
+
 <a id="sd-5"></a>
 ## SD-5: Dependency Scanning
 
 ### Control Statement
 
-Schedule a scan at least every [sd-5_prm_1] day(s) in the CI/CD pipeline and/or repository to identify the use of vulnerable software libraries.
+Schedule a scan at least every [sd-5_prm_1] day(s) in the [sd-5_prm_2] to identify the use of vulnerable software libraries.
 
 ### Control Recommendations
 
-Dependency scanning checks the source code for dependencies with known vulnerabilities. By running scans regularly using bots or software composition analysis (SCA) tools, vulnerabilities arising from outdated dependencies can be quickly detected and patched. Triage and prioritise vulnerabilities against Common Vulnerability Scoring System (CVSS), Known Exploited Vulnerabilities (KEV) Catalog, Vulnerability Exploitability eXchange (VEX) and other sources.
+Dependency scanning checks the source code for dependencies with known vulnerabilities. By running scans regularly using bots or software composition analysis (SCA) tools, vulnerabilities arising from outdated dependencies can be quickly detected and patched. Software composition analysis can be performed using tools such as Gitlab, Nexus IQ, or their equivalent, with output in a common SBOM format such as SPDX or CycloneDX.
 
 ### Risk Statement
 
-Failing to schedule regular scans in the CI/CD pipeline to identify vulnerable software libraries and address findings in a timely manner increases the risk of deploying applications with known vulnerabilities, potentially exposing the system to security exploits and compromise.
+Failing to schedule regular dependency scanning to identify vulnerable software libraries and address findings in a timely manner increases the risk of deploying applications with known vulnerabilities, potentially exposing the system to security exploits and compromise.
 
 
 
@@ -108,13 +114,14 @@ Failing to schedule regular scans in the CI/CD pipeline to identify vulnerable s
 | ID | Type | Description |
 | -- | ---- | ----------- |
 | sd-5_prm_1 | time period (days) | The time period in days of dependency scanning frequency. |
+| sd-5_prm_2 | location | The location where dependency scanning occurs. |
 
 <a id="sd-6"></a>
-## SD-6: Secret Detection Scanning
+## SD-6: Secret Detection
 
 ### Control Statement
 
-Set up a secret detection alert or job in the development CI/CD pipeline that runs on each commit and remediate true positives within [sd-6_prm_1] day(s).
+Set up secret detection in the [sd-6_prm_1] and remediate true positives within [sd-6_prm_2] day(s).
 
 ### Control Recommendations
 
@@ -122,7 +129,7 @@ Ensure that the exposed secret is revoked and purged from the Git history.
 
 ### Risk Statement
 
-Without setting up secret detection alerts or jobs in the development CI/CD pipeline and addressing true positive findings promptly, there's an increased risk of exposing sensitive information, potential unauthorized access, and compromised security.
+Without setting up secret detection and addressing true positive findings promptly, there's an increased risk of exposing sensitive information, potential unauthorised access, and compromised security.
 
 
 
@@ -131,6 +138,7 @@ Without setting up secret detection alerts or jobs in the development CI/CD pipe
 | ID | Type | Description |
 | -- | ---- | ----------- |
 | sd-6_prm_1 | time period (days) | Number of days within which to remediate a secret detection true positive. |
+| sd-6_prm_2 | location | The location where secret detection occurs. |
 
 <a id="sd-7"></a>
 ## SD-7: CI Environment Variable Secrets Management
