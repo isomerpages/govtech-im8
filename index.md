@@ -16,7 +16,7 @@ sections:
           description: See full catalog of controls
           url: /catalog
         - title: Stay connected with us
-          description: Keep updated on latest news
+          description: Subscribe for latest updates
           url: https://url.gov.sg
       variant: floating
       backgroundColor: gray
