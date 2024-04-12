@@ -4,3 +4,5 @@ links:
     collection: catalog
   - title: Contact Us
     url: /contact-us/
+  - title: Catalog (I)
+    collection: catalog-1
