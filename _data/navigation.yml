@@ -1,5 +1,7 @@
 logo: /images/logo_govtech_hort.gif
 links:
+  - title: About
+    url: /about
   - title: Catalog (I)
     collection: catalog-i
   - title: Catalog (II)
