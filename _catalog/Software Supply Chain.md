@@ -12,12 +12,11 @@ Controls to prevent tampering and improve the integrity of the software supply c
 | [SC-2: Commit Signing](#sc-2) |
 | [SC-3: Peer Review](#sc-3) |
 | [SC-4: Dependency Manifest Version Pinning](#sc-4) |
-| [SC-5: Software Composition Analysis](#sc-5) |
-| [SC-6: Automated Build and Deploy](#sc-6) |
-| [SC-7: Dependency Installation during Deployment](#sc-7) |
-| [SC-8: Component Signing](#sc-8) |
-| [SC-9: Signature Verification](#sc-9) |
-| [SC-10: Internal Code Collaboration and Sharing](#sc-10) |
+| [SC-5: Automated Build and Deploy](#sc-5) |
+| [SC-6: Dependency Installation during Deployment](#sc-6) |
+| [SC-7: Software Artefact Signing](#sc-7) |
+| [SC-8: Software Artefact Signature Verification](#sc-8) |
+| [SC-9: Internal Code Collaboration and Sharing](#sc-9) |
 
 
 <a id="sc-1"></a>
@@ -89,24 +88,7 @@ Failure to pin direct and transitive dependency versions in the application's ma
 
 
 <a id="sc-5"></a>
-## SC-5: Software Composition Analysis
-
-### Control Statement
-
-Perform regular software composition analysis of application code that can be exported as a software bill of materials (SBOM).
-
-### Control Recommendations
-
-Software composition analysis can be performed using tools such as Gitlab, Nexus IQ, or their equivalent, with output in a common SBOM format such as SPDX or CycloneDX.
-
-### Risk Statement
-
-Without regular software composition analysis, the risk of using outdated or vulnerable third-party components in the application increases, potentially exposing it to security exploits.
-
-
-
-<a id="sc-6"></a>
-## SC-6: Automated Build and Deploy
+## SC-5: Automated Build and Deploy
 
 ### Control Statement
 
@@ -122,8 +104,8 @@ Inconsistent system provisioning and operation, without automation, may lead to 
 
 
 
-<a id="sc-7"></a>
-## SC-7: Dependency Installation during Deployment
+<a id="sc-6"></a>
+## SC-6: Dependency Installation during Deployment
 
 ### Control Statement
 
@@ -139,12 +121,12 @@ Failure to install only pinned versions of dependencies during deployment increa
 
 
 
-<a id="sc-8"></a>
-## SC-8: Component Signing
+<a id="sc-7"></a>
+## SC-7: Software Artefact Signing
 
 ### Control Statement
 
-Sign code and container images using a trusted source during build.
+Sign software artefacts such as code and container images using a trusted source during build.
 
 ### Control Recommendations
 
@@ -156,8 +138,8 @@ Unsigned code and container images pose a risk of tampering, impersonation, and 
 
 
 
-<a id="sc-9"></a>
-## SC-9: Signature Verification
+<a id="sc-8"></a>
+## SC-8: Software Artefact Signature Verification
 
 ### Control Statement
 
@@ -169,12 +151,12 @@ Implement a signature verification step such as a pipeline stage or Kubernetes A
 
 ### Risk Statement
 
-Without verifying the signatures of code and artifacts before deployment or runtime, there's an increased risk of deploying tampered or malicious software, compromising the integrity and security of the system.
+Without verifying the signatures of code and artefacts before deployment or runtime, there's an increased risk of deploying tampered or malicious software, compromising the integrity and security of the system.
 
 
 
-<a id="sc-10"></a>
-## SC-10: Internal Code Collaboration and Sharing
+<a id="sc-9"></a>
+## SC-9: Internal Code Collaboration and Sharing
 
 ### Control Statement
 
