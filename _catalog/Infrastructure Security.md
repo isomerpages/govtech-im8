@@ -18,6 +18,8 @@ Controls to secure infrastructure that host applications, services, and data.
 | [IS-8: Endpoint Detection and Response (EDR)](#is-8) |
 | [IS-9: End-of-Support (EOS) Assets](#is-9) |
 | [IS-10: Synchronise time clocks](#is-10) |
+| [IS-11: Domain Name Registration](#is-11) |
+| [IS-12: DNS Security Extensions (DNSSEC)](#is-12) |
 
 
 <a id="is-1"></a>
@@ -46,7 +48,7 @@ Automate patching of operating systems and applications.
 
 ### Control Recommendations
 
-Apply patch baselines via the CSP node management service, unless the patch management process is automated as part of the build and deploy phase.
+Apply patch baselines via the CSP node management service, unless the patch management process is automated as part of the build and deploy phase. For on-premise systems, use tools like Azure Update Manager to schedule and automatically deploy patches to Windows and Linux OS.
 
 ### Risk Statement
 
@@ -59,7 +61,7 @@ Failure to automate patching of operating systems and applications increases the
 
 ### Control Statement
 
-Restrict administrator privileges by disabling remote login for the root/administrator user and removing sudo/administrators group access for other users.
+Restrict administrator privileges by disabling remote login for the root/administrator user and restricting sudo/administrators group access for other users.
 
 ### Control Recommendations
 
@@ -93,7 +95,7 @@ Failure to disable or remove unnecessary functions, system ports, protocols, sof
 
 ### Control Statement
 
-Harden the host configuration in accordance with industry standards.
+Harden the host configuration with reference to industry standards.
 
 ### Control Recommendations
 
@@ -193,6 +195,40 @@ Use common time source such as Network Time Protocol.
 ### Risk Statement
 
 Inconsistent time clocks will impede incident investigations.
+
+
+
+<a id="is-11"></a>
+## IS-11: Domain Name Registration
+
+### Control Statement
+
+Register .sg domain names (e.g., .gov.sg, .edu.sg, .org.sg, .sg) with GovTech as the sole registrar.
+
+### Control Recommendations
+
+Consider defensive domain registation for domains that could be mistaken for the original domain, such as common typos or with special characters.
+
+### Risk Statement
+
+Improper management of domain names increase the risk of phishing attacks or domain takeovers.
+
+
+
+<a id="is-12"></a>
+## IS-12: DNS Security Extensions (DNSSEC)
+
+### Control Statement
+
+Implement DNS Security Extensions (DNSSEC) for public DNS records and servers.
+
+### Control Recommendations
+
+DNS services such as WOG DNS, Amazon Route 53 and Cloudflare support DNSSEC configuration.
+
+### Risk Statement
+
+Insecure domain name resolution can lead to man-in-the-middle attacks caused by DNS spoofing or DNS cache poisoning.
 
 
 
