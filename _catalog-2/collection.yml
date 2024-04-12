@@ -2,6 +2,7 @@ collections:
   catalog-2:
     output: true
     order:
+      - Access Control.md
       - Container Security.md
       - Security Programme Management.md
       - Infrastructure Security.md
