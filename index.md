@@ -1,7 +1,10 @@
 ---
 layout: homepage
-title: Title
-description: An Isomer site of the Singapore Government
+title: Policy Reform Portal
+description: "A site of the Singapore Government. The ICT&SS Policy Reform is an
+  effort to transform the policy controls to be lean, relevant and effective. It
+  enables differentiated treatment for systems of different risk materiality
+  levels. "
 image: /images/isomer-logo.svg
 permalink: /
 notification: ""
