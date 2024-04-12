@@ -14,12 +14,11 @@ Controls to secure container building, distribution, and deployment.
 | [CS-4: Non-Privileged Container User](#cs-4) |
 | [CS-5: Dockerfile Linting](#cs-5) |
 | [CS-6: Read-Only Container Root Filesystem](#cs-6) |
-| [CS-7: CI/CD Container Image Scanning](#cs-7) |
-| [CS-8: Container Registry Image Scanning](#cs-8) |
-| [CS-9: Private Container Image Registries](#cs-9) |
-| [CS-10: Container Orchestrator API Access Control](#cs-10) |
-| [CS-11: Container Workload Segmentation](#cs-11) |
-| [CS-12: Container Runtime Security](#cs-12) |
+| [CS-7: Container Image Scanning](#cs-7) |
+| [CS-8: Private Container Image Registries](#cs-8) |
+| [CS-9: Container Orchestrator API Access Control](#cs-9) |
+| [CS-10: Container Workload Segmentation](#cs-10) |
+| [CS-11: Container Runtime Security](#cs-11) |
 
 
 <a id="cs-1"></a>
@@ -125,41 +124,30 @@ Failure to configure the container filesystem as read-only increases the risk of
 
 
 <a id="cs-7"></a>
-## CS-7: CI/CD Container Image Scanning
+## CS-7: Container Image Scanning
 
 ### Control Statement
 
-Set up a container image scanning job in the CI/CD pipeline that runs on each container image build.
+Scan container images in the [cs-7_prm_1] for known vulnerabilities.
 
 ### Control Recommendations
 
-Container image scanning tools (e.g., Trivy, Grype) scan the contents of a container image or filesystem for known vulnerabilities.
+Container image scanning tools (e.g., Amazon Inspector, Trivy, Grype) scan the contents of a container image for known vulnerabilities. Configure scans to run automatically and continuously, as well as enable scanning of image on push. Block deployment of container images with HIGH CVE being detected during scan (e.g., using Amazon ECR with Security Hub).
 
 ### Risk Statement
 
-Without setting up a container image scanning job in the CI/CD pipeline, there's an increased risk of deploying vulnerable images, as potential security vulnerabilities may go undetected, compromising the security and integrity of the containerised applications during deployment.
+Failure to scan container images increases the risk of deploying insecure images, potentially exposing the infrastructure to known exploits and compromising the security of the containerised applications during runtime.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| cs-7_prm_1 | location | The location where container image scanning occurs. |
 
 <a id="cs-8"></a>
-## CS-8: Container Registry Image Scanning
-
-### Control Statement
-
-Scan container images in container registries (e.g., Amazon ECR) for known vulnerabilities.
-
-### Control Recommendations
-
-Configure container registries to scan images automatically and continuously, as well as enable scanning of image on push. Block deployment of container images with HIGH CVE being detected during scan (e.g., using Amazon ECR with Security Hub).
-
-### Risk Statement
-
-Failure to scan container images in container registries for known vulnerabilities increases the risk of deploying insecure images, potentially exposing the infrastructure to known exploits and compromising the security of the containerised applications during runtime.
-
-
-
-<a id="cs-9"></a>
-## CS-9: Private Container Image Registries
+## CS-8: Private Container Image Registries
 
 ### Control Statement
 
@@ -175,8 +163,8 @@ Hosting built container images in private registries enhances security by reduci
 
 
 
-<a id="cs-10"></a>
-## CS-10: Container Orchestrator API Access Control
+<a id="cs-9"></a>
+## CS-9: Container Orchestrator API Access Control
 
 ### Control Statement
 
@@ -192,8 +180,8 @@ Failure to disable public access to Container Orchestrator API endpoints from th
 
 
 
-<a id="cs-11"></a>
-## CS-11: Container Workload Segmentation
+<a id="cs-10"></a>
+## CS-10: Container Workload Segmentation
 
 ### Control Statement
 
@@ -205,12 +193,12 @@ Create Kubernetes namespaces or similar container segmentation controls to isola
 
 ### Risk Statement
 
-Without separating container workloads into namespaces, there's an increased risk of lateral movement and potential compromise, as attacks on one workload could impact others; utilising namespaces helps contain and isolate potential security incidents, enhancing overall cluster security.
+Without separating container workloads into namespaces, there's an increased risk of lateral movement and potential compromise.
 
 
 
-<a id="cs-12"></a>
-## CS-12: Container Runtime Security
+<a id="cs-11"></a>
+## CS-11: Container Runtime Security
 
 ### Control Statement
 
@@ -218,7 +206,7 @@ Detect and remediate changes to running containers with container runtime protec
 
 ### Control Recommendations
 
-Runtime protection tools, such as AWS EKS Protection, Microsoft Defender for Containers or Falco, monitor threats and changes to running containers. Vulnerable container instances should be isolated for investigation and replaced with rebuilt and patched images. To avoid persistence if patches do not exist, the container instance should be replaced frequently with an un-compromised image until a patch released. These tools replace Malware Protection (IS-7) and EDR (IS-8) in container environments.
+Runtime protection tools, such as AWS EKS Protection, Microsoft Defender for Containers, or Falco, monitor threats and changes to running containers. Vulnerable container instances should be isolated for investigation and replaced with rebuilt and patched images. To avoid persistence if patches do not exist, the container instance should be replaced frequently with an un-compromised image until a patch released. These tools replace Malware Protection (IS-7) and EDR (IS-8) in container environments.
 
 ### Risk Statement
 
