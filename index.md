@@ -13,10 +13,10 @@ sections:
       url: /contact-us/
       key_highlights:
         - title: Control Catalog
-          description: Key Highlight description
+          description: See full catalog of controls
           url: /catalog
         - title: Stay connected with us
-          description: Key Highlight description
+          description: Keep updated on latest news
           url: https://url.gov.sg
       variant: floating
       backgroundColor: gray
@@ -30,4 +30,11 @@ sections:
       button: Read more
       alt: Image alt text
       url: /about
+  - infopic:
+      title: Catalog of Controls
+      id: infopic
+      description: Re-calibrated catalog of controls starting with systems under
+        low-risk materiality level.
+      button: Read more
+      url: /catalog/
 ---
