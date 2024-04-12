@@ -1,5 +1,5 @@
 collections:
-  catalog:
+  catalog-temp:
     output: true
     order:
       - Overview.md
