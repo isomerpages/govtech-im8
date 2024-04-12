@@ -38,4 +38,5 @@ sections:
         low-risk materiality level.
       button: Read more
       url: /catalog/
+      image: /images/img_catalog.png
 ---
