@@ -1,4 +1,5 @@
 collections:
   catalog-2:
     output: true
-    order: []
+    order:
+      - Datacentre.md
