@@ -1,18 +1,17 @@
 ---
 layout: homepage
 title: Policy Reform Portal
-description: "A site of the Singapore Government. The ICT&SS Policy Reform is an
+description: A site of the Singapore Government. The ICT&SS Policy Reform is an
   effort to transform the policy controls to be lean, relevant and effective. It
   enables differentiated treatment for systems of different risk materiality
-  levels. "
+  levels.
 image: /images/isomer-logo.svg
 permalink: /
 notification: ""
 sections:
   - hero:
-      title: Hero title
-      subtitle: Hero subtitle
-      background: /images/hero-banner.png
+      title: One-stop portal for modern digital governance
+      background: /images/banner_home.png
       url: /contact-us/
       key_highlights:
         - title: Control Catalog
@@ -24,7 +23,7 @@ sections:
       variant: floating
       backgroundColor: gray
       alignment: left
-      size: sm
+      size: md
   - infopic:
       title: About Policy Reform
       id: infopic
