@@ -1,4 +1,5 @@
 collections:
   catalog-1:
     output: true
-    order: []
+    order:
+      - Overview.md
