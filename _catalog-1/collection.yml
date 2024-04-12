@@ -1,0 +1,4 @@
+collections:
+  catalog-1:
+    output: true
+    order: []
