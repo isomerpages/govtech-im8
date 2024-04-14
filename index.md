@@ -29,7 +29,7 @@ sections:
       description: Effort to reform ICT&SS policies to give flexibility to right-fit
         controls based on risk materiality level of systems.
       button: Read more
-      alt: Image alt text
+      alt: isometric illustration reform
       url: /about
       image: /images/img_about.png
   - infopic:
@@ -40,4 +40,5 @@ sections:
       button: Read more
       url: /catalog/
       image: /images/img_catalog.png
+      alt: isometric illustration tech
 ---
