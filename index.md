@@ -13,9 +13,12 @@ sections:
       title: One-stop portal for modern digital governance
       background: /images/banner_home.png
       key_highlights:
-        - title: Control Catalog
-          description: See full catalog of controls
-          url: /catalog
+        - title: Catalog of Controls (I)
+          description: View list of controls
+          url: /catalog/
+        - title: Catalog of Controls (II)
+          description: View list of controls
+          url: /catalog-2/
         - title: Stay connected with us
           description: Subscribe for latest updates
           url: https://url.gov.sg
