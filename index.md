@@ -18,7 +18,7 @@ sections:
           url: /catalog/
         - title: Catalog of Controls (II)
           description: View list of controls
-          url: /catalog-2/
+          url: /catalog-2/lm
         - title: Stay connected with us
           description: Subscribe for latest updates
           url: https://url.gov.sg
