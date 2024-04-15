@@ -11,7 +11,7 @@ contacts:
     title: GovTech Enquiries & Feedback
   - content:
       - phone: ""
-      - email: xxxxxxxxxx@tech.gov.sg
+      - email: im8_secy@tech.gov.sg
       - other: ""
     title: Policy & Controls Enquiries
 feedback: ""
