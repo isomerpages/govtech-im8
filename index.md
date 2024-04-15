@@ -24,7 +24,7 @@ sections:
       alignment: left
       size: md
   - infopic:
-      title: About Policy Reform
+      title: About ICT&SS Policy Reform
       id: infopic
       description: Effort to reform ICT&SS policies to give flexibility to right-fit
         controls based on risk materiality level of systems.
