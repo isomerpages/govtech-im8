@@ -41,24 +41,24 @@ The IM8-lite catalog serves as a central pool of controls.
 <p></p><h3 class="controls-title">Control Catalog</h3><p></p>
 <div class="controls" id="grid">
 	<div class="content">
-	  <div><a href="/catalog/as/" rel="noopener noreferrer nofollow">Application Security</a></div>
-		<div><a href="/control-catalog/002-software-supply-chain/" rel="noopener noreferrer nofollow">Software Supply Chain</a></div>
-		<div><a href="/control-catalog/003-security-testing/" rel="noopener noreferrer nofollow">Security Testing</a></div>
-		<div><a href="/control-catalog/004-network-security/" rel="noopener noreferrer nofollow">Network Security</a></div>
+	  <div><a href="/control-catalog/as/" rel="noopener noreferrer nofollow">Application Security</a></div>
+		<div><a href="/control-catalog/sc/" rel="noopener noreferrer nofollow">Software Supply Chain</a></div>
+		<div><a href="/control-catalog/st/" rel="noopener noreferrer nofollow">Security Testing</a></div>
+		<div><a href="/control-catalog/ns/" rel="noopener noreferrer nofollow">Network Security</a></div>
 	</div>
 	<div class="content">
-		<div><a href="/control-catalog/005-backup-and-recovery/" rel="noopener noreferrer nofollow">Backup and Recovery</a></div>
-		<div><a href="/control-catalog/006-data-protection/" rel="noopener noreferrer nofollow">Data Protection</a></div>
-		<div><a href="/control-catalog/007-logging-and-monitoring/" rel="noopener noreferrer nofollow">Logging and Monitoring</a></div>
-		<div><a href="/control-catalog/008-access-control/" rel="noopener noreferrer nofollow">Access Control</a></div>
+		<div><a href="/control-catalog/br/" rel="noopener noreferrer nofollow">Backup and Recovery</a></div>
+		<div><a href="/control-catalog/dp/" rel="noopener noreferrer nofollow">Data Protection</a></div>
+		<div><a href="/control-catalog/lm/" rel="noopener noreferrer nofollow">Logging and Monitoring</a></div>
+		<div><a href="/control-catalog/ac/" rel="noopener noreferrer nofollow">Access Control</a></div>
 	</div>
 	<div class="content">
-		<div><a href="/control-catalog/009-container-security/" rel="noopener noreferrer nofollow">Container Security</a></div>
-	  <div><a href="/control-catalog/010-security-programme-management/" rel="noopener noreferrer nofollow">Security Programme Management</a></div>
-	  <div><a href="/control-catalog/011-infrastructure-security/" rel="noopener noreferrer nofollow">Infrastructure Security</a></div>
-	  <div><a href="/control-catalog/012-secure-development/" rel="noopener noreferrer nofollow">Secure Development</a></div>
+		<div><a href="/control-catalog/cs/" rel="noopener noreferrer nofollow">Container Security</a></div>
+	  <div><a href="/control-catalog/pm/" rel="noopener noreferrer nofollow">Security Programme Management</a></div>
+	  <div><a href="/control-catalog/is/" rel="noopener noreferrer nofollow">Infrastructure Security</a></div>
+	  <div><a href="/control-catalog/sd/" rel="noopener noreferrer nofollow">Secure Development</a></div>
 	</div>
 	<div class="content">
-	  <div><a href="/control-catalog/013-datacentre/" rel="noopener noreferrer nofollow">Datacentre</a></div>
+	  <div><a href="/control-catalog/dc/" rel="noopener noreferrer nofollow">Datacentre</a></div>
 	</div>
 </div>
