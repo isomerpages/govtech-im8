@@ -41,7 +41,7 @@ The IM8-lite catalog serves as a central pool of controls.
 <p></p><h3 class="controls-title">Control Catalog</h3><p></p>
 <div class="controls" id="grid">
 	<div class="content">
-	  <div><a href="/control-catalog/001-application-security/" rel="noopener noreferrer nofollow">Application Security</a></div>
+	  <div><a href="/catalog/as/" rel="noopener noreferrer nofollow">Application Security</a></div>
 		<div><a href="/control-catalog/002-software-supply-chain/" rel="noopener noreferrer nofollow">Software Supply Chain</a></div>
 		<div><a href="/control-catalog/003-security-testing/" rel="noopener noreferrer nofollow">Security Testing</a></div>
 		<div><a href="/control-catalog/004-network-security/" rel="noopener noreferrer nofollow">Network Security</a></div>
