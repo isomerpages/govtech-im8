@@ -1,6 +1,6 @@
 ---
 layout: homepage
-title: New IM8 Portal
+title: ICT&SS Policy Reform
 description: A site of the Singapore Government. The ICT&SS Policy Reform is an
   effort to transform the policy controls to be lean, relevant and effective. It
   enables differentiated treatment for systems of different risk materiality
