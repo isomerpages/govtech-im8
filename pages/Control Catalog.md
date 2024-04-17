@@ -13,15 +13,12 @@ These controls are catagorised into **profiles** that represent security baselin
 The IM8-lite catalog serves as a central pool of controls.
 
 <style>
-	h3.controls-title {
-	  display: flex;
-	  justify-content: center;
-	}
+	
 	#grid.controls {
 	  display: grid;
 	  grid-template-columns: repeat(4, minmax(0, 1fr));
 	  grid-auto-rows: 1fr;
-	  grid-gap: 15px;
+	  grid-gap: 30px;
 	}
 	#grid.controls > div.content {
 	  display: contents;
@@ -30,7 +27,7 @@ The IM8-lite catalog serves as a central pool of controls.
 	#grid.controls > div.content a {
 	  border: 1px solid #d6d6d6;
 	  border-radius: 8px;
-	  padding: 8px;
+	  padding: 16px;
     display: flex;
 	  justify-content: center;
 	  align-items: center;
