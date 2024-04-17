@@ -21,7 +21,7 @@ Controls to prevent application vulnerabilities caused by insecure coding.
 | [AS-11: Session Management](#as-11) |
 
 
-<a id="as-1"></a>
+<a id="as-1"> </a>
 ## AS-1: Input Validation
 
 ### Control Statement
