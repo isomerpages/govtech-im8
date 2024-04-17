@@ -15,6 +15,15 @@ description: ""
 	#grid.controls > div.content {
 	  display: contents;
   }
+	
+	#grid.controls > div.content > div {
+	  border: 1px solid black;
+	  padding: 8px;
+    display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  text-align: center;
+	}
 	</style>
 
 ## Purpose
