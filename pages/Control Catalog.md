@@ -5,6 +5,11 @@ variant: markdown
 description: ""
 ---
 <style>
+	p.controls-title {
+	  display: flex;
+	  justify-content: center;
+	}
+	
 	#grid.controls {
 	  display: grid;
 	  grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -26,6 +31,7 @@ description: ""
 	  text-align: center;
 	  height: 100%;
     text-decoration: none;
+	  font-weight: bold;
 	}
 	</style>
 
@@ -37,6 +43,7 @@ These controls are catagorised into **profiles** that represent security baselin
 
 The IM8-lite catalog serves as a central pool of controls.
 
+<p class="controls-title"><strong>Control Catalog<strong></strong></strong></p><strong><strong>
 <div class="controls" id="grid">
 	<div class="content">
 	  <div><a href="/control-catalog/001-application-security/" rel="noopener noreferrer nofollow">Application Security</a></div>
@@ -61,9 +68,4 @@ The IM8-lite catalog serves as a central pool of controls.
 	</div>
 </div>
 
-| Control Catalog | | | |
-| -- | -- | -- | -- |
-| [Application Security](/control-catalog/001-application-security/) | [Software Supply Chain](/control-catalog/002-software-supply-chain/) | [Security Testing](/control-catalog/003-security-testing/) | [Network Security](/control-catalog/004-network-security/) |
-| [Backup and Recovery](/control-catalog/005-backup-and-recovery/) |  [Data Protection](/control-catalog/006-data-protection/) | [Logging and Monitoring](/control-catalog/007-logging-and-monitoring/) | [Access Control](/control-catalog/008-access-control/) | 
-[Container Security](/control-catalog/009-container-security/) | [Security Programme Management](/control-catalog/010-security-programme-management/) | [Infrastructure Security](/control-catalog/011-infrastructure-security/) | [Secure Development](/control-catalog/012-secure-development/) | 
-[Datacentre](/control-catalog/013-datacentre/) |
+</strong></strong>
