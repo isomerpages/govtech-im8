@@ -16,13 +16,16 @@ description: ""
 	  display: contents;
   }
 	
-	#grid.controls > div.content > div {
-	  border: 1px solid black;
+	#grid.controls > div.content a {
+	  border: 1px solid #d6d6d6;
+	  border-radius: 8px;
 	  padding: 8px;
     display: flex;
 	  justify-content: center;
 	  align-items: center;
 	  text-align: center;
+	  height: 100%;
+    text-decoration: none;
 	}
 	</style>
 
