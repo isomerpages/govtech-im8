@@ -41,7 +41,7 @@ The IM8-lite catalog serves as a central pool of controls.
 	}
 	</style>
 	
-<p class="controls-title"><strong>Control Catalog<strong></strong></strong></p><strong><strong>
+<p class="controls-title"><strong>Control Catalog<strong></strong></strong></p>
 <div class="controls" id="grid">
 	<div class="content">
 	  <div><a href="/control-catalog/001-application-security/" rel="noopener noreferrer nofollow">Application Security</a></div>
@@ -66,4 +66,3 @@ The IM8-lite catalog serves as a central pool of controls.
 	</div>
 </div>
 
-</strong></strong>
