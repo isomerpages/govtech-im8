@@ -6,11 +6,11 @@ description: ""
 ---
 ## Purpose
 
-Within the OSCAL framework, a **catalog** represents a collection of **controls**. The catalog model is designed to represent security and privacy controls in standardised, machine-readable formats.
+       
 
-These controls are catagorised into **profiles** that represent security baselines and selected for implementation in **system security plans**. As different system security plans have different selections of controls depending on the type and sensitivity of the systems covered, not all controls will be in use at any one time.
+This catalog consists of a central pool of controls meant for low-risk systems. They are categorised into profiles that represent security baselines for selection and implementation in system security plans.
 
-The IM8-lite catalog serves as a central pool of controls.
+Each system security plan have different selections of controls depending on the type and sensitivity of the system. Agencies will determine the controls required based on the nature of their systems.
 
 <style>
 	
