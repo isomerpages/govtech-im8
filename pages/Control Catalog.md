@@ -4,7 +4,6 @@ permalink: /control-catalog/
 variant: markdown
 description: ""
 ---
-
 ## Purpose
 
 Within the OSCAL framework, a **catalog** represents a collection of **controls**. The catalog model is designed to represent security and privacy controls in standardised, machine-readable formats.
