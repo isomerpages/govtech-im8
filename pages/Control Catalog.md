@@ -13,7 +13,7 @@ These controls are catagorised into **profiles** that represent security baselin
 The IM8-lite catalog serves as a central pool of controls.
 
 <style>
-	p.controls-title {
+	h3.controls-title {
 	  display: flex;
 	  justify-content: center;
 	}
@@ -41,7 +41,7 @@ The IM8-lite catalog serves as a central pool of controls.
 	}
 	</style>
 	
-<p class="controls-title"><strong>Control Catalog<strong></strong></strong></p>
+<p></p><h3 class="controls-title">Control Catalog</h3><p></p>
 <div class="controls" id="grid">
 	<div class="content">
 	  <div><a href="/control-catalog/001-application-security/" rel="noopener noreferrer nofollow">Application Security</a></div>
@@ -65,4 +65,3 @@ The IM8-lite catalog serves as a central pool of controls.
 	  <div><a href="/control-catalog/013-datacentre/" rel="noopener noreferrer nofollow">Datacentre</a></div>
 	</div>
 </div>
-
