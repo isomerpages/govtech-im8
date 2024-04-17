@@ -35,7 +35,7 @@ sections:
       description: Re-calibrated catalog of controls starting with systems under
         low-risk materiality level.
       button: Read more
-      url: /catalog/
+      url: /control-catalog/
       image: /images/img_catalog.png
       alt: isometric illustration tech
 ---
