@@ -1,9 +1,0 @@
-collections:
-  system-security-plans:
-    output: true
-    order:
-      - Overview.md
-      - Low᠆Risk Cloud.md
-      - Low᠆Risk On᠆Premises.md
-      - Low Risk Saas.md
-      - Pilot Sandbox.md
