@@ -15,7 +15,7 @@ provide <strong>policy guidance to government agencies on how to protect and man
     <div class="col is-12"><p>The ICT&amp;SS Policy Reform is an effort to transform the policy controls
 to be lean, relevant and effective. It <strong>enables&nbsp;differentiated treatment</strong> for
 systems of different risk materiality levels. Agencies will assess the
-risks and choose the appropriate controls for their systems based on factors
-such as cost and effort.</p><p><strong>The first tranche of the reviewed controls is published <a href="/control-catalog/" rel="noopener noreferrer nofollow">here</a> and will be progressively updated in this website.</strong>
+risks and choose the appropriate controls for their systems based on various considerations.
+</p><p><strong>The first tranche of the reviewed controls is published <a href="/control-catalog/" rel="noopener noreferrer nofollow">here</a> and will be progressively updated in this website.</strong>
 </p></div>
 </div>
