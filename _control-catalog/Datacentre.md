@@ -1,6 +1,6 @@
 ---
 title: Datacentre
-permalink: /catalog-temp/dc/
+permalink: /control-catalog/dc/
 variant: markdown
 description: ""
 ---

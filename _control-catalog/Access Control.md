@@ -1,6 +1,6 @@
 ---
 title: Access Control
-permalink: /catalog-temp/ac/
+permalink: /control-catalog/ac/
 variant: markdown
 description: ""
 ---

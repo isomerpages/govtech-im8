@@ -1,6 +1,6 @@
 ---
 title: Software Supply Chain
-permalink: /catalog-temp/sc/
+permalink: /control-catalog/sc/
 variant: markdown
 description: ""
 ---

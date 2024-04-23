@@ -1,6 +1,6 @@
 ---
 title: Security Testing
-permalink: /catalog/st/
+permalink: /control-catalog/st/
 variant: markdown
 description: ""
 ---

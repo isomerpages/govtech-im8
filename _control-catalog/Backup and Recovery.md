@@ -1,6 +1,6 @@
 ---
 title: Backup and Recovery
-permalink: /catalog-temp/br/
+permalink: /control-catalog/br/
 variant: markdown
 description: ""
 ---

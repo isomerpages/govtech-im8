@@ -1,8 +1,8 @@
 logo: /images/logo_govtech_hort.gif
 links:
-  - title: Catalog (I)
-    collection: catalog-i
-  - title: Catalog (II)
-    collection: catalog-ii
+  - title: About
+    url: /about
+  - title: Control Catalog
+    url: /control-catalog
   - title: Contact Us
     url: /contact-us/

@@ -1,6 +1,6 @@
 ---
 title: Data Protection
-permalink: /catalog/dp/
+permalink: /control-catalog/dp/
 variant: markdown
 description: ""
 ---

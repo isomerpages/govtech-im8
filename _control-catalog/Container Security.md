@@ -1,6 +1,6 @@
 ---
 title: Container Security
-permalink: /catalog-2/cs/
+permalink: /control-catalog/cs/
 variant: markdown
 description: ""
 ---

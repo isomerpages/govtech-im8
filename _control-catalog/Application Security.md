@@ -1,6 +1,6 @@
 ---
 title: Application Security
-permalink: /catalog/as/
+permalink: /control-catalog/as/
 variant: markdown
 description: ""
 ---

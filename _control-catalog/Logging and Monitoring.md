@@ -1,6 +1,6 @@
 ---
 title: Logging and Monitoring
-permalink: /catalog-temp/lm/
+permalink: /control-catalog/lm/
 variant: markdown
 description: ""
 ---

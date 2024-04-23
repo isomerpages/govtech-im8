@@ -1,6 +1,6 @@
 ---
 title: Security Programme Management
-permalink: /catalog-temp/pm/
+permalink: /control-catalog/pm/
 variant: markdown
 description: ""
 ---

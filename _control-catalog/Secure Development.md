@@ -1,6 +1,6 @@
 ---
 title: Secure Development
-permalink: /catalog-temp/sd/
+permalink: /control-catalog/sd/
 variant: markdown
 description: ""
 ---

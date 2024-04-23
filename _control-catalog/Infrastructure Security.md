@@ -1,6 +1,6 @@
 ---
 title: Infrastructure Security
-permalink: /catalog-2/is/
+permalink: /control-catalog/is/
 variant: markdown
 description: ""
 ---

@@ -1,4 +1,4 @@
-title: Title
+title: ICT&SS Policy Reform
 url: https://im8.tech.gov.sg
 favicon: /images/favicon-isomer.ico
 colors:
@@ -15,7 +15,10 @@ colors:
       color: "#0061af"
     - title: media-color-five
       color: "#b41e8e"
-description: An Isomer site of the Singapore Government
+description: A site of the Singapore Government. The ICT&SS Policy Reform is an
+  effort to transform the policy controls to be lean, relevant and effective. It
+  enables differentiated treatment for systems of different risk materiality
+  levels.
 permalink: none
 baseurl: ""
 exclude:

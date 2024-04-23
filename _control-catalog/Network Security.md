@@ -1,6 +1,6 @@
 ---
 title: Network Security
-permalink: /catalog-temp/ns/
+permalink: /control-catalog/ns/
 variant: markdown
 description: ""
 ---
