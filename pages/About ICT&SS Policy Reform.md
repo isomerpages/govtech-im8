@@ -14,6 +14,6 @@ has accelerated its digital transformation efforts.&nbsp;This includes <strong>i
     <div class="col is-12"><p>The ICT&amp;SS Policy Reform is an effort to transform the policy controls
 to be lean, relevant and effective. It <strong>enables&nbsp;differentiated treatment for
 systems of different risk materiality levels </strong>. Agencies will assess the risks and choose the appropriate controls for their systems based on various business and technical considerations.
-</p><p><strong>The first tranche of the recommended controls is published <a href="/control-catalog/" rel="noopener noreferrer nofollow">here</a> and will be progressively updated in this website.</strong>
+</p><p><strong>The first tranche of the recommended controls for low-risk systems is published <a href="/control-catalog/" rel="noopener noreferrer nofollow">here</a> and will be progressively updated in this website.</strong>
 </p></div>
 </div>
