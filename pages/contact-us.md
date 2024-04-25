@@ -14,6 +14,6 @@ contacts:
       - email: ""
       - other: Enquiries & Feedback at <a aria-label="link to form" target="_blank"
           href="https://go.gov.sg/ictpolicy">https://go.gov.sg/ictpolicy</a>
-    title: "ICT&SS Standards "
+    title: ICT&SS Standards
 feedback: ""
 ---
