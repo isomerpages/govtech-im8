@@ -7,9 +7,8 @@ description: ""
 <div class="row is-multiline">
   <div class="col is-7">
 <p>To support Singapore’s ambition to build a Smart Nation, the Government
-has accelerated its digital transformation efforts.&nbsp;This includes <strong>improving how services are delivered, operations are managed, and policies are made.</strong> </p>
-<p>The Instruction Manual for Infocomm Technology &amp; Smart Systems (ICT&amp;SS)
-provide <strong>policy guidance to government agencies on how to protect and manage their ICT&amp;SS assets</strong>.</p>
+has accelerated its digital transformation efforts.&nbsp;This includes <strong>improving how services are delivered, operations are managed and policies are defined to protect agencies'  ICT&amp;SS assets.</strong> </p>
+
   </div>
   <div class="col is-5"><img style="width: 100%;" height="auto" width="100%" alt="illustration of 2 business user and improvement in productivity" src="/images/img_about_kv.png"></div>
     <div class="col is-12"><p>The ICT&amp;SS Policy Reform is an effort to transform the policy controls
