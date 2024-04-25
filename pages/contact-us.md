@@ -12,9 +12,8 @@ contacts:
   - content:
       - phone: ""
       - email: ""
-      - other: Submit any feedback or queries you have at <a aria-label="link to form"
-          target="_blank"
+      - other: Enquiries & Feedback at <a aria-label="link to form" target="_blank"
           href="https://go.gov.sg/ictpolicy">https://go.gov.sg/ictpolicy</a>
-    title: Policy Enquiries & Feedback
+    title: "ICT&SS Standards "
 feedback: ""
 ---
