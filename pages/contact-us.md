@@ -12,8 +12,9 @@ contacts:
   - content:
       - phone: ""
       - email: ""
-      - other: Submit any feedback or queries you have at <a target="_blank"
-          href="https://go.gov.sg/ictpolicy">go.gov.sg/ictpolicy</a>
+      - other: Submit any feedback or queries you have at <a aria-label="link to form"
+          target="_blank"
+          href="https://go.gov.sg/ictpolicy">https://go.gov.sg/ictpolicy</a>
     title: Policy Enquiries & Feedback
 feedback: ""
 ---
