@@ -11,8 +11,9 @@ contacts:
     title: GovTech Enquiries & Feedback
   - content:
       - phone: ""
-      - email: im8_secy@tech.gov.sg
-      - other: ""
-    title: Policy & Controls Enquiries
+      - email: ""
+      - other: Submit any feedback or queries you have at <a target="_blank"
+          href="https://go.gov.sg/ictpolicy">go.gov.sg/ictpolicy</a>
+    title: Policy Enquiries & Feedback
 feedback: ""
 ---
