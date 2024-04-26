@@ -23,9 +23,8 @@ sections:
   - infopic:
       title: About ICT&SS Policy Reform
       id: infopic
-      description: Effort to reform ICT&SS policies so that agencies have the
-        flexibility to right-fit controls based on risk materiality level of
-        their systems.
+      description: Effort to reform policies so that agencies have the flexibility to
+        right-fit controls based on risk materiality level of their systems.
       button: Read more
       alt: isometric illustration reform
       url: /about
