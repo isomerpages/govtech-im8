@@ -17,4 +17,4 @@ systems of different risk materiality levels </strong>. Agencies will assess the
 </p><p>The reform effort has started for low-risk systems first. <strong>The first tranche of the recommended controls for low-risk systems is published <a href="/control-catalog/" rel="noopener noreferrer nofollow">here</a> and will be progressively updated in this website.</strong>
 </p></div>
 </div>
-<p>We invite industry players to join us in the ICT&amp;SS Policy Reform journey. For any feedback please enter [here](https://go.gov.sg/ictpolicy)</p>
+<p>We invite industry players to join us in the ICT&amp;SS Policy Reform journey. For any feedback please enter here(https://go.gov.sg/ictpolicy)</p>
