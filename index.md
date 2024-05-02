@@ -23,8 +23,8 @@ sections:
   - infopic:
       title: About Singapore Government ICT&SS Policy Reform
       id: infopic
-      description: "Simplifying ICT&SS policies to enable Agencies to deliver rapid,
-        cost effective and innovative ICT&SS with right-fit risk controls "
+      description: Simplifying ICT&SS policies to enable Agencies to deliver rapid,
+        cost effective and innovative ICT&SS with right-fit risk controls.
       button: Read more
       alt: isometric illustration reform
       url: /about
