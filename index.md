@@ -21,10 +21,10 @@ sections:
       alignment: left
       size: md
   - infopic:
-      title: About ICT&SS Policy Reform
+      title: About Singapore Government ICT&SS Policy Reform
       id: infopic
-      description: Effort to reform policies so that agencies have the flexibility to
-        right-fit controls based on risk materiality level of their systems.
+      description: "Simplifying ICT&SS policies to enable Agencies to deliver rapid,
+        cost effective and innovative ICT&SS with right-fit risk controls "
       button: Read more
       alt: isometric illustration reform
       url: /about
