@@ -2,7 +2,7 @@
 layout: contact_us
 title: Contact Us
 permalink: /contact-us/
-agency_name: Singapore Government ICT&SS Policy Reform
+agency_name: Singapore Government ICT&SS Policy Reform team
 contacts:
   - content:
       - phone: +65 6211 2100
