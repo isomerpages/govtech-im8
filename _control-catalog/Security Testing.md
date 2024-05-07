@@ -125,3 +125,5 @@ Failure to promptly remediate vulnerabilities increases the risk of potential ex
 | st-5_prm_2 | time period (days) | The time period in days to remediate or risk accept high vulnerability findings. |
 | st-5_prm_3 | time period (days) | The time period in days to remediate or risk accept medium vulnerability findings. |
 | st-5_prm_4 | time period (days) | The time period in days to remediate or risk accept low vulnerability findings. |
+
+
