@@ -224,3 +224,5 @@ Not verifying a user regularly and at suitable checkpoints could allow someone w
 | ID | Type | Description |
 | -- | ---- | ----------- |
 | as-11_prm_1 | time period (hours) | The maximum time period in hours of a user's session. |
+
+
