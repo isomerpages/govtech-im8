@@ -319,3 +319,7 @@ Implement tools and processes to track Deployment Frequency, Lead Time for Chang
 ### Risk Statement
 
 Failing to measure and improve the software delivery performance can lead to inefficient development processes, reduced software quality and longer recovery times.
+
+
+
+

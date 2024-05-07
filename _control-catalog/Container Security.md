@@ -211,3 +211,7 @@ Runtime protection tools, such as AWS EKS Protection, Microsoft Defender for Con
 ### Risk Statement
 
 Failure to detect and remediate changes to running containers using container runtime protection tools increases the risk of unnoticed compromises, potential exploitation, and unauthorised alterations to containerised applications, compromising the security and integrity of the runtime environment.
+
+
+
+

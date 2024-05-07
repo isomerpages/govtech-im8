@@ -1,6 +1,6 @@
 ---
 layout: homepage
-title: ICT&SS Policy Reform
+title: Singapore Government ICT&SS Policy Reform
 description: A site of the Singapore Government. The ICT&SS Policy Reform is an
   effort to transform the policy controls to be lean, relevant and effective. It
   enables differentiated treatment for systems of different risk materiality
@@ -21,10 +21,10 @@ sections:
       alignment: left
       size: md
   - infopic:
-      title: About ICT&SS Policy Reform
+      title: About Singapore Government ICT&SS Policy Reform
       id: infopic
-      description: Effort to reform ICT&SS policies to give flexibility to right-fit
-        controls based on risk materiality level of systems.
+      description: Simplifying ICT&SS policies to enable Agencies to deliver rapid,
+        cost effective and innovative ICT&SS with right-fit risk controls.
       button: Read more
       alt: isometric illustration reform
       url: /about

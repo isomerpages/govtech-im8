@@ -4,6 +4,8 @@ permalink: /control-catalog/dc/
 variant: markdown
 description: ""
 ---
+
+
 | Controls |
 | ---- |
 | [DC-1: Separate hosting](#dc-1) |
@@ -57,3 +59,7 @@ h) CCTV installed to monitor the facility.
 ### Risk Statement
 
 Violating this control can subject government data and systems to access risks leading to compromised systems and data.
+
+
+
+

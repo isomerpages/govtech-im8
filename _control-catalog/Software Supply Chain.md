@@ -169,3 +169,7 @@ Adopt Innersource practices for internal collaboration, utilizing platforms like
 ### Risk Statement
 
 Restricting code repositories to closed source can result in duplicated efforts, hinder collaborative learning, and lead to missed bugs or vulnerabilities.
+
+
+
+

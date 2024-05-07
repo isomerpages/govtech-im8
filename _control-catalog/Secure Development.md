@@ -74,7 +74,7 @@ Failing to require passing Continuous Integration (CI) tests before merging into
 
 ### Control Statement
 
-Set up a static analysis job in the [cs-7_prm_1], and remediate or risk accept true positive vulnerability findings before deploying to production.
+Set up a static analysis job in the [sd-4_prm_1], and remediate or risk accept true positive vulnerability findings before deploying to production.
 
 ### Control Recommendations
 
@@ -171,3 +171,7 @@ Achieve segregation using separate Government on Commercial Cloud (GCC) accounts
 ### Risk Statement
 
 Failure to segregate production and non-production environments increases the risk of unauthorized access, data leaks, and denial of service attacks, as compromises in non-production environments may lead to cascading impacts on production systems.
+
+
+
+
