@@ -69,3 +69,5 @@ Lack of prevention measures against the modification or deletion of backups for 
 | ID | Type | Description |
 | -- | ---- | ----------- |
 | br-3_prm_1 | time period (days) | The time period in days of backup retention. |
+
+
