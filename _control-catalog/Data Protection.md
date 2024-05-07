@@ -118,3 +118,7 @@ Establish a SOP to ensure sanitisation and destruction are witnessed by an agenc
 ### Risk Statement
 
 Ensuring storage devices are sanitised or destroyed will eliminate the possibility of unauthorised or unintended data retention.
+
+
+
+
