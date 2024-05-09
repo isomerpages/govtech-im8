@@ -9,7 +9,6 @@ Controls to secure the network boundaries of a system.
 | Controls |
 | ---- |
 | [NS-1: Public and Private Subnet Segmentation](#ns-1) |
-| [NS-11: Alerts on changes to firewall](#ns-11) |
 | [NS-2: Access Restrictions on CSP Resources Outside Virtual Network](#ns-2) |
 | [NS-3: Deny by Default – Allow by Exception](#ns-3) |
 | [NS-4: Inter-Private Network Connectivity](#ns-4) |
@@ -19,6 +18,7 @@ Controls to secure the network boundaries of a system.
 | [NS-8: Secure Government Enterprise Network (GEN) connectivity](#ns-8) |
 | [NS-9: Intrusion Prevention System (IPS)/Intrusion Detection System (IDS)](#ns-9) |
 | [NS-10: Private Network Connectivity](#ns-10) |
+| [NS-11: Alerts on changes to firewall](#ns-11) |
 
 
 <a id="ns-1"></a>
@@ -35,23 +35,6 @@ This control does not apply to serverless resources (API Gateways), static sites
 ### Risk Statement
 
 Failure to segregate private and public resources within distinct subnets in a virtual network increases the risk of unauthorised access to sensitive data, as private resources may be exposed to the public internet, compromising the overall security of the infrastructure.
-
-
-
-<a id="ns-11"></a>
-## NS-11: Alerts on changes to firewall
-
-### Control Statement
-
-Generate alerts to inform appointed administrators on changes to firewall rules, including the enabling or disabling of rules.
-
-### Control Recommendations
-
-Implement real time alerts to inform administrators of creation, deletion, modification, enabling and disabling of firewall rules. Also alert administrators when unusual or sudden spike/drop in utilisation of firewall's system resources.
-
-### Risk Statement
-
-Any unintended changes to firewall rules can significantly lower the perimeter defence of a network.
 
 
 
@@ -243,4 +226,17 @@ Weak private network security may expose our network to malicious activities, je
 
 
 
+<a id="ns-11"></a>
+## NS-11: Alerts on changes to firewall
 
+### Control Statement
+
+Generate alerts to inform appointed administrators on changes to firewall rules, including the enabling or disabling of rules.
+
+### Control Recommendations
+
+Implement real time alerts to inform administrators of creation, deletion, modification, enabling and disabling of firewall rules. Also alert administrators when unusual or sudden spike/drop in utilisation of firewall's system resources.
+
+### Risk Statement
+
+Any unintended changes to firewall rules can significantly lower the perimeter defence of a network.
