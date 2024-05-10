@@ -18,7 +18,7 @@ Controls to secure the network boundaries of a system.
 | [NS-8: Secure Government Enterprise Network (GEN) connectivity](#ns-8) |
 | [NS-9: Intrusion Prevention System (IPS)/Intrusion Detection System (IDS)](#ns-9) |
 | [NS-10: Private Network Connectivity](#ns-10) |
-| [NS-11: Alerts on changes to firewall](#ns-11) |
+| [NS-11: Alerts on Firewall Configuration Changes](#ns-11) |
 
 
 <a id="ns-1"></a>
@@ -227,7 +227,7 @@ Weak private network security may expose our network to malicious activities, je
 
 
 <a id="ns-11"></a>
-## NS-11: Alerts on changes to firewall
+## NS-11: Alerts on Firewall Configuration Changes
 
 ### Control Statement
 
@@ -240,3 +240,7 @@ Implement real time alerts to inform administrators of creation, deletion, modif
 ### Risk Statement
 
 Any unintended changes to firewall rules can significantly lower the perimeter defence of a network.
+
+
+
+

@@ -20,7 +20,7 @@ Controls to validate the security of a system via internal and external testing.
 
 ### Control Statement
 
-Run [st-1_prm_1] vulnerability assessment scans for eligible hosts.
+Run regular [st-1_prm_1] vulnerability assessment scans for eligible hosts.
 
 ### Control Recommendations
 
@@ -36,7 +36,7 @@ Without regular vulnerability assessment scans, hosts remain exposed to undetect
 
 | ID | Type | Description |
 | -- | ---- | ----------- |
-| st-1_prm_1 | type | The time period of vulnerability assessment scanning. |
+| st-1_prm_1 | type | The type of vulnerability assessment scanning. |
 
 <a id="st-2"></a>
 ## ST-2: Cloud Security Posture Management
