@@ -20,4 +20,4 @@ Each system is to define a system security plan that comprises the implementable
 
 The first tranche of recommended controls for low-risk systems are published here and will progressively be updated in this website.
 
-We invite the industry players to join us in the ICT&amp;SS Reform journey. For&nbsp; any feedback, please provide [here](go.gov.sg/ictpolicy)
+We invite the industry players to join us in the ICT&amp;SS Reform journey. For&nbsp; any feedback, please provide [here.](https://go.gov.sg/ictpolicy)
