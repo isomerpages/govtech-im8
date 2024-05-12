@@ -8,7 +8,7 @@ description: ""
 
   
 
-This catalog publication is to provide the <strong>same control&nbsp;requirements to government agencies and industry partners </strong>so that both parties can work together to apply the right level of controls for their systems.
+This catalog publishes the <strong>same control&nbsp;requirements to government agencies and industry partners </strong>so that both parties can work together to apply the right level of controls for their systems.
 
 The catalog consists of a&nbsp;central pool of recommended controls meant for low-risk systems&nbsp;that has no disruptive impact to agency’s core function or Whole-of-Government.
 
