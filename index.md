@@ -23,7 +23,7 @@ sections:
   - infopic:
       title: About Singapore Government ICT&SS Policy Reform
       id: infopic
-      description: Simplifying ICT&SS policies to enable Agencies to deliver rapid,
+      description: Simplifying ICT&SS policies to enable agencies to deliver rapid,
         cost effective and innovative ICT&SS with right-fit risk controls.
       button: Read more
       alt: isometric illustration reform
@@ -32,8 +32,8 @@ sections:
   - infopic:
       title: Catalog of Controls
       id: infopic
-      description: Re-calibrated catalog of controls starting with systems under
-        low-risk materiality level.
+      description: Re-calibrated catalog of controls starting with systems of low-risk
+        impact level.
       button: Read more
       url: /control-catalog/
       image: /images/img_catalog.png
