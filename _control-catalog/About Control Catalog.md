@@ -10,7 +10,7 @@ description: ""
 
 This catalog publishes the <strong>same control&nbsp;requirements to government agencies and industry partners </strong>so that both parties can work together to apply the right level of controls for their systems.
 
-The catalog consists of a&nbsp;central pool of recommended controls meant for low-risk systems&nbsp;that has no disruptive impact to agency’s core function or Whole-of-Government.
+The catalog consists of a&nbsp;central pool of recommended controls meant for low-risk systems&nbsp;that have no disruptive impact to agency’s core function or Whole-of-Government.
 
 The controls are expressed using Open Security Controls Assessment Language (OSCAL) which are codified in machine-readable policy format. It enables future automation to monitor and assess the effectiveness of technical control implementation. Industry partners can get more info about OSCAL [here](https://pages.nist.gov/OSCAL/).
 
