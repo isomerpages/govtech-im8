@@ -14,7 +14,8 @@ to be lean, relevant and effective. It <strong>enables&nbsp;differentiated treat
 systems of different risk impact levels </strong>. Agencies will assess the risks and apply the right level of controls for their systems based on various business and technical considerations.
 </p>
 		   
-This publication is to provide the same control&nbsp;requirements to government agencies and industry partners so that both parties can work together to apply the right level of controls for their systems.
+<p>This publication is to provide the same control&nbsp;requirements to government agencies and industry partners so that both parties can work together to apply the right level of controls for their systems.
+</p>
 		
   </div>
   <div class="col is-5"><img style="width: 100%;" height="auto" width="100%" alt="illustration of 2 business user and improvement in productivity" src="/images/img_about_kv.png"></div>
