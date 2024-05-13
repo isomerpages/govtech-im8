@@ -27,7 +27,7 @@ Develop, document, and disseminate an agency-level cybersecurity incident manage
 
 ### Control Recommendations
 
-Refer to the Government Incident Reporting and Operations Centre (GIROC) [ICT and Data Incident Reporting Resources](https://gccprod.sharepoint.com/sites/GOVTECH-digitalgov/GIROC/SitePages/Useful-Resources.aspx) for an incident management plan and best practices template.
+Refer to the Government Incident Reporting and Operations Centre (GIROC) [ICT and Data Incident Reporting Resources] for an incident management plan and best practices template.
 
 ### Risk Statement
 
@@ -50,7 +50,7 @@ Develop and document a project-level cybersecurity risk assessment prior to init
 
 ### Control Recommendations
 
-Refer to the Cyber Security Agency of Singapore [Cybersecurity Toolkit for IT Teams](https://www.csa.gov.sg/our-programmes/support-for-enterprises/sg-cyber-safe-programme/cybersecurity-toolkits/cybersecurity-toolkit-for-it-teams) for an example of a risk assessment template and modify accordingly. For potential risk scenarios, consider examples from the Government Commercial Cloud [Cloud Security Risk Register](https://cloudplaybook.in.tech.gov.sg/confluence/display/CPP/3%29+Cloud+Security+Risk+Assessment).
+Refer to the Cyber Security Agency of Singapore [Cybersecurity Toolkit for IT Teams](https://www.csa.gov.sg/our-programmes/support-for-enterprises/sg-cyber-safe-programme/cybersecurity-toolkits/cybersecurity-toolkit-for-it-teams) for an example of a risk assessment template and modify accordingly. For potential risk scenarios, consider examples from the Government Commercial Cloud [Cloud Security Risk Register].
 
 ### Risk Statement
 
@@ -163,7 +163,3 @@ Ensure that the service level agreement is regularly checked for compliance.
 ### Risk Statement
 
 Without a service level agreement the availability of the Software as a Service (SaaS) system may be poorly maintained by the provider.
-
-
-
-
