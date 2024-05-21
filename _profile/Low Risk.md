@@ -4,9 +4,7 @@ permalink: /profile/low-risk/
 variant: markdown
 description: ""
 ---
-## Low-Risk
-
-### Mandatory
+## Mandatory
 
 * [AS-1: Input Validation](/control-catalog/as/#as-1) 
 * [AS-2: Parameterised Interfaces](/control-catalog/as/#as-2) 
@@ -101,7 +99,7 @@ description: ""
 
 
 
-### Guideline
+## Guideline
 
 * [AS-10: HTTP Strict Transport Security (HSTS)](/control-catalog/as/#as-10)
 * [SC-2: Commit Signing](/control-catalog/sc/#sc-2)
