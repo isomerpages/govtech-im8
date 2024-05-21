@@ -10,7 +10,7 @@ description: ""
 | [PM-4: Approval of Policy Deviations](/control-catalog/pm/#pm-4) |
 | [PM-5: Central Submission of Approved System Security Plan (SSP)](/control-catalog/pm/#pm-5) |
  
- <br>
+ <p>
 
 | Guideline |
 | ---- |
@@ -122,4 +122,4 @@ description: ""
 | [SD-7: CI Environment Variable Secrets Management](/control-catalog/sd/#sd-7) |
 | [SD-8: Deployment Environment Segregation](/control-catalog/sd/#sd-8) |
 | [DC-1: Separate hosting](/control-catalog/dc/#dc-1) |
-| [DC-2: Physical Access Controls](/control-catalog/dc/#dc-2) |
+| [DC-2: Physical Access Controls](/control-catalog/dc/#dc-2) |</p>
