@@ -10,7 +10,7 @@ description: ""
 | [PM-4: Approval of Policy Deviations](/control-catalog/pm/#pm-4) |
 | [PM-5: Central Submission of Approved System Security Plan (SSP)](/control-catalog/pm/#pm-5) |
  
-<p>&nbsp;</p>
+<br>
 
 	
 | Guideline |
