@@ -96,8 +96,7 @@ description: ""
 | [DC-1: Separate hosting](/control-catalog/dc/#dc-1) |
 | [DC-2: Physical Access Controls](/control-catalog/dc/#dc-2) |
 
-
-<p>
+<br>
 
 | Guideline |
 | ---- |
@@ -126,4 +125,4 @@ description: ""
 | [CS-11: Container Runtime Security](/control-catalog/cs/#cs-11) |
 | [IS-8: Endpoint Detection and Response (EDR)](/control-catalog/is/#is-8) |
 | [IS-12: DNS Security Extensions (DNSSEC)](/control-catalog/is/#is-12) |
-| [SD-3: Continuous Integration (CI) Tests](/control-catalog/sd/#sd-3) |</p>
+| [SD-3: Continuous Integration (CI) Tests](/control-catalog/sd/#sd-3) |<p></p>
