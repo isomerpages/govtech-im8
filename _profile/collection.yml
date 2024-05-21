@@ -2,4 +2,5 @@ collections:
   profile:
     output: true
     order:
+      - Sandbox.md
       - Low Risk.md
