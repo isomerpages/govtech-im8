@@ -4,9 +4,7 @@ permalink: /profile/sandbox/
 variant: markdown
 description: ""
 ---
-## Sandbox
-
-### Mandatory
+## Mandatory
 
 * [PM-3: System Security Plan (SSP) Development](/control-catalog/pm/#pm-3) 
 * [PM-4: Approval of Policy Deviations](/control-catalog/pm/#pm-4) 
@@ -15,7 +13,7 @@ description: ""
 
 
 
-### Guideline
+## Guideline
 
 * [AS-1: Input Validation](/control-catalog/as/#as-1)
 * [AS-2: Parameterised Interfaces](/control-catalog/as/#as-2)
