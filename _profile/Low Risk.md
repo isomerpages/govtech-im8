@@ -28,7 +28,7 @@ description: ""
 | [ST-5: Vulnerability Management](/control-catalog/st/#st-5) |
 | [NS-1: Public and Private Subnet Segmentation](/control-catalog/ns/#ns-1) |
 | [NS-2: Access Restrictions on CSP Resources Outside Virtual Network](/control-catalog/ns/#ns-2) |
-| [NS-3: Deny by Default – Allow by Exception](/control-catalog/ns/#ns-3) |
+| [NS-3: Deny by Default - Allow by Exception](/control-catalog/ns/#ns-3) |
 | [NS-4: Inter-Private Network Connectivity](/control-catalog/ns/#ns-4) |
 | [NS-5: Network and Application Layer Filtering](/control-catalog/ns/#ns-5) |
 | [NS-6: Valid and Trusted SSL/TLS Certificates](/control-catalog/ns/#ns-6) |
@@ -52,7 +52,7 @@ description: ""
 | [LM-8: Security Log Retention](/control-catalog/lm/#lm-8) |
 | [LM-9: Security Monitoring and Alerting](/control-catalog/lm/#lm-9) |
 | [LM-10: Resource Usage Monitoring and Alerting](/control-catalog/lm/#lm-10) |
-| [LM-12: Government Cyber Security Operations Centre (GCSOC)](/control-catalog/lm/#lm-12) |
+| [LM-12: Central Security Log Management and Monitoring](/control-catalog/lm/#lm-12) |
 | [AC-1: Principle of Least Privilege](/control-catalog/ac/#ac-1) |
 | [AC-2: Multi-Factor Authentication (MFA)](/control-catalog/ac/#ac-2) |
 | [AC-3: Inactive and Expired Accounts](/control-catalog/ac/#ac-3) |
@@ -85,7 +85,8 @@ description: ""
 | [IS-7: Malware Protection](/control-catalog/is/#is-7) |
 | [IS-9: End-of-Support (EOS) Assets](/control-catalog/is/#is-9) |
 | [IS-10: Synchronise time clocks](/control-catalog/is/#is-10) |
-| [IS-11: Domain Name Registration](/control-catalog/is/#is-11) |
+| [IS-11: Central Domain Name Registration](/control-catalog/is/#is-11) |
+| [IS-14: Singapore SMS Sender ID Registry Registration](/control-catalog/is/#is-14) |
 | [SD-1: Push Protection for Secrets](/control-catalog/sd/#sd-1) |
 | [SD-2: Default Branch Push Permissions](/control-catalog/sd/#sd-2) |
 | [SD-4: Static Analysis](/control-catalog/sd/#sd-4) |
@@ -96,11 +97,13 @@ description: ""
 | [DC-1: Separate hosting](/control-catalog/dc/#dc-1) |
 | [DC-2: Physical Access Controls](/control-catalog/dc/#dc-2) |
 
+
 <br>
 
 | Guideline |
 | ---- |
 | [AS-10: HTTP Strict Transport Security (HSTS)](/control-catalog/as/#as-10) |
+| [AS-12: Malware Scanning of Uploaded Files](/control-catalog/as/#as-12) |
 | [SC-2: Commit Signing](/control-catalog/sc/#sc-2) |
 | [SC-7: Software Artefact Signing](/control-catalog/sc/#sc-7) |
 | [SC-8: Software Artefact Signature Verification](/control-catalog/sc/#sc-8) |
@@ -111,7 +114,7 @@ description: ""
 | [LM-5: Database Logging](/control-catalog/lm/#lm-5) |
 | [LM-11: Service Level Monitoring and Alerting](/control-catalog/lm/#lm-11) |
 | [LM-13: Database Activity Monitoring](/control-catalog/lm/#lm-13) |
-| [LM-14: Web defacement monitoring and response](/control-catalog/lm/#lm-14) |
+| [LM-14: Web Defacement Monitoring](/control-catalog/lm/#lm-14) |
 | [LM-15: Structured Log Formatting](/control-catalog/lm/#lm-15) |
 | [LM-16: Key Signals Monitoring](/control-catalog/lm/#lm-16) |
 | [LM-17: Software delivery performance monitoring](/control-catalog/lm/#lm-17) |
@@ -125,4 +128,6 @@ description: ""
 | [CS-11: Container Runtime Security](/control-catalog/cs/#cs-11) |
 | [IS-8: Endpoint Detection and Response (EDR)](/control-catalog/is/#is-8) |
 | [IS-12: DNS Security Extensions (DNSSEC)](/control-catalog/is/#is-12) |
+| [IS-13: Defensive Domain Name Registration](/control-catalog/is/#is-13) |
 | [SD-3: Continuous Integration (CI) Tests](/control-catalog/sd/#sd-3) |
+
