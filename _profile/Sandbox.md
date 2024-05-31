@@ -9,10 +9,10 @@ description: ""
 | [PM-3: System Security Plan (SSP) Development](/control-catalog/pm/#pm-3) |
 | [PM-4: Approval of Policy Deviations](/control-catalog/pm/#pm-4) |
 | [PM-5: Central Submission of Approved System Security Plan (SSP)](/control-catalog/pm/#pm-5) |
- 
+
+
 <br>
 
-	
 | Guideline |
 | ---- |
 | [AS-1: Input Validation](/control-catalog/as/#as-1) |
@@ -42,7 +42,7 @@ description: ""
 | [ST-5: Vulnerability Management](/control-catalog/st/#st-5) |
 | [NS-1: Public and Private Subnet Segmentation](/control-catalog/ns/#ns-1) |
 | [NS-2: Access Restrictions on CSP Resources Outside Virtual Network](/control-catalog/ns/#ns-2) |
-| [NS-3: Deny by Default – Allow by Exception](/control-catalog/ns/#ns-3) |
+| [NS-3: Deny by Default - Allow by Exception](/control-catalog/ns/#ns-3) |
 | [NS-4: Inter-Private Network Connectivity](/control-catalog/ns/#ns-4) |
 | [NS-5: Network and Application Layer Filtering](/control-catalog/ns/#ns-5) |
 | [NS-6: Valid and Trusted SSL/TLS Certificates](/control-catalog/ns/#ns-6) |
@@ -69,8 +69,8 @@ description: ""
 | [LM-9: Security Monitoring and Alerting](/control-catalog/lm/#lm-9) |
 | [LM-10: Resource Usage Monitoring and Alerting](/control-catalog/lm/#lm-10) |
 | [LM-11: Service Level Monitoring and Alerting](/control-catalog/lm/#lm-11) |
-| [LM-12: Government Cyber Security Operations Centre (GCSOC)](/control-catalog/lm/#lm-12) |
-| [LM-14: Web defacement monitoring and response](/control-catalog/lm/#lm-14) |
+| [LM-12: Central Security Log Management and Monitoring](/control-catalog/lm/#lm-12) |
+| [LM-14: Web Defacement Monitoring](/control-catalog/lm/#lm-14) |
 | [LM-15: Structured Log Formatting](/control-catalog/lm/#lm-15) |
 | [LM-16: Key Signals Monitoring](/control-catalog/lm/#lm-16) |
 | [LM-17: Software delivery performance monitoring](/control-catalog/lm/#lm-17) |
@@ -112,8 +112,9 @@ description: ""
 | [IS-8: Endpoint Detection and Response (EDR)](/control-catalog/is/#is-8) |
 | [IS-9: End-of-Support (EOS) Assets](/control-catalog/is/#is-9) |
 | [IS-10: Synchronise time clocks](/control-catalog/is/#is-10) |
-| [IS-11: Domain Name Registration](/control-catalog/is/#is-11) |
+| [IS-11: Central Domain Name Registration](/control-catalog/is/#is-11) |
 | [IS-12: DNS Security Extensions (DNSSEC)](/control-catalog/is/#is-12) |
+| [IS-13: Defensive Domain Name Registration](/control-catalog/is/#is-13) |
 | [SD-1: Push Protection for Secrets](/control-catalog/sd/#sd-1) |
 | [SD-2: Default Branch Push Permissions](/control-catalog/sd/#sd-2) |
 | [SD-3: Continuous Integration (CI) Tests](/control-catalog/sd/#sd-3) |
@@ -124,3 +125,4 @@ description: ""
 | [SD-8: Deployment Environment Segregation](/control-catalog/sd/#sd-8) |
 | [DC-1: Separate hosting](/control-catalog/dc/#dc-1) |
 | [DC-2: Physical Access Controls](/control-catalog/dc/#dc-2) |
+
