@@ -9,7 +9,7 @@ Controls to prevent application vulnerabilities caused by insecure coding.
 | Controls |
 | ---- |
 | [AS-1: Input Validation](#as-1) |
-| [AS-2: Parametrised Interfaces](#as-2) |
+| [AS-2: Parameterised Interfaces](#as-2) |
 | [AS-3: Output Sanitisation](#as-3) |
 | [AS-4: Authentication Mechanism Rate-Limiting](#as-4) |
 | [AS-5: Password Requirements](#as-5) |
@@ -19,6 +19,7 @@ Controls to prevent application vulnerabilities caused by insecure coding.
 | [AS-9: Content Security Policy (CSP)](#as-9) |
 | [AS-10: HTTP Strict Transport Security (HSTS)](#as-10) |
 | [AS-11: Session Management](#as-11) |
+| [AS-12: Malware Scanning of Uploaded Files](#as-12) |
 
 
 <a id="as-1"></a>
@@ -39,15 +40,15 @@ Without input validation, there's a heightened risk of injection attacks, data m
 
 
 <a id="as-2"></a>
-## AS-2: Parametrised Interfaces
+## AS-2: Parameterised Interfaces
 
 ### Control Statement
 
-Use parametrised interfaces for database queries or system commands.
+Use parameterised interfaces for database queries or system commands.
 
 ### Control Recommendations
 
-Parametrised interfaces such Object-Relational Mapping (ORM) libraries ensure that parameters used in database queries or system commands are properly sanitised and prevent injection attacks.
+Parameterised interfaces such Object-Relational Mapping (ORM) libraries ensure that parameters used in database queries or system commands are properly sanitised and prevent injection attacks.
 
 ### Risk Statement
 
@@ -224,5 +225,22 @@ Not verifying a user regularly and at suitable checkpoints could allow someone w
 | ID | Type | Description |
 | -- | ---- | ----------- |
 | as-11_prm_1 | time period (hours) | The maximum time period in hours of a user's session. |
+
+<a id="as-12"></a>
+## AS-12: Malware Scanning of Uploaded Files
+
+### Control Statement
+
+Scan file uploads for malware before further processing by the system or users.
+
+### Control Recommendations
+
+Consider uploading the files to temporary storage for malware scanning on ephemeral compute like serverless functions before moving safe files to another storage for further processing or unsafe files to quarantine storage.
+
+### Risk Statement
+
+Without scanning uploaded files for malware, there's an increased risk of exploits or infection for consumers of the files.
+
+
 
 
