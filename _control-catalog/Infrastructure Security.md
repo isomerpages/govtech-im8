@@ -18,8 +18,10 @@ Controls to secure infrastructure that host applications, services, and data.
 | [IS-8: Endpoint Detection and Response (EDR)](#is-8) |
 | [IS-9: End-of-Support (EOS) Assets](#is-9) |
 | [IS-10: Synchronise time clocks](#is-10) |
-| [IS-11: Domain Name Registration](#is-11) |
+| [IS-11: Central Domain Name Registration](#is-11) |
 | [IS-12: DNS Security Extensions (DNSSEC)](#is-12) |
+| [IS-13: Defensive Domain Name Registration](#is-13) |
+| [IS-14: Singapore SMS Sender ID Registry Registration](#is-14) |
 
 
 <a id="is-1"></a>
@@ -190,24 +192,24 @@ Synchronise internal clocks to a common reference time source.
 
 ### Control Recommendations
 
-Use common time source such as Network Time Protocol.
+Use common time source such as Network Time Protocol (NTP). In the cloud, it is recommended to use the default time sources provided by the CSPs.
 
 ### Risk Statement
 
-Inconsistent time clocks will impede incident investigations.
+The lack of synchronised clocks introduces significant risks, including increased security vulnerabilities, data integrity issues, and challenges in troubleshooting.
 
 
 
 <a id="is-11"></a>
-## IS-11: Domain Name Registration
+## IS-11: Central Domain Name Registration
 
 ### Control Statement
 
-Register .sg domain names (e.g., .gov.sg, .edu.sg, .org.sg, .sg) with GovTech as the sole registrar.
+Register .gov.sg and .edu.sg domain names with GovTech as the sole registrar.
 
 ### Control Recommendations
 
-Consider defensive domain registation for domains that could be mistaken for the original domain, such as common typos or with special characters.
+Use the Whole of Government Domain Name Server (DNS) portal on the IT Service Management (ITSM) portal to register domain names.
 
 ### Risk Statement
 
@@ -229,6 +231,40 @@ DNS services such as WOG DNS, Amazon Route 53 and Cloudflare support DNSSEC conf
 ### Risk Statement
 
 Insecure domain name resolution can lead to man-in-the-middle attacks caused by DNS spoofing or DNS cache poisoning.
+
+
+
+<a id="is-13"></a>
+## IS-13: Defensive Domain Name Registration
+
+### Control Statement
+
+Register second (.sg) and third (.com.sg, .org.sg, .net.sg, .edu.sg) level domain name variants of the system's primary domain name.
+
+### Control Recommendations
+
+Consider defensive registration of domain names with typographical variants of the system's primary domain name. The Whole of Government Domain Name Server (DNS) portal on the IT Service Management (ITSM) portal automatically includes the second and third level domain names.
+
+### Risk Statement
+
+Malicious use of domain names similar to actual Government domain names increases the risk of phishing and spoofing.
+
+
+
+<a id="is-14"></a>
+## IS-14: Singapore SMS Sender ID Registry Registration
+
+### Control Statement
+
+Register with the Singapore SMS Sender ID Registry by whitelisting or blacklisting SMS Sender IDs associated with the agency.
+
+### Control Recommendations
+
+Whitelist Sender IDs used to send SMSes and blacklist Sender IDs which are variants of the whitelisted Sender IDs, agency names, or names of services.
+
+### Risk Statement
+
+Lack of Sender ID registration allows malicious entities to spoof legitimate Government SMSes.
 
 
 

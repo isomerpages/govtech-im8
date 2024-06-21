@@ -24,11 +24,11 @@ Run regular [st-1_prm_1] vulnerability assessment scans for eligible hosts.
 
 ### Control Recommendations
 
-Select agent-based or network-based scans as necessary. Use scanners such as Amazon Inspector that support continuous scanning. Use authenticated scans for greater coverage.
+Select agent-based or network-based scans as necessary. Implement authenticated scans where possible for greater coverage. Use scanners such as Amazon Inspector or Microsoft Defender for Cloud for continuous scanning of cloud systems. For on-premises systems or systems that require periodic scans, subscribe to Vulnerability Management System (VMS).
 
 ### Risk Statement
 
-Without regular vulnerability assessment scans, hosts remain exposed to undetected security vulnerabilities, increasing the risk of exploitation and unauthorised access to critical systems.
+Without regular vulnerability assessment scans, hosts remain exposed to undetected security vulnerabilities or misconfigurations, increasing the risk of exploitation and unauthorised access to critical systems.
 
 
 

@@ -27,7 +27,7 @@ Develop, document, and disseminate an agency-level cybersecurity incident manage
 
 ### Control Recommendations
 
-Refer to the Government Incident Reporting and Operations Centre (GIROC) [ICT and Data Incident Reporting Resources] for an incident management plan and best practices template.
+Refer to the Government Incident Reporting and Operations Centre (GIROC) ICT and Data Incident Reporting Resources for an incident management plan and best practices template.
 
 ### Risk Statement
 
@@ -50,7 +50,7 @@ Develop and document a project-level cybersecurity risk assessment prior to init
 
 ### Control Recommendations
 
-Refer to the Cyber Security Agency of Singapore [Cybersecurity Toolkit for IT Teams](https://www.csa.gov.sg/our-programmes/support-for-enterprises/sg-cyber-safe-programme/cybersecurity-toolkits/cybersecurity-toolkit-for-it-teams) for an example of a risk assessment template and modify accordingly. For potential risk scenarios, consider examples from the Government Commercial Cloud [Cloud Security Risk Register].
+Refer to the Cyber Security Agency of Singapore's Cybersecurity Toolkit for IT Teams for an example of a risk assessment template and modify accordingly.
 
 ### Risk Statement
 
@@ -80,11 +80,11 @@ Failure to develop a comprehensive SSP can result in inadequate documentation an
 
 ### Control Statement
 
-Approve all deviations from the Level 1 Profile by the relevant agency approval authority and document these deviations in the customised SSP.
+Get approval of deviations from applicable Level 1 profile controls in the default System Security Plans (SSPs) from the agency's ICT and Digitalisation Steering Committee (IDSC) and document these deviations in the customised SSP.
 
 ### Control Recommendations
 
-Agencies should seek approval for deviation from their IDSC or delegated approval authority such as the agency CIO or CISO.
+Agencies should seek approval for deviation from their IDSC or delegated approval authority. Controls that are not applicable to the system do not need approval for deviations but the reasons why they are not applicable must be documented in the customised SSP.
 
 ### Risk Statement
 
@@ -163,3 +163,7 @@ Ensure that the service level agreement is regularly checked for compliance.
 ### Risk Statement
 
 Without a service level agreement the availability of the Software as a Service (SaaS) system may be poorly maintained by the provider.
+
+
+
+
