@@ -4,7 +4,7 @@ permalink: /profile/low-risk/
 variant: markdown
 description: ""
 ---
-| Mandatory |
+| Requirement |
 | ---- |
 | [AS-1: Input Validation](/control-catalog/as/#as-1) |
 | [AS-2: Parameterised Interfaces](/control-catalog/as/#as-2) |
