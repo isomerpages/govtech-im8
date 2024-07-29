@@ -19,9 +19,9 @@ Controls to support detection and response to security and operations incidents.
 | [LM-9: Security Monitoring and Alerting](#lm-9) |
 | [LM-10: Resource Usage Monitoring and Alerting](#lm-10) |
 | [LM-11: Service Level Monitoring and Alerting](#lm-11) |
-| [LM-12: Government Cyber Security Operations Centre (GCSOC)](#lm-12) |
+| [LM-12: Central Security Log Management and Monitoring](#lm-12) |
 | [LM-13: Database Activity Monitoring](#lm-13) |
-| [LM-14: Web defacement monitoring and response](#lm-14) |
+| [LM-14: Web Defacement Monitoring](#lm-14) |
 | [LM-15: Structured Log Formatting](#lm-15) |
 | [LM-16: Key Signals Monitoring](#lm-16) |
 | [LM-17: Software delivery performance monitoring](#lm-17) |
@@ -221,21 +221,27 @@ Without effective service level monitoring to identify potential application or 
 
 
 <a id="lm-12"></a>
-## LM-12: Government Cyber Security Operations Centre (GCSOC)
+## LM-12: Central Security Log Management and Monitoring
 
 ### Control Statement
 
-Subscribe and send security logs to GCSOC for central threat monitoring.
+Centralise security log management and monitoring with [lm-12_prm_1].
 
 ### Control Recommendations
 
-Logs that are sent to GCC Central Logs are forwarded to GCSOC.
+Tenants on Government Commercial Cloud (GCC) already have Cloud Service Provider (CSP) tenant security logs stored centrally and available for forwarding to Government Cyber Security Operations Centre (GCSOC). Contact GCSOC for subscription and additional services.
 
 ### Risk Statement
 
-Failure to subscribe and send security logs to the Government Cyber Security Operations Centre (GCSOC) impedes central threat monitoring, increasing the risk of delayed or unnoticed security incidents, hindering effective response, and compromising the overall cybersecurity posture.
+Lack of central security log management and monitoring increases the risk of delayed or unnoticed security incidents, hindering effective response, and compromising the overall cybersecurity posture.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| lm-12_prm_1 | service | The central security log management and monitoring service. |
 
 <a id="lm-13"></a>
 ## LM-13: Database Activity Monitoring
@@ -255,19 +261,19 @@ Neglecting to monitor database activities for anomalous behaviour increases the 
 
 
 <a id="lm-14"></a>
-## LM-14: Web defacement monitoring and response
+## LM-14: Web Defacement Monitoring
 
 ### Control Statement
 
-Plan for and implement measures to recover against web defacements.
+Plan for and implement measures to detect and recover from web defacements.
 
 ### Control Recommendations
 
-Use GCSOC’s services for centralised monitoring for web defacements attacks on internet-facing systems.
+The Government Cyber Security Operations Centre (GCSOC) offers centralised monitoring of web defacements of internet-facing systems.
 
 ### Risk Statement
 
-Leverage on GCSOC services to reduce duplication of effort and reduce inconsistent implementation.
+Failure to detect and respond to web defacement promptly will lead to prolonged disruption to services.
 
 
 

@@ -10,7 +10,7 @@ Controls to secure the network boundaries of a system.
 | ---- |
 | [NS-1: Public and Private Subnet Segmentation](#ns-1) |
 | [NS-2: Access Restrictions on CSP Resources Outside Virtual Network](#ns-2) |
-| [NS-3: Deny by Default – Allow by Exception](#ns-3) |
+| [NS-3: Deny by Default - Allow by Exception](#ns-3) |
 | [NS-4: Inter-Private Network Connectivity](#ns-4) |
 | [NS-5: Network and Application Layer Filtering](#ns-5) |
 | [NS-6: Valid and Trusted SSL/TLS Certificates](#ns-6) |
@@ -62,7 +62,7 @@ Lack of access restrictions raises the risk of unauthorised access, data exposur
 
 
 <a id="ns-3"></a>
-## NS-3: Deny by Default – Allow by Exception
+## NS-3: Deny by Default - Allow by Exception
 
 ### Control Statement
 
@@ -132,19 +132,13 @@ Ensure that deployed SSL/TLS certificates are:
 
 ### Control Recommendations
 
-Configure a certificate manager that auto-renews certificates and sends alerts at least [ns-6_prm_1] day(s) before expiry (e.g., AWS Certificate Manager). Otherwise, automate these functions separately.
+Configure a certificate manager that auto-renews certificates and sends alerts before expiry (e.g., AWS Certificate Manager). Otherwise, automate these functions separately.
 
 ### Risk Statement
 
 Using invalid SSL/TLS certificates introduces the risk of compromised encryption, man-in-the-middle attacks, and potential unauthorised access to sensitive information.
 
 
-
-#### Parameters
-
-| ID | Type | Description |
-| -- | ---- | ----------- |
-| ns-6_prm_1 | time period (days) | The time period in days before certificate expiry. |
 
 <a id="ns-7"></a>
 ## NS-7: Secure Inter-Service Communication
@@ -206,19 +200,11 @@ Implement strong access controls, encryption, and logging for remote developer, 
 
 ### Control Recommendations
 
-Use strong authentication and MFA (except for mobile GFE). Layered security mechanisms and controls include firewall that inspects traffic from gateway to private network;&nbsp;
+Use strong authentication and MFA (except for mobile GFE). Layered security mechanisms and controls include:
 
-Terminate all remote access connections in a dedicated network segment within the network and restrict access to only systems and services allowed by the Agencies;&nbsp;
+Inspect traffic from gateway to private network;
 
-Implement strong encryption for remote access into school staff network;
-
-Only authorised Government Furnished Equipment (GFE) shall be used for remote access connection to SSN;
-
-Make sure that remote access connections are not perpetual or to re-authenticate remote users to the VPN gateway on a periodic basis (such as every four hours);&nbsp;
-
-Set the maximum number of consecutive failed authentication attempts before account lockout for remote access into SSN; and
-
-Make sure that split tunnelling is not implemented.
+Terminate all remote access connections in a dedicated network segment within the network and restrict access to only systems and services allowed by the Agencies; Implement strong encryption for remote access into school staff network; Only authorised Government Furnished Equipment (GFE) shall be used for remote access connection to SSN; Make sure that remote access connections are not perpetual or to re-authenticate remote users to the VPN gateway on a periodic basis (such as every four hours); Set the maximum number of consecutive failed authentication attempts before account lockout for remote access into SSN; and Make sure that split tunnelling is not implemented.
 
 ### Risk Statement
 

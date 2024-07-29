@@ -1,0 +1,6 @@
+collections:
+  profile:
+    output: true
+    order:
+      - Low Risk.md
+      - Sandbox.md
