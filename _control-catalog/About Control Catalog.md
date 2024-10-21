@@ -14,7 +14,7 @@ The catalog consists of a&nbsp;central pool of recommended controls meant for lo
 
 The controls are expressed using Open Security Controls Assessment Language (OSCAL) which are codified in machine-readable policy format. It enables future automation to monitor and assess the effectiveness of technical control implementation. Industry partners can get more info about OSCAL [here](https://pages.nist.gov/OSCAL/).
 
-The controls are categorised into domain areas as listed on the left. Each control can either be a basic <strong>hygiene requirement</strong> which should be implemented or a <strong>guideline</strong> which is best practice for consideration.&nbsp; A control can be tagged as requirement for low-risk systems but tagged as guideline for systems in sandbox stage. The list of controls for these 2 profiles are listed <a href="/profile/low-risk/" rel="noopener noreferrer nofollow">here</a>.
+The controls are categorised into domain areas as listed on the left. Each control can either be a basic <strong>hygiene requirement</strong> which should be implemented or a <strong>guideline</strong> which is best practice for consideration.&nbsp; A control can be tagged as requirement for low-risk systems but tagged as guideline for systems in sandbox stage. The list of controls for these 2 profiles are listed <a href="/profile/low-risk/" rel="noopener noreferrer nofollow">here</a>.  You may refer to sample JSON files [Sample JSON files](https://info.standards.tech.gov.sg/control-catalog/)here.
 
 Each system is to define a system security plan that comprises the implementable controls.&nbsp; Agencies and their industry partners are to apply the controls identified for each system.
 
