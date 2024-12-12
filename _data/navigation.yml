@@ -4,5 +4,7 @@ links:
     url: /about
   - title: Control Catalog
     url: /control-catalog
+  - title: Profiles
+    collection: profile
   - title: Contact Us
     url: /contact-us/
