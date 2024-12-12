@@ -4,7 +4,7 @@ links:
     url: /about
   - title: Control Catalog
     url: /control-catalog
-  - title: Profile
-    collection: profile
   - title: Contact Us
     url: /contact-us/
+  - title: Profile
+    url: /profile/low-risk
