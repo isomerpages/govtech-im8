@@ -40,11 +40,10 @@ sections:
       alt: isometric illustration tech
   - infopic:
       title: Profiles
-      subtitle: Add an image and text
       id: infopic
       description: A Profile defines a customised set of controls derived from the catalog.
       button: READ MORE
       url: /profiles/
       image: /images/img_catalog.png
-      alt: Image alt text
+      alt: isometric illustration tech
 ---
