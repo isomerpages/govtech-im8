@@ -2,5 +2,6 @@ collections:
   profile:
     output: true
     order:
+      - About Profile.md
       - Low Risk.md
       - Sandbox.md
