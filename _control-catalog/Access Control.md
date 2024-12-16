@@ -20,6 +20,7 @@ Controls to protect against unauthorised access to agency systems.
 | [AC-10: Identity and Device-Based Access Control](#ac-10) |
 | [AC-11: Single User Endpoints](#ac-11) |
 | [AC-12: Single Sign-On (SSO) for Internal Users](#ac-12) |
+| [AC-13: Static Credential Expiry and Rotation](#ac-13) |
 
 
 <a id="ac-1"></a>
@@ -31,7 +32,7 @@ Deny access by default and grant only the minimum permissions required for autho
 
 ### Control Recommendations
 
-Consider attribute- or feature-based access control for greater customisability and granularity.
+Consider attribute- or feature-based access control for greater customisability and granularity. Use automated tools such as AWS IAM Access Advisor or Azure AD Access Review to assist with granular permission management.
 
 ### Risk Statement
 
@@ -44,7 +45,7 @@ Violating the principle of least privileges increases the risk of unauthorised a
 
 ### Control Statement
 
-Require MFA for remote developer, maintainer, or administrator access at login.
+Require MFA for privileged accounts at login.
 
 ### Control Recommendations
 
@@ -164,7 +165,7 @@ Implement automation of cloud and application account provisioning and deprovisi
 
 ### Control Recommendations
 
-Adopt Single Sign-On (SSO) with just-in-time provisioning or account lifecycle management tools (such as SCIM or CAM) to assist with account management. For systems unable to use SSO, it is recommended to leverage account management lifecycle tools with HR records (such as CAM) to automatically provision and de-provision accounts.
+Adopt Single Sign-On (SSO) with just-in-time provisioning or account lifecycle management tools (such as SCIM or CAM) to assist with account management. Perform validation testing of the integration between system and tool, such as ensuring accounts are provisioned and deprovisioned in a timely manner by the tool. Where possible, configure the system such that accounts can only be managed via automated provisioning. For systems unable to use SSO, it is recommended to leverage account management lifecycle tools with HR records (such as CAM) to automatically provision and de-provision accounts.
 
 ### Risk Statement
 
@@ -239,5 +240,28 @@ Configure multi-factor authentication (MFA) at the Single-Sign On (SSO) identity
 Without Single Sign-On (SSO), there is an increased risk of unauthorized access and compromised user credentials, as users may resort to using weak passwords or reusing credentials across multiple systems, thereby exposing sensitive information to potential security breaches.
 
 
+
+<a id="ac-13"></a>
+## AC-13: Static Credential Expiry and Rotation
+
+### Control Statement
+
+Rotate long-lived static credentials such as API keys, AWS IAM user access keys, and personal access tokens every [ac-13_prm_1] day(s) or used short-lived credentials.
+
+### Control Recommendations
+
+Automate credential rotation where possible. Consider short-lived alternatives to long-lived static credentials, such as AWS Security Token Service and IAM Identity Center authentication instead of IAM user access keys.
+
+### Risk Statement
+
+Failure to regularly rotate long-lived credentials or use short-lived credentials increases the risk of unauthorised access from stolen or unrevoked credentials.
+
+
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| ac-13_prm_1 | time period (days) | The time period in days for credential rotation. |
 
 
