@@ -11,16 +11,16 @@ The Profile model is the sole model in the OSCAL Control layer. The profiles
 that are currently created are:</p>
 <ol data-tight="true" class="tight">
 <li>
-<p>Low-Risk Profile</p>
+<p>Low Risk Profile</p>
 </li>
 <li>
 <p>Open Saas Profile</p>
 </li>
 <li>
-<p>Low-Risk Saas Profile</p>
+<p>Low Risk Saas Profile</p>
 </li>
 <li>
-<p>Medium-Risk Saas Profile</p>
+<p>Medium Risk Saas Profile</p>
 </li>
 <li>
 <p>Sandbox Profile</p>
