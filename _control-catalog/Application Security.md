@@ -15,11 +15,13 @@ Controls to prevent application vulnerabilities caused by insecure coding.
 | [AS-5: Password Requirements](#as-5) |
 | [AS-6: Password Salting and Hashing](#as-6) |
 | [AS-7: Access Control Check Enforcement](#as-7) |
-| [AS-8: Application Secrets Management](#as-8) |
+| [AS-8: Secrets Management](#as-8) |
 | [AS-9: Content Security Policy (CSP)](#as-9) |
 | [AS-10: HTTP Strict Transport Security (HSTS)](#as-10) |
 | [AS-11: Session Management](#as-11) |
 | [AS-12: Malware Scanning of Uploaded Files](#as-12) |
+| [AS-13: Exposure of Internal System Details](#as-13) |
+| [AS-14: Secure Cryptographic Libraries](#as-14) |
 
 
 <a id="as-1"></a>
@@ -153,19 +155,19 @@ Failure to perform access control checks on authenticated requests increases the
 
 
 <a id="as-8"></a>
-## AS-8: Application Secrets Management
+## AS-8: Secrets Management
 
 ### Control Statement
 
-Encrypt and store application secrets in a secret management solution with appropriate access controls and do not hard-code secrets in source code.
+Securely store secrets in an appropriate secrets management solution with access control enforcement, encryption, and monitoring.
 
 ### Control Recommendations
 
-Secret management solutions include cloud solutions like AWS Secrets Manager and Azure Key Vault as well as cloud-agnostic solutions like HashiCorp Vault and CyberArk Conjur.
+Secrets include API keys, AWS IAM user access keys, and other static credentials. Do not store secrets unencrypted in source code or configuration files. Store secrets in cloud solutions like AWS Secrets Manager and Azure Key Vault or cloud-agnostic solutions like HashiCorp Vault and CyberArk Conjur. For SaaS or platforms, ensure that secrets are stored in an appropriate solution. For example, use GitHub Actions secrets instead of variables.
 
 ### Risk Statement
 
-Exposure of sensitive information and unauthorised access to system credentials may occur if application secrets are stored without encryption or if hard-coded in source code.
+Exposure of sensitive information and unauthorised access to system credentials may occur if application secrets are stored insecurely or hard-coded in source code.
 
 
 
@@ -240,6 +242,40 @@ Consider uploading the files to temporary storage for malware scanning on epheme
 ### Risk Statement
 
 Without scanning uploaded files for malware, there's an increased risk of exploits or infection for consumers of the files.
+
+
+
+<a id="as-13"></a>
+## AS-13: Exposure of Internal System Details
+
+### Control Statement
+
+Prevent the unnecessary disclosure of internal system details to end users.
+
+### Control Recommendations
+
+Ensure all system messages and notifications are informative yet secure. These messages should be contextually appropriate, providing end-users with relevant information without exposing internal system details such as debug information, stack traces, or software versioning.
+
+### Risk Statement
+
+Disclosure of internal system details or debug stack traces can expose vulnerabilities, software versions, and system architecture, potentially leading to targeted attacks, exploitation of known vulnerabilities, and unauthorised access to sensitive systems or data.
+
+
+
+<a id="as-14"></a>
+## AS-14: Secure Cryptographic Libraries
+
+### Control Statement
+
+Use reputable and secure cryptographic libraries and functions to handle cryptographic operations.
+
+### Control Recommendations
+
+Follow the OWASP Cryptographic Storage Cheat Sheet for best practices in securely implementing cryptographic operations. Regularly update libraries and prefer widely recognized ones such as OpenSSL. Consider using libraries that are FIPS 140-2 or FIPS 140-3 compliant for enhanced security assurance.
+
+### Risk Statement
+
+Using insecure cryptographic libraries and functions can expose applications to significant security risks, such as data breaches and unauthorized access, compromising sensitive information.
 
 
 
