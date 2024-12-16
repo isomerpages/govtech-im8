@@ -4,164 +4,73 @@ permalink: /control-catalog/lm/
 variant: markdown
 description: ""
 ---
-Controls to support detection and response to security and operations incidents.
+Controls to protect against unauthorised access to agency systems.
 
 | Controls |
 | ---- |
-| [LM-1: Separate Log Storage](#lm-1) |
-| [LM-2: Tamper-Resistant Log Storage](#lm-2) |
-| [LM-3: Network Flow Logging](#lm-3) |
-| [LM-4: Audit Logging](#lm-4) |
-| [LM-5: Database Logging](#lm-5) |
-| [LM-6: Access Logging](#lm-6) |
-| [LM-7: Host Security Event Logging](#lm-7) |
-| [LM-8: Security Log Retention](#lm-8) |
-| [LM-9: Security Monitoring and Alerting](#lm-9) |
-| [LM-10: Resource Usage Monitoring and Alerting](#lm-10) |
-| [LM-11: Service Level Monitoring and Alerting](#lm-11) |
-| [LM-12: Central Security Log Management and Monitoring](#lm-12) |
-| [LM-13: Database Activity Monitoring](#lm-13) |
-| [LM-14: Web Defacement Monitoring](#lm-14) |
-| [LM-15: Structured Log Formatting](#lm-15) |
-| [LM-16: Key Signals Monitoring](#lm-16) |
-| [LM-17: Software delivery performance monitoring](#lm-17) |
-| [LM-18: Whole of Government Application Analytics (WOGAA)](#lm-18) |
-| [LM-19: Log Sanitisation](#lm-19) |
+| [AC-1: Principle of Least Privilege](#ac-1) |
+| [AC-2: Multi-Factor Authentication (MFA)](#ac-2) |
+| [AC-3: Inactive and Expired Accounts](#ac-3) |
+| [AC-4: Access Review](#ac-4) |
+| [AC-5: Endpoint Device Hardening](#ac-5) |
+| [AC-6: Default Credentials](#ac-6) |
+| [AC-7: SingPass/CorpPass for External Users](#ac-7) |
+| [AC-8: Automate account provisioning](#ac-8) |
+| [AC-9: Endpoint Device Management](#ac-9) |
+| [AC-10: Identity and Device-Based Access Control](#ac-10) |
+| [AC-11: Single User Endpoints](#ac-11) |
+| [AC-12: Single Sign-On (SSO) for Internal Users](#ac-12) |
+| [AC-13: Static Credential Expiry and Rotation](#ac-13) |
 
 
-<a id="lm-1"></a>
-## LM-1: Separate Log Storage
+<a id="ac-1"></a>
+## AC-1: Principle of Least Privilege
 
 ### Control Statement
 
-Store logs in a different system or system component than the system component that generated the logs.
+Deny access by default and grant only the minimum permissions required for authorised accounts or processes to perform a specific function.
 
 ### Control Recommendations
 
-Do not store logs only in the same system component that generated it. For example, an application server on EC2 or ECS should send logs to a separate storage such as an S3 bucket as soon as possible after the logged event instead of only storing it on the server. For cloud audit logs, store them in a separate system or account (such as AWS Organisation Cloudtrail in GCC). Sending logs to the Government Cyber Security Operations Centre (GCSOC) or the central Government Commercial Cloud (GCC) log bucket can also satisfy this control.
+Consider attribute- or feature-based access control for greater customisability and granularity. Use automated tools such as AWS IAM Access Advisor or Azure AD Access Review to assist with granular permission management.
 
 ### Risk Statement
 
-Storing logs in a repository separate from the system component reduces the risk of tampering, unauthorised access, and manipulation of logs if the system component is compromised.
+Violating the principle of least privileges increases the risk of unauthorised access, privilege escalation, and potential security breaches due to unnecessary permissions, compromising the overall security posture.
 
 
 
-<a id="lm-2"></a>
-## LM-2: Tamper-Resistant Log Storage
+<a id="ac-2"></a>
+## AC-2: Multi-Factor Authentication (MFA)
 
 ### Control Statement
 
-Protect logs from unauthorised access, modification, and deletion.
+Require MFA for privileged accounts at login.
 
 ### Control Recommendations
 
-Apply access control policies to logs based on the principle of least privilege. As far as possible, only read access should be granted. Logs sent to GCC Central Logs are tamper-resistant.
+Ensure that the authentication factors are different and independent of the accessing device. For additional security, consider MFA for privileged actions at the application level (such as step-up MFA challenges via PIM tools).
 
 ### Risk Statement
 
-Without protection measures, logs are susceptible to unauthorised access, modification, or deletion, leading to the risk of tampering, loss of crucial audit information, and compromised forensic analysis capabilities during security incidents.
+Without requiring phishing-resistant Multi-Factor Authentication (MFA) for remote access, there is an increased risk of unauthorised access, credential theft, and potential compromise of sensitive systems, especially for users with elevated privileges.
 
 
 
-<a id="lm-3"></a>
-## LM-3: Network Flow Logging
+<a id="ac-3"></a>
+## AC-3: Inactive and Expired Accounts
 
 ### Control Statement
 
-Log network traffic going to and from network interfaces.
+Disable or remove accounts with privileged access within [ac-3_prm_1] day(s) from last day of authorised use or have not been used for [ac-3_prm_2] day(s).
 
 ### Control Recommendations
 
-Enable VPC Flow Logs for AWS or its equivalents.
+Use automated checks to identify accounts and credentials that should be disabled. For privileged user accounts in applications, consider using automated workflows such as System for Cross-domain Identity Management (SCIM) or identity lifecycle management tools. For cloud service provider accounts, use tools such as AWS Config iam-user-unused-credentials-check to manage Identity and Access Management (IAM) users.
 
 ### Risk Statement
 
-Failing to log network traffic going to and from network interfaces increases the risk of overlooking suspicious activities, potential security breaches, and the inability to trace and investigate network-related incidents effectively.
-
-
-
-<a id="lm-4"></a>
-## LM-4: Audit Logging
-
-### Control Statement
-
-Log management and audit events.
-
-### Control Recommendations
-
-For cloud, configure CloudTrail for AWS or its equivalents to log management and audit events such as changes to accounts, access, IAM policies and resources. For SaaS and COTS, enable audit logging features.
-
-### Risk Statement
-
-Neglecting to log and manage audit events increases the risk of undetected security incidents, compromises visibility into system activities, and hinders effective forensic analysis and compliance monitoring.
-
-
-
-<a id="lm-5"></a>
-## LM-5: Database Logging
-
-### Control Statement
-
-Log database audit events.
-
-### Control Recommendations
-
-Enable RDS logging for AWS or its equivalents.
-
-### Risk Statement
-
-Neglecting to log database audit events raises the risk of overlooking unauthorised activities, compromises in data security, and hinders the ability to track and investigate security incidents or compliance violations within the database environment.
-
-
-
-<a id="lm-6"></a>
-## LM-6: Access Logging
-
-### Control Statement
-
-Log access requests sent to web application firewalls, load balancers, proxies or web servers.
-
-### Control Recommendations
-
-Enable AWS WAF logging, Application Load Balancer logging, API Gateways, or their equivalents.
-
-### Risk Statement
-
-Failure to log access requests sent to web application firewalls, load balancers, proxies, or web servers increases the risk of overlooking potential security threats, unauthorised access attempts, and compromises visibility into the traffic that could lead to security incidents.
-
-
-
-<a id="lm-7"></a>
-## LM-7: Host Security Event Logging
-
-### Control Statement
-
-Log security events on hosts.
-
-### Control Recommendations
-
-Host security events include operating system security events, authentication, and endpoint detection and response alerts, configuration changes, and account and access rights changes.
-
-### Risk Statement
-
-Neglecting to log security events on hosts increases the risk of undetected security incidents, compromises incident response capabilities, and hinders forensic analysis, limiting the ability to identify and mitigate potential threats.
-
-
-
-<a id="lm-8"></a>
-## LM-8: Security Log Retention
-
-### Control Statement
-
-Retain security logs for at least [lm-8_prm_1] day(s).
-
-### Control Recommendations
-
-Security logs include network flow logs, cloud management logs, access logs, database logs and host logs. Retain non-security logs (e.g. application, operations and performance logs) as long as needed for incident resolution and debugging. Consider log lifecycle management automation, such as Amazon S3 Lifecycle configurations.
-
-### Risk Statement
-
-Failure to retain security logs increases the risk of losing crucial historical data, hindering investigations, compliance audits, and the ability to identify and respond to security incidents that occurred beyond a limited timeframe.
+Failure to disable or remove unused accounts or credentials with elevated access increases the risk of unauthorised access, as dormant accounts may become targets for exploitation, compromising the security of the system.
 
 
 
@@ -169,73 +78,23 @@ Failure to retain security logs increases the risk of losing crucial historical 
 
 | ID | Type | Description |
 | -- | ---- | ----------- |
-| lm-8_prm_1 | time period (days) | The time period in days of log retention. |
+| ac-3_prm_1 | time period (days) | The time period in days after account expiry. |
+| ac-3_prm_2 | time period (days) | The time period in days of account inactivity. |
 
-<a id="lm-9"></a>
-## LM-9: Security Monitoring and Alerting
-
-### Control Statement
-
-Configure security monitoring to identify potential security violations or breaches and send automated alerts.
-
-### Control Recommendations
-
-Enable Amazon GuardDuty, Microsoft Azure Security Center, or their equivalents.
-
-### Risk Statement
-
-Without configuring security monitoring to identify potential security violations or breaches and send automated alerts, there's an increased risk of delayed or unnoticed security incidents, hindering timely response and mitigation efforts to protect the system from further compromise.
-
-
-
-<a id="lm-10"></a>
-## LM-10: Resource Usage Monitoring and Alerting
+<a id="ac-4"></a>
+## AC-4: Access Review
 
 ### Control Statement
 
-Configure resource usage monitoring to identify abnormal usage and send automated alerts.
+Perform an access review every [ac-4_prm_1] day(s) and remove unauthorised or unintended privileged access rights within [ac-4_prm_2] day(s).
 
 ### Control Recommendations
 
-Configure Amazon CloudWatch alarms, Azure Monitor alerts, or their equivalents to identify abnormal usage such as spike in usage, access to resources during expected hours, and excessive charges.
+For privileged user accounts in applications, implement automated review workflows or reports. For cloud service provider accounts and roles, use tools such as AWS IAM Access Advisor or Azure AD Access Review to facilitate and manage access reviews.
 
 ### Risk Statement
 
-Lack of resource usage monitoring with automated alerts increases the risk of overlooking abnormal usage patterns, potential resource abuse, and compromises in system performance, hindering the ability to proactively address issues and prevent service disruptions.
-
-
-
-<a id="lm-11"></a>
-## LM-11: Service Level Monitoring and Alerting
-
-### Control Statement
-
-Monitor, maintain and alert on service level objectives (SLOs) and indicators (SLIs) to ensure consistent service performance, availability and reliability.
-
-### Control Recommendations
-
-Implement a comprehensive monitoring system that tracks key SLIs and evaluates them against defined SLOs. This will help in identifying potential service level breaches early and take proactive measures to maintain service quality. Examples include Cloudwatch metrics and alerts, Amazon Route 53 health checks, Azure Monitor Application Insights, or their equivalents.
-
-### Risk Statement
-
-Without effective service level monitoring to identify potential application or service degradation and send automated alerts, there is a risk of failing to meet service availability standards, which could result in user dissatisfaction and reduced reliability.
-
-
-
-<a id="lm-12"></a>
-## LM-12: Central Security Log Management and Monitoring
-
-### Control Statement
-
-Centralise security log management and monitoring with [lm-12_prm_1].
-
-### Control Recommendations
-
-Tenants on Government Commercial Cloud (GCC) already have Cloud Service Provider (CSP) tenant security logs stored centrally and available for forwarding to Government Cyber Security Operations Centre (GCSOC). Contact GCSOC for subscription and additional services.
-
-### Risk Statement
-
-Lack of central security log management and monitoring increases the risk of delayed or unnoticed security incidents, hindering effective response, and compromising the overall cybersecurity posture.
+Without regular access reviews and prompt removal of unauthorised or unintended access rights, there is an increased risk of lingering access, potential misuse of privileges, and compromised security, impacting the confidentiality and integrity of sensitive data.
 
 
 
@@ -243,125 +102,166 @@ Lack of central security log management and monitoring increases the risk of del
 
 | ID | Type | Description |
 | -- | ---- | ----------- |
-| lm-12_prm_1 | service | The central security log management and monitoring service. |
+| ac-4_prm_1 | time period (days) | The time period in days of access review frequency. |
+| ac-4_prm_2 | time period (days) | The time period in days of access removal deadline. |
 
-<a id="lm-13"></a>
-## LM-13: Database Activity Monitoring
-
-### Control Statement
-
-Monitor database activities for anomalous behaviour.
-
-### Control Recommendations
-
-Config RDS Activity Streams and logs with alerts or Database Activity Monitoring (DAM) tools to detect unusual authentication, reads or writes to a database.
-
-### Risk Statement
-
-Neglecting to monitor database activities for anomalous behaviour increases the risk of undetected security threats, unauthorised access, and compromises in data integrity, hindering the ability to identify and respond to potential database-related incidents.
-
-
-
-<a id="lm-14"></a>
-## LM-14: Web Defacement Monitoring
+<a id="ac-5"></a>
+## AC-5: Endpoint Device Hardening
 
 ### Control Statement
 
-Plan for and implement measures to detect and recover from web defacements.
+Require hardened endpoint devices for remote developer, maintainer, or administrator access.
 
 ### Control Recommendations
 
-The Government Cyber Security Operations Centre (GCSOC) offers centralised monitoring of web defacements of internet-facing systems.
+Use Endpoint Management platfoms to continuously check and enforce device security posture and deny access if the hardening requirements are not met. Hardened devices include Government Standard Image Build (GSIB) and Security Suite for Engineering Endpoint Devices (SEED).
 
 ### Risk Statement
 
-Failure to detect and respond to web defacement promptly will lead to prolonged disruption to services.
+Without requiring hardened endpoint devices for remote access, there's an increased risk of compromised endpoints, potential malware infections, and security breaches, which could lead to unauthorised access and compromise the integrity of systems.
 
 
 
-<a id="lm-15"></a>
-## LM-15: Structured Log Formatting
+<a id="ac-6"></a>
+## AC-6: Default Credentials
 
 ### Control Statement
 
-Publish logs in a consistent, structured format that aligns with industry standards for easy parsing and analysis.
+Change default credentials prior to first use.
 
 ### Control Recommendations
 
-For security logs, implement or transform to OCSF (Open Cybersecurity Schema Framework), ECS (Elastic Common Schema) or similar schemas to standardize log formats for better threat detection and analysis. For operational logs, adopt OpenTelemetry or structured JSON formats to facilitate clear, structured, and efficient log analysis for system performance and diagnostics. Consistent log formatting aids in automated parsing and helps in integrating logs from various sources.
+Identify any default credentials used in any system components before deploying and change them. Configure end-user systems to prompt for password change on first login after account creation or reset.
 
 ### Risk Statement
 
-Inconsistent or unstructured log formatting can lead to difficulties in log analysis and monitoring, potentially resulting in missed critical events or delayed response to system anomalies.
+Failure to change default credentials prior to first use increases the risk of unauthorised access, as default credentials are often well-known and targeted by attackers, compromising the security of the system or device.
 
 
 
-<a id="lm-16"></a>
-## LM-16: Key Signals Monitoring
+<a id="ac-7"></a>
+## AC-7: SingPass/CorpPass for External Users
 
 ### Control Statement
 
-Monitor key user-facing signals to maintain robust service health and performance.
+Use SingPass or CorpPass MFA for digital services that require high level of identity assurance for external users.
 
 ### Control Recommendations
 
-Implement monitoring of key signals such as latency, traffic, errors, and saturation (the 4 Golden Signals). Regularly track and analyse these indicators for proactive issue detection and resolution. Use this data to identify trends and areas for system improvement, ensuring continuous enhancement in service quality and reliability.
+For high impact or high risk transactions, use SingPass/CorpPass to identify external users (e.g. citizens). Internal users should use Government managed Single Sign-on (SSO) solutions (such as WOG AAD).
 
 ### Risk Statement
 
-Inadequate monitoring of key user-facing signals such as latency, traffic, errors, and saturation can lead to suboptimal service performance, adversely impacting user experience, system efficiency, and increasing the likelihood of system failures. This oversight can significantly detract from service reliability and user satisfaction.
+Leverage on SingPass or CorpPass to reduce duplication of effort and provide consistent end user experience.
 
 
 
-<a id="lm-17"></a>
-## LM-17: Software delivery performance monitoring
+<a id="ac-8"></a>
+## AC-8: Automate account provisioning
 
 ### Control Statement
 
-Measure and analyse software delivery performance to optimise development velocity and operational efficiency.
+Implement automation of cloud and application account provisioning and deprovisioning using an account management tool.
 
 ### Control Recommendations
 
-Implement tools and processes to track Deployment Frequency, Lead Time for Changes, Change Failure Rate, and Time to Restore Service (the DORA 4 Key metrics). Use these metrics as benchmarks to drive continuous improvement in the software development and deployment process, enhancing agility, reliability, and responsiveness to changes.
+Adopt Single Sign-On (SSO) with just-in-time provisioning or account lifecycle management tools (such as SCIM or CAM) to assist with account management. Perform validation testing of the integration between system and tool, such as ensuring accounts are provisioned and deprovisioned in a timely manner by the tool. Where possible, configure the system such that accounts can only be managed via automated provisioning. For systems unable to use SSO, it is recommended to leverage account management lifecycle tools with HR records (such as CAM) to automatically provision and de-provision accounts.
 
 ### Risk Statement
 
-Failing to measure and improve the software delivery performance can lead to inefficient development processes, reduced software quality and longer recovery times.
+Manual account and access provisioning can introduce errors and weaknesses, thus making access control measures ineffective and unreliable.
 
 
 
-<a id="lm-18"></a>
-## LM-18: Whole of Government Application Analytics (WOGAA)
+<a id="ac-9"></a>
+## AC-9: Endpoint Device Management
 
 ### Control Statement
 
-Implement Whole of Government Application Analytics (WOGAA) in public facing digital services.
+Implement and maintain an endpoint device management solution to ensure the security and integrity of endpoint devices used within the organisation.
 
 ### Control Recommendations
 
-Register at the WOGAA portal at https://wogaa.sg/ and follow the implementation documentation at https://docs.wogaa.sg/.
+Mobile Device Management (MDM) platforms enable management, monitoring, and secure configuration of endpoint devices. This includes enforcing disk encryption, managing configuration, ensuring regular updates, and providing the ability to remotely wipe data in case of device loss or theft.
 
 ### Risk Statement
 
-Lack of performance tracking can lead to gaps in service delivery.
+Unmanaged endpoint devices increase the risk of unauthorized access and potential loss of sensitive information due to the compromise of devices.
 
 
 
-<a id="lm-19"></a>
-## LM-19: Log Sanitisation
+<a id="ac-10"></a>
+## AC-10: Identity and Device-Based Access Control
 
 ### Control Statement
 
-Sanitise logs to protect classified and sensitive data before it is recorded in any logging system or shared to any third party.
+Adopt Identity and Device-Based Access Control for secure and context-aware connectivity to private organisational resources.
 
 ### Control Recommendations
 
-Identify types of classified and sensitive data that may appear in logs. When logging, consider using sanitisation techniques like masking or tokenisation. This ensures that sensitive information — such as PII, credentials, API keys, and payment details — are not stored in plaintext during log collection.
+Use solutions such as Secure Service Edge (SSE), Identity Aware Proxies (IAP) or other Zero Trust services (Entra ID Conditional Access, Okta Device Trust, etc) that integrate identity and device management systems to provide granular access control to resources based on user identity and device posture. For example, Security Suite for Engineering Endpoint Devices (SEED).
 
 ### Risk Statement
 
-Failing to sanitise logs increases the risk of unauthorised exposure or misuse of sensitive information and other confidential data. This exposure could lead to privacy breaches, financial losses, compliance violations and damage to national reputation.
+Relying on direct connections or traditional VPNs for remote access can lead to vulnerabilities, as they do not always incorporate strong identity and device-based security measures. This increases the risk of unauthorized access and potential data breaches.
 
 
+
+<a id="ac-11"></a>
+## AC-11: Single User Endpoints
+
+### Control Statement
+
+Assign each endpoint device to a single designated primary user and enforce the assignment to ensure accountability and enhance security monitoring.
+
+### Control Recommendations
+
+Implement measures such as user authentication and endpoint management with device enrollment to enforce the single primary user per endpoint. If secondary accounts for local device support or maintenance activities consider securing with endpoint privilege management tools.
+
+### Risk Statement
+
+Allowing multiple users to access a single endpoint device can lead to security risks such as data leakage, difficulty in tracking user activities, and increased vulnerability to insider threats.
+
+
+
+<a id="ac-12"></a>
+## AC-12: Single Sign-On (SSO) for Internal Users
+
+### Control Statement
+
+Use Single Sign-On (SSO) for internal users and services.
+
+### Control Recommendations
+
+Configure multi-factor authentication (MFA) at the Single-Sign On (SSO) identity provider (IdP) and ensure that access to the system is only granted after the IdP authenticates the user. WOG AAD is recommended for public officers and TechPass AAD for developers.
+
+### Risk Statement
+
+Without Single Sign-On (SSO), there is an increased risk of unauthorized access and compromised user credentials, as users may resort to using weak passwords or reusing credentials across multiple systems, thereby exposing sensitive information to potential security breaches.
+
+
+
+<a id="ac-13"></a>
+## AC-13: Static Credential Expiry and Rotation
+
+### Control Statement
+
+Rotate long-lived static credentials such as API keys, AWS IAM user access keys, and personal access tokens every [ac-13_prm_1] day(s) or used short-lived credentials.
+
+### Control Recommendations
+
+Automate credential rotation where possible. Consider short-lived alternatives to long-lived static credentials, such as AWS Security Token Service and IAM Identity Center authentication instead of IAM user access keys.
+
+### Risk Statement
+
+Failure to regularly rotate long-lived credentials or use short-lived credentials increases the risk of unauthorised access from stolen or unrevoked credentials.
+
+
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| ac-13_prm_1 | time period (days) | The time period in days for credential rotation. |
 
 
