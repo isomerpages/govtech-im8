@@ -2,7 +2,7 @@ collections:
   profile:
     output: true
     order:
-      - Open Saas.md
       - About Profile.md
       - Low Risk.md
+      - Open Saas.md
       - Sandbox.md
