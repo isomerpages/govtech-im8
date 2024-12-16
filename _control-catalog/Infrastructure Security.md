@@ -9,7 +9,7 @@ Controls to secure infrastructure that host applications, services, and data.
 | Controls |
 | ---- |
 | [IS-1: Management Agents](#is-1) |
-| [IS-2: Automated Patch Management](#is-2) |
+| [IS-2: Automated Patch Management Tools](#is-2) |
 | [IS-3: Restricted Administrator Privileges](#is-3) |
 | [IS-4: Least Functionality](#is-4) |
 | [IS-5: Host System Hardening](#is-5) |
@@ -42,19 +42,19 @@ Without installing management agents on hosts, there is an increased risk of man
 
 
 <a id="is-2"></a>
-## IS-2: Automated Patch Management
+## IS-2: Automated Patch Management Tools
 
 ### Control Statement
 
-Automate patching of operating systems and applications.
+Use automated patch management tools to facilitate security patching of operating systems and software included in the operating systems.
 
 ### Control Recommendations
 
-Apply patch baselines via the CSP node management service, unless the patch management process is automated as part of the build and deploy phase. For on-premise systems, use tools like Azure Update Manager to schedule and automatically deploy patches to Windows and Linux OS.
+Patch management can be automated as part of the build and deploy phase, such as with golden images for containers and virtual machines. It can also be automated in running instances on the cloud via CSP node management services (such as Azure Update Manager or AWS Systems Manager Patch Manager) and on-premises via patch management services (such as Windows Server Update Services or Configuration Management tools). To minimise risk of disruption due to patching, consider staged rollouts with canary deployments or in non-production environments.
 
 ### Risk Statement
 
-Failure to automate patching of operating systems and applications increases the risk of delayed or missed security updates, leaving systems vulnerable to known exploits and potential security breaches, compromising the overall security of the environment.
+Failure to automate security patching of operating systems and included software increases the risk of delayed or missed security updates, leaving systems vulnerable to known exploits and potential security breaches, compromising the overall security of the environment.
 
 
 
@@ -101,7 +101,7 @@ Harden the host configuration with reference to industry standards.
 
 ### Control Recommendations
 
-Select the appropriate benchmark for the host such as from the [NIST National Checklist Program](https://ncp.nist.gov/repository) or [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks). Automate the configuration process or use hardened images instead of manually configuring.
+Select the appropriate benchmark for the host such as from the [NIST National Checklist Program](https://ncp.nist.gov/repository) or [CIS Benchmarks](https://www.cisecurity.org/controls/v8). Automate the configuration process or use hardened images instead of manually configuring.
 
 ### Risk Statement
 
@@ -114,11 +114,11 @@ Without hardening the operating system configuration according to industry stand
 
 ### Control Statement
 
-Use remote administration tools instead of direct SSH or RDP.
+Use remote administration tools to control and monitor remote access.
 
 ### Control Recommendations
 
-In production environments, use remote administration (e.g., AWS Systems Manager Session Manager, AWS Systems Manager Fleet Manager, GCC Privileged Identity Management) only for break glass scenarios where remote monitoring and automation is not available. Document and remediate gaps in monitoring and automation to minimise the need for remote administration. If SSH is still required and remote administration tools are not available, only use it within a private non-production environment such as an encrypted tunnel and authenticate with short-lived certificates.
+Prioritise remote administration tools (e.g., AWS Systems Manager Session Manager, AWS Systems Manager Fleet Manager, GCC Privileged Identity Management) over direct SSH or RDP. If SSH is still required and remote administration tools are not available, use it only within a private non-production environment such as an encrypted tunnel and authenticate with short-lived certificates. Document and remediate gaps in monitoring and automation to minimise the need for remote access.
 
 ### Risk Statement
 
@@ -209,7 +209,7 @@ Register .gov.sg and .edu.sg domain names with GovTech as the sole registrar.
 
 ### Control Recommendations
 
-Use the Whole of Government Domain Name Server (DNS) portal on the IT Service Management (ITSM) portal to register domain names.
+Use the Whole of Government Domain Name Server (DNS) portal on the IT Service Management (ITSM) portal to register domain names. While the root level of the domain must be registered with ITSM, the use of subdomain delegation to external DNS Services (e.g. AWS Route53, Cloudflare DNS, etc) is allowed.
 
 ### Risk Statement
 
@@ -256,11 +256,11 @@ Malicious use of domain names similar to actual Government domain names increase
 
 ### Control Statement
 
-Register with the Singapore SMS Sender ID Registry by whitelisting or blacklisting SMS Sender IDs associated with the agency.
+Register and use whitelisted SMS Sender IDs with the Singapore SMS Sender ID Registry for sending SMSes.
 
 ### Control Recommendations
 
-Whitelist Sender IDs used to send SMSes and blacklist Sender IDs which are variants of the whitelisted Sender IDs, agency names, or names of services.
+Agencies must use the "gov.sg" Sender ID via the Postman tool to send SMSes to members of public unless exempted. Whitelist Sender IDs used to send SMSes and blacklist Sender IDs which are variants of the whitelisted Sender IDs, agency names, or names of services.
 
 ### Risk Statement
 
