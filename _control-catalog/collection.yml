@@ -2,7 +2,6 @@ collections:
   control-catalog:
     output: true
     order:
-      - Third Party Management.md
       - About Control Catalog.md
       - Application Security.md
       - Software Supply Chain.md
@@ -17,3 +16,4 @@ collections:
       - Infrastructure Security.md
       - Secure Development.md
       - Datacentre.md
+      - Third Party Management.md
