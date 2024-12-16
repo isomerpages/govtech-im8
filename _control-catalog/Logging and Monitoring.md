@@ -11,10 +11,10 @@ Controls to support detection and response to security and operations incidents.
 | [LM-1: Separate Log Storage](#lm-1) |
 | [LM-2: Tamper-Resistant Log Storage](#lm-2) |
 | [LM-3: Network Flow Logging](#lm-3) |
-| [LM-4: Cloud Management Event Logging](#lm-4) |
+| [LM-4: Audit Logging](#lm-4) |
 | [LM-5: Database Logging](#lm-5) |
 | [LM-6: Access Logging](#lm-6) |
-| [LM-7: Security Event Logging](#lm-7) |
+| [LM-7: Host Security Event Logging](#lm-7) |
 | [LM-8: Security Log Retention](#lm-8) |
 | [LM-9: Security Monitoring and Alerting](#lm-9) |
 | [LM-10: Resource Usage Monitoring and Alerting](#lm-10) |
@@ -25,6 +25,8 @@ Controls to support detection and response to security and operations incidents.
 | [LM-15: Structured Log Formatting](#lm-15) |
 | [LM-16: Key Signals Monitoring](#lm-16) |
 | [LM-17: Software delivery performance monitoring](#lm-17) |
+| [LM-18: Whole of Government Application Analytics (WOGAA)](#lm-18) |
+| [LM-19: Log Sanitisation](#lm-19) |
 
 
 <a id="lm-1"></a>
@@ -32,15 +34,15 @@ Controls to support detection and response to security and operations incidents.
 
 ### Control Statement
 
-Store logs in a repository that is part of a different system or system component than the system or component being audited.
+Store logs in a different system or system component than the system component that generated the logs.
 
 ### Control Recommendations
 
-Send logs to the separate storage as soon as possible after the logged event. For cloud audit logs, store them in a separate service or account (such as AWS Organisation Cloudtrail in GCC). Sending logs to the Government Cyber Security Operations Centre (GCSOC) or the central Government Commercial Cloud (GCC) log bucket can also satisfy this control.
+Do not store logs only in the same system component that generated it. For example, an application server on EC2 or ECS should send logs to a separate storage such as an S3 bucket as soon as possible after the logged event instead of only storing it on the server. For cloud audit logs, store them in a separate system or account (such as AWS Organisation Cloudtrail in GCC). Sending logs to the Government Cyber Security Operations Centre (GCSOC) or the central Government Commercial Cloud (GCC) log bucket can also satisfy this control.
 
 ### Risk Statement
 
-Storing logs in a repository separate from the audited system or component enhances security by reducing the risk of tampering, unauthorised access, and manipulation of audit trails, ensuring the integrity and reliability of log data for forensic analysis and compliance purposes.
+Storing logs in a repository separate from the system component reduces the risk of tampering, unauthorised access, and manipulation of logs if the system component is compromised.
 
 
 
@@ -79,19 +81,19 @@ Failing to log network traffic going to and from network interfaces increases th
 
 
 <a id="lm-4"></a>
-## LM-4: Cloud Management Event Logging
+## LM-4: Audit Logging
 
 ### Control Statement
 
-Log management and audit events on cloud resources.
+Log management and audit events.
 
 ### Control Recommendations
 
-Configure CloudTrail for AWS or its equivalents to log management and audit events such as changes to IAM policies and resources.
+For cloud, configure CloudTrail for AWS or its equivalents to log management and audit events such as changes to accounts, access, IAM policies and resources. For SaaS and COTS, enable audit logging features.
 
 ### Risk Statement
 
-Neglecting to log and manage audit events on cloud resources increases the risk of undetected security incidents, compromises visibility into system activities, and hinders effective forensic analysis and compliance monitoring in cloud environments.
+Neglecting to log and manage audit events increases the risk of undetected security incidents, compromises visibility into system activities, and hinders effective forensic analysis and compliance monitoring.
 
 
 
@@ -130,19 +132,19 @@ Failure to log access requests sent to web application firewalls, load balancers
 
 
 <a id="lm-7"></a>
-## LM-7: Security Event Logging
+## LM-7: Host Security Event Logging
 
 ### Control Statement
 
-Log security events on hosts and other cloud resources.
+Log security events on hosts.
 
 ### Control Recommendations
 
-Security events include operating system security events, authentication and audit logs, and endpoint detection and response alerts.
+Host security events include operating system security events, authentication, and endpoint detection and response alerts, configuration changes, and account and access rights changes.
 
 ### Risk Statement
 
-Neglecting to log security events on hosts and other cloud resources increases the risk of undetected security incidents, compromises incident response capabilities, and hinders forensic analysis, limiting the ability to identify and mitigate potential threats.
+Neglecting to log security events on hosts increases the risk of undetected security incidents, compromises incident response capabilities, and hinders forensic analysis, limiting the ability to identify and mitigate potential threats.
 
 
 
@@ -325,6 +327,40 @@ Implement tools and processes to track Deployment Frequency, Lead Time for Chang
 ### Risk Statement
 
 Failing to measure and improve the software delivery performance can lead to inefficient development processes, reduced software quality and longer recovery times.
+
+
+
+<a id="lm-18"></a>
+## LM-18: Whole of Government Application Analytics (WOGAA)
+
+### Control Statement
+
+Implement Whole of Government Application Analytics (WOGAA) in public facing digital services.
+
+### Control Recommendations
+
+Register at the WOGAA portal at https://wogaa.sg/ and follow the implementation documentation at https://docs.wogaa.sg/.
+
+### Risk Statement
+
+Lack of performance tracking can lead to gaps in service delivery.
+
+
+
+<a id="lm-19"></a>
+## LM-19: Log Sanitisation
+
+### Control Statement
+
+Sanitise logs to protect classified and sensitive data before it is recorded in any logging system or shared to any third party.
+
+### Control Recommendations
+
+Identify types of classified and sensitive data that may appear in logs. When logging, consider using sanitisation techniques like masking or tokenisation. This ensures that sensitive information — such as PII, credentials, API keys, and payment details — are not stored in plaintext during log collection.
+
+### Risk Statement
+
+Failing to sanitise logs increases the risk of unauthorised exposure or misuse of sensitive information and other confidential data. This exposure could lead to privacy breaches, financial losses, compliance violations and damage to national reputation.
 
 
 
