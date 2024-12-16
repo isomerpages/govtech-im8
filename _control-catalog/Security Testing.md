@@ -11,7 +11,7 @@ Controls to validate the security of a system via internal and external testing.
 | [ST-1: Vulnerability Assessment](#st-1) |
 | [ST-2: Cloud Security Posture Management](#st-2) |
 | [ST-3: Vulnerability Disclosure Programme](#st-3) |
-| [ST-4: Penetration Testing](#st-4) |
+| [ST-4: Security Testing Program](#st-4) |
 | [ST-5: Vulnerability Management](#st-5) |
 
 
@@ -73,19 +73,19 @@ Publicly disclosing vulnerabilities without following a responsible disclosure p
 
 
 <a id="st-4"></a>
-## ST-4: Penetration Testing
+## ST-4: Security Testing Program
 
 ### Control Statement
 
-Conduct and document a penetration test by internal teams or independent external parties every [st-4_prm_1] day(s).
+Conduct and document a [st-4_prm_1] by internal teams or independent external parties every [st-4_prm_2] day(s).
 
 ### Control Recommendations
 
-A white-box penetration test should be performed to effectively test the application.
+Refer to the [WOG Security Testing Guidelines](https://docs.developer.tech.gov.sg/docs/security-testing-guidelines/) for recommendations on the conduct of security testing engagements. For systems that are permitted to use Government Bug Bounty Program as an alternative, obtain a passing rating based on the Agency Readiness Scorecard. For SaaS, refer to past penetration testing reports done by the SaaS provider, if any.
 
 ### Risk Statement
 
-Without conducting and documenting penetration tests, there's an increased risk of undetected security weaknesses, leaving the application susceptible to exploitation, data breaches, and unauthorised access.
+Without undergoing security testing, there's an increased risk of undetected security weaknesses, leaving the application susceptible to exploitation, data breaches, and unauthorised access.
 
 
 
@@ -93,14 +93,15 @@ Without conducting and documenting penetration tests, there's an increased risk 
 
 | ID | Type | Description |
 | -- | ---- | ----------- |
-| st-4_prm_1 | time period (days) | The time period in days of penetration testing frequency. |
+| st-4_prm_1 | type of security testing program | The type of security testing program. |
+| st-4_prm_2 | time period (days) | The time period in days of penetration testing frequency. |
 
 <a id="st-5"></a>
 ## ST-5: Vulnerability Management
 
 ### Control Statement
 
-Triage and then remediate or risk accept all true positive vulnerability findings discovered through security testing within the following timeframe based on severity:
+Triage, prioritise and then remediate or risk accept vulnerabilities that materially impact security within the following timeframe based on severity:
  * Critical: [st-5_prm_1] day(s)
  * High: [st-5_prm_2] day(s)
  * Medium: [st-5_prm_3] day(s)
@@ -109,7 +110,7 @@ Triage and then remediate or risk accept all true positive vulnerability finding
 
 ### Control Recommendations
 
-Seek approval from the appropriate approving authority for risk acceptance.
+Vulnerabilities that materially impact security include vulnerabilities that have a high likelihood of exploitability, or are known to be exploited. Refer to resources such as the [Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) to prioritise vulnerabilities that should be remediated. Seek approval from the appropriate approving authority for risk acceptance.
 
 ### Risk Statement
 
