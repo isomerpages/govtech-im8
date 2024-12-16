@@ -9,13 +9,13 @@ Controls to implement cybersecurity governance, risk, and compliance processes a
 | Controls |
 | ---- |
 | [PM-1: Cybersecurity Incident Management Plan](#pm-1) |
-| [PM-2: Project Cybersecurity Risk Assessment](#pm-2) |
+| [PM-2: Risk Assessment](#pm-2) |
 | [PM-3: System Security Plan (SSP) Development](#pm-3) |
-| [PM-4: Approval of Policy Deviations](#pm-4) |
+| [PM-4: Approval of Residual Risks](#pm-4) |
 | [PM-5: Central Submission of Approved System Security Plan (SSP)](#pm-5) |
 | [PM-6: System Documentation](#pm-6) |
 | [PM-7: Certification](#pm-7) |
-| [PM-8: Software as a Service (SaaS) Service Level Agreement](#pm-8) |
+| [PM-8: SaaS Whitelisting](#pm-8) |
 
 
 <a id="pm-1"></a>
@@ -36,27 +36,29 @@ Lack of a cybersecurity incident management plan increases the risk of ineffecti
 
 
 <a id="pm-2"></a>
-## PM-2: Project Cybersecurity Risk Assessment
+## PM-2: Risk Assessment
 
 ### Control Statement
 
-Develop and document a project-level cybersecurity risk assessment prior to initial full release that includes:
- * Risk scenario;
- * Likelihood (from 1-5);
- * Impact (from 1-5);
- * Risk Level (Likelihood * Impact; 1-4: Low, 5-9: Medium, 10-14: Medium High, 15-19: High, 20-25: Critical)
- * Mitigating Measures
-
+Develop and document a risk assessment by [pm-2_prm_1] and get it approved by [pm-2_prm_2] prior to initial full release and conduct a review every [pm-2_prm_3] day(s).
 
 ### Control Recommendations
 
-Refer to the Cyber Security Agency of Singapore's Cybersecurity Toolkit for IT Teams for an example of a risk assessment template and modify accordingly.
+The Risk Assessment should cover Cyber Risk, Data Risk, Resiliency Risk, Business Risk, Project Risk, Offshore Risk and other types of risk where applicable. 
 
 ### Risk Statement
 
-Without developing and documenting a project-level cybersecurity risk assessment before the initial full release, there's an increased risk of overlooking potential security threats, vulnerabilities, and regulatory compliance issues, compromising the overall security posture of the project.
+Without developing and documenting risk assessment before the initial full release, there's an increased risk of overlooking potential security threats, vulnerabilities, and regulatory compliance issues, compromising the overall security posture of the system.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| pm-2_prm_1 | system owner | The owner of the system. |
+| pm-2_prm_2 | risk assessment approver | The approver of the risk assessment. |
+| pm-2_prm_3 | time period (days) | The time period in days for risk assessment. |
 
 <a id="pm-3"></a>
 ## PM-3: System Security Plan (SSP) Development
@@ -76,21 +78,27 @@ Failure to develop a comprehensive SSP can result in inadequate documentation an
 
 
 <a id="pm-4"></a>
-## PM-4: Approval of Policy Deviations
+## PM-4: Approval of Residual Risks
 
 ### Control Statement
 
-Get approval of deviations from applicable Level 1 profile controls in the default System Security Plans (SSPs) from the agency's ICT and Digitalisation Steering Committee (IDSC) and document these deviations in the customised SSP.
+Get acceptance and approval of the residual risks from agency's [pm-4_prm_1].
 
 ### Control Recommendations
 
-Agencies should seek approval for deviation from their IDSC or delegated approval authority. Controls that are not applicable to the system do not need approval for deviations but the reasons why they are not applicable must be documented in the customised SSP.
+Agencies should seek acceptance and approval from their [pm-4_prm_1] on the residual risks based on the SSP and inform GovTech of the approval.
 
 ### Risk Statement
 
-Unauthorised deviations from the policy can lead to an increased risk of security vulnerabilities and other compliance issues.
+Failure to seek the right level of authority to accept and approve the residual risks can lead to misalignment of the business implications and trade-offs from the controls set in the SSP with the Agency IDSC direction.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| pm-4_prm_1 | approving authority | The authority for approval of residual risks. |
 
 <a id="pm-5"></a>
 ## PM-5: Central Submission of Approved System Security Plan (SSP)
@@ -150,19 +158,19 @@ Third-party certification provides assurance that security controls have been pr
 | pm-7_prm_1 | certifications | The required certifications. |
 
 <a id="pm-8"></a>
-## PM-8: Software as a Service (SaaS) Service Level Agreement
+## PM-8: SaaS Whitelisting
 
 ### Control Statement
 
-Obtain a service level agreement with the Software as a Service (SaaS) provider that covers uptime, response times, downtime notifications, support avenues, and support content.
+Whitelist SaaS before use.
 
 ### Control Recommendations
 
-Ensure that the service level agreement is regularly checked for compliance.
+Refer to a centrally-maintained whitelist or whitelisting authority for authorised SaaS.
 
 ### Risk Statement
 
-Without a service level agreement the availability of the Software as a Service (SaaS) system may be poorly maintained by the provider.
+Failing to whitelist the SaaS may potentially expose sensitive data (e.g., Confidential (Cloud-Eligible) or SENSITIVE-HIGH data) to the risk of data breaches.
 
 
 
