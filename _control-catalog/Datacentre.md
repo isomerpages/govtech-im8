@@ -4,7 +4,7 @@ permalink: /control-catalog/dc/
 variant: markdown
 description: ""
 ---
-
+Controls to secure datacentre system components.
 
 | Controls |
 | ---- |
