@@ -12,7 +12,7 @@ Controls to prevent tampering and improve the integrity of the software supply c
 | [SC-2: Commit Signing](#sc-2) |
 | [SC-3: Peer Review](#sc-3) |
 | [SC-4: Dependency Manifest Version Pinning](#sc-4) |
-| [SC-5: Automated Build and Deploy](#sc-5) |
+| [SC-5: Build and Release Process](#sc-5) |
 | [SC-6: Dependency Installation during Deployment](#sc-6) |
 | [SC-7: Software Artefact Signing](#sc-7) |
 | [SC-8: Software Artefact Signature Verification](#sc-8) |
@@ -88,19 +88,19 @@ Failure to pin direct and transitive dependency versions in the application's ma
 
 
 <a id="sc-5"></a>
-## SC-5: Automated Build and Deploy
+## SC-5: Build and Release Process
 
 ### Control Statement
 
-Provision and operate systems in a consistent manner using automation.
+Use a consistent build and release process that generates a record of how the release artefact was built and deployed.
 
 ### Control Recommendations
 
-Deploy and maintain Infrastructure and Applications with automated and repeatable tools such as CI/CD Pipelines, Infrastructure as Code (IaC) and other scripts. Automated build and deploy pipelines allow for signing and validation of build artefacts. Do not make manual changes directly into production systems.
+Consider automated build and deploy tools such as CI/CD Pipelines, Infrastructure as Code (IaC) and other scripts, which allow for signing and validation of build artefacts. If automation is not possible, develop and implement release management processes.
 
 ### Risk Statement
 
-Inconsistent system provisioning and operation, without automation, may lead to configuration drift, increased likelihood of errors, and heightened vulnerability to security breaches due to manual misconfigurations.
+Inconsistent and unmanaged releases may lead to configuration drift, increased likelihood of errors, and unapproved changes to releases.
 
 
 
@@ -109,7 +109,7 @@ Inconsistent system provisioning and operation, without automation, may lead to 
 
 ### Control Statement
 
-When installing dependencies during deployment, only install pinned versions in the manifest.
+Only install pinned versions in the manifest when installing dependencies during deployment.
 
 ### Control Recommendations
 
