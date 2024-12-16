@@ -137,8 +137,8 @@ Without setting up secret detection and addressing true positive findings prompt
 
 | ID | Type | Description |
 | -- | ---- | ----------- |
-| sd-6_prm_1 | time period (days) | Number of days within which to remediate a secret detection true positive. |
-| sd-6_prm_2 | location | The location where secret detection occurs. |
+| sd-6_prm_1 | location | The location where secret detection occurs. |
+| sd-6_prm_2 | time period (days) | Number of days within which to remediate a secret detection true positive. |
 
 <a id="sd-7"></a>
 ## SD-7: CI Environment Variable Secrets Management
