@@ -2,6 +2,7 @@ collections:
   profile:
     output: true
     order:
+      - Medium Risk Saas.md
       - Low Risk Saas.md
       - About Profile.md
       - Low Risk.md
