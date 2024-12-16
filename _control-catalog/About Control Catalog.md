@@ -29,5 +29,5 @@ identified for each system.</p>
 <p>The first and second tranches of recommended controls for low-risk systems
 and SaaS are published here and will progressively be updated in this website.</p>
 <p>We invite the industry players to join us in the ICT&amp;SS Reform journey.
-For&nbsp; any feedback, please provide <a href="https://go.gov.sg/ictpolicy" rel="noopener noreferrer nofollow" target="_blank">here.</a>
+For any feedback, please provide <a href="https://go.gov.sg/ictpolicy" rel="noopener noreferrer nofollow" target="_blank">here.</a>
 </p>
