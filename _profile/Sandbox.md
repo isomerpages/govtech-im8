@@ -7,7 +7,7 @@ description: ""
 | Requirement |
 | ---- |
 | [PM-3: System Security Plan (SSP) Development](/control-catalog/pm/#pm-3) |
-| [PM-4: Approval of Policy Deviations](/control-catalog/pm/#pm-4) |
+| [PM-4: Approval of Residual Risks](/control-catalog/pm/#pm-4) |
 | [PM-5: Central Submission of Approved System Security Plan (SSP)](/control-catalog/pm/#pm-5) |
 
 
@@ -22,15 +22,18 @@ description: ""
 | [AS-5: Password Requirements](/control-catalog/as/#as-5) |
 | [AS-6: Password Salting and Hashing](/control-catalog/as/#as-6) |
 | [AS-7: Access Control Check Enforcement](/control-catalog/as/#as-7) |
-| [AS-8: Application Secrets Management](/control-catalog/as/#as-8) |
+| [AS-8: Secrets Management](/control-catalog/as/#as-8) |
 | [AS-9: Content Security Policy (CSP)](/control-catalog/as/#as-9) |
 | [AS-10: HTTP Strict Transport Security (HSTS)](/control-catalog/as/#as-10) |
 | [AS-11: Session Management](/control-catalog/as/#as-11) |
+| [AS-12: Malware Scanning of Uploaded Files](/control-catalog/as/#as-12) |
+| [AS-13: Exposure of Internal System Details](/control-catalog/as/#as-13) |
+| [AS-14: Secure Cryptographic Libraries](/control-catalog/as/#as-14) |
 | [SC-1: Code Repository](/control-catalog/sc/#sc-1) |
 | [SC-2: Commit Signing](/control-catalog/sc/#sc-2) |
 | [SC-3: Peer Review](/control-catalog/sc/#sc-3) |
 | [SC-4: Dependency Manifest Version Pinning](/control-catalog/sc/#sc-4) |
-| [SC-5: Automated Build and Deploy](/control-catalog/sc/#sc-5) |
+| [SC-5: Build and Release Process](/control-catalog/sc/#sc-5) |
 | [SC-6: Dependency Installation during Deployment](/control-catalog/sc/#sc-6) |
 | [SC-7: Software Artefact Signing](/control-catalog/sc/#sc-7) |
 | [SC-8: Software Artefact Signature Verification](/control-catalog/sc/#sc-8) |
@@ -38,7 +41,7 @@ description: ""
 | [ST-1: Vulnerability Assessment](/control-catalog/st/#st-1) |
 | [ST-2: Cloud Security Posture Management](/control-catalog/st/#st-2) |
 | [ST-3: Vulnerability Disclosure Programme](/control-catalog/st/#st-3) |
-| [ST-4: Penetration Testing](/control-catalog/st/#st-4) |
+| [ST-4: Security Testing Program](/control-catalog/st/#st-4) |
 | [ST-5: Vulnerability Management](/control-catalog/st/#st-5) |
 | [NS-1: Public and Private Subnet Segmentation](/control-catalog/ns/#ns-1) |
 | [NS-2: Access Restrictions on CSP Resources Outside Virtual Network](/control-catalog/ns/#ns-2) |
@@ -58,22 +61,26 @@ description: ""
 | [DP-3: Data in Transit Encryption](/control-catalog/dp/#dp-3) |
 | [DP-4: Government on Commercial Cloud (GCC)](/control-catalog/dp/#dp-4) |
 | [DP-5: Sanitisation](/control-catalog/dp/#dp-5) |
+| [DP-7: Cryptographic Key Establishment](/control-catalog/dp/#dp-7) |
+| [DP-8: Cryptographic Key Management](/control-catalog/dp/#dp-8) |
 | [LM-1: Separate Log Storage](/control-catalog/lm/#lm-1) |
 | [LM-2: Tamper-Resistant Log Storage](/control-catalog/lm/#lm-2) |
 | [LM-3: Network Flow Logging](/control-catalog/lm/#lm-3) |
-| [LM-4: Cloud Management Event Logging](/control-catalog/lm/#lm-4) |
+| [LM-4: Audit Logging](/control-catalog/lm/#lm-4) |
 | [LM-5: Database Logging](/control-catalog/lm/#lm-5) |
 | [LM-6: Access Logging](/control-catalog/lm/#lm-6) |
-| [LM-7: Security Event Logging](/control-catalog/lm/#lm-7) |
+| [LM-7: Host Security Event Logging](/control-catalog/lm/#lm-7) |
 | [LM-8: Security Log Retention](/control-catalog/lm/#lm-8) |
 | [LM-9: Security Monitoring and Alerting](/control-catalog/lm/#lm-9) |
 | [LM-10: Resource Usage Monitoring and Alerting](/control-catalog/lm/#lm-10) |
 | [LM-11: Service Level Monitoring and Alerting](/control-catalog/lm/#lm-11) |
 | [LM-12: Central Security Log Management and Monitoring](/control-catalog/lm/#lm-12) |
+| [LM-13: Database Activity Monitoring](/control-catalog/lm/#lm-13) |
 | [LM-14: Web Defacement Monitoring](/control-catalog/lm/#lm-14) |
 | [LM-15: Structured Log Formatting](/control-catalog/lm/#lm-15) |
 | [LM-16: Key Signals Monitoring](/control-catalog/lm/#lm-16) |
 | [LM-17: Software delivery performance monitoring](/control-catalog/lm/#lm-17) |
+| [LM-19: Log Sanitisation](/control-catalog/lm/#lm-19) |
 | [AC-1: Principle of Least Privilege](/control-catalog/ac/#ac-1) |
 | [AC-2: Multi-Factor Authentication (MFA)](/control-catalog/ac/#ac-2) |
 | [AC-3: Inactive and Expired Accounts](/control-catalog/ac/#ac-3) |
@@ -86,6 +93,7 @@ description: ""
 | [AC-10: Identity and Device-Based Access Control](/control-catalog/ac/#ac-10) |
 | [AC-11: Single User Endpoints](/control-catalog/ac/#ac-11) |
 | [AC-12: Single Sign-On (SSO) for Internal Users](/control-catalog/ac/#ac-12) |
+| [AC-13: Static Credential Expiry and Rotation](/control-catalog/ac/#ac-13) |
 | [CS-1: Unique Base Container Image Tags](/control-catalog/cs/#cs-1) |
 | [CS-2: Minimal Base Container Images](/control-catalog/cs/#cs-2) |
 | [CS-3: Runtime Container Secrets](/control-catalog/cs/#cs-3) |
@@ -98,12 +106,11 @@ description: ""
 | [CS-10: Container Workload Segmentation](/control-catalog/cs/#cs-10) |
 | [CS-11: Container Runtime Security](/control-catalog/cs/#cs-11) |
 | [PM-1: Cybersecurity Incident Management Plan](/control-catalog/pm/#pm-1) |
-| [PM-2: Project Cybersecurity Risk Assessment](/control-catalog/pm/#pm-2) |
+| [PM-2: Risk Assessment](/control-catalog/pm/#pm-2) |
 | [PM-6: System Documentation](/control-catalog/pm/#pm-6) |
 | [PM-7: Certification](/control-catalog/pm/#pm-7) |
-| [PM-8: Software as a Service (SaaS) Service Level Agreement](/control-catalog/pm/#pm-8) |
 | [IS-1: Management Agents](/control-catalog/is/#is-1) |
-| [IS-2: Automated Patch Management](/control-catalog/is/#is-2) |
+| [IS-2: Automated Patch Management Tools](/control-catalog/is/#is-2) |
 | [IS-3: Restricted Administrator Privileges](/control-catalog/is/#is-3) |
 | [IS-4: Least Functionality](/control-catalog/is/#is-4) |
 | [IS-5: Host System Hardening](/control-catalog/is/#is-5) |
@@ -115,6 +122,7 @@ description: ""
 | [IS-11: Central Domain Name Registration](/control-catalog/is/#is-11) |
 | [IS-12: DNS Security Extensions (DNSSEC)](/control-catalog/is/#is-12) |
 | [IS-13: Defensive Domain Name Registration](/control-catalog/is/#is-13) |
+| [IS-14: Singapore SMS Sender ID Registry Registration](/control-catalog/is/#is-14) |
 | [SD-1: Push Protection for Secrets](/control-catalog/sd/#sd-1) |
 | [SD-2: Default Branch Push Permissions](/control-catalog/sd/#sd-2) |
 | [SD-3: Continuous Integration (CI) Tests](/control-catalog/sd/#sd-3) |
@@ -125,4 +133,4 @@ description: ""
 | [SD-8: Deployment Environment Segregation](/control-catalog/sd/#sd-8) |
 | [DC-1: Separate hosting](/control-catalog/dc/#dc-1) |
 | [DC-2: Physical Access Controls](/control-catalog/dc/#dc-2) |
-
+| [TP-1: Software as a Service (SaaS) Service Level Agreement](/control-catalog/tp/#tp-1) |
