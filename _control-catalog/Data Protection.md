@@ -14,6 +14,8 @@ Controls to protect the data of a system.
 | [DP-4: Government on Commercial Cloud (GCC)](#dp-4) |
 | [DP-5: Sanitisation](#dp-5) |
 | [DP-6: Witness Sanitisation and Destruction of Storage Devices](#dp-6) |
+| [DP-7: Cryptographic Key Establishment](#dp-7) |
+| [DP-8: Cryptographic Key Management](#dp-8) |
 
 
 <a id="dp-1"></a>
@@ -21,17 +23,23 @@ Controls to protect the data of a system.
 
 ### Control Statement
 
-Enforce data residency of primary data in Singapore.
+Enforce data residency of primary data in [dp-1_prm_1].
 
 ### Control Recommendations
 
-Use the Singapore region of cloud service providers for compute and storage of primary data, such as ap-southeast-1 for AWS.
+Use the appropriate region of cloud service providers for compute and storage of data, such as ap-southeast-1 for Singapore in AWS.
 
 ### Risk Statement
 
-Failure to enforce data residency of primary data in Singapore may lead to legal and regulatory compliance issues, privacy concerns, and potential unauthorised access or storage of sensitive data outside the jurisdiction, increasing the risk of legal consequences and data breaches.
+Failure to enforce data residency of primary data in the appropriate country may lead to legal and regulatory compliance issues, privacy concerns, and potential unauthorised access or storage of sensitive data outside the jurisdiction, increasing the risk of legal consequences and data breaches.
 
 
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| dp-1_prm_1 | country | The country the primary data resides in. |
 
 <a id="dp-2"></a>
 ## DP-2: Data at Rest Encryption
@@ -120,5 +128,45 @@ Establish a SOP to ensure sanitisation and destruction are witnessed by an agenc
 Ensuring storage devices are sanitised or destroyed will eliminate the possibility of unauthorised or unintended data retention.
 
 
+
+<a id="dp-7"></a>
+## DP-7: Cryptographic Key Establishment
+
+### Control Statement
+
+Use industry-standard cryptographic key establishment schemes and key derivation methods.
+
+### Control Recommendations
+
+Refer to [SP 800-56A](https://doi.org/10.6028/NIST.SP.800-56Ar3), [SP 800-56B](https://doi.org/10.6028/NIST.SP.800-56Br2), and [SP 800-56C](https://doi.org/10.6028/NIST.SP.800-56Cr2) for updated industry-standard cryptographic key establishment schemes and key derivation methods. Cloud services such as AWS Key Management Service and Azure Key Vault can be used for generating and managing cryptographic keys.
+
+### Risk Statement
+
+Insecure cryptographic key establishment can lead to weak or broken encryption.
+
+
+
+<a id="dp-8"></a>
+## DP-8: Cryptographic Key Management
+
+### Control Statement
+
+Rotate cryptographic keys every [dp-8_prm_1] days.
+
+### Control Recommendations
+
+Cloud services such as AWS Key Management Service and Azure Key Vault enable automatic rotation of cryptographic keys.
+
+### Risk Statement
+
+Failing to rotate cryptographic keys increases the risk of broken encryption.
+
+
+
+#### Parameters
+
+| ID | Type | Description |
+| -- | ---- | ----------- |
+| dp-8_prm_1 | time period (days) | The time period in days of cryptographic key rotation frequency. |
 
 
