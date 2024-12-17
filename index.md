@@ -44,6 +44,6 @@ sections:
       description: A Profile defines a customised set of controls derived from the catalog.
       button: READ MORE
       url: about-profile
-      image: /images/img_catalog.png
+      image: /images/img_about.png
       alt: isometric illustration tech
 ---
