@@ -14,13 +14,13 @@ that are currently created are:</p>
 <p>Low Risk Profile</p>
 </li>
 <li>
-<p>Open Saas Profile</p>
+<p>Open SaaS Profile</p>
 </li>
 <li>
-<p>Low Risk Saas Profile</p>
+<p>Low Risk SaaS Profile</p>
 </li>
 <li>
-<p>Medium Risk Saas Profile</p>
+<p>Medium Risk SaaS Profile</p>
 </li>
 <li>
 <p>Sandbox Profile</p>
