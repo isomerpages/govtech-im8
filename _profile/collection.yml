@@ -4,6 +4,5 @@ collections:
     order:
       - About Profile.md
       - Low Risk.md
-      - Low Risk SaaS.md
       - Medium Risk SaaS.md
       - Sandbox.md
