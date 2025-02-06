@@ -14,15 +14,6 @@ that are currently created are:</p>
 <p>Low Risk Profile</p>
 </li>
 <li>
-<p>Open SaaS Profile</p>
-</li>
-<li>
-<p>Low Risk SaaS Profile</p>
-</li>
-<li>
-<p>Medium Risk SaaS Profile</p>
-</li>
-<li>
 <p>Sandbox Profile</p>
 </li>
 </ol>
