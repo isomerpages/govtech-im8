@@ -27,7 +27,7 @@ of controls for the profiles are listed <a href="/profile/low-risk/" rel="noopen
 controls.&nbsp; Agencies and their industry partners are to apply the controls
 identified for each system.</p>
 <p>The first and second tranches of recommended controls for low-risk systems
-and SaaS are published here and will progressively be updated in this website.</p>
+are published here and will progressively be updated in this website.</p>
 <p>We invite the industry players to join us in the ICT&amp;SS Reform journey.
 For any feedback, please provide <a href="https://go.gov.sg/ictpolicy" rel="noopener noreferrer nofollow" target="_blank">here.</a>
 </p>
