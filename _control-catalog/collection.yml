@@ -2,6 +2,7 @@ collections:
   control-catalog:
     output: true
     order:
+      - Cybersecurity/Logging and Monitoring.md
       - Cybersecurity/Data Protection.md
       - Cybersecurity/Backup and Recovery.md
       - Cybersecurity/Network Security.md
