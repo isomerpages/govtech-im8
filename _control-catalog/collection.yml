@@ -2,6 +2,7 @@ collections:
   control-catalog:
     output: true
     order:
+      - Cybersecurity/Security Testing.md
       - Cybersecurity/Software Supply Chain.md
       - Cybersecurity/Application Security.md
       - Cybersecurity/.keep
