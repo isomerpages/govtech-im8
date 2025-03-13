@@ -2,6 +2,7 @@ collections:
   control-catalog:
     output: true
     order:
+      - Cybersecurity/Datacentre.md
       - Cybersecurity/Secure Development.md
       - Cybersecurity/Infrastructure Security.md
       - Cybersecurity/Security Programme Management.md
