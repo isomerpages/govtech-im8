@@ -2,6 +2,7 @@ collections:
   control-catalog:
     output: true
     order:
+      - Digital Service Standards/.keep
       - About Control Catalog.md
       - Application Security.md
       - Software Supply Chain.md
