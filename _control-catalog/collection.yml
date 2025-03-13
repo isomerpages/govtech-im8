@@ -2,6 +2,7 @@ collections:
   control-catalog:
     output: true
     order:
+      - Cybersecurity/Software Supply Chain.md
       - Cybersecurity/Application Security.md
       - Cybersecurity/.keep
       - Digital Service Standards/Baseline Design Practices.md
