@@ -2,6 +2,7 @@ collections:
   control-catalog:
     output: true
     order:
+      - Cybersecurity/Data Protection.md
       - Cybersecurity/Backup and Recovery.md
       - Cybersecurity/Network Security.md
       - Cybersecurity/Security Testing.md
