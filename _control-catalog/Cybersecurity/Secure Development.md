@@ -5,7 +5,6 @@ variant: markdown
 description: ""
 third_nav_title: Cybersecurity
 ---
-
 Controls to secure the development pipeline and perform source code quality assurance.
 
 | Controls                                                                                             |
