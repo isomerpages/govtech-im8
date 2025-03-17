@@ -5,25 +5,26 @@ variant: markdown
 description: ""
 third_nav_title: Cybersecurity
 ---
+
 Controls to secure the network boundaries of a system.
 
-| Controls |
-| ---- |
-| [NS-1: Public and Private Subnet Segmentation](#ns-1) |
-| [NS-2: Access Restrictions on CSP Resources Outside Virtual Network](#ns-2) |
-| [NS-3: Deny by Default - Allow by Exception](#ns-3) |
-| [NS-4: Inter-Private Network Connectivity](#ns-4) |
-| [NS-5: Network and Application Layer Filtering](#ns-5) |
-| [NS-6: Valid and Trusted SSL/TLS Certificates](#ns-6) |
-| [NS-7: Secure Inter-Service Communication](#ns-7) |
-| [NS-8: Secure Government Enterprise Network (GEN) connectivity](#ns-8) |
-| [NS-9: Intrusion Prevention System (IPS)/Intrusion Detection System (IDS)](#ns-9) |
-| [NS-10: Private Network Connectivity](#ns-10) |
-| [NS-11: Alerts on Firewall Configuration Changes](#ns-11) |
+| Controls                                                                                                                                        |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| [NS-1: Public and Private Subnet Segmentation](#ns-1-public-and-private-subnet-segmentation)                                                    |
+| [NS-2: Access Restrictions on CSP Resources Outside Virtual Network](#ns-2-access-restrictions-on-csp-resources-outside-virtual-network)        |
+| [NS-3: Deny by Default - Allow by Exception](#ns-3-deny-by-default-allow-by-exception)                                                          |
+| [NS-4: Inter-Private Network Connectivity](#ns-4-inter-private-network-connectivity)                                                            |
+| [NS-5: Network and Application Layer Filtering](#ns-5-network-and-application-layer-filtering)                                                  |
+| [NS-6: Valid and Trusted SSL/TLS Certificates](#ns-6-valid-and-trusted-ssltls-certificates)                                                     |
+| [NS-7: Secure Inter-Service Communication](#ns-7-secure-inter-service-communication)                                                            |
+| [NS-8: Secure Government Enterprise Network (GEN) connectivity](#ns-8-secure-government-enterprise-network-gen-connectivity)                    |
+| [NS-9: Intrusion Prevention System (IPS)/Intrusion Detection System (IDS)](#ns-9-intrusion-prevention-system-ipsintrusion-detection-system-ids) |
+| [NS-10: Private Network Connectivity](#ns-10-private-network-connectivity)                                                                      |
+| [NS-11: Alerts on Firewall Configuration Changes](#ns-11-alerts-on-firewall-configuration-changes)                                              |
 
-
-<a id="ns-1"></a>
 ## NS-1: Public and Private Subnet Segmentation
+
+**Group:** Network Security
 
 ### Control Statement
 
@@ -37,10 +38,18 @@ This control does not apply to serverless resources (API Gateways), static sites
 
 Failure to segregate private and public resources within distinct subnets in a virtual network increases the risk of unauthorised access to sensitive data, as private resources may be exposed to the public internet, compromising the overall security of the infrastructure.
 
+### References
 
+- [IM8 Cloud Security (IaaS and PaaS): 1.5/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 Cloud Security (IaaS and PaaS): 1.5/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 Cloud Security (IaaS and PaaS): 1.7/S14](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 On-Premise IS (Non-S): 4.2/S1a]()
+- [IM8 On-Premise AAS (Non-S): 1.1/S1, 2.1/S1]()
+- [IM8 Cloud Security (IaaS and PaaS): 1.5/S6b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
 
-<a id="ns-2"></a>
 ## NS-2: Access Restrictions on CSP Resources Outside Virtual Network
+
+**Group:** Network Security
 
 ### Control Statement
 
@@ -50,20 +59,25 @@ Restrict access to CSP resources outside of a virtual network (e.g., Lambda, Dyn
 
 Apply access restrictions appropriate to the resource type. Access through interface VPC endpoints is only required if the client is hosted in a private subnet. For example:
 
-* Restrict access to DynamoDB with IAM policies.
+- Restrict access to DynamoDB with IAM policies.
 
-* Restrict access to API Gateway with Lambda Authorizers or authorisation middlewares at the application layer. If the API Gateway is exposed to private subnets, create a [private API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-private-apis.html).
+- Restrict access to API Gateway with Lambda Authorizers or authorisation middlewares at the application layer. If the API Gateway is exposed to private subnets, create a [private API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-private-apis.html).
 
-* Restrict access to S3 Buckets with IAM policies and block public access from the internet.
+- Restrict access to S3 Buckets with IAM policies and block public access from the internet.
 
 ### Risk Statement
 
 Lack of access restrictions raises the risk of unauthorised access, data exposure, and potential misuse of critical services, compromising the overall security posture.
 
+### References
 
+- [IM8 Cloud Security (IaaS and PaaS): 1.5/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 Cloud Security (IaaS and PaaS): 1.5/S5](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 Cloud Security (IaaS and PaaS): 1.7/S23](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
 
-<a id="ns-3"></a>
 ## NS-3: Deny by Default - Allow by Exception
+
+**Group:** Network Security
 
 ### Control Statement
 
@@ -77,10 +91,19 @@ Configure network access control lists and security groups to deny all traffic b
 
 Without network access controls, there's an increased risk of unauthorised or malicious network access, leading to potential security breaches and compromise of system integrity.
 
+### References
 
+- [NIST SP 800-53 SC-7(5): Deny by Default - Allow by Exception](https://doi.org/10.6028/NIST.SP.800-53r5)
+- [IM8 Cloud Security (IaaS and PaaS): 1.5/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 Cloud Security (IaaS and PaaS): 1.5/S5](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 Cloud Security (IaaS and PaaS): 1.6/S1h](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 Cloud Security (IaaS and PaaS): 1.7/S23b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 On-Premise IS (Non-S): 4.2/S1b]()
+- [IM8 On-Premise AAS (Non-S): 2.2/S1]()
 
-<a id="ns-4"></a>
 ## NS-4: Inter-Private Network Connectivity
+
+**Group:** Network Security
 
 ### Control Statement
 
@@ -94,10 +117,14 @@ Use CSP Private endpoint services (e.g., AWS PrivateLink with VPC endpoints) whe
 
 When routing through the internet, there's an increased risk of man-in-the-middle and spoofing attacks. Allowing bidirectional access between networks without fine-grained access controls increases the risk of unauthorized access, potential data exfiltration, and compromise of network security compared to unidirectional access to specific resources.
 
+### References
 
+- [IM8 Cloud Security (IaaS and PaaS): 1.5/S7](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 Cloud Security (IaaS and PaaS): 1.5/S4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
 
-<a id="ns-5"></a>
 ## NS-5: Network and Application Layer Filtering
+
+**Group:** Network Security
 
 ### Control Statement
 
@@ -105,31 +132,35 @@ Filter direct traffic from the internet to protect against network and applicati
 
 ### Control Recommendations
 
-Deploy the following as required:
+Deploy the following mechanisms as appropriate for the system and network architecture:
 
-* Web Application Firewall
+- Web Application Firewall
 
-* Distributed Denial of Service Protection (e.g., AWS Shield)
+- Distributed Denial of Service Protection (e.g., AWS Shield)
 
-* Content Delivery Network (e.g., CloudFront)
+- Content Delivery Network (e.g., CloudFront)
 
 ### Risk Statement
 
 Lack of filtering for direct traffic from the internet exposes the system to the risk of network and application layer attacks, increasing the likelihood of unauthorised access, denial-of-service incidents, and compromise of sensitive data.
 
+### References
 
+- [IM8 Cloud Security (IaaS and PaaS): 1.5/S5](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 On-Premise ADS (Non-S): 1.1/S4]()
 
-<a id="ns-6"></a>
 ## NS-6: Valid and Trusted SSL/TLS Certificates
+
+**Group:** Network Security
 
 ### Control Statement
 
 Ensure that deployed SSL/TLS certificates are:
- * signed by a trusted root Certificate Authority;
- * match the domain name of the service they are issued for;
- * not expired; and
- * not revoked.
 
+- signed by a trusted root Certificate Authority;
+- match the domain name of the service they are issued for;
+- not expired; and
+- not revoked.
 
 ### Control Recommendations
 
@@ -139,10 +170,13 @@ Configure a certificate manager that auto-renews certificates and sends alerts b
 
 Using invalid SSL/TLS certificates introduces the risk of compromised encryption, man-in-the-middle attacks, and potential unauthorised access to sensitive information.
 
+### References
 
+- [IM8 Cloud Security (IaaS and PaaS): 1.5/S8](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
 
-<a id="ns-7"></a>
 ## NS-7: Secure Inter-Service Communication
+
+**Group:** Network Security
 
 ### Control Statement
 
@@ -156,10 +190,9 @@ Design and build inter-service communications (e.g., databases, microservices) t
 
 Failure to ensure secure communications between services increases the risk of unauthorised access, data breaches, and potential manipulation of sensitive information during transit.
 
-
-
-<a id="ns-8"></a>
 ## NS-8: Secure Government Enterprise Network (GEN) connectivity
+
+**Group:** Network Security
 
 ### Control Statement
 
@@ -173,10 +206,9 @@ Design and build secure communications to or from on-premises systems (e.g. Gove
 
 Routing network traffic through a secure intermediary mitigates the risk of unauthorised access and cross-network compromise in the case of bridging or direct connectivity.
 
-
-
-<a id="ns-9"></a>
 ## NS-9: Intrusion Prevention System (IPS)/Intrusion Detection System (IDS)
+
+**Group:** Network Security
 
 ### Control Statement
 
@@ -190,10 +222,13 @@ Configure network or host IPS/IDS to detect malicious traffic to/from public or 
 
 Absence of network or host IPS or IDS in the network increases the likelihood of undetected intrusions, putting sensitive data and system integrity at risk.
 
+### References
 
+- [IM8 On-Premise IS (Non-S): 4.2/S3d]()
 
-<a id="ns-10"></a>
 ## NS-10: Private Network Connectivity
+
+**Group:** Network Security
 
 ### Control Statement
 
@@ -211,10 +246,13 @@ Terminate all remote access connections in a dedicated network segment within th
 
 Weak private network security may expose our network to malicious activities, jeopardizing the confidentiality, integrity, and availability of critical resources.
 
+### References
 
+- [IM8 On-Premise IS (Non-S): 5.4]()
 
-<a id="ns-11"></a>
 ## NS-11: Alerts on Firewall Configuration Changes
+
+**Group:** Network Security
 
 ### Control Statement
 
@@ -227,3 +265,7 @@ Implement real time alerts to inform administrators of creation, deletion, modif
 ### Risk Statement
 
 Any unintended changes to firewall rules can significantly lower the perimeter defence of a network.
+
+### References
+
+- [IM8 On-Premise IS (Non-S): 4.3/S2]()
