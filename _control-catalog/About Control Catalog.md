@@ -31,4 +31,4 @@ are published here and will progressively be updated in this website.</p>
 For any feedback, please provide <a href="https://go.gov.sg/ictpolicy" rel="noopener noreferrer nofollow" target="_blank">here.</a>
 </p>
 <p></p>
-<p>The control catalog was last updated on 03 December 2024.</p>
+<p>The control catalog was last updated on 24 February 2025.</p>
