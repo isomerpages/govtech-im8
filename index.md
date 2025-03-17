@@ -38,12 +38,4 @@ sections:
       url: /control-catalog/
       image: /images/img_catalog.png
       alt: isometric illustration tech
-  - infopic:
-      title: Profiles
-      id: infopic
-      description: A Profile defines a customised set of controls derived from the catalog.
-      button: READ MORE
-      url: about-profile
-      image: /images/img_about.png
-      alt: isometric illustration tech
 ---
