@@ -5,7 +5,6 @@ variant: markdown
 description: ""
 third_nav_title: Cybersecurity
 ---
-
 Controls to prevent application vulnerabilities caused by insecure coding.
 
 | Controls                                                                                     |
