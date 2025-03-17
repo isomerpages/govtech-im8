@@ -5,23 +5,24 @@ variant: markdown
 description: ""
 third_nav_title: Cybersecurity
 ---
+
 Controls to prevent tampering and improve the integrity of the software supply chain.
 
-| Controls |
-| ---- |
-| [SC-1: Code Repository](#sc-1) |
-| [SC-2: Commit Signing](#sc-2) |
-| [SC-3: Peer Review](#sc-3) |
-| [SC-4: Dependency Manifest Version Pinning](#sc-4) |
-| [SC-5: Build and Release Process](#sc-5) |
-| [SC-6: Dependency Installation during Deployment](#sc-6) |
-| [SC-7: Software Artefact Signing](#sc-7) |
-| [SC-8: Software Artefact Signature Verification](#sc-8) |
-| [SC-9: Internal Code Collaboration and Sharing](#sc-9) |
+| Controls                                                                                           |
+| -------------------------------------------------------------------------------------------------- |
+| [SC-1: Code Repository](#sc-1-code-repository)                                                     |
+| [SC-2: Commit Signing](#sc-2-commit-signing)                                                       |
+| [SC-3: Peer Review](#sc-3-peer-review)                                                             |
+| [SC-4: Dependency Manifest Version Pinning](#sc-4-dependency-manifest-version-pinning)             |
+| [SC-5: Build and Release Process](#sc-5-build-and-release-process)                                 |
+| [SC-6: Dependency Installation during Deployment](#sc-6-dependency-installation-during-deployment) |
+| [SC-7: Software Artefact Signing](#sc-7-software-artefact-signing)                                 |
+| [SC-8: Software Artefact Signature Verification](#sc-8-software-artefact-signature-verification)   |
+| [SC-9: Internal Code Collaboration and Sharing](#sc-9-internal-code-collaboration-and-sharing)     |
 
-
-<a id="sc-1"></a>
 ## SC-1: Code Repository
+
+**Group:** Software Supply Chain
 
 ### Control Statement
 
@@ -35,10 +36,14 @@ Use common platforms such as SHIP-HATS 2.0 GitLab or equivalents.
 
 Absence of centralised code repository and version control increases the risk of code inconsistencies, loss of code history, and difficulties in collaboration, potentially leading to errors and security vulnerabilities.
 
+### References
 
+- [IM8 Cloud ADS: 7.1/S1]()
+- [IM8 On-Premise ADS (Non-S): 6.1/S1]()
 
-<a id="sc-2"></a>
 ## SC-2: Commit Signing
+
+**Group:** Software Supply Chain
 
 ### Control Statement
 
@@ -52,10 +57,9 @@ Use GitLab's push rules, GitHub's branch protection rules or similar code reposi
 
 Allowing unsigned commits in the code repository introduces the risk of unauthorised or malicious code changes, compromising the integrity and security of the software development process.
 
-
-
-<a id="sc-3"></a>
 ## SC-3: Peer Review
+
+**Group:** Software Supply Chain
 
 ### Control Statement
 
@@ -69,10 +73,15 @@ Use GitLab's protected branch and merge request settings, GitHub's branch protec
 
 Without peer review and approval before merging, there is an increased risk of introducing undetected coding errors, security vulnerabilities, and maintaining codebase consistency may become challenging.
 
+### References
 
+- [IM8 Cloud Security (IaaS and PaaS): 1.1/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 Cloud ADS: 8.1/G1]()
+- [IM8 On-Premise ADS (Non-S): 8.1/G1]()
 
-<a id="sc-4"></a>
 ## SC-4: Dependency Manifest Version Pinning
+
+**Group:** Software Supply Chain
 
 ### Control Statement
 
@@ -86,10 +95,15 @@ Dependency manifests such as package-lock.json for npm and Pipfile.lock for pipe
 
 Failure to pin direct and transitive dependency versions in the application's manifest may lead to version drift, introducing compatibility issues, security vulnerabilities, and unpredictability in the software environment.
 
+### References
 
+- [SLSA Build L1: Provenance exists](https://slsa.dev)
+- [IM8 Cloud ADS: 8.1/G4]()
+- [IM8 On-Premise ADS (Non-S): 8.1/G4]()
 
-<a id="sc-5"></a>
 ## SC-5: Build and Release Process
+
+**Group:** Software Supply Chain
 
 ### Control Statement
 
@@ -103,10 +117,16 @@ Consider automated build and deploy tools such as CI/CD Pipelines, Infrastructur
 
 Inconsistent and unmanaged releases may lead to configuration drift, increased likelihood of errors, and unapproved changes to releases.
 
+### References
 
+- [MVSP 3.5: Build and release process](https://mvsp.dev/)
+- [SLSA Build L1: Provenance exists](https://slsa.dev)
+- [IM8 Cloud Security (IaaS and PaaS): 1.7/S22](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 Cloud ADS: 6.1/G4]()
 
-<a id="sc-6"></a>
 ## SC-6: Dependency Installation during Deployment
+
+**Group:** Software Supply Chain
 
 ### Control Statement
 
@@ -120,10 +140,13 @@ Use package manager commands such as npm ci for npm and pipenv sync for pipenv t
 
 Failure to install only pinned versions of dependencies during deployment increases the risk of introducing unforeseen changes, compatibility issues, and potential security vulnerabilities into the deployed environment.
 
+### References
 
+- [SLSA Build L1: Provenance exists](https://slsa.dev)
 
-<a id="sc-7"></a>
 ## SC-7: Software Artefact Signing
+
+**Group:** Software Supply Chain
 
 ### Control Statement
 
@@ -137,10 +160,15 @@ Use tools or services like Cosign or AWS Signer to sign and verify code.
 
 Unsigned code and container images pose a risk of tampering, impersonation, and the injection of malicious code during the build process, compromising the integrity and security of the deployed software.
 
+### References
 
+- [SLSA Build L2: Hosted build platform](https://slsa.dev)
+- [IM8 Cloud ADS: 1.7/G9]()
+- [IM8 Cloud ADS: 8.1/G1]()
 
-<a id="sc-8"></a>
 ## SC-8: Software Artefact Signature Verification
+
+**Group:** Software Supply Chain
 
 ### Control Statement
 
@@ -154,10 +182,16 @@ Implement a signature verification step such as a pipeline stage or Kubernetes A
 
 Without verifying the signatures of code and artefacts before deployment or runtime, there's an increased risk of deploying tampered or malicious software, compromising the integrity and security of the system.
 
+### References
 
+- [SLSA Build L2: Hosted build platform](https://slsa.dev)
+- [IM8 Cloud ADS: 1.7/G9](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 Cloud Security (IaaS and PaaS): 1.7/S20](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+- [IM8 Cloud ADS: 8.1/G12]()
 
-<a id="sc-9"></a>
 ## SC-9: Internal Code Collaboration and Sharing
+
+**Group:** Software Supply Chain
 
 ### Control Statement
 
@@ -170,3 +204,7 @@ Adopt Innersource practices for internal collaboration, utilizing platforms like
 ### Risk Statement
 
 Restricting code repositories to closed source can result in duplicated efforts, hinder collaborative learning, and lead to missed bugs or vulnerabilities.
+
+### References
+
+- [Singapore Government Developer Portal - Innersource](https://docs.developer.tech.gov.sg/docs/innersource-in-the-government/)
