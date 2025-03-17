@@ -20,9 +20,8 @@ control implementation. Industry partners can get more info about OSCAL
 Each control can either be a basic <strong>hygiene requirement</strong> which
 should be implemented or a <strong>guideline</strong> which is best practice
 for consideration.&nbsp; A control can be tagged as requirement for low-risk
-systems but tagged as guideline for systems in sandbox stage. The list
-of controls for the profiles are listed <a href="/profile/low-risk/" rel="noopener noreferrer nofollow" target="_blank">here</a>. You may refer to sample JSON files
-<a href="https://github.com/GovtechSG/tech-standards" rel="noopener nofollow" target="_blank">here</a>.</p>
+systems but tagged as guideline for systems in sandbox stage. You may refer
+to sample JSON files <a href="https://github.com/GovtechSG/tech-standards" rel="noopener nofollow" target="_blank">here</a>.</p>
 <p>Each system is to define a system security plan that comprises the implementable
 controls.&nbsp; Agencies and their industry partners are to apply the controls
 identified for each system.</p>
