@@ -2,6 +2,7 @@ collections:
   control-catalog:
     output: true
     order:
+      - About Control Catalog.md
       - Cybersecurity/.keep
       - Cybersecurity/Datacentre.md
       - Cybersecurity/Secure Development.md
@@ -16,4 +17,3 @@ collections:
       - Cybersecurity/Security Testing.md
       - Cybersecurity/Software Supply Chain.md
       - Cybersecurity/Application Security.md
-      - About Control Catalog.md
