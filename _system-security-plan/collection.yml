@@ -2,4 +2,5 @@ collections:
   system-security-plan:
     output: true
     order:
+      - Low Risk (On Premise).md
       - Low Risk (Cloud).md
