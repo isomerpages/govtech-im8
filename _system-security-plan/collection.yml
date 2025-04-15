@@ -1,4 +1,5 @@
 collections:
   system-security-plan:
     output: true
-    order: []
+    order:
+      - Low Risk (Cloud).md
