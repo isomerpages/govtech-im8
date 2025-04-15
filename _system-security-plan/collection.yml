@@ -2,7 +2,7 @@ collections:
   system-security-plan:
     output: true
     order:
-      - Medium Risk (Cloud).md
-      - Low Risk (Gen AI).md
       - Low Risk (Cloud).md
       - Low Risk (On Premise).md
+      - Medium Risk (Cloud).md
+      - Low Risk (Gen AI).md
