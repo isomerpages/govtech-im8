@@ -3,6 +3,5 @@ collections:
     output: true
     order:
       - Low Risk (Cloud).md
-      - Low Risk (On Premise).md
       - Medium Risk (Cloud).md
       - Low Risk (Gen AI).md
