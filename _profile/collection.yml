@@ -1,5 +1,5 @@
 collections:
-  system-security-plan:
+  profile:
     output: true
     order:
       - Low Risk (Cloud).md
