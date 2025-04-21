@@ -16,7 +16,6 @@ systems of different risk impact levels </strong>. Agencies will assess the risk
   </div>
   <div class="col is-5"><img style="width: 100%;" height="auto" width="100%" alt="illustration of 2 business user and improvement in productivity" src="/images/img_about_kv.png"></div>
     <div class="col is-12"><p>This publication is to provide the same control&nbsp;requirements to government agencies and industry partners so that both parties can work together to apply the right level of controls for their systems.
-</p><p>The reform effort has started for low-risk systems first. <strong>The first tranche of the recommended controls for low-risk systems is published <a href="/control-catalog/" rel="noopener noreferrer nofollow">here</a> and will be progressively updated in this website.</strong>
 </p></div>
 </div>
 <p>We invite industry players to join us in the ICT&amp;SS Policy Reform journey. For any feedback, please provide here:  <a aria-label="link to form" target="_blank" href="https://go.gov.sg/ictpolicy">https://go.gov.sg/ictpolicy</a></p>
