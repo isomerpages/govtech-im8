@@ -2,6 +2,7 @@ collections:
   ssp:
     output: true
     order:
+      - Low Risk Cloud.md
       - Low Risk.md
       - Medium Risk.md
       - Sandbox.md
