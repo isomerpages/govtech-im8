@@ -31,7 +31,6 @@ sections:
       image: /images/img_about.png
   - infopic:
       title: System Security Plan
-      subtitle: Add an image and text
       id: infopic
       description: System Security Plans for low-risk Cloud, low-risk On-Premises,
         medium-risk Cloud and Sandbox systems.
