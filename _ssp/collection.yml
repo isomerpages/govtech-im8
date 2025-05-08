@@ -4,6 +4,6 @@ collections:
     order:
       - About SSP.md
       - Low Risk Cloud.md
-      - Low Risk.md
+      - Low Risk On Premises.md
       - Medium Risk.md
       - Sandbox.md
