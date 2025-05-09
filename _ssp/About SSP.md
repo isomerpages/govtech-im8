@@ -6,7 +6,7 @@ description: ""
 ---
 <h2>Purpose</h2>
 
-<p>A system security plan comprises the implementable controls for a system type. The current types of systems include:</p>
+<p>A system security plan comprises the implementable controls based on system characteristics. The current types of systems include:</p>
 <ul>
 	<li>Low-Risk Cloud</li>
 	<li>Low-Risk On-Premises</li>
