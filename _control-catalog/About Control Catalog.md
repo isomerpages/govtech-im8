@@ -9,7 +9,7 @@ description: ""
 that both parties can work together to apply the right level of controls
 for their systems.</p>
 <p>The catalog consists of a&nbsp;central pool of recommended controls meant
-for low-risk systems and medium-risk cloud systems.&nbsp;</p>
+for Low-Risk Cloud, Low-Risk On-Premises and Medium-Risk Cloud systems.&nbsp;</p>
 <p>The controls are expressed using Open Security Controls Assessment Language
 (OSCAL) which are codified in machine-readable policy format. It enables
 future automation to monitor and assess the effectiveness of technical
