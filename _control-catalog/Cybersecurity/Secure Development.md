@@ -28,15 +28,11 @@ Configure the code repository to prevent secrets from being pushed to the reposi
 
 ### Control Recommendations
 
-Use GitLab's push rules or GitHub's push protection to reject secrets on push.
+Use GitLab&#39;s push rules or GitHub&#39;s push protection to reject secrets on push.
 
 ### Risk Statement
 
 Failure to configure the code repository to prevent secrets from being pushed introduces the risk of inadvertent exposure, unauthorised access, and potential misuse of sensitive information, compromising the security of the codebase and associated systems.
-
-### References
-
-- [IM8 Cloud ADS: 6.4/G1]()
 
 ## SD-2: Default Branch Push Permissions
 
@@ -48,11 +44,11 @@ Configure the code repository to prevent pushes (including force pushes) to the 
 
 ### Control Recommendations
 
-Use GitLab's protected branch and merge request settings or GitHub's branch protection settings to enforce this.
+Use GitLab&#39;s protected branch and merge request settings or GitHub&#39;s branch protection settings to enforce this.
 
 ### Risk Statement
 
-Without configuring the code repository to prevent pushes, including force pushes, to the default branch, there's an increased risk of unintentional or malicious changes, potential loss of code history, and compromised version control, impacting the integrity and reliability of the software development process.
+Without configuring the code repository to prevent pushes, including force pushes, to the default branch, there&#39;s an increased risk of unintentional or malicious changes, potential loss of code history, and compromised version control, impacting the integrity and reliability of the software development process.
 
 ## SD-3: Continuous Integration (CI) Tests
 
@@ -64,7 +60,7 @@ Require Continuous Integration (CI) tests to pass before merging into the defaul
 
 ### Control Recommendations
 
-Use GitLab's protected branch and merge request settings or GitHub's branch protection settings to enforce this.
+Use GitLab&#39;s protected branch and merge request settings or GitHub&#39;s branch protection settings to enforce this.
 
 ### Risk Statement
 
@@ -92,11 +88,6 @@ Without setting up static analysis in the CI/CD pipeline for each merge request 
 | ---------- | -------------- | ------------------------------------------ |
 | sd-4_prm_1 | location (str) | The location where static analysis occurs. |
 
-### References
-
-- [IM8 Cloud ADS: 6.4/S2]()
-- [IM8 On-Premise ADS (Non-S): 4.1/S1]()
-
 ## SD-5: Dependency Scanning
 
 **Group:** Secure Development
@@ -120,14 +111,6 @@ Failing to schedule regular dependency scanning to identify vulnerable software 
 | sd-5_prm_1 | time period (days) (int) | The time period in days of dependency scanning frequency. |
 | sd-5_prm_2 | location (str)           | The location where dependency scanning occurs.            |
 
-### References
-
-- [MVSP 2.6: Dependency Patching](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.7/S8i](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud ADS: 8.1/S2]()
-- [IM8 Cloud ADS: 6.1/S1c]()
-- [IM8 On-Premise ADS (Non-S): 1.1/S1i]()
-
 ## SD-6: Secret Detection
 
 **Group:** Secure Development
@@ -142,7 +125,7 @@ Ensure that the exposed secret is revoked and purged from the Git history.
 
 ### Risk Statement
 
-Without setting up secret detection and addressing true positive findings promptly, there's an increased risk of exposing sensitive information, potential unauthorised access, and compromised security.
+Without setting up secret detection and addressing true positive findings promptly, there&#39;s an increased risk of exposing sensitive information, potential unauthorised access, and compromised security.
 
 ### Parameters
 
@@ -150,13 +133,6 @@ Without setting up secret detection and addressing true positive findings prompt
 | ---------- | ------------------------ | -------------------------------------------------------------------------- |
 | sd-6_prm_1 | location (str)           | The location where secret detection occurs.                                |
 | sd-6_prm_2 | time period (days) (int) | Number of days within which to remediate a secret detection true positive. |
-
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.7/S8f](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud ADS: 1.1/S1f]()
-- [IM8 Cloud ADS: 6.4/G1b]()
-- [IM8 On-Premise ADS (Non-S): 6.4/G1]()
 
 ## SD-7: CI Environment Variable Secrets Management
 
@@ -168,7 +144,7 @@ Protect environment variable secrets used in CI jobs by limiting them to protect
 
 ### Control Recommendations
 
-Use GitLab's CI/CD variable security settings or GitHub's encrypted secrets with the add-mask workflow command.
+Use GitLab&#39;s CI/CD variable security settings or GitHub&#39;s encrypted secrets with the add-mask workflow command.
 
 ### Risk Statement
 
@@ -189,8 +165,3 @@ Achieve segregation using separate Government on Commercial Cloud (GCC) accounts
 ### Risk Statement
 
 Failure to segregate production and non-production environments increases the risk of unauthorized access, data leaks, and denial of service attacks, as compromises in non-production environments may lead to cascading impacts on production systems.
-
-### References
-
-- [MVSP 4.2: Logical access](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.4/S9](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
