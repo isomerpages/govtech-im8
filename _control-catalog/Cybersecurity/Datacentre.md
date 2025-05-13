@@ -28,10 +28,6 @@ For on-premise environments, ensure government resources are physically stored a
 
 Violating this control can subject government data and systems to access risks leading to compromised systems and data.
 
-### References
-
-- [IM8 On-Premise IS (Non-S): 1.1/S1c]()
-
 ## DC-2: Physical Access Controls
 
 **Group:** Datacentre
@@ -63,7 +59,3 @@ h) CCTV installed to monitor the facility.
 ### Risk Statement
 
 Violating this control can subject government data and systems to access risks leading to compromised systems and data.
-
-### References
-
-- [IM8 On-Premise IS (Non-S): 1.1/S1i]()
