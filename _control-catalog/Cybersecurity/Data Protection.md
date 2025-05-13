@@ -5,9 +5,6 @@ variant: markdown
 description: ""
 third_nav_title: Cybersecurity
 ---
-
-Controls to protect the data of a system.
-
 | Controls                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------ |
 | [DP-1: Data Residency](#dp-1-data-residency)                                                                                   |
@@ -28,7 +25,7 @@ Enforce data residency of primary data in [ insert: param, dp-1_prm_1 ].
 
 ### Control Recommendations
 
-Use the appropriate region of cloud service providers for storage of data, such as ap-southeast-1 for Singapore in AWS. Primary data excludes transient data such as data-in-transit or temporary caches which may briefly pass through or be temporarily stored in other locations as part of normal system operations.
+Use the appropriate region of cloud service providers for compute and storage of data, such as ap-southeast-1 for Singapore in AWS.
 
 ### Risk Statement
 
@@ -39,13 +36,6 @@ Failure to enforce data residency of primary data in the appropriate country may
 | ID         | Type          | Description                              |
 | ---------- | ------------- | ---------------------------------------- |
 | dp-1_prm_1 | country (str) | The country the primary data resides in. |
-
-### References
-
-- [MVSP 1.6: Compliance](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.3/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise IS (Non-S): 1.1/S1a]()
-- [IM8 Cloud SaaS Security: 1.1/S4]()
 
 ## DP-2: Data at Rest Encryption
 
@@ -61,14 +51,7 @@ Many CSP services encrypt data at rest by default but this should be confirmed a
 
 ### Risk Statement
 
-Without encrypting data at rest, there's an increased risk of unauthorised access and data exposure in the event of physical theft, unauthorised access to storage media, or compromised security controls, compromising the confidentiality of stored information.
-
-### References
-
-- [MVSP 2.8: Encryption](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.3/S2a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise ADS (Non-S): 1.1/S1h]()
-- [NIST FIPS 140-3](https://csrc.nist.gov/pubs/fips/140-3/final)
+Without encrypting data at rest, there&#39;s an increased risk of unauthorised access and data exposure in the event of physical theft, unauthorised access to storage media, or compromised security controls, compromising the confidentiality of stored information.
 
 ## DP-3: Data in Transit Encryption
 
@@ -86,13 +69,6 @@ While some CSP services transparently encrypt data in transit at the network lay
 
 Failure to encrypt data in transit increases the risk of unauthorised interception and eavesdropping, potentially leading to data breaches, unauthorised access, and compromise of sensitive information during transmission.
 
-### References
-
-- [MVSP 2.8: Encryption](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.3/S2b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise ADS (Non-S): 3.1/S3]()
-- [NIST FIPS 140-3](https://csrc.nist.gov/pubs/fips/140-3/final)
-
 ## DP-4: Government on Commercial Cloud (GCC)
 
 **Group:** Data Protection
@@ -109,11 +85,6 @@ GCC allows oversight to be maintained at the Whole-of-Government level and imple
 
 Hosting higher-sensitivity systems in Government on Commercial Cloud (GCC) ensures compliance with security classifications, reducing the risk of unauthorised access and maintaining data confidentiality according to government security standards.
 
-### References
-
-- [MVSP 1.6: Compliance](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.1/S4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-
 ## DP-5: Sanitisation
 
 **Group:** Data Protection
@@ -127,15 +98,11 @@ Sanitise all hardware that stores data at rest. Shred or incinerate data storage
 Use industry standards such as
 a) Peter Gutmann Secure Deletion;
 b) Bruce Schneier Algorithm
-c) US Department of Defence's Standards (DoD 5220.22-M).
+c) US Department of Defence&#39;s Standards (DoD 5220.22-M).
 
 ### Risk Statement
 
 Violating this control can expose government data to unauthorised users.
-
-### References
-
-- [IM8 On-Premise IS (Non-S): 3.3/S1]()
 
 ## DP-6: Witness Sanitisation and Destruction of Storage Devices
 
@@ -153,10 +120,6 @@ Establish a SOP to ensure sanitisation and destruction are witnessed by an agenc
 
 Ensuring storage devices are sanitised or destroyed will eliminate the possibility of unauthorised or unintended data retention.
 
-### References
-
-- [IM8 On-Premise IS (Non-S): 3.3/S1]()
-
 ## DP-7: Data Loss Prevention
 
 **Group:** Data Protection
@@ -172,7 +135,3 @@ Where possible, use built-in solutions such as Microsoft Purview or Google Works
 ### Risk Statement
 
 Failure to implement data loss prevention measures increases the risk of unauthorized data exfiltration, accidental data leaks, and data breaches, compromising sensitive information and organizational integrity.
-
-### References
-
-- [CIS Critical Security Controls v8 3.13: Deploy a Data Loss Prevention Solution](https://www.cisecurity.org/controls/v8)
