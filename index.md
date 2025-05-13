@@ -13,9 +13,9 @@ sections:
       title: One-stop portal for modern digital governance
       background: /images/banner_home.png
       key_highlights:
-        - title: Catalog of Controls
-          description: View list of controls
-          url: /control-catalog/
+        - title: Scroll down for more information
+          description: ""
+          url: ""
       variant: floating
       backgroundColor: gray
       alignment: left
