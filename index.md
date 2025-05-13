@@ -41,8 +41,8 @@ sections:
   - infopic:
       title: Catalog of Controls
       id: infopic
-      description: Re-calibrated catalog of controls for low-risk Cloud, low-risk
-        On-Premises, medium-risk Cloud and Sandbox systems.
+      description: Re-calibrated catalog of controls for Low-Risk Cloud, Low-Risk
+        On-Premises, Medium-Risk Cloud and Sandbox systems.
       button: Read more
       url: /control-catalog/
       image: /images/img_about.png
