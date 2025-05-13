@@ -30,12 +30,21 @@ sections:
       url: /about
       image: /images/img_about.png
   - infopic:
+      title: System Security Plan
+      id: infopic
+      description: System Security Plans for Low-Risk Cloud, Low-Risk On-Premises,
+        Medium-Risk Cloud and Sandbox systems.
+      button: Read more
+      url: /about-ssp/
+      image: /images/img_catalog.png
+      alt: Image alt text
+  - infopic:
       title: Catalog of Controls
       id: infopic
-      description: Re-calibrated catalog of controls starting with systems of low-risk
-        impact level.
+      description: Re-calibrated catalog of controls for Low-Risk Cloud, Low-Risk
+        On-Premises, Medium-Risk Cloud and Sandbox systems.
       button: Read more
       url: /control-catalog/
-      image: /images/img_catalog.png
+      image: /images/img_about.png
       alt: isometric illustration tech
 ---

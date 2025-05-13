@@ -3,17 +3,18 @@ title: Datacentre
 permalink: /control-catalog/dc/
 variant: markdown
 description: ""
+third_nav_title: Cybersecurity
 ---
+Controls to secure datacentre system components.
 
+| Controls                                                         |
+| ---------------------------------------------------------------- |
+| [DC-1: Separate hosting](#dc-1-separate-hosting)                 |
+| [DC-2: Physical Access Controls](#dc-2-physical-access-controls) |
 
-| Controls |
-| ---- |
-| [DC-1: Separate hosting](#dc-1) |
-| [DC-2: Physical Access Controls](#dc-2) |
-
-
-<a id="dc-1"></a>
 ## DC-1: Separate hosting
+
+**Group:** Datacentre
 
 ### Control Statement
 
@@ -27,10 +28,13 @@ For on-premise environments, ensure government resources are physically stored a
 
 Violating this control can subject government data and systems to access risks leading to compromised systems and data.
 
+### References
 
+- [IM8 On-Premise IS (Non-S): 1.1/S1c]()
 
-<a id="dc-2"></a>
 ## DC-2: Physical Access Controls
+
+**Group:** Datacentre
 
 ### Control Statement
 
@@ -60,6 +64,6 @@ h) CCTV installed to monitor the facility.
 
 Violating this control can subject government data and systems to access risks leading to compromised systems and data.
 
+### References
 
-
-
+- [IM8 On-Premise IS (Non-S): 1.1/S1i]()
