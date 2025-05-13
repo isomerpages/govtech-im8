@@ -5,7 +5,6 @@ variant: markdown
 description: ""
 third_nav_title: Cybersecurity
 ---
-
 Controls to prevent tampering and improve the integrity of the software supply chain.
 
 | Controls                                                                                           |
@@ -36,11 +35,6 @@ Use common platforms such as SHIP-HATS 2.0 GitLab or equivalents.
 
 Absence of centralised code repository and version control increases the risk of code inconsistencies, loss of code history, and difficulties in collaboration, potentially leading to errors and security vulnerabilities.
 
-### References
-
-- [IM8 Cloud ADS: 7.1/S1]()
-- [IM8 On-Premise ADS (Non-S): 6.1/S1]()
-
 ## SC-2: Commit Signing
 
 **Group:** Software Supply Chain
@@ -51,7 +45,7 @@ Configure the code repository to reject unsigned commits.
 
 ### Control Recommendations
 
-Use GitLab's push rules, GitHub's branch protection rules or similar code repository controls to reject unsigned commits on push.
+Use GitLab&#39;s push rules, GitHub&#39;s branch protection rules or similar code repository controls to reject unsigned commits on push.
 
 ### Risk Statement
 
@@ -67,17 +61,11 @@ Require peer review and approval by a designated reviewer before merging into th
 
 ### Control Recommendations
 
-Use GitLab's protected branch and merge request settings, GitHub's branch protection settings or similar code repository controls to enforce this.
+Use GitLab&#39;s protected branch and merge request settings, GitHub&#39;s branch protection settings or similar code repository controls to enforce this.
 
 ### Risk Statement
 
 Without peer review and approval before merging, there is an increased risk of introducing undetected coding errors, security vulnerabilities, and maintaining codebase consistency may become challenging.
-
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.1/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud ADS: 8.1/G1]()
-- [IM8 On-Premise ADS (Non-S): 8.1/G1]()
 
 ## SC-4: Dependency Manifest Version Pinning
 
@@ -85,7 +73,7 @@ Without peer review and approval before merging, there is an increased risk of i
 
 ### Control Statement
 
-Pin direct and transitive dependency versions in the application's dependency manifest.
+Pin direct and transitive dependency versions in the application&#39;s dependency manifest.
 
 ### Control Recommendations
 
@@ -93,13 +81,7 @@ Dependency manifests such as package-lock.json for npm and Pipfile.lock for pipe
 
 ### Risk Statement
 
-Failure to pin direct and transitive dependency versions in the application's manifest may lead to version drift, introducing compatibility issues, security vulnerabilities, and unpredictability in the software environment.
-
-### References
-
-- [SLSA Build L1: Provenance exists](https://slsa.dev)
-- [IM8 Cloud ADS: 8.1/G4]()
-- [IM8 On-Premise ADS (Non-S): 8.1/G4]()
+Failure to pin direct and transitive dependency versions in the application&#39;s manifest may lead to version drift, introducing compatibility issues, security vulnerabilities, and unpredictability in the software environment.
 
 ## SC-5: Build and Release Process
 
@@ -117,13 +99,6 @@ Consider automated build and deploy tools such as CI/CD Pipelines, Infrastructur
 
 Inconsistent and unmanaged releases may lead to configuration drift, increased likelihood of errors, and unapproved changes to releases.
 
-### References
-
-- [MVSP 3.5: Build and release process](https://mvsp.dev/)
-- [SLSA Build L1: Provenance exists](https://slsa.dev)
-- [IM8 Cloud Security (IaaS and PaaS): 1.7/S22](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud ADS: 6.1/G4]()
-
 ## SC-6: Dependency Installation during Deployment
 
 **Group:** Software Supply Chain
@@ -139,10 +114,6 @@ Use package manager commands such as npm ci for npm and pipenv sync for pipenv t
 ### Risk Statement
 
 Failure to install only pinned versions of dependencies during deployment increases the risk of introducing unforeseen changes, compatibility issues, and potential security vulnerabilities into the deployed environment.
-
-### References
-
-- [SLSA Build L1: Provenance exists](https://slsa.dev)
 
 ## SC-7: Software Artefact Signing
 
@@ -160,12 +131,6 @@ Use tools or services like Cosign or AWS Signer to sign and verify code.
 
 Unsigned code and container images pose a risk of tampering, impersonation, and the injection of malicious code during the build process, compromising the integrity and security of the deployed software.
 
-### References
-
-- [SLSA Build L2: Hosted build platform](https://slsa.dev)
-- [IM8 Cloud ADS: 1.7/G9]()
-- [IM8 Cloud ADS: 8.1/G1]()
-
 ## SC-8: Software Artefact Signature Verification
 
 **Group:** Software Supply Chain
@@ -180,14 +145,7 @@ Implement a signature verification step such as a pipeline stage or Kubernetes A
 
 ### Risk Statement
 
-Without verifying the signatures of code and artefacts before deployment or runtime, there's an increased risk of deploying tampered or malicious software, compromising the integrity and security of the system.
-
-### References
-
-- [SLSA Build L2: Hosted build platform](https://slsa.dev)
-- [IM8 Cloud ADS: 1.7/G9](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.7/S20](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud ADS: 8.1/G12]()
+Without verifying the signatures of code and artefacts before deployment or runtime, there&#39;s an increased risk of deploying tampered or malicious software, compromising the integrity and security of the system.
 
 ## SC-9: Internal Code Collaboration and Sharing
 
@@ -204,7 +162,3 @@ Adopt Innersource practices for internal collaboration, utilizing platforms like
 ### Risk Statement
 
 Restricting code repositories to closed source can result in duplicated efforts, hinder collaborative learning, and lead to missed bugs or vulnerabilities.
-
-### References
-
-- [Singapore Government Developer Portal - Innersource](https://docs.developer.tech.gov.sg/docs/innersource-in-the-government/)
