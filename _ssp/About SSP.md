@@ -24,3 +24,5 @@ description: ""
 Agencies and industry partners are to assess and apply the controls in accordance with its risk impacts.</p> 
 <h3>Profile Level 2</h3>
 <p>These are best practices for Agencies to consider and adopt where required.</p>
+
+<p>The SSPs were last updated on 13 May 2025.</p>
