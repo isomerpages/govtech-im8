@@ -5,7 +5,6 @@ variant: markdown
 description: ""
 third_nav_title: Cybersecurity
 ---
-
 Controls to validate the security of a system via internal and external testing.
 
 | Controls                                                                                           |
@@ -39,10 +38,6 @@ Without regular vulnerability assessment scans, hosts remain exposed to undetect
 | st-1_prm_1 | type (str)               | The type of vulnerability assessment scanning.              |
 | st-1_prm_2 | time period (days) (int) | The time period in days for vulnerability assessment scans. |
 
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.8/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-
 ## ST-2: Cloud Security Posture Management
 
 **Group:** Security Testing
@@ -58,10 +53,6 @@ Use cloud security posture management tools such as CloudSCAPE, AWS Security Hub
 ### Risk Statement
 
 Lack of continuous configuration scans through cloud security posture management increases the risk of misconfigurations in cloud assets, leading to security vulnerabilities, data breaches, and unauthorised access.
-
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.1/S6](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
 
 ## ST-3: Public Vulnerability Disclosure Programme
 
@@ -85,13 +76,6 @@ Lack of a reporting channel for vulnerabilities increases the risk of undetected
 | ---------- | ---------- | --------------------------------------------------- |
 | st-3_prm_1 | type (str) | The type of public vulnerability reporting channel. |
 
-### References
-
-- [MVSP 1.1: Vulnerability reports](https://mvsp.dev/)
-- [IM8 On-Premise ADS (Non-S): 5.1/S4]()
-- [NIST SP 800-53 RA-5(11): Public Disclosure Program](https://doi.org/10.6028/NIST.SP.800-53r5)
-- [Cloud Controls Matrix TVM-09: Vulnerability Management Reporting](https://cloudsecurityalliance.org/artifacts/cloud-controls-matrix-v4)
-
 ## ST-4: Security Testing Programme
 
 **Group:** Security Testing
@@ -106,7 +90,7 @@ Refer to the [WOG Security Testing Guidelines](https://docs.developer.tech.gov.s
 
 ### Risk Statement
 
-Without undergoing security testing, there's an increased risk of undetected security weaknesses, leaving the application susceptible to exploitation, data breaches, and unauthorised access.
+Without undergoing security testing, there&#39;s an increased risk of undetected security weaknesses, leaving the application susceptible to exploitation, data breaches, and unauthorised access.
 
 ### Parameters
 
@@ -114,13 +98,6 @@ Without undergoing security testing, there's an increased risk of undetected sec
 | ---------- | ------------------------ | --------------------------------------------------------- |
 | st-4_prm_1 | type (str)               | The type of security testing programme.                   |
 | st-4_prm_2 | time period (days) (int) | The time period in days of penetration testing frequency. |
-
-### References
-
-- [MVSP 1.4: External testing](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.8/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise ADS (Non-S): 4.1/S1]()
-- [WOG Security Testing Guidelines](https://docs.developer.tech.gov.sg/docs/security-testing-guidelines/)
 
 ## ST-5: Vulnerability Management
 
@@ -151,10 +128,3 @@ Failure to promptly remediate vulnerabilities increases the risk of potential ex
 | st-5_prm_2 | time period (days) (int) | The time period in days to remediate or risk accept high vulnerability findings.     |
 | st-5_prm_3 | time period (days) (int) | The time period in days to remediate or risk accept medium vulnerability findings.   |
 | st-5_prm_4 | time period (days) (int) | The time period in days to remediate or risk accept low vulnerability findings.      |
-
-### References
-
-- [MVSP 3.4: Time to fix vulnerabilities](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.8/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.8/S4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise ADS (Non-S): 5.1/S3]()

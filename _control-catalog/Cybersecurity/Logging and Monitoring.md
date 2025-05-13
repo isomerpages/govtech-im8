@@ -5,7 +5,6 @@ variant: markdown
 description: ""
 third_nav_title: Cybersecurity
 ---
-
 Controls to support detection and response to security and operations incidents.
 
 | Controls                                                                                                           |
@@ -47,12 +46,6 @@ Do not store logs only in the same system component that generated it. For examp
 
 Storing logs in a repository separate from the system component reduces the risk of tampering, unauthorised access, and manipulation of logs if the system component is compromised.
 
-### References
-
-- [MVSP 2.7: Logging](https://mvsp.dev/)
-- [NIST SP 800-53 AU-9(2): Store on Separate Physical Systems or Components](https://doi.org/10.6028/NIST.SP.800-53r5)
-- [IM8 On-Premise IS (Non-S): 7.2/S8]()
-
 ## LM-2: Tamper-Resistant Log Storage
 
 **Group:** Logging and Monitoring
@@ -68,13 +61,6 @@ Apply access control policies to logs based on the principle of least privilege.
 ### Risk Statement
 
 Without protection measures, logs are susceptible to unauthorised access, modification, or deletion, leading to the risk of tampering, loss of crucial audit information, and compromised forensic analysis capabilities during security incidents.
-
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S5](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S9d](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise IS (Non-S): 7.1/S2]()
 
 ## LM-3: Network Flow Logging
 
@@ -92,10 +78,6 @@ Enable VPC Flow Logs for AWS or its equivalents.
 
 Failing to log network traffic going to and from network interfaces increases the risk of overlooking suspicious activities, potential security breaches, and the inability to trace and investigate network-related incidents effectively.
 
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.5/S6a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-
 ## LM-4: Audit Logging
 
 **Group:** Logging and Monitoring
@@ -111,13 +93,6 @@ For cloud, configure CloudTrail for AWS or its equivalents to log management and
 ### Risk Statement
 
 Neglecting to log and manage audit events increases the risk of undetected security incidents, compromises visibility into system activities, and hinders effective forensic analysis and compliance monitoring.
-
-### References
-
-- [MVSP 2.7: Logging](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S7](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [CIS Critical Security Controls v8 8.2: Collect Audit Logs](https://www.cisecurity.org/controls/v8)
-- [NIST SP 800-53 AU-2: Event Logging](https://doi.org/10.6028/NIST.SP.800-53r5)
 
 ## LM-5: Database Logging
 
@@ -135,11 +110,6 @@ Enable RDS logging for AWS or its equivalents.
 
 Neglecting to log database audit events raises the risk of overlooking unauthorised activities, compromises in data security, and hinders the ability to track and investigate security incidents or compliance violations within the database environment.
 
-### References
-
-- [MVSP 2.7: Logging](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-
 ## LM-6: Access Logging
 
 **Group:** Logging and Monitoring
@@ -156,13 +126,6 @@ Enable AWS WAF logging, Application Load Balancer logging, API Gateways, or thei
 
 Failure to log access requests sent to web application firewalls, load balancers, proxies, or web servers increases the risk of overlooking potential security threats, unauthorised access attempts, and compromises visibility into the traffic that could lead to security incidents.
 
-### References
-
-- [MVSP 2.7: Logging](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.6/S4e](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise IS (Non-S): 7.1/S3]()
-
 ## LM-7: Host Security Event Logging
 
 **Group:** Logging and Monitoring
@@ -178,10 +141,6 @@ Host security events include operating system security events, authentication, a
 ### Risk Statement
 
 Neglecting to log security events on hosts increases the risk of undetected security incidents, compromises incident response capabilities, and hinders forensic analysis, limiting the ability to identify and mitigate potential threats.
-
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
 
 ## LM-8: Security Log Retention
 
@@ -205,14 +164,6 @@ Failure to retain security logs increases the risk of losing crucial historical 
 | ---------- | ------------------------ | ----------------------------------------- |
 | lm-8_prm_1 | time period (days) (int) | The time period in days of log retention. |
 
-### References
-
-- [MVSP 2.7: Logging](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S9](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S13](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise IS (Non-S): 7.2/S6]()
-
 ## LM-9: Security Monitoring and Alerting
 
 **Group:** Logging and Monitoring
@@ -227,16 +178,7 @@ Enable Amazon GuardDuty, Microsoft Azure Security Center, or their equivalents.
 
 ### Risk Statement
 
-Without configuring security monitoring to identify potential security violations or breaches and send automated alerts, there's an increased risk of delayed or unnoticed security incidents, hindering timely response and mitigation efforts to protect the system from further compromise.
-
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S7](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S10](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S11](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S13](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise IS (Non-S): 7.2/S10]()
+Without configuring security monitoring to identify potential security violations or breaches and send automated alerts, there&#39;s an increased risk of delayed or unnoticed security incidents, hindering timely response and mitigation efforts to protect the system from further compromise.
 
 ## LM-10: Resource Usage Monitoring and Alerting
 
@@ -254,10 +196,6 @@ Configure Amazon CloudWatch alarms, Azure Monitor alerts, or their equivalents t
 
 Lack of resource usage monitoring with automated alerts increases the risk of overlooking abnormal usage patterns, potential resource abuse, and compromises in system performance, hindering the ability to proactively address issues and prevent service disruptions.
 
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S8](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-
 ## LM-11: Service Level Monitoring and Alerting
 
 **Group:** Logging and Monitoring
@@ -273,10 +211,6 @@ Implement a comprehensive monitoring system that tracks key SLIs and evaluates t
 ### Risk Statement
 
 Without effective service level monitoring to identify potential application or service degradation and send automated alerts, there is a risk of failing to meet service availability standards, which could result in user dissatisfaction and reduced reliability.
-
-### References
-
-- [IM8 Cloud ADS: 11.1/G3]()
 
 ## LM-12: Central Security Log Management and Monitoring
 
@@ -299,13 +233,6 @@ Lack of central security log management and monitoring increases the risk of del
 | ID          | Type          | Description                                                 |
 | ----------- | ------------- | ----------------------------------------------------------- |
 | lm-12_prm_1 | service (str) | The central security log management and monitoring service. |
-
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise IS (Non-S): 7.1/S3]()
-- [NIST SP 800-53 AU-6(4): Central Review and Analysis](https://doi.org/10.6028/NIST.SP.800-53r5)
-- [NIST SP 800-53 PL-9: Central Management](https://doi.org/10.6028/NIST.SP.800-53r5)
 
 ## LM-13: Anomalous Database Activity Monitoring
 
@@ -338,11 +265,6 @@ The Government Cyber Security Operations Centre (GCSOC) offers centralised monit
 ### Risk Statement
 
 Failure to detect and respond to web defacement promptly will lead to prolonged disruption to services.
-
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.9/S13](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise IS (Non-S): 7.1/S5]()
 
 ## LM-15: Structured Log Formatting
 
@@ -407,11 +329,6 @@ Register at the WOGAA portal at https://wogaa.sg/ and follow the implementation 
 ### Risk Statement
 
 Lack of performance tracking can lead to gaps in service delivery.
-
-### References
-
-- [PMO(SNGDO) Circular Minute No 7/2018: Implementation of Whole of Government Application Analytics](https://intranet.mof.gov.sg/portal/IM/Circulars/ICT/Circular-Minutes/2014/Internet-Domain-Names-Registration,-Management-and.aspx)
-- [PMO(SNGDO) Circular Minute No 7/2019: Extension of Whole of Government Application Analytics (WOGAA) to Incorporate WOGAA Sentiments](https://intranet.mof.gov.sg/portal/IM/Circulars/ICT/Circular-Minutes/2021/Mandatory-Defensive-Registration-of-Internet-Domai.aspx)
 
 ## LM-19: Log Sanitisation
 

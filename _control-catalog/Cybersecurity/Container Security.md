@@ -5,7 +5,6 @@ variant: markdown
 description: ""
 third_nav_title: Cybersecurity
 ---
-
 Controls to secure container building, distribution, and deployment.
 
 | Controls                                                                                           |
@@ -38,11 +37,6 @@ Avoid the `latest` tag or other common rolling tags for base images to minimise 
 
 Using unique base container image tags instead of rolling tags reduces the risk of unintentional updates, inconsistencies, and potential security vulnerabilities in containerised environments, ensuring a more stable and secure deployment process.
 
-### References
-
-- [SLSA Build L1: Provenance exists](https://slsa.dev)
-- [IM8 Cloud ADS: 12.1/G3]()
-
 ## CS-2: Minimal Base Container Images
 
 **Group:** Container Security
@@ -58,10 +52,6 @@ Use minimal container images such as alpine, scratch, wolfi, and distroless imag
 ### Risk Statement
 
 Building container images with minimal base images reduces the attack surface, potential vulnerabilities, and resource overhead, minimising the risk of security exploits and enhancing the overall security posture of the containerised environment.
-
-### References
-
-- [IM8 Cloud ADS: 12.1/G1]()
 
 ## CS-3: Runtime Container Secrets
 
@@ -79,10 +69,6 @@ Ensure no secrets (e.g., TLS certificate keys, cloud provider credentials, SSH p
 
 Providing secrets and sensitive data to the container at runtime instead of image build time reduces the risk of exposing sensitive information in the image and enhances security by ensuring that secrets are managed and updated independently, minimising the risk of unauthorised access or data compromise.
 
-### References
-
-- [IM8 Cloud ADS: 2.2/S4]()
-
 ## CS-4: Non-Privileged Container User
 
 **Group:** Container Security
@@ -99,10 +85,6 @@ Ensure the non-root user has the minimal set of permissions required to run the 
 
 Failure to create a non-root user and set it as the default user in container image build instructions increases the risk of security vulnerabilities, as running containers with root privileges may lead to potential exploitation and compromise of the host system.
 
-### References
-
-- [IM8 Cloud ADS: 12.2/S2]()
-
 ## CS-5: Dockerfile Linting
 
 **Group:** Container Security
@@ -117,11 +99,7 @@ Use linters such as Hadolint to check the Dockerfile (or similar build file) ins
 
 ### Risk Statement
 
-Without linting Dockerfiles before building container images, there's an increased risk of syntax errors, misconfigurations, and potential security vulnerabilities, compromising the reliability and security of the resulting containerised applications.
-
-### References
-
-- [IM8 Cloud ADS: 12.1/G4]()
+Without linting Dockerfiles before building container images, there&#39;s an increased risk of syntax errors, misconfigurations, and potential security vulnerabilities, compromising the reliability and security of the resulting containerised applications.
 
 ## CS-6: Read-Only Container Root Filesystem
 
@@ -133,11 +111,11 @@ Configure the container root filesystem to be read-only during runtime, except f
 
 ### Control Recommendations
 
-Use security policies (e.g., `readonlyRootFilesystem` for Kubernetes) to prevent any direct writes to the container's root filesystem during runtime and ensure immutable infrastructure. Do not directly apply patches or alter running containers as the containers are ephemeral and patches will disappear upon redeploy. Apply patches by rebuilding and redeploying container images. Use tmpfs mounts to mount a temporary file system.
+Use security policies (e.g., `readonlyRootFilesystem` for Kubernetes) to prevent any direct writes to the container&#39;s root filesystem during runtime and ensure immutable infrastructure. Do not directly apply patches or alter running containers as the containers are ephemeral and patches will disappear upon redeploy. Apply patches by rebuilding and redeploying container images. Use tmpfs mounts to mount a temporary file system.
 
 ### Risk Statement
 
-Failure to configure the container filesystem as read-only increases the risk of unauthorised modifications, potential tampering, and compromise of containerised applications, as attackers may exploit write access to alter the container's state and integrity.
+Failure to configure the container filesystem as read-only increases the risk of unauthorised modifications, potential tampering, and compromise of containerised applications, as attackers may exploit write access to alter the container&#39;s state and integrity.
 
 ## CS-7: Container Image Scanning
 
@@ -160,11 +138,6 @@ Failure to scan container images increases the risk of deploying insecure images
 | ID         | Type           | Description                                         |
 | ---------- | -------------- | --------------------------------------------------- |
 | cs-7_prm_1 | location (str) | The location where container image scanning occurs. |
-
-### References
-
-- [IM8 Cloud ADS: 12.3/G2b]()
-- [IM8 Cloud ADS: 12.3/G2c]()
 
 ## CS-8: Private Container Image Registries
 
@@ -198,10 +171,6 @@ Restrict access to the Container Orchestrator API endpoints (such as the Kuberne
 
 Failure to disable public access to Container Orchestrator API endpoints from the internet increases the risk of unauthorised access, potential exploitation, and security breaches, as exposing these endpoints publicly may lead to unauthorised control and compromise of the container infrastructure.
 
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.7/S21b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-
 ## CS-10: Container Workload Segmentation
 
 **Group:** Container Security
@@ -216,7 +185,7 @@ Create Kubernetes namespaces or similar container segmentation controls to isola
 
 ### Risk Statement
 
-Without separating container workloads into namespaces, there's an increased risk of lateral movement and potential compromise.
+Without separating container workloads into namespaces, there&#39;s an increased risk of lateral movement and potential compromise.
 
 ## CS-11: Container Runtime Security
 
@@ -233,7 +202,3 @@ Runtime protection tools, such as AWS EKS Protection, Microsoft Defender for Con
 ### Risk Statement
 
 Failure to detect and remediate changes to running containers using container runtime protection tools increases the risk of unnoticed compromises, potential exploitation, and unauthorised alterations to containerised applications, compromising the security and integrity of the runtime environment.
-
-### References
-
-- [IM8 Cloud ADS: 12.3/G2b]()

@@ -5,7 +5,6 @@ variant: markdown
 description: ""
 third_nav_title: Cybersecurity
 ---
-
 Controls to support backup and disaster recovery.
 
 | Controls                                                     |
@@ -37,12 +36,6 @@ Without regular backups stored in a secure and separate location, there is an in
 | ---------- | ------------------------ | ----------------------------------- |
 | br-1_prm_1 | time period (days) (int) | The time period in days for backup. |
 
-### References
-
-- [MVSP 4.4: Backup and Disaster recovery](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.2/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise IS (Non-S): 1.5/S1]()
-
 ## BR-2: Recovery Testing
 
 **Group:** Backup and Recovery
@@ -53,7 +46,7 @@ Conduct testing of recovery processes at least every [ insert: param, br-2_prm_1
 
 ### Control Recommendations
 
-Ensure each test verifies the system's ability to fully restore all data and services.
+Ensure each test verifies the system&#39;s ability to fully restore all data and services.
 
 ### Risk Statement
 
@@ -65,19 +58,13 @@ Failure to regularly test recovery processes may result in ineffective response 
 | ---------- | ------------------------ | --------------------------------------------- |
 | br-2_prm_1 | time period (days) (int) | The time period in days for recovery testing. |
 
-### References
-
-- [MVSP 4.4: Backup and Disaster recovery](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.2/S1d](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise IS (Non-S): 1.5/S1d]()
-
 ## BR-3: Backup Retention
 
 **Group:** Backup and Recovery
 
 ### Control Statement
 
-Prevent backups from being modified or deleted for [ insert: param, br-3_prm_1 ] day(s) or as stipulated in the agency's data retention policies.
+Prevent backups from being modified or deleted for [ insert: param, br-3_prm_1 ] day(s) or as stipulated in the agency&#39;s data retention policies.
 
 ### Control Recommendations
 
@@ -92,12 +79,6 @@ Lack of prevention measures against the modification or deletion of backups for 
 | ID         | Type                     | Description                                  |
 | ---------- | ------------------------ | -------------------------------------------- |
 | br-3_prm_1 | time period (days) (int) | The time period in days of backup retention. |
-
-### References
-
-- [MVSP 4.4: Backup and Disaster recovery](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.2/S1b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise IS (Non-S): 1.5/S2c]()
 
 ## BR-4: Disaster Recovery Plan
 
@@ -114,9 +95,3 @@ The disaster recovery plan should include clearly defined roles and responsibili
 ### Risk Statement
 
 Absence of a comprehensive disaster recovery plan increases the risk of prolonged system downtime, data loss, and inability to maintain business continuity in the event of a disaster, potentially leading to significant financial losses and damage to organisational reputation.
-
-### References
-
-- [MVSP 4.4: Backup and Disaster recovery](https://mvsp.dev/)
-- [SP 800-53 CP-2: Contingency Plan](https://doi.org/10.6028/NIST.SP.800-53r5)
-- [Cloud Controls Matrix BCR-09: Disaster Response Plan](https://cloudsecurityalliance.org/artifacts/cloud-controls-matrix-v4)

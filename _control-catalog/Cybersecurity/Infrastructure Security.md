@@ -5,7 +5,6 @@ variant: markdown
 description: ""
 third_nav_title: Cybersecurity
 ---
-
 Controls to secure infrastructure that host applications, services, and data.
 
 | Controls                                                                                                     |
@@ -41,11 +40,6 @@ Most CSP compute instances preinstall management agents (e.g., AWS Systems Manag
 
 Without installing management agents on hosts, there is an increased risk of manual misconfigurations, difficulty in maintaining consistent configurations, and potential security vulnerabilities due to reduced visibility and ability to manage hosts effectively.
 
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.1/G1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.4/S21](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-
 ## IS-2: Automated Patch Management Tools
 
 **Group:** Infrastructure Security
@@ -61,12 +55,6 @@ Patch management can be automated as part of the build and deploy phase, such as
 ### Risk Statement
 
 Failure to automate security patching of operating systems and included software increases the risk of delayed or missed security updates, leaving systems vulnerable to known exploits and potential security breaches, compromising the overall security of the environment.
-
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.7/S12](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.8/S4](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [NIST SP 800-53 SI-2(4): Automated Patch Management Tools](https://doi.org/10.6028/NIST.SP.800-53r5)
 
 ## IS-3: Restricted Administrator Privileges
 
@@ -84,12 +72,6 @@ Further reduce the attack surface by running common services such as the web ser
 
 Without restricting administrator privileges, there is an increased risk of unauthorised access, privilege escalation, and potential security breaches, compromising the integrity and security of the system.
 
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.6/S1d](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.6/S1e](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise IS (Non-S): 1.2/S2a]()
-
 ## IS-4: Least Functionality
 
 **Group:** Infrastructure Security
@@ -106,14 +88,6 @@ Follow the principle of least functionality to configure the host to carry out o
 
 Failure to disable or remove unnecessary functions, system ports, protocols, software, and services on the host increases the attack surface, potential vulnerabilities, and the risk of exploitation, compromising the overall security and performance of the system.
 
-### References
-
-- [NIST SP 800-53 CM-7: Least Functionality](https://doi.org/10.6028/NIST.SP.800-53r5)
-- [IM8 Cloud Security (IaaS and PaaS): 1.4/S7](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.5/S4e](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.7/S1b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise IS (Non-S): 1.2/S2c]()
-
 ## IS-5: Host System Hardening
 
 **Group:** Infrastructure Security
@@ -128,13 +102,7 @@ Select the appropriate benchmark for the host such as from the [NIST National Ch
 
 ### Risk Statement
 
-Without hardening the operating system configuration according to industry standards, there's an increased risk of security vulnerabilities, unauthorised access, and potential exploitation, compromising the overall security posture and resilience of the operating system.
-
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.6/G2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.6/S2](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise IS (Non-S): 1.2/S1]()
+Without hardening the operating system configuration according to industry standards, there&#39;s an increased risk of security vulnerabilities, unauthorised access, and potential exploitation, compromising the overall security posture and resilience of the operating system.
 
 ## IS-6: Remote Administration
 
@@ -152,12 +120,6 @@ Prioritise remote administration tools (e.g., AWS Systems Manager Session Manage
 
 Using remote administration tools enhances security by providing controlled and audited access, reducing the risk of unauthorised activities, and improving overall management of privileged identities.
 
-### References
-
-- [AWS SSB WKLD.06: Use Systems Manager instead of SSH or RDP](https://docs.aws.amazon.com/prescriptive-guidance/latest/aws-startup-security-baseline/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.4/S21](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [NIST SP 800-53 AC-17: Remote Access](https://doi.org/10.6028/NIST.SP.800-53r5)
-
 ## IS-7: Malware Protection
 
 **Group:** Infrastructure Security
@@ -172,11 +134,7 @@ Configure anti-malware tools for all compute hosts (e.g. AWS Guardduty Malware P
 
 ### Risk Statement
 
-Without malware protection, there's an increased risk of undetected malicious activities, potential data breaches, and compromise of host systems, highlighting the importance of proactive measures to ensure the security and integrity of the environment.
-
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.6/S1a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
+Without malware protection, there&#39;s an increased risk of undetected malicious activities, potential data breaches, and compromise of host systems, highlighting the importance of proactive measures to ensure the security and integrity of the environment.
 
 ## IS-8: Endpoint Detection and Response (EDR)
 
@@ -193,10 +151,6 @@ Implement EDR tools for all compute hosts. Security incident response should be 
 ### Risk Statement
 
 Failure to monitor security threats on hosts with an Endpoint Detection and Response (EDR) tool increases the risk of undetected advanced threats, compromises in host security, and delayed response to potential security incidents, highlighting the need for continuous monitoring and proactive threat detection.
-
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.6/G1a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
 
 ## IS-9: End-of-Support (EOS) Assets
 
@@ -220,11 +174,6 @@ EOS assets can introduce security vulnerabilities as the assets are no longer pr
 | ---------- | ---------- | ------------------ |
 | is-9_prm_1 | type (str) | The type of asset. |
 
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.1/S6](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise ADS (Non-S): 5.1/S8]()
-
 ## IS-10: Synchronise time clocks
 
 **Group:** Infrastructure Security
@@ -240,10 +189,6 @@ Use common time source such as Network Time Protocol (NTP). In the cloud, it is 
 ### Risk Statement
 
 The lack of synchronised clocks introduces significant risks, including increased security vulnerabilities, data integrity issues, and challenges in troubleshooting.
-
-### References
-
-- [IM8 On-Premise IS (Non-S): 1.2/S5]()
 
 ## IS-11: Central Domain Name Registration
 
@@ -261,11 +206,6 @@ Use the Whole of Government Domain Name Server (DNS) portal on the IT Service Ma
 
 Improper management of domain names increase the risk of phishing attacks or domain takeovers.
 
-### References
-
-- [IM8 Cloud ADO: 2.1/S1, 2.1/S2]()
-- [MCI ICT Circular Minute No 5/2014: Internet Domain Names Registration, Management and Protection](https://intranet.mof.gov.sg/portal/IM/Circulars/ICT/Circular-Minutes/2014/Internet-Domain-Names-Registration,-Management-and.aspx)
-
 ## IS-12: DNS Security Extensions (DNSSEC)
 
 **Group:** Infrastructure Security
@@ -282,31 +222,21 @@ DNS services such as WOG DNS, Amazon Route 53 and Cloudflare support DNSSEC conf
 
 Insecure domain name resolution can lead to man-in-the-middle attacks caused by DNS spoofing or DNS cache poisoning.
 
-### References
-
-- [IM8 On-Premise IS (Non-S): 4.4/S5]()
-- [IM8 Cloud IS (Non-S): 4.4/S5]()
-- [NIST SP 800-53 SC-20: Secure Name/Address Resolution Service (Authoritative Source)](https://doi.org/10.6028/NIST.SP.800-53r5)
-
 ## IS-13: Defensive Domain Name Registration
 
 **Group:** Infrastructure Security
 
 ### Control Statement
 
-Register second (.sg) and third (.com.sg, .org.sg, .net.sg, .edu.sg) level domain name variants of the system's primary domain name.
+Register second (.sg) and third (.com.sg, .org.sg, .net.sg, .edu.sg) level domain name variants of the system&#39;s primary domain name.
 
 ### Control Recommendations
 
-Consider defensive registration of domain names with typographical variants of the system's primary domain name. The Whole of Government Domain Name Server (DNS) portal on the IT Service Management (ITSM) portal automatically includes the second and third level domain names.
+Consider defensive registration of domain names with typographical variants of the system&#39;s primary domain name. The Whole of Government Domain Name Server (DNS) portal on the IT Service Management (ITSM) portal automatically includes the second and third level domain names.
 
 ### Risk Statement
 
 Malicious use of domain names similar to actual Government domain names increases the risk of phishing and spoofing.
-
-### References
-
-- [MCI ICT Circular Minute No 6/2021: Mandatory Defensive Registration of Internet Domain Names](https://intranet.mof.gov.sg/portal/IM/Circulars/ICT/Circular-Minutes/2021/Mandatory-Defensive-Registration-of-Internet-Domai.aspx)
 
 ## IS-14: Singapore SMS Sender ID Registry Registration
 
@@ -318,14 +248,8 @@ Register and use whitelisted SMS Sender IDs with the Singapore SMS Sender ID Reg
 
 ### Control Recommendations
 
-Agencies must use the "gov.sg" Sender ID via the Postman tool to send SMSes to members of the public unless exempted. Whitelist Sender IDs used to send SMSes and blacklist Sender IDs which are variants of the whitelisted Sender IDs, agency names, or names of services.
+Agencies must use the &quot;gov.sg&quot; Sender ID via the Postman tool to send SMSes to members of the public unless exempted. Whitelist Sender IDs used to send SMSes and blacklist Sender IDs which are variants of the whitelisted Sender IDs, agency names, or names of services.
 
 ### Risk Statement
 
 Lack of Sender ID registration allows malicious entities to spoof legitimate Government SMSes.
-
-### References
-
-- [PMO(SNDGO) Circular Minute No 4/2022: Mandatory Registration with the Singapore SMS Sender ID Registry]()
-- [PMO(SNDGO) Circular No 1/2024: Implementation of Measures to Establish Trusted Channels for Government Calls and Messages (Building Trusted Networks)](https://intranet.mof.gov.sg/portal/IM/Circulars/ICT/Circulars/2024/IMPLEMENTATION-OF-MEASURES-TO-ESTABLISH-TRUSTED-CH.aspx)
-- [PMO (SNDGO) Circular No 2/2024: Amendments to PMO (SNDGO) Circular Minute No 1/2024: Implementation of Measures to Establish Trusted Channels for Government Calls and Messages (Building Trusted Networks)]()
