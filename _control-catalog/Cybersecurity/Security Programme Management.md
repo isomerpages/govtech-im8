@@ -5,7 +5,6 @@ variant: markdown
 description: ""
 third_nav_title: Cybersecurity
 ---
-
 Controls to implement cybersecurity governance, risk, and compliance processes and policies.
 
 | Controls                                                                                                                         |
@@ -35,12 +34,6 @@ Refer to the Government Incident Reporting and Operations Centre (GIROC) ICT and
 
 Lack of a cybersecurity incident management plan increases the risk of ineffective response to cybersecurity incidents, hindering the ability to contain, mitigate, and recover from security breaches, potentially leading to extended downtime and data compromise.
 
-### References
-
-- [MVSP 1.7: Incident handling](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.1/S3](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [GIROC ICT and Data Incident Reporting Resources](https://gccprod.sharepoint.com/sites/GOVTECH-digitalgov/GIROC/SitePages/Useful-Resources.aspx)
-
 ## PM-2: Risk Assessment
 
 **Group:** Security Programme Management
@@ -55,7 +48,7 @@ The Risk Assessment should cover Cyber Risk, Data Risk, Resiliency Risk, Busines
 
 ### Risk Statement
 
-Without developing and documenting risk assessment before the initial full release, there's an increased risk of overlooking potential security threats, vulnerabilities, and regulatory compliance issues, compromising the overall security posture of the system.
+Without developing and documenting risk assessment before the initial full release, there&#39;s an increased risk of overlooking potential security threats, vulnerabilities, and regulatory compliance issues, compromising the overall security posture of the system.
 
 ### Parameters
 
@@ -66,19 +59,13 @@ Without developing and documenting risk assessment before the initial full relea
 | pm-2_prm_3 | risk assessment use case (str) | The use case of the risk assessment.         |
 | pm-2_prm_4 | time period (days) (int)       | The time period in days for risk assessment. |
 
-### References
-
-- [MVSP 1.3: Self-assessment](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.1/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Risk Management: 1.1/S1](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Set-policies,-standards-and-guidelines-for-ICT-man/Topic/Risk-Management.aspx)
-
 ## PM-3: System Security Plan (SSP) Development
 
 **Group:** Security Programme Management
 
 ### Control Statement
 
-Develop and maintain a comprehensive System Security Plan (SSP) that accurately reflects the system characteristics and security controls in place for the organisation's systems and environments.
+Develop and maintain a comprehensive System Security Plan (SSP) that accurately reflects the system characteristics and security controls in place for the organisation&#39;s systems and environments.
 
 ### Control Recommendations
 
@@ -88,17 +75,13 @@ The SSP should be detailed, covering all aspects of security controls, roles, re
 
 Failure to develop a comprehensive SSP can result in inadequate documentation and security controls, leading to increased vulnerability to cyber threats and non-compliance with regulatory requirements.
 
-### References
-
-- [Data Protection (Data Security): 1.1]()
-
 ## PM-4: Approval of Residual Risks
 
 **Group:** Security Programme Management
 
 ### Control Statement
 
-Get acceptance and approval of the residual risks from agency's [ insert: param, pm-4_prm_1 ].
+Get acceptance and approval of the residual risks from agency&#39;s [ insert: param, pm-4_prm_1 ].
 
 ### Control Recommendations
 
@@ -189,8 +172,3 @@ Failing to whitelist the SaaS may potentially expose sensitive data (e.g., Confi
 | ID         | Type                         | Description                 |
 | ---------- | ---------------------------- | --------------------------- |
 | pm-8_prm_1 | whitelisting authority (str) | The whitelisting authority. |
-
-### References
-
-- [IM8 SaaS Cloud Security: 7.1/S3]()
-- [NIST SP 800-53 CM-7(5): Authorized Software](https://doi.org/10.6028/NIST.SP.800-53r5)
