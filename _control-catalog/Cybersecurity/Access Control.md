@@ -5,7 +5,6 @@ variant: markdown
 description: ""
 third_nav_title: Cybersecurity
 ---
-
 Controls to protect against unauthorised access to agency systems.
 
 | Controls                                                                                                                                   |
@@ -42,16 +41,6 @@ Consider attribute- or feature-based access control for greater customisability 
 
 Violating the principle of least privileges increases the risk of unauthorised access, privilege escalation, and potential security breaches due to unnecessary permissions, compromising the overall security posture.
 
-### References
-
-- [MVSP 4.2: Logical access](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.4/S7](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.5/S4e](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.7/S1b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Data Protection (Data Security): 1.9]()
-- [IM8 Data Protection (Data Security): 1.10]()
-- [IM8 Data Protection (Data Security): 1.12]()
-
 ## AC-2: Multi-Factor Authentication (MFA)
 
 **Group:** Access Control
@@ -67,16 +56,6 @@ Ensure that the authentication factors are different and independent of the acce
 ### Risk Statement
 
 Without requiring phishing-resistant Multi-Factor Authentication (MFA) for remote access, there is an increased risk of unauthorised access, credential theft, and potential compromise of sensitive systems, especially for users with elevated privileges.
-
-### References
-
-- [NIST SP 800-53 IA-2(1): Multi-factor Authentication to Privileged Accounts](https://doi.org/10.6028/NIST.SP.800-53r5)
-- [MVSP 4.2: Logical access](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.4/S20a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise ADS (Non-S): 2.4/S2]()
-- [IM8 Data Protection (Data Security): 1.9]()
-- [IM8 Data Protection (Data Security): 1.10]()
-- [IM8 Data Protection (Data Security): 1.12]()
 
 ## AC-3: Inactive and Expired Accounts
 
@@ -102,17 +81,6 @@ Failure to disable or remove unused accounts or credentials with elevated access
 | ac-3_prm_2 | time period (days) (int) | The time period in days after account expiry.  |
 | ac-3_prm_3 | time period (days) (int) | The time period in days of account inactivity. |
 
-### References
-
-- [NIST SP 800-53 AC-2(3): Disable Accounts](https://doi.org/10.6028/NIST.SP.800-53r5)
-- [MVSP 4.2: Logical access](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.4/S15](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.4/S18b](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise ADS (Non-S): 2.3/S2, 2.3/S3]()
-- [IM8 Data Protection (Data Security): 1.9]()
-- [IM8 Data Protection (Data Security): 1.10]()
-- [IM8 Data Protection (Data Security): 1.12]()
-
 ## AC-4: Access Review
 
 **Group:** Access Control
@@ -136,17 +104,6 @@ Without regular access reviews and prompt removal of unauthorised or unnecessary
 | ac-4_prm_1 | organisation-defined frequency (str) | The access review frequency.                |
 | ac-4_prm_2 | time period (days) (int)             | The time period in days for access removal. |
 
-### References
-
-- [AC-2: Account Management](https://doi.org/10.6028/NIST.SP.800-53r5)
-- [MVSP 4.2: Logical access](https://mvsp.dev/)
-- [IM8 Cloud Security (IaaS and PaaS): 1.4/S13](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise ADS (Non-S): 2.3/S1, 2.3/S6]()
-- [IM8 Data Protection (Data Security): 1.9]()
-- [IM8 Data Protection (Data Security): 1.10]()
-- [IM8 Data Protection (Data Security): 1.11]()
-- [IM8 Data Protection (Data Security): 1.12]()
-
 ## AC-5: Endpoint Device Hardening
 
 **Group:** Access Control
@@ -161,15 +118,7 @@ Use Endpoint Management platfoms to continuously check and enforce device securi
 
 ### Risk Statement
 
-Without requiring hardened endpoint devices for remote access, there's an increased risk of compromised endpoints, potential malware infections, and security breaches, which could lead to unauthorised access and compromise the integrity of systems.
-
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.4/S20a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise IS (Non-S): 1.3/S1, 4.7/S3]()
-- [IM8 Data Protection (Data Security): 1.9]()
-- [IM8 Data Protection (Data Security): 1.10]()
-- [IM8 Data Protection (Data Security): 1.12]()
+Without requiring hardened endpoint devices for remote access, there&#39;s an increased risk of compromised endpoints, potential malware infections, and security breaches, which could lead to unauthorised access and compromise the integrity of systems.
 
 ## AC-6: Default Credentials
 
@@ -187,13 +136,6 @@ Identify any default credentials used in any system components before deploying 
 
 Failure to change default credentials prior to first use increases the risk of unauthorised access, as default credentials are often well-known and targeted by attackers, compromising the security of the system or device.
 
-### References
-
-- [NIST SP 800-53 IA-5: Authenticator Management](https://doi.org/10.6028/NIST.SP.800-53r5)
-- [IM8 Cloud Security (IaaS and PaaS): 1.4/S1c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Cloud Security (IaaS and PaaS): 1.4/S2c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise ADS (Non-S): 2.2/S1d, 2.3/S5]()
-
 ## AC-7: Singpass/Corppass for External Users
 
 **Group:** Access Control
@@ -209,13 +151,6 @@ For high impact or high risk transactions, use Singpass/Corppass to identify ext
 ### Risk Statement
 
 Leverage on Singpass or Corppass to reduce duplication of effort and provide consistent end user experience.
-
-### References
-
-- [IM8 On-Premise ADS (Non-S): 2.1/S1]()
-- [IM8 Data Protection (Data Security): 1.9]()
-- [IM8 Data Protection (Data Security): 1.10]()
-- [IM8 Data Protection (Data Security): 1.12]()
 
 ## AC-8: Automated Account Lifecycle Management
 
@@ -240,15 +175,6 @@ Manual account and access lifecycle management can introduce errors and weakness
 | ac-8_prm_1 | process (str) | The account lifecycle management processes to automate. |
 | ac-8_prm_2 | tool (str)    | Recommended account lifecycle management tool.          |
 
-### References
-
-- [IM8 Cloud Security (IaaS and PaaS): 1.4/S18a](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 On-Premise ADS (Non-S): 2.3/S7]()
-- [IM8 Data Protection (Data Security): 1.9]()
-- [IM8 Data Protection (Data Security): 1.10]()
-- [IM8 Data Protection (Data Security): 1.11]()
-- [IM8 Data Protection (Data Security): 1.12]()
-
 ## AC-9: Endpoint Device Management
 
 **Group:** Access Control
@@ -264,12 +190,6 @@ Mobile Device Management (MDM) platforms enable management, monitoring, and secu
 ### Risk Statement
 
 Unmanaged endpoint devices increase the risk of unauthorized access and potential loss of sensitive information due to the compromise of devices.
-
-### References
-
-- [IM8 Data Protection (Data Security): 1.9]()
-- [IM8 Data Protection (Data Security): 1.10]()
-- [IM8 Data Protection (Data Security): 1.12]()
 
 ## AC-10: Identity and Device-Based Access Control
 
@@ -287,12 +207,6 @@ Use solutions such as Secure Service Edge (SSE), Identity Aware Proxies (IAP) or
 
 Relying on direct connections or traditional VPNs for remote access can lead to vulnerabilities, as they do not always incorporate strong identity and device-based security measures. This increases the risk of unauthorized access and potential data breaches.
 
-### References
-
-- [IM8 Data Protection (Data Security): 1.9]()
-- [IM8 Data Protection (Data Security): 1.10]()
-- [IM8 Data Protection (Data Security): 1.12]()
-
 ## AC-11: Single User Endpoints
 
 **Group:** Access Control
@@ -309,12 +223,6 @@ Implement measures such as user authentication and endpoint management with devi
 
 Allowing multiple users to access a single endpoint device can lead to security risks such as data leakage, difficulty in tracking user activities, and increased vulnerability to insider threats.
 
-### References
-
-- [IM8 Data Protection (Data Security): 1.9]()
-- [IM8 Data Protection (Data Security): 1.10]()
-- [IM8 Data Protection (Data Security): 1.12]()
-
 ## AC-12: Single Sign-On (SSO) for Internal Services and Accounts
 
 **Group:** Access Control
@@ -330,14 +238,6 @@ Configure multi-factor authentication (MFA) at the Single-Sign On (SSO) identity
 ### Risk Statement
 
 Without Single Sign-On (SSO), there is an increased risk of unauthorized access and compromised user credentials, as users may resort to using weak passwords or reusing credentials across multiple systems, thereby exposing sensitive information to potential security breaches.
-
-### References
-
-- [NIST SP 800-53 IA-2(10): Single Sign-on](https://doi.org/10.6028/NIST.SP.800-53r5)
-- [IM8 Cloud Security (IaaS and PaaS): 1.4/S18c](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Cloud/Topics/Cloud-Security.aspx)
-- [IM8 Data Protection (Data Security): 1.9]()
-- [IM8 Data Protection (Data Security): 1.10]()
-- [IM8 Data Protection (Data Security): 1.12]()
 
 ## AC-13: Static Credential Expiry and Rotation
 
@@ -361,10 +261,6 @@ Failure to regularly rotate long-lived credentials or use short-lived credential
 | ----------- | ------------------------ | ------------------------------------------------ |
 | ac-13_prm_1 | time period (days) (int) | The time period in days for credential rotation. |
 
-### References
-
-- [PR.AA-01: Identities and credentials for authorized users, services, and hardware are managed by the organization](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf)
-
 ## AC-14: Inventory of Accounts
 
 **Group:** Access Control
@@ -381,11 +277,6 @@ Regularly review and update the account inventory to ensure accuracy and complet
 
 Failure to maintain an accurate inventory of managed accounts increases the risk of unauthorized access, account misuse, and security breaches due to unmonitored or orphaned accounts.
 
-### References
-
-- [CIS Critical Security Controls v8 5.1: Establish and Maintain an Inventory of Accounts](https://www.cisecurity.org/controls/v8)
-- [NIST SP 800-53 AC-2: Account Management](https://csf.tools/reference/nist-sp-800-53/r5/ac/ac-2/)
-
 ## AC-15: Validation Testing of Automated Account Lifecycle Management
 
 **Group:** Access Control
@@ -396,7 +287,7 @@ Conduct validation tests on the system integrated with account management tools 
 
 ### Control Recommendations
 
-Where possible, test cases should include verifying that: account provisioning occurs solely through the account management tool(s), not directly on the SaaS; accounts are deactivated on the final day of authorised use; accounts are provisioned only after validating that access is permitted to the defined boundaries; and access rights match the account's assigned role and functions.
+Where possible, test cases should include verifying that: account provisioning occurs solely through the account management tool(s), not directly on the SaaS; accounts are deactivated on the final day of authorised use; accounts are provisioned only after validating that access is permitted to the defined boundaries; and access rights match the account&#39;s assigned role and functions.
 
 ### Risk Statement
 
