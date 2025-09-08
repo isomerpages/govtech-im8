@@ -48,29 +48,22 @@ A Public User logs in to a Digital Service containing both Transactional Service
 
 The categories and examples of transactional services are shown in below table.
 
+
+
 | Category | Examples |
-
-|----------|----------|
-
-| **Applications** - Formal requests to be considered for a position or to be allowed to do or have something (e.g. grant, permit, scheme, job applications) | MCCY Community Integration Fund, MOM - Work Permit Online, MSF - ComCare Long Term Assistance Scheme |
-
+| -------- | -------- |
+|  **Applications** - Formal requests to be considered for a position or to be allowed to do or have something (e.g. grant, permit, scheme, job applications)      |  MCCY Community Integration Fund, MOM - Work Permit Online, MSF - ComCare Long Term Assistance Scheme      |
 | **Declarations** - Formally stating or affirming information that may have legal or administrative significance (e.g. tax or health declarations) | ICA - SG Arrival Card (SGAC) with Electronic Health Declaration, IRAS - File Income Tax Returns |
-
 | **Bookings** - Reservation of services or resources in advance | PA - Book a Facility |
-
 | **Payments** - The exchange of money for goods or services (e.g. purchases, fines, tax) | OneMotoring - Pay LTA Fines and ERP Admin Fees, IRAS - Pay Taxes |
-
 | **Appeals** - Formal request to review or reverse decisions made by authorities | SPF - e-Appeal Against Traffic Offences |
-
 | **Renewals** - The process of extending the validity of licenses, permits, or subscriptions | HDB - Renewal of Season Parking |
-
 | **Submission/update of Records** - The modification of existing information within a system | ICA - Change of Residential Address |
-
 | **Contact/Feedback Forms** - Forms for users to reach out to organisations for inquiries, support or feedback | |
-
 | **Redemption of benefits** | RedeemSG - CDC Voucher Redemption |
 
-\### Non-Transactional Service
+
+### Non-Transactional Service
 
 A Non-Transactional Service is a Digital Service that enables Public Users to access general or personalised information, or engage with the government without requiring the exchange of information, goods, services or money, or changes to government data.
 
@@ -79,19 +72,12 @@ These services help Public Users understand, navigate, and engage with governmen
 The categories and examples of non-transactional services are shown in below table.
 
 | Category | Examples |
-
 |----------|----------|
-
 | **Static content** - General, non-personalised information about government services, policies, and processes | Informational content on any government website ranging from explanation of policy to organisational mission |
-
 | **View statements or records** - Functions to view or retrieve official information held by the government about themselves or their organisation | CPF - View CPF Statements |
-
 | **Self-assessment and Planning Tools** - Interactive tools that provide indicative outcomes or advice to support decision-making | HDB – Calculate Housing Budget, SupportGoWhere - Support For You Calculator |
-
 | **Dashboards** - Consolidated view of personalised data or information | ICA - MyICA Dashboard |
-
 | **Notifications and Inboxes** - Services for users to receive, view, or manage official communications from the government | Singpass - Inbox |
-
 | **E-service Portals** - Digital services that consolidate multiple transactional services | |
-
 | **Search Functions** - Functions for finding information, records, or services using keywords or filters | Site search, Govtech - Gowhere, Our Marriage Journey - Search Solemniser |
+
