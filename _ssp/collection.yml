@@ -2,6 +2,7 @@ collections:
   ssp:
     output: true
     order:
+      - Digital Services (High Impact).md
       - Digital Services (Others).md
       - About SSP.md
       - Low Risk Cloud.md
