@@ -2,6 +2,7 @@ collections:
   ssp:
     output: true
     order:
+      - Glossary/Glossary.md
       - Glossary/.keep
       - About SSP.md
       - Low Risk Cloud.md
