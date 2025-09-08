@@ -76,8 +76,6 @@ for simplification.</p>
 <p>### Rationale</p>
 <p>Writing in a simple and concise manner allows more users with different
 backgrounds and language proficiency to understand your content.</p>
-<p>### References</p>
-<p>- [Plain Language Guidelines](<a href="https://www.plainlanguage.gov/guidelines/" rel="noopener noreferrer nofollow" target="_blank">https://www.plainlanguage.gov/guidelines/</a>)</p>
 <p>## BD-5: Search Engine Optimisation</p>
 <p><strong>Group:</strong> Baseline Design Practices</p>
 <p>### Control Statement</p>
@@ -94,9 +92,6 @@ and accessed directly, and experimental or beta services.</p>
 platforms effectively crawl your content and optimising the content displayed
 in search listings. Good SEO practices are essential for end users who
 access your pages via search.</p>
-<p>### References</p>
-<p>- [<a href="http://Gov.UK" rel="noopener noreferrer nofollow" target="_blank">Gov.UK</a> SEO
-Best Practices](<a href="https://www.gov.uk/government/publications/search-engine-optimisation-for-publishers-best-practice-guide/search-engine-optimisation-seo-for-data-publishers-best-practice-guide" rel="noopener noreferrer nofollow" target="_blank">https://www.gov.uk/government/publications/search-engine-optimisation-for-publishers-best-practice-guide/search-engine-optimisation-seo-for-data-publishers-best-practice-guide</a>)</p>
 <p>## BD-6: Consistent UI Design</p>
 <p><strong>Group:</strong> Baseline Design Practices</p>
 <p>### Control Statement</p>
