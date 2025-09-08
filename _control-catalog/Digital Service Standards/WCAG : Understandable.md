@@ -5,13 +5,6 @@ variant: markdown
 description: ""
 third_nav_title: Digital Service Standards
 ---
----
-title: WCAG - Understandable
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
----
-
 Controls to ensure content and user interfaces are clear and comprehensible.
 
 | Controls                                                                               |
