@@ -2,7 +2,6 @@ collections:
   control-catalog:
     output: true
     order:
-      - Digital Service Standards.md
       - About Control Catalog.md
       - Cybersecurity/.keep
       - Cybersecurity/Access Control.md
@@ -19,3 +18,4 @@ collections:
       - Cybersecurity/Security Programme Management.md
       - Cybersecurity/Security Testing.md
       - Cybersecurity/Software Supply Chain.md
+      - Digital Service Standards.md
