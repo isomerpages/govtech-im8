@@ -2,6 +2,7 @@ collections:
   control-catalog:
     output: true
     order:
+      - Digital Service Standards.md
       - About Control Catalog.md
       - Cybersecurity/.keep
       - Cybersecurity/Access Control.md
