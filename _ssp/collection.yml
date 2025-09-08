@@ -2,11 +2,11 @@ collections:
   ssp:
     output: true
     order:
-      - High Risk Cloud CII.md
       - About SSP.md
       - Low Risk Cloud.md
       - Low Risk On Premises.md
       - Medium Risk Cloud.md
+      - High Risk Cloud CII.md
       - CCoP Cloud.md
       - Sandbox.md
       - Glossary.md
