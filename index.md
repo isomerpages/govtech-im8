@@ -32,8 +32,8 @@ sections:
   - infopic:
       title: System Security Plan
       id: infopic
-      description: System Security Plans for Low-Risk Cloud, Low-Risk On-Premises,
-        Medium-Risk Cloud and Sandbox systems.
+      description: System Security Plans for Low to High Risk Cloud, CCoP Cloud,
+        Low-Risk On-Premises, Digital Services and Sandbox systems.
       button: Read more
       url: /about-ssp/
       image: /images/img_catalog.png
