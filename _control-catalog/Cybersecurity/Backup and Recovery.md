@@ -7,12 +7,14 @@ third_nav_title: Cybersecurity
 ---
 Controls to support backup and disaster recovery.
 
-| Controls                                                     |
-| ------------------------------------------------------------ |
-| [BR-1: Backup](#br-1-backup)                                 |
-| [BR-2: Recovery Testing](#br-2-recovery-testing)             |
-| [BR-3: Backup Retention](#br-3-backup-retention)             |
-| [BR-4: Disaster Recovery Plan](#br-4-disaster-recovery-plan) |
+| Controls                                                                 |
+| ------------------------------------------------------------------------ |
+| [BR-1: Backup](#br-1-backup)                                             |
+| [BR-2: Recovery Testing](#br-2-recovery-testing)                         |
+| [BR-3: Backup Retention](#br-3-backup-retention)                         |
+| [BR-4: Disaster Recovery Plan](#br-4-disaster-recovery-plan)             |
+| [BR-5: Business Continuity Plan](#br-5-business-continuity-plan)         |
+| [BR-6: Business Continuity Exercise](#br-6-business-continuity-exercise) |
 
 ## BR-1: Backup
 
@@ -95,3 +97,41 @@ The disaster recovery plan should include clearly defined roles and responsibili
 ### Risk Statement
 
 Absence of a comprehensive disaster recovery plan increases the risk of prolonged system downtime, data loss, and inability to maintain business continuity in the event of a disaster, potentially leading to significant financial losses and damage to organisational reputation.
+
+## BR-5: Business Continuity Plan
+
+**Group:** Backup and Recovery
+
+### Control Statement
+
+Develop a business continuity plan.
+
+### Control Recommendations
+
+Refer to the [Cyber Security Agency&#39;s Cybersecurity Toolkit for IT Teams](https://www.csa.gov.sg/our-programmes/support-for-enterprises/sg-cyber-safe-programme/cybersecurity-toolkits/cybersecurity-toolkit-for-it-teams) for a business continuity plan template.
+
+### Risk Statement
+
+Failure to develop a Business Continuity Plan may result in prolonged system downtime, loss of critical data, and diminished organisational resilience during disruptive events, increasing the risk of financial and reputational damage.
+
+## BR-6: Business Continuity Exercise
+
+**Group:** Backup and Recovery
+
+### Control Statement
+
+Conduct a business continuity exercise at least every [ insert: param, br-6_prm_1 ] day(s) to test the effectiveness of the business continuity plan.
+
+### Control Recommendations
+
+Conduct testing based on the business continuity plan which can include checklists, tabletop exercises, and simulations.
+
+### Risk Statement
+
+Failure to conduct regular business continuity exercises may lead to unpreparedness during an actual disruption, increasing response times, operational impact, and the risk of ineffective recovery, ultimately jeopardising business operations and stakeholder trust.
+
+### Parameters
+
+| ID         | Type                     | Description                                                        |
+| ---------- | ------------------------ | ------------------------------------------------------------------ |
+| br-6_prm_1 | time period (days) (int) | The time period in days of business continuity exercise frequency. |
