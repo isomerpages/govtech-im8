@@ -15,8 +15,8 @@ Controls to implement cybersecurity governance, risk, and compliance processes a
 | [PM-4: Approval of Residual Risks](#pm-4-approval-of-residual-risks)                                                             |
 | [PM-5: Central Submission of Approved System Security Plan (SSP)](#pm-5-central-submission-of-approved-system-security-plan-ssp) |
 | [PM-6: System Documentation](#pm-6-system-documentation)                                                                         |
-| [PM-7: Certification](#pm-7-certification)                                                                                       |
-| [PM-8: SaaS Whitelisting](#pm-8-saas-whitelisting)                                                                               |
+| [PM-9: Cybersecurity Incident Response Testing](#pm-9-cybersecurity-incident-response-testing)                                   |
+| [PM-10: Cybersecurity Leadership and Oversight](#pm-10-cybersecurity-leadership-and-oversight)                                   |
 
 ## PM-1: Cybersecurity Incident Management Plan
 
@@ -24,11 +24,11 @@ Controls to implement cybersecurity governance, risk, and compliance processes a
 
 ### Control Statement
 
-Develop, document, and disseminate an agency-level cybersecurity incident management plan to respond to cybersecurity incidents.
+Develop, document, and disseminate an organisation-level cybersecurity incident management plan to respond to cybersecurity incidents.
 
 ### Control Recommendations
 
-Refer to the Government Incident Reporting and Operations Centre (GIROC) ICT and Data Incident Reporting Resources for an incident management plan and best practices template.
+Refer to the NIST SP 800-61 Computer Security Incident Handling Guide for guidelines on incident planning and handling.
 
 ### Risk Statement
 
@@ -81,7 +81,7 @@ Failure to develop a comprehensive SSP can result in inadequate documentation an
 
 ### Control Statement
 
-Get acceptance and approval of the residual risks from agency&#39;s [ insert: param, pm-4_prm_1 ].
+Get acceptance and approval of the residual risks from agency&#39;s [ insert: param, pm-4_prm_1 ], and review and seek approval every [ insert: param, pm-4_prm_2 ] days.
 
 ### Control Recommendations
 
@@ -89,13 +89,14 @@ Agencies should seek acceptance and approval from their [ insert: param, pm-4_pr
 
 ### Risk Statement
 
-Failure to seek the right level of authority to accept and approve the residual risks can lead to misalignment of the business implications and trade-offs from the controls set in the SSP with the Agency IDSC direction.
+Failure to seek the right level of authority to accept and approve the residual risks regularly can lead to misalignment of the business implications and trade-offs from the controls set in the SSP with the Agency IDSC direction.
 
 ### Parameters
 
 | ID         | Type                      | Description                                   |
 | ---------- | ------------------------- | --------------------------------------------- |
 | pm-4_prm_1 | approving authority (str) | The authority for approval of residual risks. |
+| pm-4_prm_2 | review frequency (int)    | The frequency of risk review requirement.     |
 
 ## PM-5: Central Submission of Approved System Security Plan (SSP)
 
@@ -107,7 +108,7 @@ Submit approved SSPs centrally to maintain a unified and up-to-date repository o
 
 ### Control Recommendations
 
-Reference the IM8 Portal for submitting all approved SSPs.
+Use a central submission channel for SSPs.
 
 ### Risk Statement
 
@@ -129,46 +130,40 @@ Example system documentation includes architecture and network diagrams, archite
 
 Comprehensive documentation of system architecture, components, configurations, and dependencies is essential for effective management, troubleshooting, and security auditing.
 
-## PM-7: Certification
+## PM-9: Cybersecurity Incident Response Testing
 
 **Group:** Security Programme Management
 
 ### Control Statement
 
-Ensure that the Software as a Service (SaaS) provider is certified with [ insert: param, pm-7_prm_1 ].
+Conduct incident response testing and exercises at least every [ insert: param, pm-9_prm_1 ] day(s) to evaluate the effectiveness of incident response plans and procedures.
 
 ### Control Recommendations
 
-Ensure that the certification is up-to-date. Avoid certifications that are only attestations without a pass/fail element.
+Include tabletop exercises, simulations, and full-scale drills in testing. Involve all relevant stakeholders. Document lessons learned and use them to improve incident response capabilities. Consider engaging third-party services for objective assessment.
 
 ### Risk Statement
 
-Third-party certification provides assurance that security controls have been properly implemented in the Software as a Service (SaaS) provider.
+Lack of regular incident response testing may lead to ineffective or delayed responses during actual security incidents, potentially increasing the impact and damage of such events.
 
 ### Parameters
 
-| ID         | Type                 | Description                  |
-| ---------- | -------------------- | ---------------------------- |
-| pm-7_prm_1 | certifications (str) | The required certifications. |
+| ID         | Type                     | Description                                                          |
+| ---------- | ------------------------ | -------------------------------------------------------------------- |
+| pm-9_prm_1 | time period (days) (int) | The time period in days for cybersecurity incident response testing. |
 
-## PM-8: SaaS Whitelisting
+## PM-10: Cybersecurity Leadership and Oversight
 
 **Group:** Security Programme Management
 
 ### Control Statement
 
-Maintain and enforce a whitelist of authorised software and services.
+Ensure that the board of directors (or equivalent body) and senior management team includes at least one member that has knowledge and awareness of cybersecurity matters to have oversight of cybersecurity risks.
 
 ### Control Recommendations
 
-Refer to a centrally-maintained whitelist or [ insert: param, pm-8_prm_1 ] for authorised SaaS.
+Regularly assess and document the cybersecurity expertise of board members and senior management. Provide ongoing cybersecurity training and briefings to maintain and enhance their knowledge. Consider appointing a dedicated Chief Information Security Officer (CISO) or equivalent role at the senior management level. Ensure clear communication channels between the board, senior management, and cybersecurity teams.
 
 ### Risk Statement
 
-Failing to whitelist the SaaS may potentially expose sensitive data (e.g., Confidential (Cloud-Eligible) or SENSITIVE-HIGH data) to the risk of data breaches.
-
-### Parameters
-
-| ID         | Type                         | Description                 |
-| ---------- | ---------------------------- | --------------------------- |
-| pm-8_prm_1 | whitelisting authority (str) | The whitelisting authority. |
+Lack of cybersecurity expertise at the board and senior management levels may lead to inadequate oversight and management of cybersecurity risks, potentially resulting in increased vulnerability to cyber threats and ineffective risk management strategies.
