@@ -32,8 +32,8 @@ sections:
   - infopic:
       title: System Security Plan
       id: infopic
-      description: System Security Plans for Low to High Risk Cloud, CCoP Cloud,
-        Low-Risk On-Premises, Digital Services and Sandbox systems.
+      description: System Security Plans for Low, Medium and High-Risk Cloud, Low-Risk
+        On-Premises, Digital Services and Sandbox systems.
       button: Read more
       url: /about-ssp/
       image: /images/img_catalog.png
@@ -41,7 +41,7 @@ sections:
   - infopic:
       title: Catalog of Controls
       id: infopic
-      description: Re-calibrated catalog of controls for Low to High Risk Cloud, CCoP
+      description: Re-calibrated catalog of controls for Low, Medium and High-Risk
         Cloud, Low-Risk On-Premises, Digital Services and Sandbox systems.
       button: Read more
       url: /control-catalog/
