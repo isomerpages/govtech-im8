@@ -7,7 +7,6 @@ collections:
       - Low Risk On Premises.md
       - Medium Risk Cloud.md
       - High Risk Cloud CII.md
-      - CCoP Cloud.md
       - Digital Services (Others).md
       - Digital Services (High Impact).md
       - Sandbox.md
