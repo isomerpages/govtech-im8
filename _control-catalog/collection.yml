@@ -3,6 +3,7 @@ collections:
     output: true
     order:
       - About Control Catalog.md
+      - Cybersecurity/Human Resource.md
       - Cybersecurity/.keep
       - Cybersecurity/Access Control.md
       - Cybersecurity/Application Security.md
