@@ -9,7 +9,18 @@ description: ""
 that both parties can work together to apply the right level of controls
 for their systems.</p>
 <p>The catalog consists of a&nbsp;central pool of recommended controls meant
-for Low-Risk Cloud, Low-Risk On-Premises and Medium-Risk Cloud systems.&nbsp;</p>
+for the following systems:
+</p><ul>
+  <li>Low-Risk Cloud</li>
+  <li>Low-Risk On-Premises</li>
+  <li>Medium-Risk Cloud</li>
+	<li>High-Risk Cloud CII</li>
+	<li>CCoP Cloud</li>
+	<li>Digital Services (Others)</li>
+	<li>Digital Services (High Impact)</li>
+	<li>Sandbox</li>
+</ul>
+
 <p>The controls are expressed using Open Security Controls Assessment Language
 (OSCAL) which are codified in machine-readable policy format. It enables
 future automation to monitor and assess the effectiveness of technical
@@ -31,4 +42,4 @@ are published here and will progressively be updated in this website.</p>
 For any feedback, please provide <a href="https://go.gov.sg/ictpolicy" rel="noopener noreferrer nofollow" target="_blank">here.</a>
 </p>
 <p></p>
-<p>The control catalog was last updated on 13 May 2025.</p>
+<p>The control catalog was last updated on 11 September 2025.</p>
