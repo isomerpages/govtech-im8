@@ -10,8 +10,11 @@ description: ""
 <ul>
 	<li>Low-Risk Cloud</li>
 	<li>Low-Risk On-Premises</li>
-	<li> Medium-Risk Cloud</li>
-	<li>Sandbox</li>
+	<li>Medium-Risk Cloud</li>
+	<li>High-Risk Cloud CII</li>
+	<li>CCoP Cloud</li>
+	<li>Digital Services (Others)</li>
+	<li>Digital Services (High Impact)</li>
 </ul>
 
 <p>Agencies and their industry partners are required to assess the risks and threats for each of their systems, to determine the controls required to mitigate the risks.</p>
