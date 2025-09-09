@@ -62,7 +62,7 @@ Failure to automate security patching of operating systems and included software
 
 ### Control Statement
 
-Restrict administrator privileges by disabling remote login for the root/administrator user and restricting sudo/administrators group access for other users.
+Restrict administrator privileges by disabling remote login for the root/administrator user and restricting sudo/administrators group access.
 
 ### Control Recommendations
 
@@ -114,7 +114,7 @@ Use remote administration tools to control and monitor remote access.
 
 ### Control Recommendations
 
-Prioritise remote administration tools (e.g., AWS Systems Manager Session Manager, AWS Systems Manager Fleet Manager, GCC Privileged Identity Management) over direct SSH or RDP. If SSH is still required and remote administration tools are not available, use it only within a private non-production environment such as an encrypted tunnel and authenticate with short-lived certificates. Document and remediate gaps in monitoring and automation to minimise the need for remote access.
+Prioritise remote administration tools (e.g., AWS Systems Manager Session Manager, AWS Systems Manager Fleet Manager) over direct SSH or RDP. If SSH is still required and remote administration tools are not available, use it only within a private non-production environment such as an encrypted tunnel and authenticate with short-lived certificates. Document and remediate gaps in monitoring and automation to minimise the need for remote access.
 
 ### Risk Statement
 
@@ -130,7 +130,7 @@ Detect and quarantine malware on hosts with anti-malware tools.
 
 ### Control Recommendations
 
-Configure anti-malware tools for all compute hosts (e.g. AWS Guardduty Malware Protection, Azure Antimalware, Trend Micro CloudOne). These tools should be kept up-to-date with the latest malware signatures. Regular scans should be scheduled to detect and quarantine potential threats.
+Configure anti-malware tools for all compute hosts, preferably leveraging cloud-native services where available. These tools should be kept up-to-date with the latest malware signatures. Regular scans should be scheduled to detect and quarantine potential threats.
 
 ### Risk Statement
 
@@ -232,11 +232,11 @@ Register second (.sg) and third (.com.sg, .org.sg, .net.sg, .edu.sg) level domai
 
 ### Control Recommendations
 
-Consider defensive registration of domain names with typographical variants of the system&#39;s primary domain name. The Whole of Government Domain Name Server (DNS) portal on the IT Service Management (ITSM) portal automatically includes the second and third level domain names.
+Consider defensive registration of domain names with typographical variants of the system&#39;s primary domain name.
 
 ### Risk Statement
 
-Malicious use of domain names similar to actual Government domain names increases the risk of phishing and spoofing.
+Malicious use of domain names similar to actual organisation domain names increases the risk of phishing and spoofing.
 
 ## IS-14: Singapore SMS Sender ID Registry Registration
 
