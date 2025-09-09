@@ -15,7 +15,6 @@ for the following systems:
   <li>Low-Risk On-Premises</li>
   <li>Medium-Risk Cloud</li>
 	<li>High-Risk Cloud CII</li>
-	<li>CCoP Cloud</li>
 	<li>Digital Services (Others)</li>
 	<li>Digital Services (High Impact)</li>
 	<li>Sandbox</li>
@@ -36,7 +35,7 @@ of controls for these profiles are listed <a href="/about-ssp/" rel="noopener no
 <p>Each system is to define a system security plan that comprises the implementable
 controls.&nbsp; Agencies and their industry partners are to apply the controls
 identified for each system.</p>
-<p>The recommended controls for Low to High Risk Cloud, CCoP Cloud, Low-Risk On-Premises, Digital Services and Sandbox systems are published here and will progressively be updated in this website.</p>
+<p>The recommended controls for Low to High Risk Cloud, Low-Risk On-Premises, Digital Services and Sandbox systems are published here and will progressively be updated in this website.</p>
 <p>We invite the industry players to join us in the ICT&amp;SS Reform journey.
 For any feedback, please provide <a href="https://go.gov.sg/ictpolicy" rel="noopener noreferrer nofollow" target="_blank">here.</a>
 </p>
