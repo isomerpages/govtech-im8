@@ -12,7 +12,7 @@ The CCoP Cloud System Security Plan template includes Level 0 and Level 1 baseli
 - **Description:** A generic system hosted on the cloud through a third-party Cloud Service Provider.
 - **Security Sensitivity Level:** Confidential, Sensitive High
 
-## AS: Application Security (14)
+## AS: Application Security (15)
 
 ### AS-1: Input Validation
 
@@ -270,6 +270,23 @@ Follow the OWASP Cryptographic Storage Cheat Sheet for best practices in securel
 #### Risk Statement
 
 Using insecure cryptographic libraries and functions can expose applications to significant security risks, such as data breaches and unauthorised access, compromising sensitive information.
+
+### AS-15: Password Change
+
+- **Group:** Application Security
+- **Profile Level:** 1
+
+#### Control Statement
+
+Enforce password change upon suspected account compromise.
+
+#### Control Recommendations
+
+Implement mechanisms to detect signs of account compromise, such as unusual login activity or multiple failed login attempts. Notify users promptly to change their passwords and provide guidance on creating strong, unique passwords. Consider integrating multi-factor authentication to enhance security.
+
+#### Risk Statement
+
+Failure to enforce password changes upon suspected account compromise increases the risk of prolonged unauthorised access, leading to potential data breaches and exploitation of systems.
 
 ## SC: Software Supply Chain (9)
 
