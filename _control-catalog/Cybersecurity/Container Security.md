@@ -127,7 +127,7 @@ Scan container images in the [ insert: param, cs-7_prm_1 ] for known vulnerabili
 
 ### Control Recommendations
 
-Container image scanning tools (e.g., Amazon Inspector, Trivy, Grype) scan the contents of a container image for known vulnerabilities. Configure scans to run automatically and continuously, as well as enable scanning of image on push. Block deployment of container images with HIGH CVE being detected during scan (e.g., using Amazon ECR with Security Hub).
+Container image scanning tools (e.g., Amazon Inspector, Trivy, Grype) scan the contents of a container image for known vulnerabilities. Configure scans to run automatically and continuously, as well as enable scanning of image on push. Block the deployment of container images that have critical or high severity vulnerabilities detected during the scan (e.g., using Amazon ECR with Security Hub).
 
 ### Risk Statement
 
