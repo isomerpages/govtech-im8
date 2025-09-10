@@ -4,4 +4,4 @@ permalink: /control-catalog/glossary/
 variant: markdown
 description: ""
 ---
-[](/glossary/)
+[Refer here](/glossary/)
