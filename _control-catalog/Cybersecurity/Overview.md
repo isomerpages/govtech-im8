@@ -5,22 +5,23 @@ variant: markdown
 description: ""
 third_nav_title: Cybersecurity
 ---
-Lorem Ipsum
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-| Controls                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------ |
-| [AC: Access Control](/control-catalog/ac/)                                                                   |
-| [AC-2: Multi-Factor Authentication (MFA)](#ac-2-multi-factor-authentication-mfa)                                                           |
-| [AC-3: Inactive and Expired Accounts](#ac-3-inactive-and-expired-accounts)                                                                 |
-| [AC-4: Access Review](#ac-4-access-review)                                                                                                 |
-| [AC-5: Endpoint Device Hardening](#ac-5-endpoint-device-hardening)                                                                         |
-| [AC-6: Default Credentials](#ac-6-default-credentials)                                                                                     |
-| [AC-7: Singpass/Corppass for Public Users](#ac-7-singpasscorppass-for-public-users)                                                        |
-| [AC-8: Automated Account Lifecycle Management](#ac-8-automated-account-lifecycle-management)                                               |
-| [AC-9: Endpoint Device Management](#ac-9-endpoint-device-management)                                                                       |
-| [AC-10: Identity and Device-Based Access Control](#ac-10-identity-and-device-based-access-control)                                         |
-| [AC-11: Single User Endpoints](#ac-11-single-user-endpoints)                                                                               |
-| [AC-12: Single Sign-On (SSO) for Internal Services and Accounts](#ac-12-single-sign-on-sso-for-internal-services-and-accounts)             |
-| [AC-13: Static Credential Expiry and Rotation](#ac-13-static-credential-expiry-and-rotation)                                               |
-| [AC-14: Inventory of Accounts](#ac-14-inventory-of-accounts)                                                                               |
-| [AC-16: Separation of Duties](#ac-16-separation-of-duties)
+| Domain                                                                        |
+| ------------------------------------------------------------------------------|
+| [AC: Access Control](/control-catalog/ac/)                                    |
+| [AS: Application Security](/control-catalog/as/)                              |
+| [BR: Backup and Recovery](/control-catalog/br/)                               |
+| [CK: Cryptography, Encryption and Key Management](/control-catalog/ck/)       |                                                                              |
+| [CS: Container Security AC-5: Endpoint Device Hardening](/control-catalog/cs/)|
+| [DC: Datacentre](/control-catalog/dc/)                                        |
+| [DP: Data Protection](/control-catalog/dp/)                                   |
+| [HR: Human Resource](/control-catalog/hr/)                                  	|
+| [IS: Infrastructure Security](/control-catalog/is/)                           |
+| [LM: Logging and Monitoring](/control-catalog/lm/)                           	|
+| [NS: Network Security](/control-catalog/ns/)                                  |
+| [PM: Security Programme Management](/control-catalog/pm/) 					|
+| [RS: Resiliency](/control-catalog/rs/)                                  		|
+| [SC: Software Supply Chain](/control-catalog/sc/)                             |
+| [SD: Secure Development](/control-catalog/sd/) 								|
+| [ST: Security Testing](/control-catalog/st/)                                  |
