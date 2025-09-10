@@ -2,7 +2,6 @@ collections:
   control-catalog:
     output: true
     order:
-      - Glossary.md
       - About Control Catalog.md
       - Cybersecurity/.keep
       - Cybersecurity/Access Control.md
@@ -21,8 +20,8 @@ collections:
       - Cybersecurity/Security Programme Management.md
       - Cybersecurity/Security Testing.md
       - Cybersecurity/Software Supply Chain.md
-      - Digital Service Standards/Overview.md
       - Digital Service Standards/.keep
+      - Digital Service Standards/Overview.md
       - Digital Service Standards/Baseline Design Practices.md
       - Digital Service Standards/Performance and Reliability.md
       - Digital Service Standards/Trust and Legitimacy.md
@@ -32,3 +31,4 @@ collections:
       - "Digital Service Standards/WCAG : Perceivable.md"
       - "Digital Service Standards/WCAG : Robust.md"
       - "Digital Service Standards/WCAG : Understandable.md"
+      - Glossary.md
