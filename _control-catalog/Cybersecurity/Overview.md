@@ -12,8 +12,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | [AC: Access Control](/control-catalog/ac/)                                    |
 | [AS: Application Security](/control-catalog/as/)                              |
 | [BR: Backup and Recovery](/control-catalog/br/)                               |
-| [CK: Cryptography, Encryption and Key Management](/control-catalog/ck/)       |                                                                              |
-| [CS: Container Security AC-5: Endpoint Device Hardening](/control-catalog/cs/)|
+| [CK: Cryptography, Encryption and Key Management](/control-catalog/ck/)       |                                       
+| [CS: Container Security](/control-catalog/cs/)                   |
 | [DC: Datacentre](/control-catalog/dc/)                                        |
 | [DP: Data Protection](/control-catalog/dp/)                                   |
 | [HR: Human Resource](/control-catalog/hr/)                                  	|
