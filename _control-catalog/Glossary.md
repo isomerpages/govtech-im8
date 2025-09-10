@@ -4,3 +4,4 @@ permalink: /glossary/
 variant: markdown
 description: ""
 ---
+[](/glossary/)
