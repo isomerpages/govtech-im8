@@ -9,7 +9,7 @@ Lorem Ipsum
 
 | Controls                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| [AC: Access Control](#/control-catalog/ac/)                                                                   |
+| [AC: Access Control](/control-catalog/ac/)                                                                   |
 | [AC-2: Multi-Factor Authentication (MFA)](#ac-2-multi-factor-authentication-mfa)                                                           |
 | [AC-3: Inactive and Expired Accounts](#ac-3-inactive-and-expired-accounts)                                                                 |
 | [AC-4: Access Review](#ac-4-access-review)                                                                                                 |
