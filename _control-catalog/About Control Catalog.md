@@ -40,4 +40,4 @@ identified for each system.</p>
 For any feedback, please provide <a href="https://go.gov.sg/ictpolicy" rel="noopener noreferrer nofollow" target="_blank">here.</a>
 </p>
 <p></p>
-<p>The control catalog was last updated on 11 September 2025.</p>
+<p>The control catalog was last updated on 12 September 2025.</p>
