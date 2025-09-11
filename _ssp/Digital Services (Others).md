@@ -8,8 +8,6 @@ Digital Service (also known as Government Digital Service) refers to any public 
 
 Digital Services (Others) refer to Digital services with less than 1 million visits per year (note: this will be determined based on WOGAA statistics).
 
-Unlike RML High/Medium/Low-Risk systems, Digital Services will adopt a &#39;Comply or Explain&#39; approach for any deviation of DSS Level 1 controls.
-
 ## System Characteristics
 
 - **Name:** Services System
