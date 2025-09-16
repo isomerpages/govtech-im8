@@ -15,7 +15,7 @@ Controls to protect against unauthorised access to agency systems.
 | [AC-4: Access Review](#ac-4-access-review)                                                                                                 |
 | [AC-5: Endpoint Device Hardening](#ac-5-endpoint-device-hardening)                                                                         |
 | [AC-6: Default Credentials](#ac-6-default-credentials)                                                                                     |
-| [AC-7: Singpass/Corppass for External Users](#ac-7-singpasscorppass-for-external-users)                                                    |
+| [AC-7: Singpass/Corppass for Public Users](#ac-7-singpasscorppass-for-public-users)                                                        |
 | [AC-8: Automated Account Lifecycle Management](#ac-8-automated-account-lifecycle-management)                                               |
 | [AC-9: Endpoint Device Management](#ac-9-endpoint-device-management)                                                                       |
 | [AC-10: Identity and Device-Based Access Control](#ac-10-identity-and-device-based-access-control)                                         |
@@ -23,7 +23,7 @@ Controls to protect against unauthorised access to agency systems.
 | [AC-12: Single Sign-On (SSO) for Internal Services and Accounts](#ac-12-single-sign-on-sso-for-internal-services-and-accounts)             |
 | [AC-13: Static Credential Expiry and Rotation](#ac-13-static-credential-expiry-and-rotation)                                               |
 | [AC-14: Inventory of Accounts](#ac-14-inventory-of-accounts)                                                                               |
-| [AC-15: Validation Testing of Automated Account Lifecycle Management](#ac-15-validation-testing-of-automated-account-lifecycle-management) |
+| [AC-16: Separation of Duties](#ac-16-separation-of-duties)                                                                                 |
 
 ## AC-1: Principle of Least Privilege
 
@@ -55,7 +55,7 @@ Ensure that the authentication factors are different and independent of the acce
 
 ### Risk Statement
 
-Without requiring phishing-resistant Multi-Factor Authentication (MFA) for remote access, there is an increased risk of unauthorised access, credential theft, and potential compromise of sensitive systems, especially for users with elevated privileges.
+Without requiring phishing-resistant Multi-Factor Authentication (MFA) for remote access, there is an increased risk of unauthorised access, credential theft, and potential compromise of sensitive systems, especially for accounts with elevated privileges.
 
 ## AC-3: Inactive and Expired Accounts
 
@@ -63,11 +63,11 @@ Without requiring phishing-resistant Multi-Factor Authentication (MFA) for remot
 
 ### Control Statement
 
-Disable or remove [ insert: param, ac-3_prm_1 ] accounts within [ insert: param, ac-3_prm_2 ] day(s) from last day of authorised use or have not been used for [ insert: param, ac-3_prm_3 ] day(s).
+Disable or remove [ insert: param, ac-3_prm_3 ] accounts within [ insert: param, ac-3_prm_1 ] day(s) from last day of authorised use or have not been used for [ insert: param, ac-3_prm_2 ] day(s).
 
 ### Control Recommendations
 
-Use automated checks to identify accounts and credentials that should be disabled. Consider using automated workflows such as System for Cross-domain Identity Management (SCIM) or identity lifecycle management tools. For cloud service provider accounts, use tools such as AWS Config iam-user-unused-credentials-check to manage Identity and Access Management (IAM) users.
+Use automated checks to identify accounts and credentials that should be disabled. Consider using automated workflows such as System for Cross-domain Identity Management (SCIM) or identity lifecycle management tools. For cloud service provider accounts, use tools such as AWS Config iam-user-unused-credentials-check to manage Identity and Access Management (IAM) Users.
 
 ### Risk Statement
 
@@ -77,9 +77,9 @@ Failure to disable or remove unused accounts or credentials with elevated access
 
 | ID         | Type                     | Description                                    |
 | ---------- | ------------------------ | ---------------------------------------------- |
-| ac-3_prm_1 | type (str)               | The type of accounts.                          |
-| ac-3_prm_2 | time period (days) (int) | The time period in days after account expiry.  |
-| ac-3_prm_3 | time period (days) (int) | The time period in days of account inactivity. |
+| ac-3_prm_1 | time period (days) (int) | The time period in days after account expiry.  |
+| ac-3_prm_2 | time period (days) (int) | The time period in days of account inactivity. |
+| ac-3_prm_3 | type (str)               | The type of accounts.                          |
 
 ## AC-4: Access Review
 
@@ -91,7 +91,7 @@ Perform an access review [ insert: param, ac-4_prm_1 ] and remove unauthorised o
 
 ### Control Recommendations
 
-For user accounts in applications, implement automated review workflows or reports. For cloud service provider accounts and roles, use tools such as AWS IAM Access Advisor or Azure AD Access Review to facilitate and manage access reviews.
+For application accounts, implement automated review workflows or reports. For cloud service provider accounts and roles, use tools such as AWS IAM Access Advisor or Azure AD Access Review to facilitate and manage access reviews.
 
 ### Risk Statement
 
@@ -114,7 +114,7 @@ Require hardened endpoint devices for remote developer, maintainer, or administr
 
 ### Control Recommendations
 
-Use Endpoint Management platfoms to continuously check and enforce device security posture and deny access if the hardening requirements are not met. Hardened devices include Government Standard Image Build (GSIB) and Security Suite for Engineering Endpoint Devices (SEED).
+Use Endpoint Management platforms to continuously check and enforce device security posture and deny access if the hardening requirements are not met.
 
 ### Risk Statement
 
@@ -136,17 +136,17 @@ Identify any default credentials used in any system components before deploying 
 
 Failure to change default credentials prior to first use increases the risk of unauthorised access, as default credentials are often well-known and targeted by attackers, compromising the security of the system or device.
 
-## AC-7: Singpass/Corppass for External Users
+## AC-7: Singpass/Corppass for Public Users
 
 **Group:** Access Control
 
 ### Control Statement
 
-Use Singpass or Corppass MFA for digital services that require high level of identity assurance for external users.
+Use Singpass or Corppass MFA for digital services that require high level of identity assurance for Public Users.
 
 ### Control Recommendations
 
-For high impact or high risk transactions, use Singpass/Corppass to identify external users (e.g. citizens). Internal users should use Government managed Single Sign-on (SSO) solutions (such as WOG AAD).
+For high impact or high risk transactions, use Singpass/Corppass to identify Public Users (e.g. citizens). Agency or internal Users should use Government managed Single Sign-on (SSO) solutions (such as WOG AAD).
 
 ### Risk Statement
 
@@ -158,7 +158,7 @@ Leverage on Singpass or Corppass to reduce duplication of effort and provide con
 
 ### Control Statement
 
-Automate account [ insert: param, ac-8_prm_1 ] for internal users using an account lifecycle management tool.
+Automate account [ insert: param, ac-8_prm_1 ] for [ insert: param, ac-8_prm_3 ] using an account lifecycle management tool.
 
 ### Control Recommendations
 
@@ -174,6 +174,7 @@ Manual account and access lifecycle management can introduce errors and weakness
 | ---------- | ------------- | ------------------------------------------------------- |
 | ac-8_prm_1 | process (str) | The account lifecycle management processes to automate. |
 | ac-8_prm_2 | tool (str)    | Recommended account lifecycle management tool.          |
+| ac-8_prm_3 | type (str)    | The type of accounts.                                   |
 
 ## AC-9: Endpoint Device Management
 
@@ -189,7 +190,7 @@ Mobile Device Management (MDM) platforms enable management, monitoring, and secu
 
 ### Risk Statement
 
-Unmanaged endpoint devices increase the risk of unauthorized access and potential loss of sensitive information due to the compromise of devices.
+Unmanaged endpoint devices increase the risk of unauthorised access and potential loss of sensitive information due to the compromise of devices.
 
 ## AC-10: Identity and Device-Based Access Control
 
@@ -201,11 +202,11 @@ Adopt Identity and Device-Based Access Control for secure and context-aware conn
 
 ### Control Recommendations
 
-Use solutions such as Secure Service Edge (SSE), Identity Aware Proxies (IAP) or other Zero Trust services (Entra ID Conditional Access, Okta Device Trust, etc) that integrate identity and device management systems to provide granular access control to resources based on user identity and device posture. For example, Security Suite for Engineering Endpoint Devices (SEED).
+Use solutions such as Secure Service Edge (SSE), Identity Aware Proxies (IAP) or other Zero Trust services (Entra ID Conditional Access, Okta Device Trust, etc) that integrate identity and device management systems to provide granular access control to resources based on user identity and device posture.
 
 ### Risk Statement
 
-Relying on direct connections or traditional VPNs for remote access can lead to vulnerabilities, as they do not always incorporate strong identity and device-based security measures. This increases the risk of unauthorized access and potential data breaches.
+Relying on direct connections or traditional VPNs for remote access can lead to vulnerabilities, as they do not always incorporate strong identity and device-based security measures. This increases the risk of unauthorised access and potential data breaches.
 
 ## AC-11: Single User Endpoints
 
@@ -213,15 +214,21 @@ Relying on direct connections or traditional VPNs for remote access can lead to 
 
 ### Control Statement
 
-Assign each endpoint device to a single designated primary user and enforce the assignment to ensure accountability and enhance security monitoring.
+Assign each endpoint device to a single designated primary [ insert: param, ac-11_prm_1 ] and enforce the assignment to ensure accountability and enhance security monitoring.
 
 ### Control Recommendations
 
-Implement measures such as user authentication and endpoint management with device enrollment to enforce the single primary user per endpoint. If secondary accounts for local device support or maintenance activities consider securing with endpoint privilege management tools.
+Implement measures such as user authentication and endpoint management with device enrolment to enforce the single primary user per endpoint. If secondary accounts for local device support or maintenance activities are used, consider securing them with endpoint privilege management tools.
 
 ### Risk Statement
 
 Allowing multiple users to access a single endpoint device can lead to security risks such as data leakage, difficulty in tracking user activities, and increased vulnerability to insider threats.
+
+### Parameters
+
+| ID          | Type       | Description                   |
+| ----------- | ---------- | ----------------------------- |
+| ac-11_prm_1 | type (str) | The type of user or identity. |
 
 ## AC-12: Single Sign-On (SSO) for Internal Services and Accounts
 
@@ -233,11 +240,11 @@ Use Single Sign-On (SSO) for internal services and accounts.
 
 ### Control Recommendations
 
-Configure multi-factor authentication (MFA) at the Single-Sign On (SSO) identity provider (IdP) and ensure that access to the system is only granted after the IdP authenticates the user. WOG AAD is recommended for public officers and TechPass AAD for developers.
+Configure multi-factor authentication (MFA) at the Single-Sign On (SSO) identity provider (IdP) and ensure that access to the system is only granted after the IdP authenticates the user.
 
 ### Risk Statement
 
-Without Single Sign-On (SSO), there is an increased risk of unauthorized access and compromised user credentials, as users may resort to using weak passwords or reusing credentials across multiple systems, thereby exposing sensitive information to potential security breaches.
+Without Single Sign-On (SSO), there is an increased risk of unauthorised access and compromised user credentials, as users may resort to using weak passwords or reusing credentials across multiple systems, thereby exposing sensitive information to potential security breaches.
 
 ## AC-13: Static Credential Expiry and Rotation
 
@@ -245,15 +252,15 @@ Without Single Sign-On (SSO), there is an increased risk of unauthorized access 
 
 ### Control Statement
 
-Rotate long-lived static credentials such as API keys, AWS IAM user access keys, and personal access tokens every [ insert: param, ac-13_prm_1 ] day(s) or used short-lived credentials.
+Rotate long-lived static credentials such as API keys, access keys, and personal access tokens every [ insert: param, ac-13_prm_1 ] day(s) or use time-restricted credentials.
 
 ### Control Recommendations
 
-Automate credential rotation where possible. Consider short-lived alternatives to long-lived static credentials, such as AWS Security Token Service and IAM Identity Center authentication instead of IAM user access keys.
+Automate credential rotation where possible. Consider time-restricted alternatives to long-lived static credentials, such as AWS Security Token Service and IAM Identity Center authentication instead of IAM user access keys.
 
 ### Risk Statement
 
-Failure to regularly rotate long-lived credentials or use short-lived credentials increases the risk of unauthorised access from stolen or unrevoked credentials.
+Failure to regularly rotate long-lived credentials or use time-restricted credentials increases the risk of unauthorised access from stolen or unrevoked credentials.
 
 ### Parameters
 
@@ -275,20 +282,21 @@ Regularly review and update the account inventory to ensure accuracy and complet
 
 ### Risk Statement
 
-Failure to maintain an accurate inventory of managed accounts increases the risk of unauthorized access, account misuse, and security breaches due to unmonitored or orphaned accounts.
+Failure to maintain an accurate inventory of managed accounts increases the risk of unauthorised access, account misuse, and security breaches due to unmonitored or orphaned accounts.
 
-## AC-15: Validation Testing of Automated Account Lifecycle Management
+
+## AC-16: Separation of Duties
 
 **Group:** Access Control
 
 ### Control Statement
 
-Conduct validation tests on the system integrated with account management tools to ensure secure integration.
+Implement and maintain separation of duties for access and privileges to prevent any single individual from having excessive control over key processes or systems.
 
 ### Control Recommendations
 
-Where possible, test cases should include verifying that: account provisioning occurs solely through the account management tool(s), not directly on the SaaS; accounts are deactivated on the final day of authorised use; accounts are provisioned only after validating that access is permitted to the defined boundaries; and access rights match the account&#39;s assigned role and functions.
+Implement multiple complementary controls to enforce separation of duties, including but not limited to role-based access control (RBAC), Privileged Identity Management (PIM), and Just-In-Time (JIT) access. Where perfect separation is not feasible, use compensating controls such as audit logging, alerting, and rate limits. Consider using tools like Azure AD Privileged Identity Management or AWS Organizations for managing separation of duties in cloud environments.
 
 ### Risk Statement
 
-Failure to conduct validation tests on the integration of account management tools with SaaS platforms increases the risk of unauthorized access, improper account provisioning, and potential security breaches.
+Failure to implement separation of duties increases the risk of fraud, errors, and misuse of systems due to excessive concentration of privileges, potentially compromising the integrity and security of critical operations.

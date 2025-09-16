@@ -1,23 +1,23 @@
 ---
-title: Low Risk Cloud
-permalink: /ssp/low-risk-cloud/
+title: High Risk Cloud CII
+permalink: /ssp/high-risk-cloud/
 variant: markdown
 description: ""
 ---
-The Low-Risk Cloud System Security Plan template includes Level 0 and Level 1 baseline controls that are recommended as the default controls for low-risk cloud systems. Agencies are to customise this template to create their own system-specific System Security Plan or use it as a default System Security Plan.
+The High-Risk Cloud CII System Security Plan template includes Level 0 and Level 1 baseline controls that are recommended as the default controls for high-risk cloud CII systems. Agencies are to customise this template to create their own system-specific System Security Plan or use it as a default System Security Plan.
 
 ## System Characteristics
 
-- **Name:** Low-Risk Cloud System
+- **Name:** High-Risk Cloud System
 - **Description:** A generic system hosted on the cloud through a third-party Cloud Service Provider.
-- **Security Sensitivity Level:** Up to Restricted, Sensitive Normal
+- **Security Sensitivity Level:** Confidential, Sensitive High
 
 ## AS: Application Security (15)
 
 ### AS-1: Input Validation
 
 - **Group:** Application Security
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -51,7 +51,7 @@ Failure to use parameterised interfaces increases the vulnerability to SQL injec
 ### AS-3: Output Sanitisation
 
 - **Group:** Application Security
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -68,7 +68,7 @@ Lack of sanitisation for application outputs used in rendering HTML documents ex
 ### AS-4: Authentication Mechanism Rate-Limiting
 
 - **Group:** Application Security
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -85,7 +85,7 @@ Without rate-limiting, there&#39;s an increased risk of unauthorised access as a
 ### AS-5: Password Requirements
 
 - **Group:** Application Security
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -110,7 +110,7 @@ Short or commonly used passwords increase the vulnerability to unauthorised acce
 ### AS-6: Password Salting and Hashing
 
 - **Group:** Application Security
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -131,7 +131,7 @@ Without salting and hashing, in case of a data breach, exposed passwords can be 
 ### AS-7: Access Control Check Enforcement
 
 - **Group:** Application Security
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -148,7 +148,7 @@ Failure to perform access control checks on authenticated requests increases the
 ### AS-8: Secrets Management
 
 - **Group:** Application Security
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -199,7 +199,7 @@ Failure to implement HTTP Strict Transport Security (HSTS) with a sufficient max
 ### AS-11: Session Management
 
 - **Group:** Application Security
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -223,7 +223,7 @@ Not re-authenticating regularly and at suitable checkpoints could allow someone 
 ### AS-12: Malware Scanning of Uploaded Files
 
 - **Group:** Application Security
-- **Profile Level:** 2
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -240,7 +240,7 @@ Without scanning uploaded files for malware, there&#39;s an increased risk of ex
 ### AS-13: Exposure of Internal System Details
 
 - **Group:** Application Security
-- **Profile Level:** 2
+- **Profile Level:** 1
 
 #### Control Statement
 
@@ -257,7 +257,7 @@ Disclosure of internal system details or debug stack traces can expose vulnerabi
 ### AS-14: Secure Cryptographic Libraries
 
 - **Group:** Application Security
-- **Profile Level:** 2
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -327,7 +327,7 @@ Allowing unsigned commits in the code repository introduces the risk of unauthor
 ### SC-3: Peer Review
 
 - **Group:** Software Supply Chain
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -448,7 +448,7 @@ Restricting code repositories to closed source can result in duplicated efforts,
 ### ST-1: Vulnerability Assessment
 
 - **Group:** Security Testing
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -472,7 +472,7 @@ Without regular vulnerability assessment scans, hosts remain exposed to undetect
 ### ST-2: Cloud Security Posture Management
 
 - **Group:** Security Testing
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -489,7 +489,7 @@ Lack of continuous configuration scans through cloud security posture management
 ### ST-3: Public Vulnerability Disclosure Programme
 
 - **Group:** Security Testing
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -512,7 +512,7 @@ Lack of a reporting channel for vulnerabilities increases the risk of undetected
 ### ST-4: Security Testing Programme
 
 - **Group:** Security Testing
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -536,7 +536,7 @@ Without undergoing security testing, there&#39;s an increased risk of undetected
 ### ST-5: Vulnerability Management
 
 - **Group:** Security Testing
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -564,12 +564,12 @@ Failure to promptly remediate vulnerabilities increases the risk of potential ex
 |st-5_prm_3|time period (days) (int)|The time period in days to remediate or risk accept medium vulnerability findings.  |
 |st-5_prm_4|time period (days) (int)|The time period in days to remediate or risk accept low vulnerability findings.     |
 
-## NS: Network Security (8)
+## NS: Network Security (11)
 
 ### NS-1: Network and System Component Segmentation
 
 - **Group:** Network Security
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -643,7 +643,7 @@ When routing through the internet, there&#39;s an increased risk of man-in-the-m
 ### NS-5: Network and Application Layer Filtering
 
 - **Group:** Network Security
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -705,7 +705,7 @@ Failure to ensure secure communications between services increases the risk of u
 ### NS-8: Secure Cloud and On-Premises Connectivity
 
 - **Group:** Network Security
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -719,12 +719,77 @@ Design and build secure communications to or from on-premises systems through a 
 
 Insecure connectivity between cloud and on-premises environments can lead to data breaches, unauthorised access, and compromise of both cloud and on-premises resources.
 
-## BR: Backup and Recovery (3)
+### NS-9: Intrusion Prevention System (IPS)/Intrusion Detection System (IDS)
+
+- **Group:** Network Security
+- **Profile Level:** 1
+
+#### Control Statement
+
+Set up and configure an Intrusion Prevention System (IPS)/Intrusion Detection System (IDS) in the network.
+
+#### Control Recommendations
+
+Configure network or host IPS/IDS to detect malicious traffic to/from public or untrusted networks.
+
+#### Risk Statement
+
+Absence of network or host IPS or IDS in the network increases the likelihood of undetected intrusions, putting sensitive data and system integrity at risk.
+
+### NS-10: Private Network Connectivity
+
+- **Group:** Network Security
+- **Profile Level:** 1
+
+#### Control Statement
+
+Implement strong access controls, encryption, and logging for remote developer, maintainer, or administrator access to private network resources.
+
+#### Control Recommendations
+
+Use strong authentication and MFA. Layered security mechanisms and controls include:
+
+- Inspect traffic from gateway to private network;
+
+- Terminate all remote access connections in a dedicated network segment within the network and restrict access to only systems and services allowed by the organisation;
+
+- Implement strong encryption for remote access into internal networks;
+
+- Only allow authorised devices to remotely access internal networks;
+
+- Ensure that remote access connections are not perpetual and re-authenticate remote connections to the VPN gateway on a periodic basis (such as every four hours);
+
+- Set the maximum number of consecutive failed authentication attempts before account lockout for remote access to internal networks; and
+
+- Make sure that split tunnelling is not implemented.
+
+#### Risk Statement
+
+Weak private network security may expose the network to malicious activities, jeopardising the confidentiality, integrity, and availability of critical resources.
+
+### NS-11: Alerts on Firewall Configuration Changes
+
+- **Group:** Network Security
+- **Profile Level:** 0
+
+#### Control Statement
+
+Generate alerts to inform appointed administrators on changes to firewall rules, including the enabling or disabling of rules.
+
+#### Control Recommendations
+
+Implement real time alerts to inform administrators of creation, deletion, modification, enabling and disabling of firewall rules. Also alert administrators when unusual or sudden spike/drop in utilisation of firewall&#39;s system resources.
+
+#### Risk Statement
+
+Any unintended changes to firewall rules can significantly lower the perimeter defence of a network.
+
+## BR: Backup and Recovery (6)
 
 ### BR-1: Backup
 
 - **Group:** Backup and Recovery
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -747,7 +812,7 @@ Without regular backups stored in a secure and separate location, there is an in
 ### BR-2: Recovery Testing
 
 - **Group:** Backup and Recovery
-- **Profile Level:** 2
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -770,7 +835,7 @@ Failure to regularly test recovery processes may result in ineffective response 
 ### BR-3: Backup Retention
 
 - **Group:** Backup and Recovery
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -789,6 +854,63 @@ Lack of prevention measures against the modification or deletion of backups for 
 |ID        |Type                    |Description                                 |
 |----------|------------------------|--------------------------------------------|
 |br-3_prm_1|time period (days) (int)|The time period in days of backup retention.|
+
+### BR-4: Disaster Recovery Plan
+
+- **Group:** Backup and Recovery
+- **Profile Level:** 0
+
+#### Control Statement
+
+Develop, maintain, and regularly test a disaster recovery plan that ensures critical functions and data can be restored within the Recovery Time Objective (RTO) and Recovery Point Objective (RPO) as determined by business requirements and risk assessments.
+
+#### Control Recommendations
+
+The disaster recovery plan should include clearly defined roles and responsibilities, step-by-step recovery procedures, communication protocols during a disaster, and integration with the overall business continuity plan. Assess the effectiveness of the existing disaster recovery plan during disaster recovery exercises.
+
+#### Risk Statement
+
+Absence of a comprehensive disaster recovery plan increases the risk of prolonged system downtime, data loss, and inability to maintain business continuity in the event of a disaster, potentially leading to significant financial losses and damage to organisational reputation.
+
+### BR-5: Business Continuity Plan
+
+- **Group:** Backup and Recovery
+- **Profile Level:** 0
+
+#### Control Statement
+
+Develop a business continuity plan.
+
+#### Control Recommendations
+
+Refer to the [Cyber Security Agency&#39;s Cybersecurity Toolkit for IT Teams](https://www.csa.gov.sg/our-programmes/support-for-enterprises/sg-cyber-safe-programme/cybersecurity-toolkits/cybersecurity-toolkit-for-it-teams) for a business continuity plan template.
+
+#### Risk Statement
+
+Failure to develop a Business Continuity Plan may result in prolonged system downtime, loss of critical data, and diminished organisational resilience during disruptive events, increasing the risk of financial and reputational damage.
+
+### BR-6: Business Continuity Exercise
+
+- **Group:** Backup and Recovery
+- **Profile Level:** 0
+
+#### Control Statement
+
+Conduct a business continuity exercise at least every [br-6_prm_1] day(s) to test the effectiveness of the business continuity plan.
+
+#### Control Recommendations
+
+Conduct testing based on the business continuity plan which can include checklists, tabletop exercises, and simulations.
+
+#### Risk Statement
+
+Failure to conduct regular business continuity exercises may lead to unpreparedness during an actual disruption, increasing response times, operational impact, and the risk of ineffective recovery, ultimately jeopardising business operations and stakeholder trust.
+
+#### Parameters
+
+|ID        |Type                    |Description                                                       |
+|----------|------------------------|------------------------------------------------------------------|
+|br-6_prm_1|time period (days) (int)|The time period in days of business continuity exercise frequency.|
 
 ## DP: Data Protection (4)
 
@@ -874,12 +996,12 @@ Lack of centralised cloud tenant management can lead to inconsistent security po
 |dp-4_prm_1|systems (str)|The systems to be hosted on a central tenant.|
 |dp-4_prm_2|system (str) |The central tenant management structure.     |
 
-## LM: Logging and Monitoring (18)
+## LM: Logging and Monitoring (19)
 
 ### LM-1: Separate Log Storage
 
 - **Group:** Logging and Monitoring
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -896,7 +1018,7 @@ Storing logs in a repository separate from the system component reduces the risk
 ### LM-2: Tamper-Resistant Log Storage
 
 - **Group:** Logging and Monitoring
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -913,7 +1035,7 @@ Without protection measures, logs are susceptible to unauthorised access, modifi
 ### LM-3: Network Flow Logging
 
 - **Group:** Logging and Monitoring
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -930,7 +1052,7 @@ Failing to log network traffic going to and from network interfaces increases th
 ### LM-4: Audit Logging
 
 - **Group:** Logging and Monitoring
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -947,7 +1069,7 @@ Neglecting to log and manage audit events increases the risk of undetected secur
 ### LM-5: Database Logging
 
 - **Group:** Logging and Monitoring
-- **Profile Level:** 2
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -964,7 +1086,7 @@ Neglecting to log database audit events raises the risk of overlooking unauthori
 ### LM-6: Access Logging
 
 - **Group:** Logging and Monitoring
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -981,7 +1103,7 @@ Failure to log access requests sent to web application firewalls, load balancers
 ### LM-7: Host Security Event Logging
 
 - **Group:** Logging and Monitoring
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -998,7 +1120,7 @@ Neglecting to log security events on hosts increases the risk of undetected secu
 ### LM-8: Security Log Retention
 
 - **Group:** Logging and Monitoring
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -1021,7 +1143,7 @@ Failure to retain security logs increases the risk of losing crucial historical 
 ### LM-9: Security Monitoring and Alerting
 
 - **Group:** Logging and Monitoring
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -1055,7 +1177,7 @@ Lack of resource usage monitoring with automated alerts increases the risk of ov
 ### LM-11: Service Level Monitoring and Alerting
 
 - **Group:** Logging and Monitoring
-- **Profile Level:** 2
+- **Profile Level:** 1
 
 #### Control Statement
 
@@ -1095,7 +1217,7 @@ Lack of central security log management and monitoring increases the risk of del
 ### LM-13: Anomalous Database Activity Monitoring
 
 - **Group:** Logging and Monitoring
-- **Profile Level:** 2
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -1112,7 +1234,7 @@ Neglecting to monitor database activities for anomalous behaviour increases the 
 ### LM-14: Web Defacement Monitoring
 
 - **Group:** Logging and Monitoring
-- **Profile Level:** 2
+- **Profile Level:** 1
 
 #### Control Statement
 
@@ -1129,7 +1251,7 @@ Failure to detect and respond to web defacement promptly will lead to prolonged 
 ### LM-15: Structured Log Formatting
 
 - **Group:** Logging and Monitoring
-- **Profile Level:** 2
+- **Profile Level:** 1
 
 #### Control Statement
 
@@ -1180,7 +1302,7 @@ Failing to measure and improve the software delivery performance can lead to ine
 ### LM-19: Log Sanitisation
 
 - **Group:** Logging and Monitoring
-- **Profile Level:** 2
+- **Profile Level:** 1
 
 #### Control Statement
 
@@ -1194,12 +1316,35 @@ Identify types of classified and sensitive data that may appear in logs. When lo
 
 Failing to sanitise logs increases the risk of unauthorised exposure or misuse of sensitive information and other confidential data. This exposure could lead to privacy breaches, financial losses, compliance violations and damage to national reputation.
 
-## AC: Access Control (14)
+### LM-21: Detection Updates
+
+- **Group:** Logging and Monitoring
+- **Profile Level:** 1
+
+#### Control Statement
+
+Update detections for malware and indicators of compromise at least every [lm-21_prm_1] day(s).
+
+#### Control Recommendations
+
+Implement automation to monitor the rollout of detection updates and ensure conformance.
+
+#### Risk Statement
+
+Outdated detection rules increase the risk of undetected compromises.
+
+#### Parameters
+
+|ID         |Type                    |Description                                            |
+|-----------|------------------------|-------------------------------------------------------|
+|lm-21_prm_1|time period (days) (int)|The time period in days for detection update frequency.|
+
+## AC: Access Control (15)
 
 ### AC-1: Principle of Least Privilege
 
 - **Group:** Access Control
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -1216,7 +1361,7 @@ Violating the principle of least privileges increases the risk of unauthorised a
 ### AC-2: Multi-Factor Authentication (MFA)
 
 - **Group:** Access Control
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -1233,7 +1378,7 @@ Without requiring phishing-resistant Multi-Factor Authentication (MFA) for remot
 ### AC-3: Inactive and Expired Accounts
 
 - **Group:** Access Control
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -1282,7 +1427,7 @@ Without regular access reviews and prompt removal of unauthorised or unnecessary
 ### AC-5: Endpoint Device Hardening
 
 - **Group:** Access Control
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -1299,7 +1444,7 @@ Without requiring hardened endpoint devices for remote access, there&#39;s an in
 ### AC-6: Default Credentials
 
 - **Group:** Access Control
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -1392,7 +1537,7 @@ Relying on direct connections or traditional VPNs for remote access can lead to 
 ### AC-11: Single User Endpoints
 
 - **Group:** Access Control
-- **Profile Level:** 2
+- **Profile Level:** 1
 
 #### Control Statement
 
@@ -1432,7 +1577,7 @@ Without Single Sign-On (SSO), there is an increased risk of unauthorised access 
 ### AC-13: Static Credential Expiry and Rotation
 
 - **Group:** Access Control
-- **Profile Level:** 2
+- **Profile Level:** 1
 
 #### Control Statement
 
@@ -1468,6 +1613,23 @@ Regularly review and update the account inventory to ensure accuracy and complet
 #### Risk Statement
 
 Failure to maintain an accurate inventory of managed accounts increases the risk of unauthorised access, account misuse, and security breaches due to unmonitored or orphaned accounts.
+
+### AC-16: Separation of Duties
+
+- **Group:** Access Control
+- **Profile Level:** 1
+
+#### Control Statement
+
+Implement and maintain separation of duties for access and privileges to prevent any single individual from having excessive control over key processes or systems.
+
+#### Control Recommendations
+
+Implement multiple complementary controls to enforce separation of duties, including but not limited to role-based access control (RBAC), Privileged Identity Management (PIM), and Just-In-Time (JIT) access. Where perfect separation is not feasible, use compensating controls such as audit logging, alerting, and rate limits. Consider using tools like Azure AD Privileged Identity Management or AWS Organizations for managing separation of duties in cloud environments.
+
+#### Risk Statement
+
+Failure to implement separation of duties increases the risk of fraud, errors, and misuse of systems due to excessive concentration of privileges, potentially compromising the integrity and security of critical operations.
 
 ## CS: Container Security (11)
 
@@ -1599,7 +1761,7 @@ Failure to scan container images increases the risk of deploying insecure images
 ### CS-8: Private Container Image Registries
 
 - **Group:** Container Security
-- **Profile Level:** 2
+- **Profile Level:** 1
 
 #### Control Statement
 
@@ -1664,12 +1826,12 @@ Runtime protection tools, such as AWS EKS Protection, Microsoft Defender for Con
 
 Failure to detect and remediate changes to running containers using container runtime protection tools increases the risk of unnoticed compromises, potential exploitation, and unauthorised alterations to containerised applications, compromising the security and integrity of the runtime environment.
 
-## PM: Security Programme Management (6)
+## PM: Security Programme Management (8)
 
 ### PM-1: Cybersecurity Incident Management Plan
 
 - **Group:** Security Programme Management
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -1686,7 +1848,7 @@ Lack of a cybersecurity incident management plan increases the risk of ineffecti
 ### PM-2: Risk Assessment
 
 - **Group:** Security Programme Management
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -1770,7 +1932,7 @@ Inconsistent or decentralised submission of the SSP can lead to decreased visibi
 ### PM-6: System Documentation
 
 - **Group:** Security Programme Management
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -1783,6 +1945,46 @@ Example system documentation includes architecture and network diagrams, archite
 #### Risk Statement
 
 Comprehensive documentation of system architecture, components, configurations, and dependencies is essential for effective management, troubleshooting, and security auditing.
+
+### PM-9: Cybersecurity Incident Response Testing
+
+- **Group:** Security Programme Management
+- **Profile Level:** 0
+
+#### Control Statement
+
+Conduct incident response testing and exercises at least every [pm-9_prm_1] day(s) to evaluate the effectiveness of incident response plans and procedures.
+
+#### Control Recommendations
+
+Include tabletop exercises, simulations, and full-scale drills in testing. Involve all relevant stakeholders. Document lessons learned and use them to improve incident response capabilities. Consider engaging third-party services for objective assessment.
+
+#### Risk Statement
+
+Lack of regular incident response testing may lead to ineffective or delayed responses during actual security incidents, potentially increasing the impact and damage of such events.
+
+#### Parameters
+
+|ID        |Type                    |Description                                                         |
+|----------|------------------------|--------------------------------------------------------------------|
+|pm-9_prm_1|time period (days) (int)|The time period in days for cybersecurity incident response testing.|
+
+### PM-10: Cybersecurity Leadership and Oversight
+
+- **Group:** Security Programme Management
+- **Profile Level:** 0
+
+#### Control Statement
+
+Ensure that the board of directors (or equivalent body) and senior management team includes at least one member that has knowledge and awareness of cybersecurity matters to have oversight of cybersecurity risks.
+
+#### Control Recommendations
+
+Regularly assess and document the cybersecurity expertise of board members and senior management. Provide ongoing cybersecurity training and briefings to maintain and enhance their knowledge. Consider appointing a dedicated Chief Information Security Officer (CISO) or equivalent role at the senior management level. Ensure clear communication channels between the board, senior management, and cybersecurity teams.
+
+#### Risk Statement
+
+Lack of cybersecurity expertise at the board and senior management levels may lead to inadequate oversight and management of cybersecurity risks, potentially resulting in increased vulnerability to cyber threats and ineffective risk management strategies.
 
 ## IS: Infrastructure Security (14)
 
@@ -1823,7 +2025,7 @@ Failure to automate security patching of operating systems and included software
 ### IS-3: Restricted Administrator Privileges
 
 - **Group:** Infrastructure Security
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -1857,7 +2059,7 @@ Failure to disable or remove unnecessary functions, system ports, protocols, sof
 ### IS-5: Host System Hardening
 
 - **Group:** Infrastructure Security
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -1891,7 +2093,7 @@ Using remote administration tools enhances security by providing controlled and 
 ### IS-7: Malware Protection
 
 - **Group:** Infrastructure Security
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -1908,7 +2110,7 @@ Without malware protection, there&#39;s an increased risk of undetected maliciou
 ### IS-8: Endpoint Detection and Response (EDR)
 
 - **Group:** Infrastructure Security
-- **Profile Level:** 2
+- **Profile Level:** 1
 
 #### Control Statement
 
@@ -1982,7 +2184,7 @@ Improper management of domain names increase the risk of phishing attacks or dom
 ### IS-12: DNS Security Extensions (DNSSEC)
 
 - **Group:** Infrastructure Security
-- **Profile Level:** 2
+- **Profile Level:** 1
 
 #### Control Statement
 
@@ -1999,7 +2201,7 @@ Insecure domain name resolution can lead to man-in-the-middle attacks caused by 
 ### IS-13: Defensive Domain Name Registration
 
 - **Group:** Infrastructure Security
-- **Profile Level:** 2
+- **Profile Level:** 1
 
 #### Control Statement
 
@@ -2016,7 +2218,7 @@ Malicious use of domain names similar to actual organisation domain names increa
 ### IS-14: Singapore SMS Sender ID Registry Registration
 
 - **Group:** Infrastructure Security
-- **Profile Level:** 0
+- **Profile Level:** 2
 
 #### Control Statement
 
@@ -2030,7 +2232,7 @@ Agencies must use the &quot;gov.sg&quot; Sender ID via the Postman tool to send 
 
 Lack of Sender ID registration allows malicious entities to spoof legitimate Government SMSes.
 
-## SD: Secure Development (8)
+## SD: Secure Development (10)
 
 ### SD-1: Push Protection for Secrets
 
@@ -2069,7 +2271,7 @@ Without configuring the code repository to prevent pushes, including force pushe
 ### SD-3: Continuous Integration (CI) Tests
 
 - **Group:** Secure Development
-- **Profile Level:** 2
+- **Profile Level:** 1
 
 #### Control Statement
 
@@ -2133,7 +2335,7 @@ Failing to schedule regular dependency scanning to identify vulnerable software 
 ### SD-6: Secret Detection
 
 - **Group:** Secure Development
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -2174,7 +2376,7 @@ Failing to protect environment variable secrets in CI jobs by limiting them to p
 ### SD-8: Deployment Environment Segregation
 
 - **Group:** Secure Development
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -2188,12 +2390,52 @@ Achieve segregation using separate cloud tenant accounts for environments such a
 
 Failure to segregate production and non-production environments increases the risk of unauthorised access, data leaks, and denial of service attacks, as compromises in non-production environments may lead to cascading impacts on production systems.
 
-## CK: Cryptography, Encryption and Key Management (2)
+### SD-9: Dynamic Analysis
+
+- **Group:** Secure Development
+- **Profile Level:** 2
+
+#### Control Statement
+
+Implement dynamic analysis testing in the [sd-9_prm_1], and address or risk-accept all identified vulnerabilities before deploying to production.
+
+#### Control Recommendations
+
+Dynamic analysis tools (such as DAST, IAST, or fuzzing tools) test applications in runtime conditions to identify vulnerabilities that may not be apparent in static code. Integrate these tools into your CI/CD pipeline to automatically scan applications in a controlled environment. Ensure that the analysis covers various attack vectors, including input validation, authentication mechanisms, and API endpoints. Regularly update and tune your dynamic analysis tools to detect emerging threats and vulnerabilities.
+
+#### Risk Statement
+
+Failure to perform dynamic analysis in a controlled environment before production deployment increases the risk of undetected runtime vulnerabilities, potentially leading to security breaches, data leaks, and compromised system integrity in the production environment.
+
+#### Parameters
+
+|ID        |Type          |Description                               |
+|----------|--------------|------------------------------------------|
+|sd-9_prm_1|location (str)|The location where static analysis occurs.|
+
+### SD-10: Secure Software Development Lifecycle (SSDLC)
+
+- **Group:** Secure Development
+- **Profile Level:** 1
+
+#### Control Statement
+
+Implement and maintain a secure software development lifecycle based on an industry-standard or organisation-defined framework, integrating security practices throughout all phases of application design, development, testing, deployment, and maintenance.
+
+#### Control Recommendations
+
+Outline a framework that defines roles, responsibilities, and accountability for security throughout the SSDLC. Existing frameworks include NIST Secure Software Development Framework (SSDF), OWASP Software Assurance Maturity Model (SAMM), and Microsoft Security Development Lifecycle (SDL).
+
+#### Risk Statement
+
+Failure to implement a comprehensive secure software development lifecycle increases the risk of introducing vulnerabilities throughout the development process, potentially leading to security breaches, data leaks, and compromised system integrity in production environments.
+
+## CK: Cryptography, Encryption and Key Management (4)
 
 ### CK-1: Cryptographic Key Establishment
 
 - **Group:** Cryptography, Encryption and Key Management
-- **Profile Level:** 2
+- **Profile Level:** 0
 
 #### Control Statement
 
@@ -2210,7 +2452,7 @@ Insecure cryptographic key establishment can lead to weak or broken encryption.
 ### CK-2: Cryptographic Key Rotation
 
 - **Group:** Cryptography, Encryption and Key Management
-- **Profile Level:** 2
+- **Profile Level:** 1
 
 #### Control Statement
 
@@ -2229,3 +2471,175 @@ Failing to rotate cryptographic keys increases the risk of broken encryption.
 |ID        |Type                    |Description                                                     |
 |----------|------------------------|----------------------------------------------------------------|
 |ck-2_prm_1|time period (days) (int)|The time period in days of cryptographic key rotation frequency.|
+
+### CK-3: Cryptographic Key Management
+
+- **Group:** Cryptography, Encryption and Key Management
+- **Profile Level:** 1
+
+#### Control Statement
+
+Implement cryptographic key management processes to ensure cryptographic keys are well-managed and safeguarded throughout their lifecycle.
+
+#### Control Recommendations
+
+Follow key management practices such as those described in NIST SP 800-57 or ISO/IEC 27017 to cover aspects including generation, registration, storage, distribution, installation, use, rotation, backup, recovery, revocation, suspension, and destruction of keys.
+
+#### Risk Statement
+
+Inadequate key management increase the risk of unauthorised access, data breaches, and compromised cryptographic operations due to poorly managed or safeguarded cryptographic keys.
+
+### CK-4: Cryptographic Key Storage
+
+- **Group:** Cryptography, Encryption and Key Management
+- **Profile Level:** 0
+
+#### Control Statement
+
+Securely store cryptographic keys and implement strict access controls based on the principle of least privilege.
+
+#### Control Recommendations
+
+Use cloud services such as AWS Key Management Service and Azure Key Vault to securely store cryptographic keys with access controls.
+
+#### Risk Statement
+
+Inadequate key storage and access controls can lead to unauthorised key access and potential data breaches.
+
+## HR: Human Resource (3)
+
+### HR-1: Security Awareness Training
+
+- **Group:** Human Resource
+- **Profile Level:** 0
+
+#### Control Statement
+
+Conduct security awareness training for all employees that operate and manage the system every [hr-1_prm_1] months.
+
+#### Control Recommendations
+
+Develop a comprehensive security awareness training that covers:
+(a) Relevant laws, regulations, codes of practice, policies, standards, guidelines and procedures
+(b) Phishing and social engineering awareness
+(c) Incident reporting procedures
+(d) Secure handling of sensitive information
+
+Utilise other methods such as posters, emails to provide regular and timely communication covering cybersecurity awareness messages and prevailing threats, impacts and mitigations.
+
+#### Risk Statement
+
+Inadequate or infrequent security awareness programs increase the likelihood of successful social engineering attacks or data breaches and non-compliance due to human error or negligence.
+
+#### Parameters
+
+|ID        |Type                      |Description                                                            |
+|----------|--------------------------|-----------------------------------------------------------------------|
+|hr-1_prm_1|time period (months) (int)|The frequency at which security awareness training should be conducted.|
+
+### HR-2: Security Screening of Employees
+
+- **Group:** Human Resource
+- **Profile Level:** 1
+
+#### Control Statement
+
+Conduct security screening of employees that operate and manage the system, during their hiring phase.
+
+#### Control Recommendations
+
+Consider engaging reputable 3rd party screening companies to conduct background checks before extending employment offers.
+
+#### Risk Statement
+
+Inadequate screening may lead to the hiring of individuals with criminal histories, falsified credentials or conflicts of interest. This potentially leads to insider threats, causing damage to the organisation.
+
+### HR-3: Employee Termination Process
+
+- **Group:** Human Resource
+- **Profile Level:** 1
+
+#### Control Statement
+
+Develop and document a process for the secure termination of employees.
+
+#### Control Recommendations
+
+The employee termination process should include:
+
+1. Deprovisioning accounts promptly before terminating employees to reduce opportunity for damage
+2. Conducting exit interviews to ensure understanding of ongoing confidentiality obligations
+3. Ensuring all issued equipment is returned and inventoried
+4. Secure disposal of employee&#39;s data and removal of access rights
+5. Notification to relevant stakeholders about the employee&#39;s departure and changes to contact points
+
+#### Risk Statement
+
+Inadequate employment termination processes can lead to unauthorised access to sensitive information due to either disgruntled employees retaining access or attackers exploiting non-disabled accounts.
+
+## RS: Resiliency (3)
+
+### RS-1: Multi-AZ Deployment
+
+- **Group:** Resiliency
+- **Profile Level:** 0
+
+#### Control Statement
+
+Deploy the system in [rs-1_prm_1] availability zones (AZs) within the region.
+
+#### Control Recommendations
+
+Utilise cloud-native services for load-balancing and auto-scaling across multiple AZs. Implement health checks and automated failover mechanisms to redirect traffic. Ensure data is replicated across multiple AZs.
+
+#### Risk Statement
+
+Failure to deploy services across multiple availability zones increases the risk of extended service outages due to a single point of failure.
+
+#### Parameters
+
+|ID        |Type                 |Description                                   |
+|----------|---------------------|----------------------------------------------|
+|rs-1_prm_1|number of zones (str)|The number of availability zones to deploy to.|
+
+### RS-2: Dynamic Resource Scaling
+
+- **Group:** Resiliency
+- **Profile Level:** 1
+
+#### Control Statement
+
+Implement and utilise dynamic resource scaling techniques in the system.
+
+#### Control Recommendations
+
+Resource optimisation techniques such as load balancing and auto-scaling should be employed to maximise resource utilisation and minimise idle resources by adjusting to real-time demand fluctuations.
+
+Refer to the AWS Well-Architected Framework&#39;s &#39;Reliability&#39; pillar for further guidance on implementing resilient systems.
+
+#### Risk Statement
+
+Failure to implement dynamic resource scaling may lead to inefficient resource utilisation and potential service degradation during spikes in demand. This can lead to system outages during peak loads, reducing overall system performance and reliability.
+
+### RS-3: Load Testing
+
+- **Group:** Resiliency
+- **Profile Level:** 2
+
+#### Control Statement
+
+Perform load testing every [rs-3_prm_1] days.
+
+#### Control Recommendations
+
+Load testing should be conducted on a replica of the production system. The load should mimic real user traffic.
+
+#### Risk Statement
+
+Inadequate load testing may lead to unexpected system failures during periods of high demand, leading to service interruptions.
+
+#### Parameters
+
+|ID        |Type                    |Description                                             |
+|----------|------------------------|--------------------------------------------------------|
+|rs-3_prm_1|time period (days) (int)|The frequency at which load testing should be performed.|

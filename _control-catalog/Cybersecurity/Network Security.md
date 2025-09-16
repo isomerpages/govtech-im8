@@ -9,29 +9,29 @@ Controls to secure the network boundaries of a system.
 
 | Controls                                                                                                                                        |
 | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| [NS-1: Public and Private Subnet Segmentation](#ns-1-public-and-private-subnet-segmentation)                                                    |
+| [NS-1: Network and System Component Segmentation](#ns-1-network-and-system-component-segmentation)                                              |
 | [NS-2: Access Restrictions on CSP Resources Outside Virtual Network](#ns-2-access-restrictions-on-csp-resources-outside-virtual-network)        |
 | [NS-3: Deny by Default - Allow by Exception](#ns-3-deny-by-default-allow-by-exception)                                                          |
 | [NS-4: Inter-Private Network Connectivity](#ns-4-inter-private-network-connectivity)                                                            |
 | [NS-5: Network and Application Layer Filtering](#ns-5-network-and-application-layer-filtering)                                                  |
 | [NS-6: Valid and Trusted SSL/TLS Certificates](#ns-6-valid-and-trusted-ssltls-certificates)                                                     |
 | [NS-7: Secure Inter-Service Communication](#ns-7-secure-inter-service-communication)                                                            |
-| [NS-8: Secure Government Enterprise Network (GEN) connectivity](#ns-8-secure-government-enterprise-network-gen-connectivity)                    |
+| [NS-8: Secure Cloud and On-Premises Connectivity](#ns-8-secure-cloud-and-on-premises-connectivity)                                              |
 | [NS-9: Intrusion Prevention System (IPS)/Intrusion Detection System (IDS)](#ns-9-intrusion-prevention-system-ipsintrusion-detection-system-ids) |
 | [NS-10: Private Network Connectivity](#ns-10-private-network-connectivity)                                                                      |
 | [NS-11: Alerts on Firewall Configuration Changes](#ns-11-alerts-on-firewall-configuration-changes)                                              |
 
-## NS-1: Public and Private Subnet Segmentation
+## NS-1: Network and System Component Segmentation
 
 **Group:** Network Security
 
 ### Control Statement
 
-Place private resources (e.g., databases) in private subnets and public resources (e.g., reverse proxies, web servers) in public subnets within a virtual network.
+Segment and isolate system components into separate physical and logical networks or environments based on their security requirements and risk levels.
 
 ### Control Recommendations
 
-This control does not apply to serverless resources (API Gateways), static sites or assets fronted by CDNs (e.g., CloudFlare, CloudFront) which are located outside of the virtual network. Private subnets do not allow direct connections from the internet while public subnets do. However, resources in private segments can connect to the internet via NAT Gateways in public subnets in the same virtual network.
+Deploy security controls such as firewalls, security groups, and API gateways to establish and maintain segmentation. In cloud environments, implement a tiered network architecture where internet-facing services are restricted to designated public segments, while sensitive backend systems remain in private segments with controlled outbound access. Consider micro-segmentation for granular control based on workload sensitivity.
 
 ### Risk Statement
 
@@ -51,7 +51,7 @@ Apply access restrictions appropriate to the resource type. Access through inter
 
 - Restrict access to DynamoDB with IAM policies.
 
-- Restrict access to API Gateway with Lambda Authorizers or authorisation middlewares at the application layer. If the API Gateway is exposed to private subnets, create a [private API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-private-apis.html).
+- Restrict access to API Gateway with Lambda authorizers or authorisation middlewares at the application layer. If the API Gateway is exposed to private subnets, create a private API.
 
 - Restrict access to S3 Buckets with IAM policies and block public access from the internet.
 
@@ -89,7 +89,7 @@ Use CSP Private endpoint services (e.g., AWS PrivateLink with VPC endpoints) whe
 
 ### Risk Statement
 
-When routing through the internet, there&#39;s an increased risk of man-in-the-middle and spoofing attacks. Allowing bidirectional access between networks without fine-grained access controls increases the risk of unauthorized access, potential data exfiltration, and compromise of network security compared to unidirectional access to specific resources.
+When routing through the internet, there&#39;s an increased risk of man-in-the-middle and spoofing attacks. Allowing bidirectional access between networks without fine-grained access controls increases the risk of unauthorised access, potential data exfiltration, and compromise of network security compared to unidirectional access to specific resources.
 
 ## NS-5: Network and Application Layer Filtering
 
@@ -150,21 +150,21 @@ Design and build inter-service communications (e.g., databases, microservices) t
 
 Failure to ensure secure communications between services increases the risk of unauthorised access, data breaches, and potential manipulation of sensitive information during transit.
 
-## NS-8: Secure Government Enterprise Network (GEN) connectivity
+## NS-8: Secure Cloud and On-Premises Connectivity
 
 **Group:** Network Security
 
 ### Control Statement
 
-Route network traffic between on-premises systems and GCC systems through a secure intermediary.
+Route network traffic between on-premises systems and cloud systems through a secure intermediary.
 
 ### Control Recommendations
 
-Design and build secure communications to or from on-premises systems (e.g. Government Enterprise Network (GEN)) through a Gateway rather than direct connectivity (e.g. via API gateways, Application proxies or private endpoint services).
+Design and build secure communications to or from on-premises systems through a managed interface with boundary protection mechanisms rather than direct connectivity (e.g. via API gateways, application proxies or private endpoint services).
 
 ### Risk Statement
 
-Routing network traffic through a secure intermediary mitigates the risk of unauthorised access and cross-network compromise in the case of bridging or direct connectivity.
+Insecure connectivity between cloud and on-premises environments can lead to data breaches, unauthorised access, and compromise of both cloud and on-premises resources.
 
 ## NS-9: Intrusion Prevention System (IPS)/Intrusion Detection System (IDS)
 
@@ -192,15 +192,25 @@ Implement strong access controls, encryption, and logging for remote developer, 
 
 ### Control Recommendations
 
-Use strong authentication and MFA (except for mobile GFE). Layered security mechanisms and controls include:
+Use strong authentication and MFA. Layered security mechanisms and controls include:
 
-Inspect traffic from gateway to private network;
+- Inspect traffic from gateway to private network;
 
-Terminate all remote access connections in a dedicated network segment within the network and restrict access to only systems and services allowed by the Agencies; Implement strong encryption for remote access into school staff network; Only authorised Government Furnished Equipment (GFE) shall be used for remote access connection to SSN; Make sure that remote access connections are not perpetual or to re-authenticate remote users to the VPN gateway on a periodic basis (such as every four hours); Set the maximum number of consecutive failed authentication attempts before account lockout for remote access into SSN; and Make sure that split tunnelling is not implemented.
+- Terminate all remote access connections in a dedicated network segment within the network and restrict access to only systems and services allowed by the organisation;
+
+- Implement strong encryption for remote access into internal networks;
+
+- Only allow authorised devices to remotely access internal networks;
+
+- Ensure that remote access connections are not perpetual and re-authenticate remote connections to the VPN gateway on a periodic basis (such as every four hours);
+
+- Set the maximum number of consecutive failed authentication attempts before account lockout for remote access to internal networks; and
+
+- Make sure that split tunnelling is not implemented.
 
 ### Risk Statement
 
-Weak private network security may expose our network to malicious activities, jeopardizing the confidentiality, integrity, and availability of critical resources.
+Weak private network security may expose the network to malicious activities, jeopardising the confidentiality, integrity, and availability of critical resources.
 
 ## NS-11: Alerts on Firewall Configuration Changes
 

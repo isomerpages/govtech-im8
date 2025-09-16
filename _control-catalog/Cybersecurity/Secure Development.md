@@ -7,16 +7,18 @@ third_nav_title: Cybersecurity
 ---
 Controls to secure the development pipeline and perform source code quality assurance.
 
-| Controls                                                                                             |
-| ---------------------------------------------------------------------------------------------------- |
-| [SD-1: Push Protection for Secrets](#sd-1-push-protection-for-secrets)                               |
-| [SD-2: Default Branch Push Permissions](#sd-2-default-branch-push-permissions)                       |
-| [SD-3: Continuous Integration (CI) Tests](#sd-3-continuous-integration-ci-tests)                     |
-| [SD-4: Static Analysis](#sd-4-static-analysis)                                                       |
-| [SD-5: Dependency Scanning](#sd-5-dependency-scanning)                                               |
-| [SD-6: Secret Detection](#sd-6-secret-detection)                                                     |
-| [SD-7: CI Environment Variable Secrets Management](#sd-7-ci-environment-variable-secrets-management) |
-| [SD-8: Deployment Environment Segregation](#sd-8-deployment-environment-segregation)                 |
+| Controls                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------- |
+| [SD-1: Push Protection for Secrets](#sd-1-push-protection-for-secrets)                                     |
+| [SD-2: Default Branch Push Permissions](#sd-2-default-branch-push-permissions)                             |
+| [SD-3: Continuous Integration (CI) Tests](#sd-3-continuous-integration-ci-tests)                           |
+| [SD-4: Static Analysis](#sd-4-static-analysis)                                                             |
+| [SD-5: Dependency Scanning](#sd-5-dependency-scanning)                                                     |
+| [SD-6: Secret Detection](#sd-6-secret-detection)                                                           |
+| [SD-7: CI Environment Variable Secrets Management](#sd-7-ci-environment-variable-secrets-management)       |
+| [SD-8: Deployment Environment Segregation](#sd-8-deployment-environment-segregation)                       |
+| [SD-9: Dynamic Analysis](#sd-9-dynamic-analysis)                                                           |
+| [SD-10: Secure Software Development Lifecycle (SSDLC)](#sd-10-secure-software-development-lifecycle-ssdlc) |
 
 ## SD-1: Push Protection for Secrets
 
@@ -148,7 +150,7 @@ Use GitLab&#39;s CI/CD variable security settings or GitHub&#39;s encrypted secr
 
 ### Risk Statement
 
-Failing to protect environment variable secrets in CI jobs by limiting them to protected pipelines and masking them in job logs increases the risk of unauthorized access and exposure of sensitive information.
+Failing to protect environment variable secrets in CI jobs by limiting them to protected pipelines and masking them in job logs increases the risk of unauthorised access and exposure of sensitive information.
 
 ## SD-8: Deployment Environment Segregation
 
@@ -160,8 +162,46 @@ Segregate production and non-production environments including applications, ser
 
 ### Control Recommendations
 
-Achieve segregation using separate Government on Commercial Cloud (GCC) accounts for environments such as production, development, test, and staging. Account segregation enhances security by limiting exposure, simplifies resource and cost management, maintains configuration integrity, facilitates compliance and auditing and streamlines operational tasks. Deploy and operate environments as similarly as possible to enhance debugging and time-to-market.
+Achieve segregation using separate cloud tenant accounts for environments such as production, development, test, and staging. Account segregation enhances security by limiting exposure, simplifies resource and cost management, maintains configuration integrity, facilitates compliance and auditing and streamlines operational tasks. Deploy and operate environments as similarly as possible to enhance debugging and time-to-market.
 
 ### Risk Statement
 
-Failure to segregate production and non-production environments increases the risk of unauthorized access, data leaks, and denial of service attacks, as compromises in non-production environments may lead to cascading impacts on production systems.
+Failure to segregate production and non-production environments increases the risk of unauthorised access, data leaks, and denial of service attacks, as compromises in non-production environments may lead to cascading impacts on production systems.
+
+## SD-9: Dynamic Analysis
+
+**Group:** Secure Development
+
+### Control Statement
+
+Implement dynamic analysis testing in the [ insert: param, sd-9_prm_1 ], and address or risk-accept all identified vulnerabilities before deploying to production.
+
+### Control Recommendations
+
+Dynamic analysis tools (such as DAST, IAST, or fuzzing tools) test applications in runtime conditions to identify vulnerabilities that may not be apparent in static code. Integrate these tools into your CI/CD pipeline to automatically scan applications in a controlled environment. Ensure that the analysis covers various attack vectors, including input validation, authentication mechanisms, and API endpoints. Regularly update and tune your dynamic analysis tools to detect emerging threats and vulnerabilities.
+
+### Risk Statement
+
+Failure to perform dynamic analysis in a controlled environment before production deployment increases the risk of undetected runtime vulnerabilities, potentially leading to security breaches, data leaks, and compromised system integrity in the production environment.
+
+### Parameters
+
+| ID         | Type           | Description                                |
+| ---------- | -------------- | ------------------------------------------ |
+| sd-9_prm_1 | location (str) | The location where static analysis occurs. |
+
+## SD-10: Secure Software Development Lifecycle (SSDLC)
+
+**Group:** Secure Development
+
+### Control Statement
+
+Implement and maintain a secure software development lifecycle based on an industry-standard or organisation-defined framework, integrating security practices throughout all phases of application design, development, testing, deployment, and maintenance.
+
+### Control Recommendations
+
+Outline a framework that defines roles, responsibilities, and accountability for security throughout the SSDLC. Existing frameworks include NIST Secure Software Development Framework (SSDF), OWASP Software Assurance Maturity Model (SAMM), and Microsoft Security Development Lifecycle (SDL).
+
+### Risk Statement
+
+Failure to implement a comprehensive secure software development lifecycle increases the risk of introducing vulnerabilities throughout the development process, potentially leading to security breaches, data leaks, and compromised system integrity in production environments.

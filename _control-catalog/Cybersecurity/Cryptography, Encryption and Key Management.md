@@ -1,6 +1,6 @@
 ---
 title: Cryptography, Encryption and Key Management
-permalink: /cryptography-encryption-and-key-management/
+permalink: /control-catalog/ck/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity
@@ -12,6 +12,7 @@ Controls to secure cryptographic protocols.
 | [CK-1: Cryptographic Key Establishment](#ck-1-cryptographic-key-establishment) |
 | [CK-2: Cryptographic Key Rotation](#ck-2-cryptographic-key-rotation)           |
 | [CK-3: Cryptographic Key Management](#ck-3-cryptographic-key-management)       |
+| [CK-4: Cryptographic Key Storage](#ck-4-cryptographic-key-storage)             |
 
 ## CK-1: Cryptographic Key Establishment
 
@@ -65,4 +66,20 @@ Follow key management practices such as those described in NIST SP 800-57 or ISO
 
 ### Risk Statement
 
-Inadequate key management increase the risk of unauthorized access, data breaches, and compromised cryptographic operations due to poorly managed or safeguarded cryptographic keys.
+Inadequate key management increase the risk of unauthorised access, data breaches, and compromised cryptographic operations due to poorly managed or safeguarded cryptographic keys.
+
+## CK-4: Cryptographic Key Storage
+
+**Group:** Cryptography, Encryption and Key Management
+
+### Control Statement
+
+Securely store cryptographic keys and implement strict access controls based on the principle of least privilege.
+
+### Control Recommendations
+
+Use cloud services such as AWS Key Management Service and Azure Key Vault to securely store cryptographic keys with access controls.
+
+### Risk Statement
+
+Inadequate key storage and access controls can lead to unauthorised key access and potential data breaches.

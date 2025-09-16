@@ -26,9 +26,8 @@ Controls to support detection and response to security and operations incidents.
 | [LM-15: Structured Log Formatting](#lm-15-structured-log-formatting)                                               |
 | [LM-16: Key Signals Monitoring](#lm-16-key-signals-monitoring)                                                     |
 | [LM-17: Software delivery performance monitoring](#lm-17-software-delivery-performance-monitoring)                 |
-| [LM-18: Whole of Government Application Analytics (WOGAA)](#lm-18-whole-of-government-application-analytics-wogaa) |
 | [LM-19: Log Sanitisation](#lm-19-log-sanitisation)                                                                 |
-| [LM-20: User and Entity Behaviour Analytics](#lm-20-user-and-entity-behaviour-analytics)                           |
+| [LM-21: Detection Updates](#lm-21-detection-updates)                                                               |
 
 ## LM-1: Separate Log Storage
 
@@ -40,7 +39,7 @@ Store logs in a different system or system component than the system component t
 
 ### Control Recommendations
 
-Do not store logs only in the same system component that generated it. For example, an application server on EC2 or ECS should send logs to a separate storage such as an S3 bucket as soon as possible after the logged event instead of only storing it on the server. For cloud audit logs, store them in a separate system or account (such as AWS Organisation Cloudtrail in GCC). Sending logs to the Government Cyber Security Operations Centre (GCSOC) or the central Government Commercial Cloud (GCC) log bucket can also satisfy this control.
+Do not store logs only in the same system component that generated it. For example, an application server on EC2 or ECS should send logs to a separate storage such as an S3 bucket as soon as possible after the logged event instead of only storing it on the server. For cloud audit logs, store them in a separate system or account.
 
 ### Risk Statement
 
@@ -190,7 +189,7 @@ Configure resource usage monitoring to identify abnormal usage and send automate
 
 ### Control Recommendations
 
-Configure Amazon CloudWatch alarms, Azure Monitor alerts, or their equivalents to identify abnormal usage such as spike in usage, access to resources during expected hours, and excessive charges.
+Configure Amazon CloudWatch alarms, Azure Monitor alerts, or their equivalents to identify abnormal usage such as spike in usage, access to resources during unexpected hours, and excessive charges.
 
 ### Risk Statement
 
@@ -206,7 +205,7 @@ Monitor, maintain and alert on service level objectives (SLOs) and indicators (S
 
 ### Control Recommendations
 
-Implement a comprehensive monitoring system that tracks key SLIs and evaluates them against defined SLOs. This will help in identifying potential service level breaches early and take proactive measures to maintain service quality. Examples include Cloudwatch metrics and alerts, Amazon Route 53 health checks, Azure Monitor Application Insights, or their equivalents.
+Implement a comprehensive monitoring system that tracks key SLIs and evaluates them against defined SLOs. This will help in identifying potential service level breaches early and take proactive measures to maintain service quality. Examples include CloudWatch metrics and alerts, Amazon Route 53 health checks, Azure Monitor Application Insights, or their equivalents.
 
 ### Risk Statement
 
@@ -260,7 +259,7 @@ Plan for and implement measures to detect and recover from web defacements.
 
 ### Control Recommendations
 
-The Government Cyber Security Operations Centre (GCSOC) offers centralised monitoring of web defacements of internet-facing systems.
+Visual monitoring tools enable detection of web defacements of internet-facing systems.
 
 ### Risk Statement
 
@@ -276,7 +275,7 @@ Publish logs in a consistent, structured format that aligns with industry standa
 
 ### Control Recommendations
 
-For security logs, implement or transform to OCSF (Open Cybersecurity Schema Framework), ECS (Elastic Common Schema) or similar schemas to standardize log formats for better threat detection and analysis. For operational logs, adopt OpenTelemetry or structured JSON formats to facilitate clear, structured, and efficient log analysis for system performance and diagnostics. Consistent log formatting aids in automated parsing and helps in integrating logs from various sources.
+For security logs, implement or transform to OCSF (Open Cybersecurity Schema Framework), ECS (Elastic Common Schema) or similar schemas to standardise log formats for better threat detection and analysis. For operational logs, adopt OpenTelemetry or structured JSON formats to facilitate clear, structured, and efficient log analysis for system performance and diagnostics. Consistent log formatting aids in automated parsing and helps in integrating logs from various sources.
 
 ### Risk Statement
 
@@ -314,21 +313,6 @@ Implement tools and processes to track Deployment Frequency, Lead Time for Chang
 
 Failing to measure and improve the software delivery performance can lead to inefficient development processes, reduced software quality and longer recovery times.
 
-## LM-18: Whole of Government Application Analytics (WOGAA)
-
-**Group:** Logging and Monitoring
-
-### Control Statement
-
-Implement Whole of Government Application Analytics (WOGAA) in public facing digital services.
-
-### Control Recommendations
-
-Register at the WOGAA portal at https://wogaa.sg/ and follow the implementation documentation at https://docs.wogaa.sg/.
-
-### Risk Statement
-
-Lack of performance tracking can lead to gaps in service delivery.
 
 ## LM-19: Log Sanitisation
 
@@ -346,18 +330,25 @@ Identify types of classified and sensitive data that may appear in logs. When lo
 
 Failing to sanitise logs increases the risk of unauthorised exposure or misuse of sensitive information and other confidential data. This exposure could lead to privacy breaches, financial losses, compliance violations and damage to national reputation.
 
-## LM-20: User and Entity Behaviour Analytics
+
+## LM-21: Detection Updates
 
 **Group:** Logging and Monitoring
 
 ### Control Statement
 
-Implement User and Entity Behaviour Analytics (UEBA) to monitor and analyse user activities for suspicious behaviour and potential threats.
+Update detections for malware and indicators of compromise at least every [ insert: param, lm-21_prm_1 ] day(s).
 
 ### Control Recommendations
 
-Select a UEBA tool that integrates with existing security information and event management (SIEM) solutions and provides real-time alerts for anomalous activities. Ensure regular updates and tuning of the tool to enhance detection capabilities.
+Implement automation to monitor the rollout of detection updates and ensure conformance.
 
 ### Risk Statement
 
-Lack of monitoring for potentially malicious user and entity behaviour increases the risk of insider threats and undetected malicious activities, potentially leading to data breaches and system compromise.
+Outdated detection rules increase the risk of undetected compromises.
+
+### Parameters
+
+| ID          | Type                     | Description                                             |
+| ----------- | ------------------------ | ------------------------------------------------------- |
+| lm-21_prm_1 | time period (days) (int) | The time period in days for detection update frequency. |

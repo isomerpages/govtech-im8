@@ -48,7 +48,7 @@ Set up cloud security posture management that performs continuous configuration 
 
 ### Control Recommendations
 
-Use cloud security posture management tools such as CloudSCAPE, AWS Security Hub, and Datadog Cloud Security Posture Management.
+Use cloud security posture management tools such as AWS Security Hub, Azure Defender for Cloud, and Google Security Command Center.
 
 ### Risk Statement
 
@@ -86,7 +86,7 @@ Conduct and document a [ insert: param, st-4_prm_1 ] by internal teams or indepe
 
 ### Control Recommendations
 
-Refer to the [WOG Security Testing Guidelines](https://docs.developer.tech.gov.sg/docs/security-testing-guidelines/) for recommendations on the conduct of security testing engagements. For systems that are permitted to use Government Bug Bounty Programmeme as an alternative, obtain a passing rating based on the Agency Readiness Scorecard. For SaaS, refer to past penetration testing reports done by the SaaS provider, if any.
+Refer to the WOG Security Testing Guidelines for recommendations on the conduct of security testing engagements. For systems that are permitted to use Government Bug Bounty Programme as an alternative, obtain a passing rating based on the Agency Readiness Scorecard. For SaaS, refer to past penetration testing reports done by the SaaS provider, if any.
 
 ### Risk Statement
 

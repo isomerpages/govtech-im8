@@ -4,10 +4,15 @@ permalink: /ssp/low-risk-on-premises/
 variant: markdown
 description: ""
 ---
-The Low-Risk On-Premises System Security Plan template includes Level 0 and Level 1 baseline controls that are recommended as the default controls for low-risk on-premises systems. Agencies may customise this template to create their own system-specific System Security Plan or use it as a default System Security Plan for generic low-risk on-premises systems.
+The Low-Risk On-Premises System Security Plan template includes Level 0 and Level 1 baseline controls that are recommended as the default controls for low-risk on-premises systems. Agencies are to customise this template to create their own system-specific System Security Plan or use it as a default System Security Plan.
 
+## System Characteristics
 
-## AS: Application Security (14)
+- **Name:** Low-Risk On-Premises System
+- **Description:** A generic system hosted on-premises.
+- **Security Sensitivity Level:** Up to Restricted, Sensitive Normal
+
+## AS: Application Security (15)
 
 ### AS-1: Input Validation
 
@@ -58,7 +63,7 @@ Any application outputs that are returned to the requester and used to render a 
 
 #### Risk Statement
 
-Lack of sanitisation for application outputs used in rendering HTML documents exposes the system to the risk of cross-site scripting (XSS) attacks, allowing malicious code execution in users&#39; browsers.
+Lack of sanitisation for application outputs used in rendering HTML documents exposes the system to the risk of cross-site scripting (XSS) attacks, allowing malicious code execution in browsers.
 
 ### AS-4: Authentication Mechanism Rate-Limiting
 
@@ -84,7 +89,7 @@ Without rate-limiting, there&#39;s an increased risk of unauthorised access as a
 
 #### Control Statement
 
-Where SSO or passwordless is not supported, verify that user-defined passwords are at least [ insert: param, as-5_prm_1 ] characters in length and [ insert: param, as-5_prm_2 ].
+Where SSO or passwordless is not supported, verify that [as-5_prm_3] passwords are at least [as-5_prm_1] characters in length and [as-5_prm_2].
 
 #### Control Recommendations
 
@@ -96,10 +101,11 @@ Short or commonly used passwords increase the vulnerability to unauthorised acce
 
 #### Parameters
 
-| ID         | Type                       | Description                       |
-| ---------- | -------------------------- | --------------------------------- |
-| as-5_prm_1 | number of characters (int) | The minimum length of a password. |
-| as-5_prm_2 | policy (str)               | The password policy.              |
+|ID        |Type                      |Description                      |
+|----------|--------------------------|---------------------------------|
+|as-5_prm_1|number of characters (int)|The minimum length of a password.|
+|as-5_prm_2|policy (str)              |The password policy.             |
+|as-5_prm_3|type (str)                |The type of password.            |
 
 ### AS-6: Password Salting and Hashing
 
@@ -120,7 +126,7 @@ Refer to NIST [SP 800-90Ar1](https://doi.org/10.6028/NIST.SP.800-90Ar1) for suit
 
 #### Risk Statement
 
-Without salting and hashing, in case of a data breach, exposed passwords can be easily extracted, leading to potential compromise of user accounts and sensitive information.
+Without salting and hashing, in case of a data breach, exposed passwords can be easily extracted, leading to potential compromise of accounts and sensitive information.
 
 ### AS-7: Access Control Check Enforcement
 
@@ -150,7 +156,7 @@ Securely store secrets in an appropriate secrets management solution with access
 
 #### Control Recommendations
 
-Secrets include API keys, AWS IAM user access keys, and other static credentials. Do not store secrets unencrypted in source code or configuration files. Store secrets in cloud solutions like AWS Secrets Manager and Azure Key Vault or cloud-agnostic solutions like HashiCorp Vault and CyberArk Conjur. For SaaS or platforms, ensure that secrets are stored in an appropriate solution. For example, use GitHub Actions secrets instead of variables.
+Secrets include API keys, access keys, and other static credentials. Do not store secrets unencrypted in source code or configuration files. Store secrets in cloud-native solutions like AWS Secrets Manager and Azure Key Vault or cloud-agnostic solutions like HashiCorp Vault and CyberArk Conjur. For SaaS or platforms, ensure that secrets are stored in an appropriate solution. For example, use GitHub Actions secrets instead of variables.
 
 #### Risk Statement
 
@@ -197,7 +203,7 @@ Failure to implement HTTP Strict Transport Security (HSTS) with a sufficient max
 
 #### Control Statement
 
-Require users to re-authenticate after their session exceeds [ insert: param, as-11_prm_1 ] hour(s) or terminate the session.
+Require [as-11_prm_2] to re-authenticate after their session exceeds [as-11_prm_1] hour(s) or terminate the session.
 
 #### Control Recommendations
 
@@ -205,13 +211,14 @@ NIST SP 800-63B recommends re-authentication once per 30 days for Authenticator 
 
 #### Risk Statement
 
-Not verifying a user regularly and at suitable checkpoints could allow someone who has access to the user&#39;s account to carry out unauthorised actions.
+Not re-authenticating regularly and at suitable checkpoints could allow someone who has access to the account to carry out unauthorised actions.
 
 #### Parameters
 
-| ID          | Type                      | Description                                               |
-| ----------- | ------------------------- | --------------------------------------------------------- |
-| as-11_prm_1 | time period (hours) (int) | The maximum time period in hours of a user&#39;s session. |
+|ID         |Type                     |Description                                              |
+|-----------|-------------------------|---------------------------------------------------------|
+|as-11_prm_1|time period (hours) (int)|The maximum time period in hours of a user&#39;s session.|
+|as-11_prm_2|type (str)               |The type of session.                                     |
 
 ### AS-12: Malware Scanning of Uploaded Files
 
@@ -220,7 +227,7 @@ Not verifying a user regularly and at suitable checkpoints could allow someone w
 
 #### Control Statement
 
-Scan file uploads for malware before further processing by the system or users.
+Scan file uploads for malware before further processing by the system.
 
 #### Control Recommendations
 
@@ -237,11 +244,11 @@ Without scanning uploaded files for malware, there&#39;s an increased risk of ex
 
 #### Control Statement
 
-Prevent the unnecessary disclosure of internal system details to end users.
+Prevent the unnecessary disclosure of internal system details to Public Users.
 
 #### Control Recommendations
 
-Ensure all system messages and notifications are informative yet secure. These messages should be contextually appropriate, providing end-users with relevant information without exposing internal system details such as debug information, stack traces, or software versioning.
+Ensure all system messages and notifications are informative yet secure. These messages should be contextually appropriate, providing relevant information without exposing internal system details such as debug information, stack traces, or software versioning.
 
 #### Risk Statement
 
@@ -258,11 +265,28 @@ Use reputable and secure cryptographic libraries and functions to handle cryptog
 
 #### Control Recommendations
 
-Follow the OWASP Cryptographic Storage Cheat Sheet for best practices in securely implementing cryptographic operations. Regularly update libraries and prefer widely recognized ones such as OpenSSL. Consider using libraries that are FIPS 140-2 or FIPS 140-3 compliant for enhanced security assurance.
+Follow the OWASP Cryptographic Storage Cheat Sheet for best practices in securely implementing cryptographic operations. Regularly update libraries and prefer widely recognised ones such as OpenSSL. Consider using libraries that are FIPS 140-2 or FIPS 140-3 compliant for enhanced security assurance.
 
 #### Risk Statement
 
-Using insecure cryptographic libraries and functions can expose applications to significant security risks, such as data breaches and unauthorized access, compromising sensitive information.
+Using insecure cryptographic libraries and functions can expose applications to significant security risks, such as data breaches and unauthorised access, compromising sensitive information.
+
+### AS-15: Password Change
+
+- **Group:** Application Security
+- **Profile Level:** 1
+
+#### Control Statement
+
+Enforce password change upon suspected account compromise.
+
+#### Control Recommendations
+
+Implement mechanisms to detect signs of account compromise, such as unusual login activity or multiple failed login attempts. Notify users promptly to change their passwords and provide guidance on creating strong, unique passwords. Consider integrating multi-factor authentication to enhance security.
+
+#### Risk Statement
+
+Failure to enforce password changes upon suspected account compromise increases the risk of prolonged unauthorised access, leading to potential data breaches and exploitation of systems.
 
 ## SC: Software Supply Chain (9)
 
@@ -277,7 +301,7 @@ Manage the codebase in a central code repository with version control.
 
 #### Control Recommendations
 
-Use common platforms such as SHIP-HATS 2.0 GitLab or equivalents.
+Use common internal platforms that provide Git repository services.
 
 #### Risk Statement
 
@@ -409,11 +433,11 @@ Without verifying the signatures of code and artefacts before deployment or runt
 
 #### Control Statement
 
-Share source code within Government to enhance code quality, accelerate innovation, and improve problem-solving efficiency.
+Share source code internally to enhance code quality, accelerate innovation, and improve problem-solving efficiency.
 
 #### Control Recommendations
 
-Adopt Innersource practices for internal collaboration, utilizing platforms like SHIP-HATS GitLab to manage and share code repositories in Government. Source code should be evaluated for suitability for innersourcing, such as the use of confidential algorithms or embedded sensitive data. The Innersource guidelines published in Developers Portal provide a useful framework for code sharing.
+Adopt InnerSource practices for internal collaboration, utilising Git platforms to manage and share code repositories internally. Source code should be evaluated for suitability for InnerSourcing, such as the use of confidential algorithms or embedded sensitive data. The InnerSource guidelines published in the Singapore Government Developer Portal provide a useful framework for code sharing.
 
 #### Risk Statement
 
@@ -428,7 +452,7 @@ Restricting code repositories to closed source can result in duplicated efforts,
 
 #### Control Statement
 
-Run regular [ insert: param, st-1_prm_1 ] vulnerability assessment scans for eligible hosts at least every [ insert: param, st-1_prm_2 ] day(s).
+Run regular [st-1_prm_1] vulnerability assessment scans for eligible hosts at least every [st-1_prm_2] day(s).
 
 #### Control Recommendations
 
@@ -440,10 +464,10 @@ Without regular vulnerability assessment scans, hosts remain exposed to undetect
 
 #### Parameters
 
-| ID         | Type                     | Description                                                 |
-| ---------- | ------------------------ | ----------------------------------------------------------- |
-| st-1_prm_1 | type (str)               | The type of vulnerability assessment scanning.              |
-| st-1_prm_2 | time period (days) (int) | The time period in days for vulnerability assessment scans. |
+|ID        |Type                    |Description                                                |
+|----------|------------------------|-----------------------------------------------------------|
+|st-1_prm_1|type (str)              |The type of vulnerability assessment scanning.             |
+|st-1_prm_2|time period (days) (int)|The time period in days for vulnerability assessment scans.|
 
 ### ST-3: Public Vulnerability Disclosure Programme
 
@@ -452,7 +476,7 @@ Without regular vulnerability assessment scans, hosts remain exposed to undetect
 
 #### Control Statement
 
-Establish a public reporting channel for disclosing vulnerabilities in public-facing systems via [ insert: param, st-3_prm_1 ].
+Establish a public reporting channel for disclosing vulnerabilities in public-facing systems via [st-3_prm_1].
 
 #### Control Recommendations
 
@@ -464,9 +488,9 @@ Lack of a reporting channel for vulnerabilities increases the risk of undetected
 
 #### Parameters
 
-| ID         | Type       | Description                                         |
-| ---------- | ---------- | --------------------------------------------------- |
-| st-3_prm_1 | type (str) | The type of public vulnerability reporting channel. |
+|ID        |Type      |Description                                        |
+|----------|----------|---------------------------------------------------|
+|st-3_prm_1|type (str)|The type of public vulnerability reporting channel.|
 
 ### ST-4: Security Testing Programme
 
@@ -475,11 +499,11 @@ Lack of a reporting channel for vulnerabilities increases the risk of undetected
 
 #### Control Statement
 
-Conduct and document a [ insert: param, st-4_prm_1 ] by internal teams or independent external parties every [ insert: param, st-4_prm_2 ] day(s).
+Conduct and document a [st-4_prm_1] by internal teams or independent external parties every [st-4_prm_2] day(s).
 
 #### Control Recommendations
 
-Refer to the [WOG Security Testing Guidelines](https://docs.developer.tech.gov.sg/docs/security-testing-guidelines/) for recommendations on the conduct of security testing engagements. For systems that are permitted to use Government Bug Bounty Programmeme as an alternative, obtain a passing rating based on the Agency Readiness Scorecard. For SaaS, refer to past penetration testing reports done by the SaaS provider, if any.
+Refer to the WOG Security Testing Guidelines for recommendations on the conduct of security testing engagements. For systems that are permitted to use Government Bug Bounty Programme as an alternative, obtain a passing rating based on the Agency Readiness Scorecard. For SaaS, refer to past penetration testing reports done by the SaaS provider, if any.
 
 #### Risk Statement
 
@@ -487,10 +511,10 @@ Without undergoing security testing, there&#39;s an increased risk of undetected
 
 #### Parameters
 
-| ID         | Type                     | Description                                               |
-| ---------- | ------------------------ | --------------------------------------------------------- |
-| st-4_prm_1 | type (str)               | The type of security testing programme.                   |
-| st-4_prm_2 | time period (days) (int) | The time period in days of penetration testing frequency. |
+|ID        |Type                    |Description                                              |
+|----------|------------------------|---------------------------------------------------------|
+|st-4_prm_1|type (str)              |The type of security testing programme.                  |
+|st-4_prm_2|time period (days) (int)|The time period in days of penetration testing frequency.|
 
 ### ST-5: Vulnerability Management
 
@@ -501,10 +525,10 @@ Without undergoing security testing, there&#39;s an increased risk of undetected
 
 Triage, prioritise and then remediate or risk accept vulnerabilities that materially impact security within the following timeframe based on severity:
 
-- Critical: [ insert: param, st-5_prm_1 ] day(s)
-- High: [ insert: param, st-5_prm_2 ] day(s)
-- Medium: [ insert: param, st-5_prm_3 ] day(s)
-- Low: [ insert: param, st-5_prm_4 ] day(s)
+- Critical: [st-5_prm_1] day(s)
+- High: [st-5_prm_2] day(s)
+- Medium: [st-5_prm_3] day(s)
+- Low: [st-5_prm_4] day(s)
 
 #### Control Recommendations
 
@@ -516,27 +540,27 @@ Failure to promptly remediate vulnerabilities increases the risk of potential ex
 
 #### Parameters
 
-| ID         | Type                     | Description                                                                          |
-| ---------- | ------------------------ | ------------------------------------------------------------------------------------ |
-| st-5_prm_1 | time period (days) (int) | The time period in days to remediate or risk accept critical vulnerability findings. |
-| st-5_prm_2 | time period (days) (int) | The time period in days to remediate or risk accept high vulnerability findings.     |
-| st-5_prm_3 | time period (days) (int) | The time period in days to remediate or risk accept medium vulnerability findings.   |
-| st-5_prm_4 | time period (days) (int) | The time period in days to remediate or risk accept low vulnerability findings.      |
+|ID        |Type                    |Description                                                                         |
+|----------|------------------------|------------------------------------------------------------------------------------|
+|st-5_prm_1|time period (days) (int)|The time period in days to remediate or risk accept critical vulnerability findings.|
+|st-5_prm_2|time period (days) (int)|The time period in days to remediate or risk accept high vulnerability findings.    |
+|st-5_prm_3|time period (days) (int)|The time period in days to remediate or risk accept medium vulnerability findings.  |
+|st-5_prm_4|time period (days) (int)|The time period in days to remediate or risk accept low vulnerability findings.     |
 
 ## NS: Network Security (8)
 
-### NS-1: Public and Private Subnet Segmentation
+### NS-1: Network and System Component Segmentation
 
 - **Group:** Network Security
 - **Profile Level:** 1
 
 #### Control Statement
 
-Place private resources (e.g., databases) in private subnets and public resources (e.g., reverse proxies, web servers) in public subnets within a virtual network.
+Segment and isolate system components into separate physical and logical networks or environments based on their security requirements and risk levels.
 
 #### Control Recommendations
 
-This control does not apply to serverless resources (API Gateways), static sites or assets fronted by CDNs (e.g., CloudFlare, CloudFront) which are located outside of the virtual network. Private subnets do not allow direct connections from the internet while public subnets do. However, resources in private segments can connect to the internet via NAT Gateways in public subnets in the same virtual network.
+Deploy security controls such as firewalls, security groups, and API gateways to establish and maintain segmentation. In cloud environments, implement a tiered network architecture where internet-facing services are restricted to designated public segments, while sensitive backend systems remain in private segments with controlled outbound access. Consider micro-segmentation for granular control based on workload sensitivity.
 
 #### Risk Statement
 
@@ -604,22 +628,22 @@ Configure a certificate manager that auto-renews certificates and sends alerts b
 
 Using invalid SSL/TLS certificates introduces the risk of compromised encryption, man-in-the-middle attacks, and potential unauthorised access to sensitive information.
 
-### NS-8: Secure Government Enterprise Network (GEN) connectivity
+### NS-8: Secure Cloud and On-Premises Connectivity
 
 - **Group:** Network Security
 - **Profile Level:** 1
 
 #### Control Statement
 
-Route network traffic between on-premises systems and GCC systems through a secure intermediary.
+Route network traffic between on-premises systems and cloud systems through a secure intermediary.
 
 #### Control Recommendations
 
-Design and build secure communications to or from on-premises systems (e.g. Government Enterprise Network (GEN)) through a Gateway rather than direct connectivity (e.g. via API gateways, Application proxies or private endpoint services).
+Design and build secure communications to or from on-premises systems through a managed interface with boundary protection mechanisms rather than direct connectivity (e.g. via API gateways, application proxies or private endpoint services).
 
 #### Risk Statement
 
-Routing network traffic through a secure intermediary mitigates the risk of unauthorised access and cross-network compromise in the case of bridging or direct connectivity.
+Insecure connectivity between cloud and on-premises environments can lead to data breaches, unauthorised access, and compromise of both cloud and on-premises resources.
 
 ### NS-9: Intrusion Prevention System (IPS)/Intrusion Detection System (IDS)
 
@@ -649,15 +673,25 @@ Implement strong access controls, encryption, and logging for remote developer, 
 
 #### Control Recommendations
 
-Use strong authentication and MFA (except for mobile GFE). Layered security mechanisms and controls include:
+Use strong authentication and MFA. Layered security mechanisms and controls include:
 
-Inspect traffic from gateway to private network;
+- Inspect traffic from gateway to private network;
 
-Terminate all remote access connections in a dedicated network segment within the network and restrict access to only systems and services allowed by the Agencies; Implement strong encryption for remote access into school staff network; Only authorised Government Furnished Equipment (GFE) shall be used for remote access connection to SSN; Make sure that remote access connections are not perpetual or to re-authenticate remote users to the VPN gateway on a periodic basis (such as every four hours); Set the maximum number of consecutive failed authentication attempts before account lockout for remote access into SSN; and Make sure that split tunnelling is not implemented.
+- Terminate all remote access connections in a dedicated network segment within the network and restrict access to only systems and services allowed by the organisation;
+
+- Implement strong encryption for remote access into internal networks;
+
+- Only allow authorised devices to remotely access internal networks;
+
+- Ensure that remote access connections are not perpetual and re-authenticate remote connections to the VPN gateway on a periodic basis (such as every four hours);
+
+- Set the maximum number of consecutive failed authentication attempts before account lockout for remote access to internal networks; and
+
+- Make sure that split tunnelling is not implemented.
 
 #### Risk Statement
 
-Weak private network security may expose our network to malicious activities, jeopardizing the confidentiality, integrity, and availability of critical resources.
+Weak private network security may expose the network to malicious activities, jeopardising the confidentiality, integrity, and availability of critical resources.
 
 ### NS-11: Alerts on Firewall Configuration Changes
 
@@ -685,7 +719,7 @@ Any unintended changes to firewall rules can significantly lower the perimeter d
 
 #### Control Statement
 
-Backup all important data and systems at least every [ insert: param, br-1_prm_1 ] day(s), and store backups in a secure and separate location.
+Backup all important data and systems at least every [br-1_prm_1] day(s), and store backups in a secure and separate location.
 
 #### Control Recommendations
 
@@ -697,9 +731,9 @@ Without regular backups stored in a secure and separate location, there is an in
 
 #### Parameters
 
-| ID         | Type                     | Description                         |
-| ---------- | ------------------------ | ----------------------------------- |
-| br-1_prm_1 | time period (days) (int) | The time period in days for backup. |
+|ID        |Type                    |Description                        |
+|----------|------------------------|-----------------------------------|
+|br-1_prm_1|time period (days) (int)|The time period in days for backup.|
 
 ### BR-2: Recovery Testing
 
@@ -708,7 +742,7 @@ Without regular backups stored in a secure and separate location, there is an in
 
 #### Control Statement
 
-Conduct testing of recovery processes at least every [ insert: param, br-2_prm_1 ] day(s) to ensure their effectiveness.
+Conduct testing of recovery processes at least every [br-2_prm_1] day(s) to ensure their effectiveness.
 
 #### Control Recommendations
 
@@ -720,9 +754,9 @@ Failure to regularly test recovery processes may result in ineffective response 
 
 #### Parameters
 
-| ID         | Type                     | Description                                   |
-| ---------- | ------------------------ | --------------------------------------------- |
-| br-2_prm_1 | time period (days) (int) | The time period in days for recovery testing. |
+|ID        |Type                    |Description                                  |
+|----------|------------------------|---------------------------------------------|
+|br-2_prm_1|time period (days) (int)|The time period in days for recovery testing.|
 
 ### BR-3: Backup Retention
 
@@ -731,7 +765,7 @@ Failure to regularly test recovery processes may result in ineffective response 
 
 #### Control Statement
 
-Prevent backups from being modified or deleted for [ insert: param, br-3_prm_1 ] day(s) or as stipulated in the agency&#39;s data retention policies.
+Prevent backups from being modified or deleted for [br-3_prm_1] day(s) or as stipulated in the agency&#39;s data retention policies.
 
 #### Control Recommendations
 
@@ -743,34 +777,35 @@ Lack of prevention measures against the modification or deletion of backups for 
 
 #### Parameters
 
-| ID         | Type                     | Description                                  |
-| ---------- | ------------------------ | -------------------------------------------- |
-| br-3_prm_1 | time period (days) (int) | The time period in days of backup retention. |
+|ID        |Type                    |Description                                 |
+|----------|------------------------|--------------------------------------------|
+|br-3_prm_1|time period (days) (int)|The time period in days of backup retention.|
 
 ## DP: Data Protection (5)
 
 ### DP-1: Data Residency
 
 - **Group:** Data Protection
-- **Profile Level:** 1
+- **Profile Level:** 0
 
 #### Control Statement
 
-Enforce data residency of primary data in [ insert: param, dp-1_prm_1 ].
+Enforce data residency of [dp-1_prm_2] data in [dp-1_prm_1].
 
 #### Control Recommendations
 
-Use the appropriate region of cloud service providers for compute and storage of data, such as ap-southeast-1 for Singapore in AWS.
+Data residency in Singapore must be enforced for [dp-1_prm_2] data.
 
 #### Risk Statement
 
-Failure to enforce data residency of primary data in the appropriate country may lead to legal and regulatory compliance issues, privacy concerns, and potential unauthorised access or storage of sensitive data outside the jurisdiction, increasing the risk of legal consequences and data breaches.
+Failure to enforce data residency in the appropriate country may lead to legal and regulatory compliance issues, privacy concerns, and potential unauthorised access or storage of sensitive data outside the jurisdiction, increasing the risk of legal consequences and data breaches.
 
 #### Parameters
 
-| ID         | Type          | Description                              |
-| ---------- | ------------- | ---------------------------------------- |
-| dp-1_prm_1 | country (str) | The country the primary data resides in. |
+|ID        |Type         |Description                                               |
+|----------|-------------|----------------------------------------------------------|
+|dp-1_prm_1|country (str)|The country the data resides in.                          |
+|dp-1_prm_2|type (str)   |The type of data that should have enforced data residency.|
 
 ### DP-2: Data at Rest Encryption
 
@@ -856,7 +891,7 @@ Store logs in a different system or system component than the system component t
 
 #### Control Recommendations
 
-Do not store logs only in the same system component that generated it. For example, an application server on EC2 or ECS should send logs to a separate storage such as an S3 bucket as soon as possible after the logged event instead of only storing it on the server. For cloud audit logs, store them in a separate system or account (such as AWS Organisation Cloudtrail in GCC). Sending logs to the Government Cyber Security Operations Centre (GCSOC) or the central Government Commercial Cloud (GCC) log bucket can also satisfy this control.
+Do not store logs only in the same system component that generated it. For example, an application server on EC2 or ECS should send logs to a separate storage such as an S3 bucket as soon as possible after the logged event instead of only storing it on the server. For cloud audit logs, store them in a separate system or account.
 
 #### Risk Statement
 
@@ -937,7 +972,7 @@ Neglecting to log security events on hosts increases the risk of undetected secu
 
 #### Control Statement
 
-Retain security logs for at least [ insert: param, lm-8_prm_1 ] day(s).
+Retain security logs for at least [lm-8_prm_1] day(s).
 
 #### Control Recommendations
 
@@ -949,9 +984,9 @@ Failure to retain security logs increases the risk of losing crucial historical 
 
 #### Parameters
 
-| ID         | Type                     | Description                               |
-| ---------- | ------------------------ | ----------------------------------------- |
-| lm-8_prm_1 | time period (days) (int) | The time period in days of log retention. |
+|ID        |Type                    |Description                              |
+|----------|------------------------|-----------------------------------------|
+|lm-8_prm_1|time period (days) (int)|The time period in days of log retention.|
 
 ### LM-9: Security Monitoring and Alerting
 
@@ -981,7 +1016,7 @@ Monitor, maintain and alert on service level objectives (SLOs) and indicators (S
 
 #### Control Recommendations
 
-Implement a comprehensive monitoring system that tracks key SLIs and evaluates them against defined SLOs. This will help in identifying potential service level breaches early and take proactive measures to maintain service quality. Examples include Cloudwatch metrics and alerts, Amazon Route 53 health checks, Azure Monitor Application Insights, or their equivalents.
+Implement a comprehensive monitoring system that tracks key SLIs and evaluates them against defined SLOs. This will help in identifying potential service level breaches early and take proactive measures to maintain service quality. Examples include CloudWatch metrics and alerts, Amazon Route 53 health checks, Azure Monitor Application Insights, or their equivalents.
 
 #### Risk Statement
 
@@ -994,7 +1029,7 @@ Without effective service level monitoring to identify potential application or 
 
 #### Control Statement
 
-Centralise security log management and monitoring with [ insert: param, lm-12_prm_1 ].
+Centralise security log management and monitoring with [lm-12_prm_1].
 
 #### Control Recommendations
 
@@ -1006,9 +1041,9 @@ Lack of central security log management and monitoring increases the risk of del
 
 #### Parameters
 
-| ID          | Type          | Description                                                 |
-| ----------- | ------------- | ----------------------------------------------------------- |
-| lm-12_prm_1 | service (str) | The central security log management and monitoring service. |
+|ID         |Type         |Description                                                |
+|-----------|-------------|-----------------------------------------------------------|
+|lm-12_prm_1|service (str)|The central security log management and monitoring service.|
 
 ### LM-13: Anomalous Database Activity Monitoring
 
@@ -1038,7 +1073,7 @@ Plan for and implement measures to detect and recover from web defacements.
 
 #### Control Recommendations
 
-The Government Cyber Security Operations Centre (GCSOC) offers centralised monitoring of web defacements of internet-facing systems.
+Visual monitoring tools enable detection of web defacements of internet-facing systems.
 
 #### Risk Statement
 
@@ -1055,7 +1090,7 @@ Publish logs in a consistent, structured format that aligns with industry standa
 
 #### Control Recommendations
 
-For security logs, implement or transform to OCSF (Open Cybersecurity Schema Framework), ECS (Elastic Common Schema) or similar schemas to standardize log formats for better threat detection and analysis. For operational logs, adopt OpenTelemetry or structured JSON formats to facilitate clear, structured, and efficient log analysis for system performance and diagnostics. Consistent log formatting aids in automated parsing and helps in integrating logs from various sources.
+For security logs, implement or transform to OCSF (Open Cybersecurity Schema Framework), ECS (Elastic Common Schema) or similar schemas to standardise log formats for better threat detection and analysis. For operational logs, adopt OpenTelemetry or structured JSON formats to facilitate clear, structured, and efficient log analysis for system performance and diagnostics. Consistent log formatting aids in automated parsing and helps in integrating logs from various sources.
 
 #### Risk Statement
 
@@ -1146,7 +1181,7 @@ Ensure that the authentication factors are different and independent of the acce
 
 #### Risk Statement
 
-Without requiring phishing-resistant Multi-Factor Authentication (MFA) for remote access, there is an increased risk of unauthorised access, credential theft, and potential compromise of sensitive systems, especially for users with elevated privileges.
+Without requiring phishing-resistant Multi-Factor Authentication (MFA) for remote access, there is an increased risk of unauthorised access, credential theft, and potential compromise of sensitive systems, especially for accounts with elevated privileges.
 
 ### AC-3: Inactive and Expired Accounts
 
@@ -1155,11 +1190,11 @@ Without requiring phishing-resistant Multi-Factor Authentication (MFA) for remot
 
 #### Control Statement
 
-Disable or remove [ insert: param, ac-3_prm_1 ] accounts within [ insert: param, ac-3_prm_2 ] day(s) from last day of authorised use or have not been used for [ insert: param, ac-3_prm_3 ] day(s).
+Disable or remove [ac-3_prm_3] accounts within [ac-3_prm_1] day(s) from last day of authorised use or have not been used for [ac-3_prm_2] day(s).
 
 #### Control Recommendations
 
-Use automated checks to identify accounts and credentials that should be disabled. Consider using automated workflows such as System for Cross-domain Identity Management (SCIM) or identity lifecycle management tools. For cloud service provider accounts, use tools such as AWS Config iam-user-unused-credentials-check to manage Identity and Access Management (IAM) users.
+Use automated checks to identify accounts and credentials that should be disabled. Consider using automated workflows such as System for Cross-domain Identity Management (SCIM) or identity lifecycle management tools. For cloud service provider accounts, use tools such as AWS Config iam-user-unused-credentials-check to manage Identity and Access Management (IAM) Users.
 
 #### Risk Statement
 
@@ -1167,11 +1202,11 @@ Failure to disable or remove unused accounts or credentials with elevated access
 
 #### Parameters
 
-| ID         | Type                     | Description                                    |
-| ---------- | ------------------------ | ---------------------------------------------- |
-| ac-3_prm_1 | type (str)               | The type of accounts.                          |
-| ac-3_prm_2 | time period (days) (int) | The time period in days after account expiry.  |
-| ac-3_prm_3 | time period (days) (int) | The time period in days of account inactivity. |
+|ID        |Type                    |Description                                   |
+|----------|------------------------|----------------------------------------------|
+|ac-3_prm_1|time period (days) (int)|The time period in days after account expiry. |
+|ac-3_prm_2|time period (days) (int)|The time period in days of account inactivity.|
+|ac-3_prm_3|type (str)              |The type of accounts.                         |
 
 ### AC-4: Access Review
 
@@ -1180,11 +1215,11 @@ Failure to disable or remove unused accounts or credentials with elevated access
 
 #### Control Statement
 
-Perform an access review [ insert: param, ac-4_prm_1 ] and remove unauthorised or unnecessary access rights within [ insert: param, ac-4_prm_2 ] day(s).
+Perform an access review [ac-4_prm_1] and remove unauthorised or unnecessary access rights within [ac-4_prm_2] day(s).
 
 #### Control Recommendations
 
-For user accounts in applications, implement automated review workflows or reports. For cloud service provider accounts and roles, use tools such as AWS IAM Access Advisor or Azure AD Access Review to facilitate and manage access reviews.
+For application accounts, implement automated review workflows or reports. For cloud service provider accounts and roles, use tools such as AWS IAM Access Advisor or Azure AD Access Review to facilitate and manage access reviews.
 
 #### Risk Statement
 
@@ -1192,10 +1227,10 @@ Without regular access reviews and prompt removal of unauthorised or unnecessary
 
 #### Parameters
 
-| ID         | Type                                 | Description                                 |
-| ---------- | ------------------------------------ | ------------------------------------------- |
-| ac-4_prm_1 | organisation-defined frequency (str) | The access review frequency.                |
-| ac-4_prm_2 | time period (days) (int)             | The time period in days for access removal. |
+|ID        |Type                                |Description                                |
+|----------|------------------------------------|-------------------------------------------|
+|ac-4_prm_1|organisation-defined frequency (str)|The access review frequency.               |
+|ac-4_prm_2|time period (days) (int)            |The time period in days for access removal.|
 
 ### AC-5: Endpoint Device Hardening
 
@@ -1208,7 +1243,7 @@ Require hardened endpoint devices for remote developer, maintainer, or administr
 
 #### Control Recommendations
 
-Use Endpoint Management platfoms to continuously check and enforce device security posture and deny access if the hardening requirements are not met. Hardened devices include Government Standard Image Build (GSIB) and Security Suite for Engineering Endpoint Devices (SEED).
+Use Endpoint Management platforms to continuously check and enforce device security posture and deny access if the hardening requirements are not met.
 
 #### Risk Statement
 
@@ -1231,18 +1266,18 @@ Identify any default credentials used in any system components before deploying 
 
 Failure to change default credentials prior to first use increases the risk of unauthorised access, as default credentials are often well-known and targeted by attackers, compromising the security of the system or device.
 
-### AC-7: Singpass/Corppass for External Users
+### AC-7: Singpass/Corppass for Public Users
 
 - **Group:** Access Control
 - **Profile Level:** 1
 
 #### Control Statement
 
-Use Singpass or Corppass MFA for digital services that require high level of identity assurance for external users.
+Use Singpass or Corppass MFA for digital services that require high level of identity assurance for Public Users.
 
 #### Control Recommendations
 
-For high impact or high risk transactions, use Singpass/Corppass to identify external users (e.g. citizens). Internal users should use Government managed Single Sign-on (SSO) solutions (such as WOG AAD).
+For high impact or high risk transactions, use Singpass/Corppass to identify Public Users (e.g. citizens). Agency or internal Users should use Government managed Single Sign-on (SSO) solutions (such as WOG AAD).
 
 #### Risk Statement
 
@@ -1255,11 +1290,11 @@ Leverage on Singpass or Corppass to reduce duplication of effort and provide con
 
 #### Control Statement
 
-Automate account [ insert: param, ac-8_prm_1 ] for internal users using an account lifecycle management tool.
+Automate account [ac-8_prm_1] for [ac-8_prm_3] using an account lifecycle management tool.
 
 #### Control Recommendations
 
-Consider adopting Single Sign-On (SSO) with just-in-time provisioning or account lifecycle management protocols or tools such as [ insert: param, ac-8_prm_2 ]. Perform validation testing of the integration between systems and tools to ensure that accounts are provisioned and/or deprovisioned in a timely manner. Where applicable, configure the system to enhance management capabilities via automation.
+Consider adopting Single Sign-On (SSO) with just-in-time provisioning or account lifecycle management protocols or tools such as [ac-8_prm_2]. Perform validation testing of the integration between systems and tools to ensure that accounts are provisioned and/or deprovisioned in a timely manner. Where applicable, configure the system to enhance management capabilities via automation.
 
 #### Risk Statement
 
@@ -1267,10 +1302,11 @@ Manual account and access lifecycle management can introduce errors and weakness
 
 #### Parameters
 
-| ID         | Type          | Description                                             |
-| ---------- | ------------- | ------------------------------------------------------- |
-| ac-8_prm_1 | process (str) | The account lifecycle management processes to automate. |
-| ac-8_prm_2 | tool (str)    | Recommended account lifecycle management tool.          |
+|ID        |Type         |Description                                            |
+|----------|-------------|-------------------------------------------------------|
+|ac-8_prm_1|process (str)|The account lifecycle management processes to automate.|
+|ac-8_prm_2|tool (str)   |Recommended account lifecycle management tool.         |
+|ac-8_prm_3|type (str)   |The type of accounts.                                  |
 
 ### AC-9: Endpoint Device Management
 
@@ -1287,7 +1323,7 @@ Mobile Device Management (MDM) platforms enable management, monitoring, and secu
 
 #### Risk Statement
 
-Unmanaged endpoint devices increase the risk of unauthorized access and potential loss of sensitive information due to the compromise of devices.
+Unmanaged endpoint devices increase the risk of unauthorised access and potential loss of sensitive information due to the compromise of devices.
 
 ### AC-10: Identity and Device-Based Access Control
 
@@ -1300,11 +1336,11 @@ Adopt Identity and Device-Based Access Control for secure and context-aware conn
 
 #### Control Recommendations
 
-Use solutions such as Secure Service Edge (SSE), Identity Aware Proxies (IAP) or other Zero Trust services (Entra ID Conditional Access, Okta Device Trust, etc) that integrate identity and device management systems to provide granular access control to resources based on user identity and device posture. For example, Security Suite for Engineering Endpoint Devices (SEED).
+Use solutions such as Secure Service Edge (SSE), Identity Aware Proxies (IAP) or other Zero Trust services (Entra ID Conditional Access, Okta Device Trust, etc) that integrate identity and device management systems to provide granular access control to resources based on user identity and device posture.
 
 #### Risk Statement
 
-Relying on direct connections or traditional VPNs for remote access can lead to vulnerabilities, as they do not always incorporate strong identity and device-based security measures. This increases the risk of unauthorized access and potential data breaches.
+Relying on direct connections or traditional VPNs for remote access can lead to vulnerabilities, as they do not always incorporate strong identity and device-based security measures. This increases the risk of unauthorised access and potential data breaches.
 
 ### AC-11: Single User Endpoints
 
@@ -1313,15 +1349,21 @@ Relying on direct connections or traditional VPNs for remote access can lead to 
 
 #### Control Statement
 
-Assign each endpoint device to a single designated primary user and enforce the assignment to ensure accountability and enhance security monitoring.
+Assign each endpoint device to a single designated primary [ac-11_prm_1] and enforce the assignment to ensure accountability and enhance security monitoring.
 
 #### Control Recommendations
 
-Implement measures such as user authentication and endpoint management with device enrollment to enforce the single primary user per endpoint. If secondary accounts for local device support or maintenance activities consider securing with endpoint privilege management tools.
+Implement measures such as user authentication and endpoint management with device enrolment to enforce the single primary user per endpoint. If secondary accounts for local device support or maintenance activities are used, consider securing them with endpoint privilege management tools.
 
 #### Risk Statement
 
 Allowing multiple users to access a single endpoint device can lead to security risks such as data leakage, difficulty in tracking user activities, and increased vulnerability to insider threats.
+
+#### Parameters
+
+|ID         |Type      |Description                  |
+|-----------|----------|-----------------------------|
+|ac-11_prm_1|type (str)|The type of user or identity.|
 
 ### AC-12: Single Sign-On (SSO) for Internal Services and Accounts
 
@@ -1334,11 +1376,11 @@ Use Single Sign-On (SSO) for internal services and accounts.
 
 #### Control Recommendations
 
-Configure multi-factor authentication (MFA) at the Single-Sign On (SSO) identity provider (IdP) and ensure that access to the system is only granted after the IdP authenticates the user. WOG AAD is recommended for public officers and TechPass AAD for developers.
+Configure multi-factor authentication (MFA) at the Single-Sign On (SSO) identity provider (IdP) and ensure that access to the system is only granted after the IdP authenticates the user.
 
 #### Risk Statement
 
-Without Single Sign-On (SSO), there is an increased risk of unauthorized access and compromised user credentials, as users may resort to using weak passwords or reusing credentials across multiple systems, thereby exposing sensitive information to potential security breaches.
+Without Single Sign-On (SSO), there is an increased risk of unauthorised access and compromised user credentials, as users may resort to using weak passwords or reusing credentials across multiple systems, thereby exposing sensitive information to potential security breaches.
 
 ### AC-13: Static Credential Expiry and Rotation
 
@@ -1347,21 +1389,21 @@ Without Single Sign-On (SSO), there is an increased risk of unauthorized access 
 
 #### Control Statement
 
-Rotate long-lived static credentials such as API keys, AWS IAM user access keys, and personal access tokens every [ insert: param, ac-13_prm_1 ] day(s) or used short-lived credentials.
+Rotate long-lived static credentials such as API keys, access keys, and personal access tokens every [ac-13_prm_1] day(s) or use time-restricted credentials.
 
 #### Control Recommendations
 
-Automate credential rotation where possible. Consider short-lived alternatives to long-lived static credentials, such as AWS Security Token Service and IAM Identity Center authentication instead of IAM user access keys.
+Automate credential rotation where possible. Consider time-restricted alternatives to long-lived static credentials, such as AWS Security Token Service and IAM Identity Center authentication instead of IAM user access keys.
 
 #### Risk Statement
 
-Failure to regularly rotate long-lived credentials or use short-lived credentials increases the risk of unauthorised access from stolen or unrevoked credentials.
+Failure to regularly rotate long-lived credentials or use time-restricted credentials increases the risk of unauthorised access from stolen or unrevoked credentials.
 
 #### Parameters
 
-| ID          | Type                     | Description                                      |
-| ----------- | ------------------------ | ------------------------------------------------ |
-| ac-13_prm_1 | time period (days) (int) | The time period in days for credential rotation. |
+|ID         |Type                    |Description                                     |
+|-----------|------------------------|------------------------------------------------|
+|ac-13_prm_1|time period (days) (int)|The time period in days for credential rotation.|
 
 ### AC-14: Inventory of Accounts
 
@@ -1378,7 +1420,7 @@ Regularly review and update the account inventory to ensure accuracy and complet
 
 #### Risk Statement
 
-Failure to maintain an accurate inventory of managed accounts increases the risk of unauthorized access, account misuse, and security breaches due to unmonitored or orphaned accounts.
+Failure to maintain an accurate inventory of managed accounts increases the risk of unauthorised access, account misuse, and security breaches due to unmonitored or orphaned accounts.
 
 ## PM: Security Programme Management (6)
 
@@ -1389,11 +1431,11 @@ Failure to maintain an accurate inventory of managed accounts increases the risk
 
 #### Control Statement
 
-Develop, document, and disseminate an agency-level cybersecurity incident management plan to respond to cybersecurity incidents.
+Develop, document, and disseminate an organisation-level cybersecurity incident management plan to respond to cybersecurity incidents.
 
 #### Control Recommendations
 
-Refer to the Government Incident Reporting and Operations Centre (GIROC) ICT and Data Incident Reporting Resources for an incident management plan and best practices template.
+Refer to the NIST SP 800-61 Computer Security Incident Handling Guide for guidelines on incident planning and handling.
 
 #### Risk Statement
 
@@ -1406,7 +1448,7 @@ Lack of a cybersecurity incident management plan increases the risk of ineffecti
 
 #### Control Statement
 
-Develop and document a risk assessment by [ insert: param, pm-2_prm_1 ] and get it approved by [ insert: param, pm-2_prm_2 ] prior to [ insert: param, pm-2_prm_3 ] and conduct a review every [ insert: param, pm-2_prm_4 ] day(s).
+Develop and document a risk assessment by [pm-2_prm_1] and get it approved by [pm-2_prm_2] prior to [pm-2_prm_3] and conduct a review every [pm-2_prm_4] day(s).
 
 #### Control Recommendations
 
@@ -1418,12 +1460,12 @@ Without developing and documenting risk assessment before the initial full relea
 
 #### Parameters
 
-| ID         | Type                           | Description                                  |
-| ---------- | ------------------------------ | -------------------------------------------- |
-| pm-2_prm_1 | system owner (str)             | The owner of the system.                     |
-| pm-2_prm_2 | risk assessment approver (str) | The approver of the risk assessment.         |
-| pm-2_prm_3 | risk assessment use case (str) | The use case of the risk assessment.         |
-| pm-2_prm_4 | time period (days) (int)       | The time period in days for risk assessment. |
+|ID        |Type                          |Description                                 |
+|----------|------------------------------|--------------------------------------------|
+|pm-2_prm_1|system owner (str)            |The owner of the system.                    |
+|pm-2_prm_2|risk assessment approver (str)|The approver of the risk assessment.        |
+|pm-2_prm_3|risk assessment use case (str)|The use case of the risk assessment.        |
+|pm-2_prm_4|time period (days) (int)      |The time period in days for risk assessment.|
 
 ### PM-3: System Security Plan (SSP) Development
 
@@ -1449,21 +1491,22 @@ Failure to develop a comprehensive SSP can result in inadequate documentation an
 
 #### Control Statement
 
-Get acceptance and approval of the residual risks from agency&#39;s [ insert: param, pm-4_prm_1 ].
+Get acceptance and approval of the residual risks from agency&#39;s [pm-4_prm_1], and review and seek approval every [pm-4_prm_2] days.
 
 #### Control Recommendations
 
-Agencies should seek acceptance and approval from their [ insert: param, pm-4_prm_1 ] on the residual risks based on the SSP and inform GovTech of the approval.
+Agencies should seek acceptance and approval from their [pm-4_prm_1] on the residual risks based on the SSP and inform GovTech of the approval.
 
 #### Risk Statement
 
-Failure to seek the right level of authority to accept and approve the residual risks can lead to misalignment of the business implications and trade-offs from the controls set in the SSP with the Agency IDSC direction.
+Failure to seek the right level of authority to accept and approve the residual risks regularly can lead to misalignment of the business implications and trade-offs from the controls set in the SSP with the Agency IDSC direction.
 
 #### Parameters
 
-| ID         | Type                      | Description                                   |
-| ---------- | ------------------------- | --------------------------------------------- |
-| pm-4_prm_1 | approving authority (str) | The authority for approval of residual risks. |
+|ID        |Type                     |Description                                  |
+|----------|-------------------------|---------------------------------------------|
+|pm-4_prm_1|approving authority (str)|The authority for approval of residual risks.|
+|pm-4_prm_2|review frequency (int)   |The frequency of risk review requirement.    |
 
 ### PM-5: Central Submission of Approved System Security Plan (SSP)
 
@@ -1476,7 +1519,7 @@ Submit approved SSPs centrally to maintain a unified and up-to-date repository o
 
 #### Control Recommendations
 
-Reference the IM8 Portal for submitting all approved SSPs.
+Use a central submission channel for SSPs.
 
 #### Risk Statement
 
@@ -1525,7 +1568,7 @@ Failure to automate security patching of operating systems and included software
 
 #### Control Statement
 
-Restrict administrator privileges by disabling remote login for the root/administrator user and restricting sudo/administrators group access for other users.
+Restrict administrator privileges by disabling remote login for the root/administrator user and restricting sudo/administrators group access.
 
 #### Control Recommendations
 
@@ -1580,7 +1623,7 @@ Detect and quarantine malware on hosts with anti-malware tools.
 
 #### Control Recommendations
 
-Configure anti-malware tools for all compute hosts (e.g. AWS Guardduty Malware Protection, Azure Antimalware, Trend Micro CloudOne). These tools should be kept up-to-date with the latest malware signatures. Regular scans should be scheduled to detect and quarantine potential threats.
+Configure anti-malware tools for all compute hosts, preferably leveraging cloud-native services where available. These tools should be kept up-to-date with the latest malware signatures. Regular scans should be scheduled to detect and quarantine potential threats.
 
 #### Risk Statement
 
@@ -1610,7 +1653,7 @@ Failure to monitor security threats on hosts with an Endpoint Detection and Resp
 
 #### Control Statement
 
-Ensure deployed [ insert: param, is-9_prm_1 ] assets have not reached end-of-support (EOS). Use of EOS assets will require risk acceptance by approved authority.
+Ensure deployed [is-9_prm_1] assets have not reached end-of-support (EOS). Use of EOS assets will require risk acceptance by approved authority.
 
 #### Control Recommendations
 
@@ -1622,9 +1665,9 @@ EOS assets can introduce security vulnerabilities as the assets are no longer pr
 
 #### Parameters
 
-| ID         | Type       | Description        |
-| ---------- | ---------- | ------------------ |
-| is-9_prm_1 | type (str) | The type of asset. |
+|ID        |Type      |Description       |
+|----------|----------|------------------|
+|is-9_prm_1|type (str)|The type of asset.|
 
 ### IS-10: Synchronise time clocks
 
@@ -1688,11 +1731,11 @@ Register second (.sg) and third (.com.sg, .org.sg, .net.sg, .edu.sg) level domai
 
 #### Control Recommendations
 
-Consider defensive registration of domain names with typographical variants of the system&#39;s primary domain name. The Whole of Government Domain Name Server (DNS) portal on the IT Service Management (ITSM) portal automatically includes the second and third level domain names.
+Consider defensive registration of domain names with typographical variants of the system&#39;s primary domain name.
 
 #### Risk Statement
 
-Malicious use of domain names similar to actual Government domain names increases the risk of phishing and spoofing.
+Malicious use of domain names similar to actual organisation domain names increases the risk of phishing and spoofing.
 
 ### IS-14: Singapore SMS Sender ID Registry Registration
 
@@ -1771,7 +1814,7 @@ Failing to require passing Continuous Integration (CI) tests before merging into
 
 #### Control Statement
 
-Set up a static analysis job in the [ insert: param, sd-4_prm_1 ], and remediate or risk accept true positive vulnerability findings before deploying to production.
+Set up a static analysis job in the [sd-4_prm_1], and remediate or risk accept true positive vulnerability findings before deploying to production.
 
 #### Control Recommendations
 
@@ -1783,9 +1826,9 @@ Without setting up static analysis in the CI/CD pipeline for each merge request 
 
 #### Parameters
 
-| ID         | Type           | Description                                |
-| ---------- | -------------- | ------------------------------------------ |
-| sd-4_prm_1 | location (str) | The location where static analysis occurs. |
+|ID        |Type          |Description                               |
+|----------|--------------|------------------------------------------|
+|sd-4_prm_1|location (str)|The location where static analysis occurs.|
 
 ### SD-5: Dependency Scanning
 
@@ -1794,7 +1837,7 @@ Without setting up static analysis in the CI/CD pipeline for each merge request 
 
 #### Control Statement
 
-Schedule a scan at least every [ insert: param, sd-5_prm_1 ] day(s) in the [ insert: param, sd-5_prm_2 ] to identify the use of vulnerable software libraries.
+Schedule a scan at least every [sd-5_prm_1] day(s) in the [sd-5_prm_2] to identify the use of vulnerable software libraries.
 
 #### Control Recommendations
 
@@ -1806,10 +1849,10 @@ Failing to schedule regular dependency scanning to identify vulnerable software 
 
 #### Parameters
 
-| ID         | Type                     | Description                                               |
-| ---------- | ------------------------ | --------------------------------------------------------- |
-| sd-5_prm_1 | time period (days) (int) | The time period in days of dependency scanning frequency. |
-| sd-5_prm_2 | location (str)           | The location where dependency scanning occurs.            |
+|ID        |Type                    |Description                                              |
+|----------|------------------------|---------------------------------------------------------|
+|sd-5_prm_1|time period (days) (int)|The time period in days of dependency scanning frequency.|
+|sd-5_prm_2|location (str)          |The location where dependency scanning occurs.           |
 
 ### SD-6: Secret Detection
 
@@ -1818,7 +1861,7 @@ Failing to schedule regular dependency scanning to identify vulnerable software 
 
 #### Control Statement
 
-Set up secret detection in the [ insert: param, sd-6_prm_1 ] and remediate true positives within [ insert: param, sd-6_prm_2 ] day(s).
+Set up secret detection in the [sd-6_prm_1] and remediate true positives within [sd-6_prm_2] day(s).
 
 #### Control Recommendations
 
@@ -1830,10 +1873,10 @@ Without setting up secret detection and addressing true positive findings prompt
 
 #### Parameters
 
-| ID         | Type                     | Description                                                                |
-| ---------- | ------------------------ | -------------------------------------------------------------------------- |
-| sd-6_prm_1 | location (str)           | The location where secret detection occurs.                                |
-| sd-6_prm_2 | time period (days) (int) | Number of days within which to remediate a secret detection true positive. |
+|ID        |Type                    |Description                                                               |
+|----------|------------------------|--------------------------------------------------------------------------|
+|sd-6_prm_1|location (str)          |The location where secret detection occurs.                               |
+|sd-6_prm_2|time period (days) (int)|Number of days within which to remediate a secret detection true positive.|
 
 ### SD-7: CI Environment Variable Secrets Management
 
@@ -1850,7 +1893,7 @@ Use GitLab&#39;s CI/CD variable security settings or GitHub&#39;s encrypted secr
 
 #### Risk Statement
 
-Failing to protect environment variable secrets in CI jobs by limiting them to protected pipelines and masking them in job logs increases the risk of unauthorized access and exposure of sensitive information.
+Failing to protect environment variable secrets in CI jobs by limiting them to protected pipelines and masking them in job logs increases the risk of unauthorised access and exposure of sensitive information.
 
 ### SD-8: Deployment Environment Segregation
 
@@ -1863,11 +1906,11 @@ Segregate production and non-production environments including applications, ser
 
 #### Control Recommendations
 
-Achieve segregation using separate Government on Commercial Cloud (GCC) accounts for environments such as production, development, test, and staging. Account segregation enhances security by limiting exposure, simplifies resource and cost management, maintains configuration integrity, facilitates compliance and auditing and streamlines operational tasks. Deploy and operate environments as similarly as possible to enhance debugging and time-to-market.
+Achieve segregation using separate cloud tenant accounts for environments such as production, development, test, and staging. Account segregation enhances security by limiting exposure, simplifies resource and cost management, maintains configuration integrity, facilitates compliance and auditing and streamlines operational tasks. Deploy and operate environments as similarly as possible to enhance debugging and time-to-market.
 
 #### Risk Statement
 
-Failure to segregate production and non-production environments increases the risk of unauthorized access, data leaks, and denial of service attacks, as compromises in non-production environments may lead to cascading impacts on production systems.
+Failure to segregate production and non-production environments increases the risk of unauthorised access, data leaks, and denial of service attacks, as compromises in non-production environments may lead to cascading impacts on production systems.
 
 ## DC: Datacentre (2)
 
@@ -1947,7 +1990,7 @@ Insecure cryptographic key establishment can lead to weak or broken encryption.
 
 #### Control Statement
 
-Rotate cryptographic keys every [ insert: param, ck-2_prm_1 ] days.
+Rotate cryptographic keys every [ck-2_prm_1] days.
 
 #### Control Recommendations
 
@@ -1959,6 +2002,6 @@ Failing to rotate cryptographic keys increases the risk of broken encryption.
 
 #### Parameters
 
-| ID         | Type                     | Description                                                      |
-| ---------- | ------------------------ | ---------------------------------------------------------------- |
-| ck-2_prm_1 | time period (days) (int) | The time period in days of cryptographic key rotation frequency. |
+|ID        |Type                    |Description                                                     |
+|----------|------------------------|----------------------------------------------------------------|
+|ck-2_prm_1|time period (days) (int)|The time period in days of cryptographic key rotation frequency.|

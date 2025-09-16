@@ -23,6 +23,7 @@ Controls to prevent application vulnerabilities caused by insecure coding.
 | [AS-12: Malware Scanning of Uploaded Files](#as-12-malware-scanning-of-uploaded-files)       |
 | [AS-13: Exposure of Internal System Details](#as-13-exposure-of-internal-system-details)     |
 | [AS-14: Secure Cryptographic Libraries](#as-14-secure-cryptographic-libraries)               |
+| [AS-15: Password Change](#as-15-password-change)                                             |
 
 ## AS-1: Input Validation
 
@@ -70,7 +71,7 @@ Any application outputs that are returned to the requester and used to render a 
 
 ### Risk Statement
 
-Lack of sanitisation for application outputs used in rendering HTML documents exposes the system to the risk of cross-site scripting (XSS) attacks, allowing malicious code execution in users&#39; browsers.
+Lack of sanitisation for application outputs used in rendering HTML documents exposes the system to the risk of cross-site scripting (XSS) attacks, allowing malicious code execution in browsers.
 
 ## AS-4: Authentication Mechanism Rate-Limiting
 
@@ -94,7 +95,7 @@ Without rate-limiting, there&#39;s an increased risk of unauthorised access as a
 
 ### Control Statement
 
-Where SSO or passwordless is not supported, verify that user-defined passwords are at least [ insert: param, as-5_prm_1 ] characters in length and [ insert: param, as-5_prm_2 ].
+Where SSO or passwordless is not supported, verify that [ insert: param, as-5_prm_3 ] passwords are at least [ insert: param, as-5_prm_1 ] characters in length and [ insert: param, as-5_prm_2 ].
 
 ### Control Recommendations
 
@@ -110,6 +111,7 @@ Short or commonly used passwords increase the vulnerability to unauthorised acce
 | ---------- | -------------------------- | --------------------------------- |
 | as-5_prm_1 | number of characters (int) | The minimum length of a password. |
 | as-5_prm_2 | policy (str)               | The password policy.              |
+| as-5_prm_3 | type (str)                 | The type of password.             |
 
 ## AS-6: Password Salting and Hashing
 
@@ -129,7 +131,7 @@ Refer to NIST [SP 800-90Ar1](https://doi.org/10.6028/NIST.SP.800-90Ar1) for suit
 
 ### Risk Statement
 
-Without salting and hashing, in case of a data breach, exposed passwords can be easily extracted, leading to potential compromise of user accounts and sensitive information.
+Without salting and hashing, in case of a data breach, exposed passwords can be easily extracted, leading to potential compromise of accounts and sensitive information.
 
 ## AS-7: Access Control Check Enforcement
 
@@ -157,7 +159,7 @@ Securely store secrets in an appropriate secrets management solution with access
 
 ### Control Recommendations
 
-Secrets include API keys, AWS IAM user access keys, and other static credentials. Do not store secrets unencrypted in source code or configuration files. Store secrets in cloud solutions like AWS Secrets Manager and Azure Key Vault or cloud-agnostic solutions like HashiCorp Vault and CyberArk Conjur. For SaaS or platforms, ensure that secrets are stored in an appropriate solution. For example, use GitHub Actions secrets instead of variables.
+Secrets include API keys, access keys, and other static credentials. Do not store secrets unencrypted in source code or configuration files. Store secrets in cloud-native solutions like AWS Secrets Manager and Azure Key Vault or cloud-agnostic solutions like HashiCorp Vault and CyberArk Conjur. For SaaS or platforms, ensure that secrets are stored in an appropriate solution. For example, use GitHub Actions secrets instead of variables.
 
 ### Risk Statement
 
@@ -201,7 +203,7 @@ Failure to implement HTTP Strict Transport Security (HSTS) with a sufficient max
 
 ### Control Statement
 
-Require users to re-authenticate after their session exceeds [ insert: param, as-11_prm_1 ] hour(s) or terminate the session.
+Require [ insert: param, as-11_prm_2 ] to re-authenticate after their session exceeds [ insert: param, as-11_prm_1 ] hour(s) or terminate the session.
 
 ### Control Recommendations
 
@@ -209,13 +211,14 @@ NIST SP 800-63B recommends re-authentication once per 30 days for Authenticator 
 
 ### Risk Statement
 
-Not verifying a user regularly and at suitable checkpoints could allow someone who has access to the user&#39;s account to carry out unauthorised actions.
+Not re-authenticating regularly and at suitable checkpoints could allow someone who has access to the account to carry out unauthorised actions.
 
 ### Parameters
 
 | ID          | Type                      | Description                                               |
 | ----------- | ------------------------- | --------------------------------------------------------- |
 | as-11_prm_1 | time period (hours) (int) | The maximum time period in hours of a user&#39;s session. |
+| as-11_prm_2 | type (str)                | The type of session.                                      |
 
 ## AS-12: Malware Scanning of Uploaded Files
 
@@ -223,7 +226,7 @@ Not verifying a user regularly and at suitable checkpoints could allow someone w
 
 ### Control Statement
 
-Scan file uploads for malware before further processing by the system or users.
+Scan file uploads for malware before further processing by the system.
 
 ### Control Recommendations
 
@@ -239,11 +242,11 @@ Without scanning uploaded files for malware, there&#39;s an increased risk of ex
 
 ### Control Statement
 
-Prevent the unnecessary disclosure of internal system details to end users.
+Prevent the unnecessary disclosure of internal system details to Public Users.
 
 ### Control Recommendations
 
-Ensure all system messages and notifications are informative yet secure. These messages should be contextually appropriate, providing end-users with relevant information without exposing internal system details such as debug information, stack traces, or software versioning.
+Ensure all system messages and notifications are informative yet secure. These messages should be contextually appropriate, providing relevant information without exposing internal system details such as debug information, stack traces, or software versioning.
 
 ### Risk Statement
 
@@ -259,8 +262,24 @@ Use reputable and secure cryptographic libraries and functions to handle cryptog
 
 ### Control Recommendations
 
-Follow the OWASP Cryptographic Storage Cheat Sheet for best practices in securely implementing cryptographic operations. Regularly update libraries and prefer widely recognized ones such as OpenSSL. Consider using libraries that are FIPS 140-2 or FIPS 140-3 compliant for enhanced security assurance.
+Follow the OWASP Cryptographic Storage Cheat Sheet for best practices in securely implementing cryptographic operations. Regularly update libraries and prefer widely recognised ones such as OpenSSL. Consider using libraries that are FIPS 140-2 or FIPS 140-3 compliant for enhanced security assurance.
 
 ### Risk Statement
 
-Using insecure cryptographic libraries and functions can expose applications to significant security risks, such as data breaches and unauthorized access, compromising sensitive information.
+Using insecure cryptographic libraries and functions can expose applications to significant security risks, such as data breaches and unauthorised access, compromising sensitive information.
+
+## AS-15: Password Change
+
+**Group:** Application Security
+
+### Control Statement
+
+Enforce password change upon suspected account compromise.
+
+### Control Recommendations
+
+Implement mechanisms to detect signs of account compromise, such as unusual login activity or multiple failed login attempts. Notify users promptly to change their passwords and provide guidance on creating strong, unique passwords. Consider integrating multi-factor authentication to enhance security.
+
+### Risk Statement
+
+Failure to enforce password changes upon suspected account compromise increases the risk of prolonged unauthorised access, leading to potential data breaches and exploitation of systems.

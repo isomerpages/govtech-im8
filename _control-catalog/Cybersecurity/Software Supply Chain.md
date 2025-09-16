@@ -29,7 +29,7 @@ Manage the codebase in a central code repository with version control.
 
 ### Control Recommendations
 
-Use common platforms such as SHIP-HATS 2.0 GitLab or equivalents.
+Use common internal platforms that provide Git repository services.
 
 ### Risk Statement
 
@@ -153,11 +153,11 @@ Without verifying the signatures of code and artefacts before deployment or runt
 
 ### Control Statement
 
-Share source code within Government to enhance code quality, accelerate innovation, and improve problem-solving efficiency.
+Share source code internally to enhance code quality, accelerate innovation, and improve problem-solving efficiency.
 
 ### Control Recommendations
 
-Adopt Innersource practices for internal collaboration, utilizing platforms like SHIP-HATS GitLab to manage and share code repositories in Government. Source code should be evaluated for suitability for innersourcing, such as the use of confidential algorithms or embedded sensitive data. The Innersource guidelines published in Developers Portal provide a useful framework for code sharing.
+Adopt InnerSource practices for internal collaboration, utilising Git platforms to manage and share code repositories internally. Source code should be evaluated for suitability for InnerSourcing, such as the use of confidential algorithms or embedded sensitive data. The InnerSource guidelines published in the Singapore Government Developer Portal provide a useful framework for code sharing.
 
 ### Risk Statement
 

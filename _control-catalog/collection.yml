@@ -11,10 +11,24 @@ collections:
       - Cybersecurity/Container Security.md
       - Cybersecurity/Datacentre.md
       - Cybersecurity/Data Protection.md
+      - Cybersecurity/Human Resource.md
       - Cybersecurity/Infrastructure Security.md
       - Cybersecurity/Logging and Monitoring.md
       - Cybersecurity/Network Security.md
+      - Cybersecurity/Resiliency.md
       - Cybersecurity/Secure Development.md
       - Cybersecurity/Security Programme Management.md
       - Cybersecurity/Security Testing.md
       - Cybersecurity/Software Supply Chain.md
+      - Digital Service Standards/.keep
+      - Digital Service Standards/Overview.md
+      - Digital Service Standards/Baseline Design Practices.md
+      - Digital Service Standards/Performance and Reliability.md
+      - Digital Service Standards/Trust and Legitimacy.md
+      - Digital Service Standards/Transactions and Payments.md
+      - Digital Service Standards/Understand Users.md
+      - "Digital Service Standards/WCAG : Operable.md"
+      - "Digital Service Standards/WCAG : Perceivable.md"
+      - "Digital Service Standards/WCAG : Robust.md"
+      - "Digital Service Standards/WCAG : Understandable.md"
+      - Glossary.md
