@@ -984,7 +984,7 @@ Reliance of specific sensory characteristics may make descriptions or instructio
 ### WP-9: Display Orientation
 
 - **Group:** WCAG - Perceivable
-- **Profile Level:** 1
+- **Profile Level:** 2
 
 #### Control Statement
 
