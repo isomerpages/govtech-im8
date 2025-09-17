@@ -1576,7 +1576,7 @@ Allows assistive technology to identify language changes and properly present co
 ### WU-3: Unusual Words
 
 - **Group:** WCAG - Understandable
-- **Profile Level:** 2
+- **Profile Level:** 1
 
 #### Control Statement
 
