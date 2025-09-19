@@ -18,4 +18,4 @@ systems of different risk impact levels</strong>. Agencies will assess the risks
     <div class="col is-12"><p>This publication is to provide the same control&nbsp;requirements to government agencies and industry partners so that both parties can work together to apply the right level of controls for their systems.
 </p></div>
 </div>
-<p>We invite industry players to join us in the ICT&amp;SS Policy Reform journey. Please share your feedback through the <a href="https://go.gov.sg/ictpolicy" target="_blank" aria-label="link to form">ICT&amp;SS Policy Reform Feedback FormSG,</a></p>
+<p>We invite industry players to join us in the ICT&amp;SS Policy Reform journey. Please share your feedback through the <a href="https://go.gov.sg/ictpolicy" target="_blank" aria-label="ICT&amp;SS Policy Reform Feedback FormSG">ICT&amp;SS Policy Reform Feedback FormSG.</a></p>
