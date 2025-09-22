@@ -1,6 +1,6 @@
 ---
 title: Cryptography, Encryption and Key Management
-permalink: /control-catalog/ck/
+permalink: /control-catalog/cybersecurity/ck/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity

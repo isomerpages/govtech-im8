@@ -1,6 +1,6 @@
 ---
 title: Security Testing
-permalink: /control-catalog/st/
+permalink: /control-catalog/cybersecurity/st/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity

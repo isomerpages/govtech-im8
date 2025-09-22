@@ -1,6 +1,6 @@
 ---
 title: Container Security
-permalink: /control-catalog/cs/
+permalink: /control-catalog/cybersecurity/cs/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity

@@ -1,6 +1,6 @@
 ---
 title: Datacentre
-permalink: /control-catalog/dc/
+permalink: /control-catalog/cybersecurity/dc/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity

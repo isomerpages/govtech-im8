@@ -1,6 +1,6 @@
 ---
 title: Security Programme Management
-permalink: /control-catalog/pm/
+permalink: /control-catalog/cybersecurity/pm/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity

@@ -1,6 +1,6 @@
 ---
 title: Data Protection
-permalink: /control-catalog/dp/
+permalink: /control-catalog/cybersecurity/dp/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity
@@ -128,4 +128,3 @@ Establish a SOP to ensure sanitisation and destruction are witnessed by an agenc
 ### Risk Statement
 
 Ensuring storage devices are sanitised or destroyed will eliminate the possibility of unauthorised or unintended data retention.
-

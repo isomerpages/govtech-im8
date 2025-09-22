@@ -1,6 +1,6 @@
 ---
 title: Overview
-permalink: /control-catalog/cybersecurity/overview/
+permalink: /control-catalog/cybersecurity/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity

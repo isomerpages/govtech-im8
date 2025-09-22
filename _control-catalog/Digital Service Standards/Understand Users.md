@@ -1,6 +1,6 @@
 ---
 title: Understand Users
-permalink: /control-catalog/uu/
+permalink: /control-catalog/dss/uu/
 variant: markdown
 description: ""
 third_nav_title: Digital Service Standards

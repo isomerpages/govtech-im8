@@ -1,6 +1,6 @@
 ---
 title: Transactions and Payments
-permalink: /control-catalog/tx/
+permalink: /control-catalog/dss/tx/
 variant: markdown
 description: ""
 third_nav_title: Digital Service Standards

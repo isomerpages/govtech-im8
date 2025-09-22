@@ -1,6 +1,6 @@
 ---
 title: Network Security
-permalink: /control-catalog/ns/
+permalink: /control-catalog/cybersecurity/ns/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity

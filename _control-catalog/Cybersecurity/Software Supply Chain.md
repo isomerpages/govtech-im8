@@ -1,6 +1,6 @@
 ---
 title: Software Supply Chain
-permalink: /control-catalog/sc/
+permalink: /control-catalog/cybersecurity/sc/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity

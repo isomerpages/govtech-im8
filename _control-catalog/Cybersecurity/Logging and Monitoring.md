@@ -1,6 +1,6 @@
 ---
 title: Logging and Monitoring
-permalink: /control-catalog/lm/
+permalink: /control-catalog/cybersecurity/lm/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity

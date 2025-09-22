@@ -1,6 +1,6 @@
 ---
 title: "WCAG : Perceivable"
-permalink: /control-catalog/wp/
+permalink: /control-catalog/dss/wp/
 variant: markdown
 description: ""
 third_nav_title: Digital Service Standards

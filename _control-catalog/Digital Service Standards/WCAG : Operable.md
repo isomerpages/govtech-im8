@@ -1,6 +1,6 @@
 ---
 title: "WCAG : Operable"
-permalink: /control-catalog/wo/
+permalink: /control-catalog/dss/wo/
 variant: markdown
 description: ""
 third_nav_title: Digital Service Standards

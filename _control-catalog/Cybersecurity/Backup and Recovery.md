@@ -1,6 +1,6 @@
 ---
 title: Backup and Recovery
-permalink: /control-catalog/br/
+permalink: /control-catalog/cybersecurity/br/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity

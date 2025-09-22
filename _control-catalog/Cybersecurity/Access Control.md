@@ -1,6 +1,6 @@
 ---
 title: Access Control
-permalink: /control-catalog/ac/
+permalink: /control-catalog/cybersecurity/ac/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity

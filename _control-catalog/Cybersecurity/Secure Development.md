@@ -1,6 +1,6 @@
 ---
 title: Secure Development
-permalink: /control-catalog/sd/
+permalink: /control-catalog/cybersecurity/sd/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity

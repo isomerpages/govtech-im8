@@ -1,6 +1,6 @@
 ---
 title: Performance and Reliability
-permalink: /control-catalog/pr/
+permalink: /control-catalog/dss/pr/
 variant: markdown
 description: ""
 third_nav_title: Digital Service Standards

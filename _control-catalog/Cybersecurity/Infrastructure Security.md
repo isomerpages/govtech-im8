@@ -1,6 +1,6 @@
 ---
 title: Infrastructure Security
-permalink: /control-catalog/is/
+permalink: /control-catalog/cybersecurity/is/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity

@@ -1,6 +1,6 @@
 ---
 title: Baseline Design Practices
-permalink: /control-catalog/bd/
+permalink: /control-catalog/dss/bd/
 variant: markdown
 description: ""
 third_nav_title: Digital Service Standards

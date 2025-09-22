@@ -1,6 +1,6 @@
 ---
 title: Resiliency
-permalink: /control-catalog/rs/
+permalink: /control-catalog/cybersecurity/rs/
 variant: markdown
 description: ""
 third_nav_title: Cybersecurity

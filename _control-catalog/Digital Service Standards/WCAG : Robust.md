@@ -1,6 +1,6 @@
 ---
 title: "WCAG : Robust"
-permalink: /control-catalog/wr/
+permalink: /control-catalog/dss/wr/
 variant: markdown
 description: ""
 third_nav_title: Digital Service Standards

@@ -1,6 +1,6 @@
 ---
 title: Trust and Legitimacy
-permalink: /control-catalog/tl/
+permalink: /control-catalog/dss/tl/
 variant: markdown
 description: ""
 third_nav_title: Digital Service Standards

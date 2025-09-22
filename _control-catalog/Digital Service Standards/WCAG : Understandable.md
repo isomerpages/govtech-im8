@@ -1,6 +1,6 @@
 ---
 title: "WCAG : Understandable"
-permalink: /control-catalog/wu/
+permalink: /control-catalog/dss/wu/
 variant: markdown
 description: ""
 third_nav_title: Digital Service Standards
