@@ -10,10 +10,3 @@ As the Singapore Government's digitalisation efforts continue to grow, agencies 
 The Cybersecurity Control Catalog applies established international standards and guidelines to the Singapore Government's context. Risk-based options are built into control parameters, enabling agencies to adapt controls to best fit their operating context.  
   
 Government agencies and their industry partners engaged in the design, development, or delivery of government digital services are expected to understand and apply the relevant Cybersecurity requirements. Adherence to these standards is essential for delivering secure and reliable digital services that align with the Government’s digital transformation objectives.
-
-
-
-| Column 1 | Column 2 | Column 3 |
-| -------- | -------- | -------- |
-| Text     | Text     | Text     |
-
