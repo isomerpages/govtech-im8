@@ -4,7 +4,7 @@ permalink: /ssp/sandbox/
 variant: markdown
 description: ""
 ---
-The Pilot Sandbox System Security Plan
+Pilot Sandbox System Security Plan.
 
 ## System Characteristics
 
