@@ -26,7 +26,9 @@ Controls to support detection and response to security and operations incidents.
 | [LM-15: Structured Log Formatting](#lm-15-structured-log-formatting)                                               |
 | [LM-16: Key Signals Monitoring](#lm-16-key-signals-monitoring)                                                     |
 | [LM-17: Software delivery performance monitoring](#lm-17-software-delivery-performance-monitoring)                 |
+| [LM-18: Whole of Government Application Analytics (WOGAA)](#lm-18-whole-of-government-application-analytics-wogaa) |
 | [LM-19: Log Sanitisation](#lm-19-log-sanitisation)                                                                 |
+| [LM-20: User and Entity Behaviour Analytics](#lm-20-user-and-entity-behaviour-analytics)                           |
 | [LM-21: Detection Updates](#lm-21-detection-updates)                                                               |
 
 ## LM-1: Separate Log Storage
@@ -313,6 +315,21 @@ Implement tools and processes to track Deployment Frequency, Lead Time for Chang
 
 Failing to measure and improve the software delivery performance can lead to inefficient development processes, reduced software quality and longer recovery times.
 
+## LM-18: Whole of Government Application Analytics (WOGAA)
+
+**Group:** Logging and Monitoring
+
+### Control Statement
+
+Implement Whole of Government Application Analytics (WOGAA) in public facing digital services.
+
+### Control Recommendations
+
+Register at the WOGAA portal at https://wogaa.sg/ and follow the implementation documentation at https://docs.wogaa.sg/.
+
+### Risk Statement
+
+Lack of performance tracking can lead to gaps in service delivery.
 
 ## LM-19: Log Sanitisation
 
@@ -330,6 +347,21 @@ Identify types of classified and sensitive data that may appear in logs. When lo
 
 Failing to sanitise logs increases the risk of unauthorised exposure or misuse of sensitive information and other confidential data. This exposure could lead to privacy breaches, financial losses, compliance violations and damage to national reputation.
 
+## LM-20: User and Entity Behaviour Analytics
+
+**Group:** Logging and Monitoring
+
+### Control Statement
+
+Implement User and Entity Behaviour Analytics (UEBA) to monitor and analyse user activities for suspicious behaviour and potential threats.
+
+### Control Recommendations
+
+Select a UEBA tool that integrates with existing security information and event management (SIEM) solutions and provides real-time alerts for anomalous activities. Ensure regular updates and tuning of the tool to enhance detection capabilities.
+
+### Risk Statement
+
+Lack of monitoring for potentially malicious user and entity behaviour increases the risk of insider threats and undetected malicious activities, potentially leading to data breaches and system compromise.
 
 ## LM-21: Detection Updates
 
