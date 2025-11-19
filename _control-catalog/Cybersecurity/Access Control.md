@@ -23,6 +23,7 @@ Controls to protect against unauthorised access to agency systems.
 | [AC-12: Single Sign-On (SSO) for Internal Services and Accounts](#ac-12-single-sign-on-sso-for-internal-services-and-accounts)             |
 | [AC-13: Static Credential Expiry and Rotation](#ac-13-static-credential-expiry-and-rotation)                                               |
 | [AC-14: Inventory of Accounts](#ac-14-inventory-of-accounts)                                                                               |
+| [AC-15: Validation Testing of Automated Account Lifecycle Management](#ac-15-validation-testing-of-automated-account-lifecycle-management) |
 | [AC-16: Separation of Duties](#ac-16-separation-of-duties)                                                                                 |
 
 ## AC-1: Principle of Least Privilege
@@ -284,6 +285,21 @@ Regularly review and update the account inventory to ensure accuracy and complet
 
 Failure to maintain an accurate inventory of managed accounts increases the risk of unauthorised access, account misuse, and security breaches due to unmonitored or orphaned accounts.
 
+## AC-15: Validation Testing of Automated Account Lifecycle Management
+
+**Group:** Access Control
+
+### Control Statement
+
+Conduct validation tests on the system integrated with account management tools to ensure secure integration.
+
+### Control Recommendations
+
+Where possible, test cases should include verifying that: account provisioning occurs solely through the account management tool(s), not directly on the SaaS; accounts are deactivated on the final day of authorised use; accounts are provisioned only after validating that access is permitted to the defined boundaries; and access rights match the account&#39;s assigned role and functions.
+
+### Risk Statement
+
+Failure to conduct validation tests on the integration of account management tools with SaaS platforms increases the risk of unauthorised access, improper account provisioning, and potential security breaches.
 
 ## AC-16: Separation of Duties
 
