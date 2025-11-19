@@ -15,6 +15,8 @@ Controls to protect the data of a system.
 | [DP-4: Central Cloud Tenant Management](#dp-4-central-cloud-tenant-management)                                                 |
 | [DP-5: Sanitisation](#dp-5-sanitisation)                                                                                       |
 | [DP-6: Witness Sanitisation and Destruction of Storage Devices](#dp-6-witness-sanitisation-and-destruction-of-storage-devices) |
+| [DP-7: Data Loss Prevention](#dp-7-data-loss-prevention)                                                                       |
+| [DP-8: Data Classification Disclosure](#dp-8-data-classification-disclosure)                                                   |
 
 ## DP-1: Data Residency
 
@@ -128,3 +130,35 @@ Establish a SOP to ensure sanitisation and destruction are witnessed by an agenc
 ### Risk Statement
 
 Ensuring storage devices are sanitised or destroyed will eliminate the possibility of unauthorised or unintended data retention.
+
+## DP-7: Data Loss Prevention
+
+**Group:** Data Protection
+
+### Control Statement
+
+Implement data loss prevention mechanisms that monitor data flows, detect sensitive data transfers, and block unauthorised sharing of sensitive data.
+
+### Control Recommendations
+
+Where possible, use built-in solutions such as Microsoft Purview or Google Workspace data loss prevention rules. Regularly review and update data loss prevention policies to adapt to evolving threats and organisational needs.
+
+### Risk Statement
+
+Failure to implement data loss prevention measures increases the risk of unauthorised data exfiltration, accidental data leaks, and data breaches, compromising sensitive information and organisational integrity.
+
+## DP-8: Data Classification Disclosure
+
+**Group:** Data Protection
+
+### Control Statement
+
+For internal applications serving public officers, specify the highest permitted security and sensitivity classification for input data, such as text, audio, or multimedia/file uploads, in the system&#39;s user interface and guides.
+
+### Control Recommendations
+
+Indicate with a clear message, either at or near the input field, the relevant data classification that may be used with the system. For GenAI systems, note that any proposed deviations to this control must be [submitted to and approved by NAIG](https://go.gov.sg/GAIDeviations).
+
+### Risk Statement
+
+Users who are not informed of the maximum allowed data classification may submit sensitive information the system is not permitted to process, risking data breaches, legal violations, and reputational harm.
