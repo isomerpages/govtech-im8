@@ -313,7 +313,6 @@ Implement tools and processes to track Deployment Frequency, Lead Time for Chang
 
 Failing to measure and improve the software delivery performance can lead to inefficient development processes, reduced software quality and longer recovery times.
 
-
 ## LM-19: Log Sanitisation
 
 **Group:** Logging and Monitoring
@@ -329,7 +328,6 @@ Identify types of classified and sensitive data that may appear in logs. When lo
 ### Risk Statement
 
 Failing to sanitise logs increases the risk of unauthorised exposure or misuse of sensitive information and other confidential data. This exposure could lead to privacy breaches, financial losses, compliance violations and damage to national reputation.
-
 
 ## LM-21: Detection Updates
 
