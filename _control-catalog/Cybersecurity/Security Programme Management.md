@@ -15,8 +15,6 @@ Controls to implement cybersecurity governance, risk, and compliance processes a
 | [PM-4: Approval of Residual Risks](#pm-4-approval-of-residual-risks)                                                             |
 | [PM-5: Central Submission of Approved System Security Plan (SSP)](#pm-5-central-submission-of-approved-system-security-plan-ssp) |
 | [PM-6: System Documentation](#pm-6-system-documentation)                                                                         |
-| [PM-7: Certification](#pm-7-certification)                                                                                       |
-| [PM-8: SaaS Whitelisting](#pm-8-saas-whitelisting)                                                                               |
 | [PM-9: Cybersecurity Incident Response Testing](#pm-9-cybersecurity-incident-response-testing)                                   |
 | [PM-10: Cybersecurity Leadership and Oversight](#pm-10-cybersecurity-leadership-and-oversight)                                   |
 
@@ -131,50 +129,6 @@ Example system documentation includes architecture and network diagrams, archite
 ### Risk Statement
 
 Comprehensive documentation of system architecture, components, configurations, and dependencies is essential for effective management, troubleshooting, and security auditing.
-
-## PM-7: Certification
-
-**Group:** Security Programme Management
-
-### Control Statement
-
-Ensure that the Software as a Service (SaaS) provider is certified with [ insert: param, pm-7_prm_1 ].
-
-### Control Recommendations
-
-Ensure that the certification is up-to-date. Avoid certifications that are only attestations without a pass/fail element.
-
-### Risk Statement
-
-Third-party certification provides assurance that security controls have been properly implemented in the Software as a Service (SaaS) provider.
-
-### Parameters
-
-| ID         | Type                 | Description                  |
-| ---------- | -------------------- | ---------------------------- |
-| pm-7_prm_1 | certifications (str) | The required certifications. |
-
-## PM-8: SaaS Whitelisting
-
-**Group:** Security Programme Management
-
-### Control Statement
-
-Maintain and enforce a whitelist of authorised software and services.
-
-### Control Recommendations
-
-Refer to a centrally-maintained whitelist or [ insert: param, pm-8_prm_1 ] for authorised SaaS.
-
-### Risk Statement
-
-Failing to whitelist the SaaS may potentially expose sensitive data (e.g., Confidential (Cloud-Eligible) or SENSITIVE-HIGH data) to the risk of data breaches.
-
-### Parameters
-
-| ID         | Type                         | Description                 |
-| ---------- | ---------------------------- | --------------------------- |
-| pm-8_prm_1 | whitelisting authority (str) | The whitelisting authority. |
 
 ## PM-9: Cybersecurity Incident Response Testing
 
