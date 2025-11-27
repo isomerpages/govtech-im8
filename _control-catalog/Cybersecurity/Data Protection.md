@@ -15,7 +15,6 @@ Controls to protect the data of a system.
 | [DP-4: Central Cloud Tenant Management](#dp-4-central-cloud-tenant-management)                                                 |
 | [DP-5: Sanitisation](#dp-5-sanitisation)                                                                                       |
 | [DP-6: Witness Sanitisation and Destruction of Storage Devices](#dp-6-witness-sanitisation-and-destruction-of-storage-devices) |
-| [DP-7: Data Loss Prevention](#dp-7-data-loss-prevention)                                                                       |
 | [DP-8: Data Classification Disclosure](#dp-8-data-classification-disclosure)                                                   |
 
 ## DP-1: Data Residency
@@ -130,22 +129,6 @@ Establish a SOP to ensure sanitisation and destruction are witnessed by an agenc
 ### Risk Statement
 
 Ensuring storage devices are sanitised or destroyed will eliminate the possibility of unauthorised or unintended data retention.
-
-## DP-7: Data Loss Prevention
-
-**Group:** Data Protection
-
-### Control Statement
-
-Implement data loss prevention mechanisms that monitor data flows, detect sensitive data transfers, and block unauthorised sharing of sensitive data.
-
-### Control Recommendations
-
-Where possible, use built-in solutions such as Microsoft Purview or Google Workspace data loss prevention rules. Regularly review and update data loss prevention policies to adapt to evolving threats and organisational needs.
-
-### Risk Statement
-
-Failure to implement data loss prevention measures increases the risk of unauthorised data exfiltration, accidental data leaks, and data breaches, compromising sensitive information and organisational integrity.
 
 ## DP-8: Data Classification Disclosure
 
