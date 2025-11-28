@@ -10,10 +10,10 @@ External publications have recognised our work in **modernising cybersecurity st
 
 ### Open Security Control Assessment Language (OSCAL) — ThoughtWorks Radar
 
-> *“OSCAL is an open, machine‑readable information exchange format designed to increase automation in compliance and risk management, and help teams move away from text‑based manual approaches.”*  
+> *“We’re excited by its potential to streamline security assessments, reduce reliance on spreadsheets and box-ticking exercises and even enable automated compliance when incorporated into compliance-as-code and continuous compliance platforms.”*  
 > — *ThoughtWorks Technology Radar, Nov 2025*
 
-[View on ThoughtWorks Technology Radar](https://www.thoughtworks.com/en-sg/radar/languages-and-frameworks/open-security-control-assessment-language-oscal)
+[View on ThoughtWorks Technology Radar](https://www.thoughtworks.com/en-sg/radar/languages-and-frameworks/summary/open-security-control-assessment-language-oscal)
 
 ---
 
