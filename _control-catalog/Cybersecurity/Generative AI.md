@@ -28,7 +28,7 @@ Use only up to RESTRICTED and SENSITIVE NORMAL data with GenAI API services serv
 
 ### Control Recommendations
 
-Verify data classification with data owner before using the data with overseas GenAI API services. Ensure that these API services are accessed only via environments authorised for up to RESTRICTED and SENSITIVE NORMAL data. For SaaS tools with GenAI components, please refer to the [Central SaaS Portal](https://go.gov.sg/saasportal).
+Verify data classification with data owner before using the data with overseas GenAI API services. Ensure that these API services are accessed only via environments authorised for up to RESTRICTED and SENSITIVE NORMAL data.
 
 ### Risk Statement
 
