@@ -33,7 +33,7 @@ sections:
       title: System Security Plan
       id: infopic
       description: System Security Plans for Low, Medium and High-Risk Cloud, Low-Risk
-        On-Premises, Digital Services and Sandbox systems.
+        On-Premises, Digital Services, Generative AI and Sandbox systems.
       button: Read more
       url: /about-ssp/
       image: /images/img_catalog.png
@@ -42,7 +42,8 @@ sections:
       title: Catalog of Controls
       id: infopic
       description: Re-calibrated catalog of controls for Low, Medium and High-Risk
-        Cloud, Low-Risk On-Premises, Digital Services and Sandbox systems.
+        Cloud, Low-Risk On-Premises, Digital Services, Generative AI and Sandbox
+        systems.
       button: Read more
       url: /control-catalog/
       image: /images/img_about.png
