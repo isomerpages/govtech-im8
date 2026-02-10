@@ -6,6 +6,8 @@ description: ""
 ---
 The High-Risk Cloud CII System Security Plan template includes Level 0 and Level 1 baseline controls that are recommended as the default controls for high-risk cloud CII systems. Agencies are to customise this template to create their own system-specific System Security Plan or use it as a default System Security Plan.
 
+CII Owners are reminded to inform Cybersecurity Agency Singapore (CSA) prior to the migration to Cloud and the creation of an High-Risk Cloud CII SSP.
+
 ## System Characteristics
 
 - **Name:** High-Risk Cloud System
@@ -2218,7 +2220,7 @@ Malicious use of domain names similar to actual organisation domain names increa
 ### IS-14: Singapore SMS Sender ID Registry Registration
 
 - **Group:** Infrastructure Security
-- **Profile Level:** 2
+- **Profile Level:** 0
 
 #### Control Statement
 
