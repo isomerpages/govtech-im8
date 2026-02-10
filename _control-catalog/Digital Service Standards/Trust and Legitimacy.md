@@ -82,7 +82,7 @@ A) The following footer links in this order
 
 i) Contact / Contact Us
 
-i) Feedback
+ii) Feedback
 
 iii) FAQ (if any)
 
