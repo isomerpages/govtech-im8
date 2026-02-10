@@ -44,7 +44,7 @@ Use only up to CONFIDENTIAL and SENSITIVE HIGH data with GenAI API services serv
 
 ### Control Recommendations
 
-Verify data classification with data owner before using the data with Singapore-hosted GenAI API services. Ensure that these API services are accessed only via environments authorised for up to CONFIDENTIAL and SENSITIVE HIGH data. Check documentation for whether cross-region inferencing or overseas processing occurs under certain conditions. For SaaS tools with GenAI components, please refer to the [Central SaaS Portal](https://go.gov.sg/saasportal).
+Verify data classification with data owner before using the data with Singapore-hosted GenAI API services. Ensure that these API services are accessed only via environments authorised for up to CONFIDENTIAL and SENSITIVE HIGH data. Check documentation for whether cross-region inferencing or overseas processing occurs under certain conditions.
 
 ### Risk Statement
 
@@ -92,7 +92,7 @@ Use approved formats (such as [ insert: param, ga-5_prm_1 ]) when using any open
 
 ### Control Recommendations
 
-Update GenAI model loaders frequently to hinder attacks. Note that any proposed deviations to this control must be [submitted to and approved by NAIG](https://go.gov.sg/GAIDeviations).
+Update GenAI model loaders frequently to hinder attacks.
 
 ### Risk Statement
 
@@ -115,7 +115,7 @@ Implement file upload safeguards if file uploads are enabled in the system.
 
 ### Control Recommendations
 
-Examples of safeguards include but are not limited to: (1) Implementing Data Loss Protection (“DLP”) tools to monitor document uploads, (2) Disabling bulk or batch file uploads, such as by preventing users from selecting multiple files with a single action, or by requiring users to confirm the data security/sensitivity classification of each file individually before uploading, (3) Prompting users who upload excessively large files to review file contents and their collective data security/sensitivity classification. Note that any proposed deviations to this control must be [submitted to and approved by NAIG](https://go.gov.sg/GAIDeviations).
+Examples of safeguards include but are not limited to: (1) Implementing Data Loss Protection (“DLP”) tools to monitor document uploads, (2) Disabling bulk or batch file uploads, such as by preventing users from selecting multiple files with a single action, or by requiring users to confirm the data security/sensitivity classification of each file individually before uploading, (3) Prompting users who upload excessively large files to review file contents and their collective data security/sensitivity classification.
 
 ### Risk Statement
 
@@ -131,7 +131,7 @@ Test the accuracy, safety, and quality of the GenAI application&#39;s outputs, w
 
 ### Control Recommendations
 
-Determine the adequate level of accuracy, safety, and output quality for your application. Develop tests to assess outputs on these dimensions. The complexity and structure of these tests should be tailored to the risk profile of your application. Document this approach and measure &amp; monitor results after relevant model, prompt, and dependency updates. Note that any proposed deviations to this control must be [submitted to and approved by NAIG](https://go.gov.sg/GAIDeviations).
+Determine the adequate level of accuracy, safety, and output quality for your application. Develop tests to assess outputs on these dimensions. The complexity and structure of these tests should be tailored to the risk profile of your application. Document this approach and measure &amp; monitor results after relevant model, prompt, and dependency updates. 
 
 ### Risk Statement
 
@@ -147,7 +147,7 @@ Require users to explicitly acknowledge the risk of inaccurate or fabricated out
 
 ### Control Recommendations
 
-Include clauses about the risk of inaccurate / fabricated outputs in your Terms of Use. Indicate prominently in your application about the possibility of inaccurate or fabricated outputs. Ensure that educational materials, such as documentation, guides, playbooks, or workshops, highlight responsible use and best practices for users of the GenAI system. Note that any proposed deviations to this control must be [submitted to and approved by NAIG](https://go.gov.sg/GAIDeviations).
+Include clauses about the risk of inaccurate / fabricated outputs in your Terms of Use. Indicate prominently in your application about the possibility of inaccurate or fabricated outputs. Ensure that educational materials, such as documentation, guides, playbooks, or workshops, highlight responsible use and best practices for users of the GenAI system.
 
 ### Risk Statement
 
