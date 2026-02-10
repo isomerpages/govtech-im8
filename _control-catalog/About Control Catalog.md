@@ -13,9 +13,9 @@ for the following systems:
 </p><ul>
   <li>Low-Risk Cloud</li>
   <li>Low-Risk On-Premises</li>
-	<li>Generative AI</li>
   <li>Medium-Risk Cloud</li>
 	<li>High-Risk Cloud CII</li>
+	<li>Generative AI</li>
 	<li>Digital Services (Others)</li>
 	<li>Digital Services (High Impact)</li>
 	<li>Sandbox</li>
