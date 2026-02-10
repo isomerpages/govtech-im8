@@ -25,7 +25,7 @@ For internal applications serving public officers, specify the highest permitted
 
 #### Control Recommendations
 
-Indicate with a clear message, either at or near the input field, the relevant data classification that may be used with the system. For GenAI systems, note that any proposed deviations to this control must be [submitted to and approved by NAIG](https://go.gov.sg/GAIDeviations).
+Indicate with a clear message, either at or near the input field, the relevant data classification that may be used with the system.
 
 #### Risk Statement
 
