@@ -10,6 +10,7 @@ description: ""
 <ul>
 	<li>Low-Risk Cloud</li>
 	<li>Low-Risk On-Premises</li>
+	<li>Generative AI</li>
 	<li>Medium-Risk Cloud</li>
 	<li>High-Risk Cloud CII</li>
 	<li>Digital Services (Others)</li>
@@ -28,4 +29,4 @@ Agencies and industry partners are to assess and apply the controls in accordanc
 <h3>Profile Level 2</h3>
 <p>These are best practices for Agencies to consider and adopt where required.</p>
 
-<p>The SSPs were last updated on 16 September 2025.</p>
+<p>The SSPs were last updated on 09 February 202.</p>
