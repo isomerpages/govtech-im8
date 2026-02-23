@@ -33,7 +33,7 @@ sections:
       title: System Security Plan
       id: infopic
       description: System Security Plans for Low, Medium and High-Risk Cloud, Low-Risk
-        On-Premises, Generative AI, Digital Servicesand Sandbox systems.
+        On-Premises, Generative AI, Digital Services and Sandbox systems.
       button: Read more
       url: /about-ssp/
       image: /images/img_catalog.png
