@@ -3,8 +3,8 @@ collections:
     output: true
     order:
       - About Control Catalog.md
-      - Cybersecurity/Overview.md
       - Cybersecurity/.keep
+      - Cybersecurity/Overview.md
       - Cybersecurity/Access Control.md
       - Cybersecurity/Application Security.md
       - Cybersecurity/Backup and Recovery.md
@@ -12,6 +12,7 @@ collections:
       - Cybersecurity/Container Security.md
       - Cybersecurity/Datacentre.md
       - Cybersecurity/Data Protection.md
+      - Cybersecurity/Generative AI.md
       - Cybersecurity/Human Resource.md
       - Cybersecurity/Infrastructure Security.md
       - Cybersecurity/Logging and Monitoring.md
