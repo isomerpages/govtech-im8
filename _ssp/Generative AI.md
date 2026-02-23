@@ -4,7 +4,7 @@ permalink: /ssp/gen-ai/
 variant: markdown
 description: ""
 ---
-The Generative AI System Security Plan template includes Level 0 and Level 1 baseline controls that are recommended as the default controls for systems that utilise generative AI models.
+The Generative AI System Security Plan template includes Level 0 and Level 1 baseline controls that are recommended as the default controls for systems that utilise generative AI models. Agencies may customise this template to create their own system-specific System Security Plan or use it as a default System Security Plan for generic Generative AI systems.
 
 ## System Characteristics
 
